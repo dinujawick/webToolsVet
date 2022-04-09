@@ -1,0 +1,500 @@
+[
+
+	{
+		"atcLevel": "N05CD",
+		"medGroup": "Benzodiazepines"
+	},
+	{
+		"atcLevel": "N05BA",
+		"medGroup": "Benzodiazepines"
+	},
+	{
+		"atcLevel": "N06AB",
+		"medGroup": "SSRI"
+	},
+	{
+		"atcLevel": "N06AF",
+		"medGroup": "MAO inhibitors"
+	},
+	{
+		"atcLevel": "N06AG",
+		"medGroup": "MAO inhibitors"
+	},
+	{
+		"atcLevel": "N06AA",
+		"medGroup": "TCA"
+	},
+	{
+		"atcLevel": "N02A",
+		"medGroup": "Opioid"
+	},
+	{
+		"atcLevel": "N05A",
+		"medGroup": "Antipsychotics (excl prochlorperazine)"
+
+	},
+	{
+		"atcLevel": "N06AX16",
+		"medGroup": "SNRI"
+
+	},
+	{
+		"atcLevel": "N06AX17",
+		"medGroup": "SNRI"
+
+	},
+	{
+		"atcLevel": "N06AX21",
+		"medGroup": "SNRI"
+
+	},
+	{
+		"atcLevel": "N06AX23",
+		"medGroup": "SNRI"
+
+	},
+	{
+		"atcLevel": "N06AX03",
+		"medGroup": "OtherAntidep"
+
+	},
+	{
+		"atcLevel": "N06AX11",
+		"medGroup": "OtherAntidep"
+
+	},
+	{
+		"atcLevel": "N06AX18",
+		"medGroup": "OtherAntidep"
+
+	},
+	{
+		"atcLevel": "N06AX22",
+		"medGroup": "OtherAntidep"
+
+	},
+	{
+		"atcLevel": "N06AX26",
+		"medGroup": "OtherAntidep"
+
+	},
+	{
+		"atcLevel": "C03CA",
+		"medGroup": "Loop"
+
+	},
+	{
+		"atcLevel": "C03AA",
+		"medGroup": "Thiazide"
+
+	},
+	{
+		"atcLevel": "C09AA",
+		"medGroup": "ACE_ARB"
+
+	},
+	{
+		"atcLevel": "C09CA",
+		"medGroup": "ACE_ARB"
+
+	},
+	{
+		"atcLevel": "C09BA",
+		"medGroup": "ACE_ARB_combo"
+
+	},
+	{
+		"atcLevel": "C09BB",
+		"medGroup": "ACE_ARB_combo"
+
+	},
+	{
+		"atcLevel": "C09DA",
+		"medGroup": "ACE_ARB_combo"
+
+	},
+	{
+		"atcLevel": "C09DB",
+		"medGroup": "ACE_ARB_combo"
+
+	},
+	{
+		"atcLevel": "C09DX",
+		"medGroup": "ACE_ARB_combo"
+
+	},
+	{
+		"atcLevel": "C03DA01",
+		"medGroup": "Spironolactone"
+
+	},
+	{
+		"atcLevel": "C01AA05",
+		"medGroup": "Digoxin"
+
+	},
+	{
+		"atcLevel": "C07",
+		"medGroup": "Betablockers"
+
+	},
+	{
+		"atcLevel": "C01DA",
+		"medGroup": "Nitrates_nicorandil"
+
+	},
+	{
+		"atcLevel": "C01DX",
+		"medGroup": "Nitrates_nicorandil"
+
+	},
+	{
+		"atcLevel": "C08C",
+		"medGroup": "CCB_dihydro"
+
+	},
+	{
+		"atcLevel": "C08D",
+		"medGroup": "CCB_dv"
+
+	},
+	{
+		"atcLevel": "C01BD01",
+		"medGroup": "Amiodarone"
+
+	},
+	{
+		"atcLevel": "C02A",
+		"medGroup": "Antihypertensive"
+
+	},
+	{
+		"atcLevel": "C02C",
+		"medGroup": "Antihypertensive"
+
+	},
+	{
+		"atcLevel": "C02D",
+		"medGroup": "Antihypertensive"
+
+	},
+	{
+		"atcLevel": "A10A",
+		"medGroup": "Insulin"
+
+	},
+	{
+		"atcLevel": "A10BB",
+		"medGroup": "Sulfonylurea"
+
+	},
+	{
+		"atcLevel": "A10BD",
+		"medGroup": "Hypoglycemics_combo"
+
+	},
+	{
+		"atcLevel": "A10BH",
+		"medGroup": "Gliptins"
+
+	},
+	{
+		"atcLevel": "A10BJ",
+		"medGroup": "Glutides"
+
+	},
+	{
+		"atcLevel": "A10BK",
+		"medGroup": "Gliflozins"
+
+	},
+	{
+		"atcLevel": "A10BA02",
+		"medGroup": "Metformin"
+
+	},
+	{
+		"atcLevel": "A10BG03",
+		"medGroup": "Pioglitazone"
+
+	},
+	{
+		"atcLevel": "B01AA",
+		"medGroup": "Anticoagulant"
+
+	},
+	{
+		"atcLevel": "B01AB",
+		"medGroup": "Anticoagulant"
+
+	},
+	{
+		"atcLevel": "B01AE",
+		"medGroup": "Anticoagulant"
+
+	},
+	{
+		"atcLevel": "B01AF",
+		"medGroup": "Anticoagulant"
+
+	},
+	{
+		"atcLevel": "B01AX",
+		"medGroup": "Anticoagulant"
+
+	},
+	{
+		"atcLevel": "B01AC04",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC05",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC07",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC13",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC16",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC17",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC22",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC24",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "B01AC30",
+		"medGroup": "Antiplt_exclPAH"
+
+	},
+	{
+		"atcLevel": "H02AB",
+		"medGroup": "Steroid"
+
+	},
+	{
+		"atcLevel": "M01A",
+		"medGroup": "NSAIDs"
+
+	},
+	{
+		"atcLevel": "R03DA04",
+		"medGroup": "Theophylline"
+
+	},
+	{
+		"atcLevel": "A02BA",
+		"medGroup": "H2Blockers"
+
+	},
+	{
+		"atcLevel": "A02BC",
+		"medGroup": "PPI"
+
+	},
+	{
+		"atcLevel": "J01DH",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J01MA",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J01XB",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J01G",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J01EE01",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J01XA01",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J01XX09",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J02AA01",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "J02AX04",
+		"medGroup": "Antimicrobials (renal)"
+
+	},
+	{
+		"atcLevel": "A07DA03",
+		"medGroup": "Loperamide"
+
+	},
+	{
+		"atcLevel": "R06AE07",
+		"medGroup": "H1Blockers"
+
+	},
+	{
+		"atcLevel": "R06AX13",
+		"medGroup": "H1Blockers"
+
+	},
+	{
+		"atcLevel": "R06AX26",
+		"medGroup": "H1Blockers"
+
+	},
+	{
+		"atcLevel": "R06AX27",
+		"medGroup": "H1Blockers"
+
+	},
+	{
+		"atcLevel": "G04CA01",
+		"medGroup": "SelectiveAlphaBlockers"
+
+	},
+	{
+		"atcLevel": "G04CA02",
+		"medGroup": "SelectiveAlphaBlockers"
+
+	},
+	{
+		"atcLevel": "G04CA04",
+		"medGroup": "SelectiveAlphaBlockers"
+
+	},
+	{
+		"atcLevel": "A03AB05",
+		"medGroup": "UrinaryAntispasm"
+
+	},
+	{
+		"atcLevel": "G04BD03",
+		"medGroup": "UrinaryAntispasm"
+
+	},
+	{
+		"atcLevel": "G04BD07",
+		"medGroup": "UrinaryAntispasm"
+
+	},
+	{
+		"atcLevel": "G04BD08",
+		"medGroup": "UrinaryAntispasm"
+
+	},
+	{
+		"atcLevel": "G04BD10",
+		"medGroup": "UrinaryAntispasm"
+
+	},
+	{
+		"atcLevel": "A06",
+		"medGroup": "Laxatives"
+
+	},
+	{
+		"atcLevel": "R03DA04",
+		"medGroup": "Theophylline"
+
+	},
+	{
+		"atcLevel": "N05AB04",
+		"medGroup": "Prochlorperazine"
+
+	},
+	{
+		"atcLevel": "A03FA01",
+		"medGroup": "Metoclopramide"
+
+	},
+	{
+		"atcLevel": "R06AD01",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AD02",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AA02",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AA09",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AB02",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AB05",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AE03",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "R06AX02",
+		"medGroup": "Sedating antihistamines (AMH)"
+
+	},
+	{
+		"atcLevel": "N03AX16",
+		"medGroup": "Pregabalin/Gabapentin (Gabapentinoid)"
+
+	},
+	{
+		"atcLevel": "N03AX12",
+		"medGroup": "Pregabalin/Gabapentin (Gabapentinoid)"
+
+	},
+	{
+		"atcLevel": "N03A",
+		"medGroup": "Antiepileptic"
+	}
+]
