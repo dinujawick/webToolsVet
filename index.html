@@ -25,7 +25,7 @@
 
     <script>
 	    
-	    states = fetch("us-population-state-age.csv").csv({typed: true})
+	    const states = d3.csv("us-population-state-age.csv");
 	    console.log(states);
 	    ages = states.columns.slice(1)
 	    stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
