@@ -138,9 +138,12 @@
         <script>
 
 
-            d3.csv("data.csv").then(d => chart(d))
+            d3.csv("data.csv").then(d => chart(d));
+
 
             function chart(csv) {
+
+                console.log(csv);
 
                 var keys = csv.columns.slice(2);
 
@@ -31379,15 +31382,11 @@
             });
 
         
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
-            function myFunction() {
+        // When the user clicks on the button,toggle between hiding and showing the dropdown content
+        function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
 
-                
-                    
-		
         function filterFunction() {
 
             var input, filter, ul, li, a, i;
@@ -31405,7 +31404,7 @@
             }
         }   
 
-            function createSelectedList(atcDescr, atcLevel) {
+        function createSelectedList(atcDescr, atcLevel) {
 
                 $('#' + "a" + atcLevel)
                     .attr('style', "display:none");
@@ -31429,7 +31428,7 @@
                 }
             }
 
-            function getMedGroups(atcDescr, atcLevel){
+        function getMedGroups(atcDescr, atcLevel){
                 
                 var identifiedMedGroup;
 
@@ -31474,8 +31473,7 @@
 
             }
 
-
-            function addOnlyMappedMedsToSelectionList(atcLevel,atcDescr) {
+        function addOnlyMappedMedsToSelectionList(atcLevel,atcDescr) {
                 $(medMap).each(function (index, item) {
 
                     var temp;
@@ -31530,7 +31528,7 @@
                 
             }
 
-            function createAccordionItem(medGroup) {
+        function createAccordionItem(medGroup) {
                 $accordion = $('<div>')
                     .attr('id',medGroup + 'accordion')
                     .addClass('accordion-item')
@@ -31573,7 +31571,8 @@
                     .addClass('list-group')
                     .appendTo($accordionBodyHeader);
             }
-            function createAcordionContent(medGroup, atcDescr, atcLevel) {
+
+        function createAcordionContent(medGroup, atcDescr, atcLevel) {
                                 
                 $('<li>')
                     .attr('id', medGroup + atcLevel + 'li')
