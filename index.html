@@ -32,7 +32,7 @@
 	    stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
 	    
 
-	    fucntion setCSV(csv){
+	    fucntion setCSV(csv) {
 		    console.log(csv);
 	    }
   chart = StackedBarChart(stateages, {
