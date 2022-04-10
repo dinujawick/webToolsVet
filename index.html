@@ -25,11 +25,9 @@
 
     <script>
 	    
-	    states = FileAttachment("us-population-state-age.csv").csv({typed: true})
-	    
-	ages = states.columns.slice(1)
-	    
-	stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
+	    states = d3.csv("us-population-state-age.csv");
+	    ages = states.columns.slice(1)
+	    stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
 	    
 	    
   chart = StackedBarChart(stateages, {
