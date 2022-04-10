@@ -25,13 +25,16 @@
 
     <script>
 	    
-	    const states = d3.csv("us-population-state-age.csv")[['PromiseResult']];
+	    const states = d3.csv("us-population-state-age.csv").then(d =>setCSV(d));
 	    
 	    console.log(states);
 	    ages = states.columns.slice(1)
 	    stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
 	    
-	    
+
+	    fucntion setCSV(csv){
+		    console.log(csv);
+	    }
   chart = StackedBarChart(stateages, {
   x: d => d.population / 1e6,
   y: d => d.state,
