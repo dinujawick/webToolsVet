@@ -25,26 +25,28 @@
 
     <script>
 	    
-	    const states = d3.csv("us-population-state-age.csv").then(d =>setCSV(d));
+	const states = d3.csv("us-population-state-age.csv").then(d =>setCSV(d));
 	    
-	    console.log(states);
-	    ages = states.columns.slice(1)
-	    stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
+	console.log(states);
+	ages = states.columns.slice(1)
+	stateages = ages.flatMap(age => states.map(d => ({state: d.name, age, population: d[age]}))) // pivot
 	    
 
-	    fucntion setCSV(data) {
-		    console.log(data);
-	    }
-  chart = StackedBarChart(stateages, {
-  x: d => d.population / 1e6,
-  y: d => d.state,
-  z: d => d.age,
-  xLabel: "Population (millions) →",
-  yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-  zDomain: ages,
-  colors: d3.schemeSpectral[ages.length],
-  width
-})
+	function setCSV(data) {
+		console.log(data);
+	 }
+
+
+	chart = StackedBarChart(stateages, {
+		x: d => d.population / 1e6,
+		y: d => d.state,
+		z: d => d.age,
+		xLabel: "Population (millions) →",
+		yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+		zDomain: ages,
+		colors: d3.schemeSpectral[ages.length],
+		width
+	})
 	    
 	    
 	
