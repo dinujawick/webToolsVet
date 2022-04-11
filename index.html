@@ -37,26 +37,20 @@
         ages = states.columns.slice(1)
 		stateages = ages.flatMap(age => states.map(d => ({ state: d.name, age, population: d[age] }))) // pivot
 
+        chart = StackedBarChart(stateages, {
+            x: d => d.population / 1e6,
+            y: d => d.state,
+            z: d => d.age,
+            xLabel: "Population (millions) →",
+            yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+            zDomain: ages,
+            colors: d3.schemeSpectral[ages.length],
+            width
+        })
+
+        $('#chart').append(chart);
 	 }
-
-
-	chart = StackedBarChart(stateages, {
-		x: d => d.population / 1e6,
-		y: d => d.state,
-		z: d => d.age,
-		xLabel: "Population (millions) →",
-		yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-		zDomain: ages,
-		colors: d3.schemeSpectral[ages.length],
-		width
-	})
-	    
-	    
-	
-	    
-	$('#chart').append(chart);
-	    
-	    
+    
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/stacked-horizontal-bar-chart
