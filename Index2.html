@@ -31506,11 +31506,15 @@
                                 medAddedStatus = true;
                             }
                             else {
+                               
                                 $.each(selectedMedList, function (i, value) {
                                     if (value == atcDescr) {
                                         medAddedStatus = true;
                                     }
                                 })
+
+                                if (medAddedStatus == false)
+                                selectedMedList.push(atcDescr);
                             }
                             
 
@@ -31532,11 +31536,11 @@
                                 });
                                 if (elementAddedStatus != true) {
                                     createAccordionItem(identifiedMedGroup);
-                                    if (medAddedStatus == false)
+                                    if (medAddedStatus != true)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
                                 else {
-                                    if (medAddedStatus == false)
+                                    if (medAddedStatus != true)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
                             }
