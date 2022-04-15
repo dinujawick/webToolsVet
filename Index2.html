@@ -31497,13 +31497,27 @@
 
                         $med.on('click', function (event) {
 
+                            var medAddedStatus = false;
+                            
                             //createSelectedList(atcDescr, atcLevel);
                             var identifiedMedGroup = getMedGroups(atcDescr, atcLevel);
-                            selectedMedList.push(atcDescr);
+                            if (selectedMedList == null) {
+                                selectedMedList.push(atcDescr);
+                                medAddedStatus = true;
+                            }
+                            else {
+                                $.each(selectedMedList, function (i, value) {
+                                    if (value == atcDescr) {
+                                        medAddedStatus = true;
+                                    }
+                                })
+                            }
+                            
 
                             if ($('#medGroup').has('.accordion-item').length == 0) {
                                 //console.log(identifiedMedGroup);
                                 createAccordionItem(identifiedMedGroup);
+                                if (medAddedStatus == false)
                                 createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                             } else {
 
@@ -31518,9 +31532,11 @@
                                 });
                                 if (elementAddedStatus != true) {
                                     createAccordionItem(identifiedMedGroup);
+                                    if (medAddedStatus == false)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
                                 else {
+                                    if (medAddedStatus == false)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
                             }
