@@ -145,7 +145,7 @@
             //d3 old school graph
             d3.csv("data.csv").then(d => chart(d));
 
-
+            
             function chart(csv) {
 
                 //console.log(csv);
@@ -31367,6 +31367,9 @@
 
             var selectedMedList = new Array();
 
+            var map = new Array();
+
+
             $(document).ready(function () {
 
 
@@ -31542,14 +31545,15 @@
 
                             console.log(selectedMedList);
                             console.log(selectedMedGroupList);
+
                             $.each(riskMap, function (i, value) {
 
                                 if (i == identifiedMedGroup) {
-                                    console.log(i);
-                                    console.log(value);
+
+                                    map.push(i, value);
                                 }                                
                             })
-
+                            console.log(map);
                             //myFunction();
                         })
                     }
