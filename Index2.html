@@ -31550,7 +31550,10 @@
 
                                 if (i == identifiedMedGroup) {
 
-                                    map.push(i, value);
+                                    $.each(value, function (i, value) {
+                                        console.log(i);
+                                        console.log(value);
+                                    })
                                 }                                
                             })
                             console.log(map);
