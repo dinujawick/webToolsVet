@@ -31535,8 +31535,13 @@
                             if ($('#medGroup').has('.accordion-item').length == 0) {
                                 //console.log(identifiedMedGroup);
                                 createAccordionItem(identifiedMedGroup);
-                                if (medAddedStatus == false)
-                                createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
+                                if (medAddedStatus == false) {
+
+                                    createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
+                                    //Calculate Total risk for first med group
+                                    calculateTotalRisk(identifiedMedGroup);
+                                }
+                                    
                             } else {
 
                                 var elementAddedStatus = false ;
@@ -31550,6 +31555,9 @@
                                 });
                                 if (elementAddedStatus != true) {
                                     createAccordionItem(identifiedMedGroup);
+                                    //Calculate Total risk for created med group
+                                    calculateTotalRisk(identifiedMedGroup);
+
                                     if (medAddedStatus != true)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
@@ -31562,22 +31570,7 @@
                             console.log(selectedMedList);
                             console.log(selectedMedGroupList);
 
-                            $.each(riskMap, function (i, value) {
-
-                                if (i == identifiedMedGroup) {
-
-                                    $.each(value, function (i, value) {
-                                        if (value == 1) {
-                                            console.log(i);
-                                            console.log(value);
-                                            totalRisk[i] = totalRisk[i] + 1;
-                                            console.log(totalRisk[i]);
-                                        }
-                                        
-                                    })
-                                    console.log(totalRisk);
-                                }                                
-                            })
+                            
                             
                             //myFunction();
                         })
@@ -31586,6 +31579,25 @@
 
             }
 
+        function calculateTotalRisk(identifiedMedGroup) {
+            
+            $.each(riskMap, function (i, value) {
+
+                if (i == identifiedMedGroup) {
+
+                    $.each(value, function (i, value) {
+                        if (value == 1) {
+                            //console.log(i);
+                            //console.log(value);
+                            totalRisk[i] = totalRisk[i] + 1;
+                            /*console.log(totalRisk[i]);*/
+                        }
+
+                    })
+                    console.log(totalRisk);
+                }
+            })
+        }
         function createAccordionItem(medGroup) {
                 $accordion = $('<div>')
                     .attr('id',medGroup + 'accordion')
