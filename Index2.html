@@ -151,14 +151,20 @@
                 //console.log(csv);
 
                 var keys = csv.columns.slice(2);
+                console.log(keys);
 
                 var year = [...new Set(csv.map(d => d.Year))]
+                console.log(year);
+
                 var states = [...new Set(csv.map(d => d.State))]
+                console.log(states);
 
                 var options = d3.select("#year").selectAll("option")
                     .data(year)
                     .enter().append("option")
                     .text(d => d)
+                console.log(options);
+
 
                 var svg = d3.select("#chart"),
                     margin = { top: 35, left: 35, bottom: 0, right: 15 },
@@ -31405,7 +31411,6 @@
         function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
-
         function filterFunction() {
 
             var input, filter, ul, li, a, i;
@@ -31422,7 +31427,6 @@
                 }
             }
         }
-
         function createSelectedList(atcDescr, atcLevel) {
 
                 $('#' + "a" + atcLevel)
@@ -31446,7 +31450,6 @@
 
                 }
             }
-
         function getMedGroups(atcDescr, atcLevel){
 
                 var identifiedMedGroup;
@@ -31491,7 +31494,6 @@
                 }
 
             }
-
         function addOnlyMappedMedsToSelectionList(atcLevel,atcDescr) {
                 $(medMap).each(function (index, item) {
 
@@ -31569,16 +31571,13 @@
 
                             console.log(selectedMedList);
                             console.log(selectedMedGroupList);
-
-                            
-                            
+                          
                             //myFunction();
                         })
                     }
                 });
 
             }
-
         function calculateTotalRisk(identifiedMedGroup) {
             
             $.each(riskMap, function (i, value) {
@@ -31587,14 +31586,12 @@
 
                     $.each(value, function (i, value) {
                         if (value == 1) {
-                            //console.log(i);
-                            //console.log(value);
-                            totalRisk[i] = totalRisk[i] + 1;
-                            /*console.log(totalRisk[i]);*/
+                            totalRisk[i] = totalRisk[i] + 1;                            
                         }
 
                     })
                     console.log(totalRisk);
+
                 }
             })
         }
@@ -31641,7 +31638,6 @@
                     .addClass('list-group')
                     .appendTo($accordionBodyHeader);
             }
-
         function createAcordionContent(medGroup, atcDescr, atcLevel) {
 
                 $('<li>')
