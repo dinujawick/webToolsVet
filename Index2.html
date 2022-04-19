@@ -185,8 +185,8 @@
                     .attr("transform", `translate(0,${margin.top})`)
                     .attr("class", "x-axis")
 
-                var z = d3.scaleOrdinal(d3.schemeCategory10)
-                    .range(0,2)
+                var z = d3.scaleOrdinal(d3.schemeCategory10().range(0,2))
+                    .range()
                     .domain(keys);
 
                 update(d3.select("#year").property("value"), 0)
