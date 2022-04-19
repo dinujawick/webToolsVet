@@ -31549,7 +31549,7 @@
                             console.log(selectedMedGroupList);
                             $.each(riskMap, function (i, value) {
 
-                                if (i == selectedMedGroupList.pop()) {
+                                if (i == selectedMedGroupList.lastIndexOf()) {
                                     console.log(i);
                                     console.log(value);
                                 }                                
