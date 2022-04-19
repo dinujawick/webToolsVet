@@ -31544,11 +31544,15 @@
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
                             }
+
                             console.log(selectedMedList);
                             console.log(selectedMedGroupList);
                             $.each(riskMap, function (i, value) {
-                                
-                                console.log(i);
+
+                                if (i == selectedMedGroupList.pop()) {
+                                    console.log(i);
+                                    console.log(value);
+                                }                                
                             })
 
                             //myFunction();
