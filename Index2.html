@@ -31367,7 +31367,23 @@
 
             var selectedMedList = new Array();
 
-            var map = new Array();
+            var totalRisk = {
+                "falls_fracture": 0,
+                "constipation": 0,
+                "urinary_retention": 0,
+                "CNS_depression": 0,
+                "bleeding": 0,
+                "heart_failure": 0,
+                "bradycardia": 0,
+                "CV_events": 0,
+                "respiratory": 0,
+                "hypoglycaemia": 0,
+                "renal_injury": 0,
+                "hypokalemia": 0,
+                "hyperkalemia": 0,
+                "serotonin_syndrome": 0,
+                "angle_closure_glaucoma": 0
+            }
 
 
             $(document).ready(function () {
@@ -31551,8 +31567,12 @@
                                 if (i == identifiedMedGroup) {
 
                                     $.each(value, function (i, value) {
-                                        console.log(i);
-                                        console.log(value);
+                                        if (value == 1) {
+                                            console.log(i);
+                                            console.log(value);
+                                            console.log(map[i][0]);
+                                        }
+                                        
                                     })
                                 }                                
                             })
