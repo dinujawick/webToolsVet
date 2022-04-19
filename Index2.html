@@ -31426,6 +31426,8 @@
 
             var data = totalRisk;
 
+            console.log(data);
+
             data.forEach(function (d) {
                 d.total = d3.sum(keys, k => +d[k]);
                 console.log(d.total);
