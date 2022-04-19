@@ -141,131 +141,10 @@
 <script>
 
             //d3 old school graph
-            d3.csv("data.csv").then(d => chart(d));
+            //d3.csv("data.csv").then(d => chart(d));
 
             
-            function chart(csv) {
-
-                //console.log(csv);
-
-                var keys = csv.columns.slice(2);
-                console.log(keys);
-
-                var year = [...new Set(csv.map(d => d.Year))]
-                console.log(year);
-
-                var states = [...new Set(csv.map(d => d.State))]
-                console.log(states);
-
-                var options = d3.select("#year").selectAll("option")
-                    .data(year)
-                    .enter().append("option")
-                    .text(d => d)
-
-
-                var svg = d3.select("#chart"),
-                    margin = { top: 35, left: 35, bottom: 0, right: 15 },
-                    width = +svg.attr("width") - margin.left - margin.right,
-                    height = +svg.attr("height") - margin.top - margin.bottom;
-
-                var y = d3.scaleBand()
-                    .range([margin.top, height - margin.bottom])
-                    .padding(0.1)
-                    .paddingOuter(0.2)
-                    .paddingInner(0.2)
-
-                var x = d3.scaleLinear()
-                    .range([margin.left, width - margin.right])
-
-                var yAxis = svg.append("g")
-                    .attr("transform", `translate(${margin.left},0)`)
-                    .attr("class", "y-axis")
-
-                var xAxis = svg.append("g")
-                    .attr("transform", `translate(0,${margin.top})`)
-                    .attr("class", "x-axis")
-
-                var z = d3.scaleOrdinal()
-                    .range(["steelblue", "darkorange", "lightblue"])
-                    .domain(keys);
-
-                update(d3.select("#year").property("value"), 0)
-
-                function update(input, speed) {
-
-                    var data = csv.filter(f => f.Year == input)
-
-                    console.log(data);
-
-                    data.forEach(function (d) {
-                        d.total = d3.sum(keys, k => +d[k])
-                        console.log(d.total);
-                        return d
-                    })
-
-                    x.domain([0, d3.max(data, d => d.total)]).nice();
-
-                    svg.selectAll(".x-axis").transition().duration(speed)
-                        .call(d3.axisTop(x).ticks(null, "s"))
-
-                    data.sort(d3.select("#sort").property("checked")
-                        ? (a, b) => b.total - a.total
-                        : (a, b) => states.indexOf(a.State) - states.indexOf(b.State))
-
-                    y.domain(data.map(d => d.State));
-
-                    svg.selectAll(".y-axis").transition().duration(speed)
-                        .call(d3.axisLeft(y).tickSizeOuter(0))
-
-                    var group = svg.selectAll("g.layer")
-                        .data(d3.stack().keys(keys)(data), d => d.key)
-
-                    group.exit().remove()
-
-                    group.enter().insert("g", ".y-axis").append("g")
-                        .classed("layer", true)
-                        .attr("fill", d => z(d.key));
-
-                    var bars = svg.selectAll("g.layer").selectAll("rect")
-                        .data(d => d, e => e.data.State);
-
-                    bars.exit().remove()
-
-                    bars.enter().append("rect")
-                        .attr("height", y.bandwidth())
-                        .merge(bars)
-                        .transition().duration(speed)
-                        .attr("y", d => y(d.data.State))
-                        .attr("x", d => x(d[0]))
-                        .attr("width", d => x(d[1]) - x(d[0]))
-
-                    var text = svg.selectAll(".text")
-                        .data(data, d => d.State);
-
-                    text.exit().remove()
-
-                    text.enter().append("text")
-                        .attr("class", "text")
-                        .attr("text-anchor", "start")
-                        .merge(text)
-                        .transition().duration(speed)
-                        .attr("y", d => y(d.State) + y.bandwidth() / 2)
-                        .attr("x", d => x(d.total) + 5)
-                        .text(d => d.total)
-                }
-
-                var select = d3.select("#year")
-                    .on("change", function () {
-                        update(this.value, 750)
-                    })
-
-                var checkbox = d3.select("#sort")
-                    .on("click", function () {
-                        update(select.property("value"), 750)
-                    })
-            }
-
-
+            
 
 
             // ATC medicines
@@ -31495,136 +31374,247 @@
 
     }
 
-        //function genGraph(csv) {
+        function genGraph() {
 
-        //    //console.log(csv);
+        var keys = selectedMedGroupList;
 
-        //    var keys = selectedMedGroupList;
-        //    console.log(keys);
+        var risks = ["falls_fracture",
+            "constipation",
+            "urinary_retention",
+            "CNS_depression",
+            "bleeding",
+            "heart_failure",
+            "bradycardia",
+            "CV_events",
+            "respiratory",
+            "hypoglycaemia",
+            "renal_injury",
+            "hypokalemia",
+            "hyperkalemia",
+            "serotonin_syndrome",
+            "angle_closure_glaucoma"];
 
-        //    //var year = [...new Set(csv.map(d => d.Year))]
-        //    //console.log(year);
+        var svg = d3.select("#chart"),
+            margin = { top: 35, left: 35, bottom: 0, right: 15 },
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = +svg.attr("height") - margin.top - margin.bottom;
 
-        //    var states = ["falls_fracture", "constipation", "urinary_retention", "CNS_depression", "bleeding", "heart_failure",
-        //        "bradycardia",
-        //        "CV_events",
-        //        "respiratory",
-        //        "hypoglycaemia",
-        //        "renal_injury",
-        //        "hypokalemia",
-        //        "hyperkalemia",
-        //        "serotonin_syndrome",
-        //        "angle_closure_glaucoma"];
-            
-        //    console.log(states);
+        var y = d3.scaleBand()
+            .range([margin.top, height - margin.bottom])
+            .padding(0.1)
+            .paddingOuter(0.2)
+            .paddingInner(0.2)
 
-        //    //var options = d3.select("#year").selectAll("option")
-        //    //    .data(year)
-        //    //    .enter().append("option")
-        //    //    .text(d => d)
+        var x = d3.scaleLinear()
+            .range([margin.left, width - margin.right])
+
+        var yAxis = svg.append("g")
+            .attr("transform", `translate(${margin.left},0)`)
+            .attr("class", "y-axis")
+
+        var xAxis = svg.append("g")
+            .attr("transform", `translate(0,${margin.top})`)
+            .attr("class", "x-axis")
+
+        var z = d3.scaleOrdinal()
+            .range(["steelblue", "darkorange", "lightblue"])
+            .domain(keys);
+
+        update(0)
+
+        function update(speed) {
+
+            var data = totalRisk;
+
+            data.forEach(function (d) {
+                d.total = d3.sum(keys, k => +d[k])
+                return d
+            })
+
+            //    x.domain([0, d3.max(data, d => d.total)]).nice();
+
+            //    svg.selectAll(".x-axis").transition().duration(speed)
+            //        .call(d3.axisTop(x).ticks(null, "s"))
+
+            //    data.sort(d3.select("#sort").property("checked")
+            //        ? (a, b) => b.total - a.total
+            //        : (a, b) => states.indexOf(a.State) - states.indexOf(b.State))
+
+            //    y.domain(data.map(d => d.State));
+
+            //    svg.selectAll(".y-axis").transition().duration(speed)
+            //        .call(d3.axisLeft(y).tickSizeOuter(0))
+
+            //    var group = svg.selectAll("g.layer")
+            //        .data(d3.stack().keys(keys)(data), d => d.key)
+
+            //    group.exit().remove()
+
+            //    group.enter().insert("g", ".y-axis").append("g")
+            //        .classed("layer", true)
+            //        .attr("fill", d => z(d.key));
+
+            //    var bars = svg.selectAll("g.layer").selectAll("rect")
+            //        .data(d => d, e => e.data.State);
+
+            //    bars.exit().remove()
+
+            //    bars.enter().append("rect")
+            //        .attr("height", y.bandwidth())
+            //        .merge(bars)
+            //        .transition().duration(speed)
+            //        .attr("y", d => y(d.data.State))
+            //        .attr("x", d => x(d[0]))
+            //        .attr("width", d => x(d[1]) - x(d[0]))
+
+            //    var text = svg.selectAll(".text")
+            //        .data(data, d => d.State);
+
+            //    text.exit().remove()
+
+            //    text.enter().append("text")
+            //        .attr("class", "text")
+            //        .attr("text-anchor", "start")
+            //        .merge(text)
+            //        .transition().duration(speed)
+            //        .attr("y", d => y(d.State) + y.bandwidth() / 2)
+            //        .attr("x", d => x(d.total) + 5)
+            //        .text(d => d.total)
+            //}
+
+            //var select = d3.select("#year")
+            //    .on("change", function () {
+            //        update(this.value, 750)
+            //    })
+
+            //var checkbox = d3.select("#sort")
+            //    .on("click", function () {
+            //        update(select.property("value"), 750)
+            //    })
+        }
+    }
 
 
-        //    var svg = d3.select("#chart"),
-        //        margin = { top: 35, left: 35, bottom: 0, right: 15 },
-        //        width = +svg.attr("width") - margin.left - margin.right,
-        //        height = +svg.attr("height") - margin.top - margin.bottom;
+    //    function chart(csv) {
 
-        //    var y = d3.scaleBand()
-        //        .range([margin.top, height - margin.bottom])
-        //        .padding(0.1)
-        //        .paddingOuter(0.2)
-        //        .paddingInner(0.2)
+    //    //console.log(csv);
 
-        //    var x = d3.scaleLinear()
-        //        .range([margin.left, width - margin.right])
+    //    var keys = csv.columns.slice(2);
+    //    console.log(keys);
 
-        //    var yAxis = svg.append("g")
-        //        .attr("transform", `translate(${margin.left},0)`)
-        //        .attr("class", "y-axis")
+    //    var year = [...new Set(csv.map(d => d.Year))]
+    //    console.log(year);
 
-        //    var xAxis = svg.append("g")
-        //        .attr("transform", `translate(0,${margin.top})`)
-        //        .attr("class", "x-axis")
+    //    var states = [...new Set(csv.map(d => d.State))]
+    //    console.log(states);
 
-        //    var z = d3.scaleOrdinal(d3.schemeCategory20)
-        //        .range(0,19)
-        //        .domain(keys);
+    //    var options = d3.select("#year").selectAll("option")
+    //        .data(year)
+    //        .enter().append("option")
+    //        .text(d => d)
 
-        //    /*update(d3.select("#year").property("value"), 0)*/
 
-        //    function update(input, speed) {
+    //    var svg = d3.select("#chart"),
+    //        margin = { top: 35, left: 35, bottom: 0, right: 15 },
+    //        width = +svg.attr("width") - margin.left - margin.right,
+    //        height = +svg.attr("height") - margin.top - margin.bottom;
 
-        //        var data = csv.filter(f => f.Year == input)
+    //    var y = d3.scaleBand()
+    //        .range([margin.top, height - margin.bottom])
+    //        .padding(0.1)
+    //        .paddingOuter(0.2)
+    //        .paddingInner(0.2)
 
-        //        console.log(data);
+    //    var x = d3.scaleLinear()
+    //        .range([margin.left, width - margin.right])
 
-        //        data.forEach(function (d) {
-        //            d.total = d3.sum(keys, k => +d[k])
-        //            console.log(d);
-        //            return d
-        //        })
+    //    var yAxis = svg.append("g")
+    //        .attr("transform", `translate(${margin.left},0)`)
+    //        .attr("class", "y-axis")
 
-        //        x.domain([0, d3.max(data, d => d.total)]).nice();
+    //    var xAxis = svg.append("g")
+    //        .attr("transform", `translate(0,${margin.top})`)
+    //        .attr("class", "x-axis")
 
-        //        svg.selectAll(".x-axis").transition().duration(speed)
-        //            .call(d3.axisTop(x).ticks(null, "s"))
+    //    var z = d3.scaleOrdinal()
+    //        .range(["steelblue", "darkorange", "lightblue"])
+    //        .domain(keys);
 
-        //        data.sort(d3.select("#sort").property("checked")
-        //            ? (a, b) => b.total - a.total
-        //            : (a, b) => states.indexOf(a.State) - states.indexOf(b.State))
+    //    update(d3.select("#year").property("value"), 0)
 
-        //        y.domain(data.map(d => d.State));
+    //    function update(input, speed) {
 
-        //        svg.selectAll(".y-axis").transition().duration(speed)
-        //            .call(d3.axisLeft(y).tickSizeOuter(0))
+    //        var data = csv.filter(f => f.Year == input)
 
-        //        var group = svg.selectAll("g.layer")
-        //            .data(d3.stack().keys(keys)(data), d => d.key)
+    //        console.log(data);
 
-        //        group.exit().remove()
+    //        data.forEach(function (d) {
+    //            d.total = d3.sum(keys, k => +d[k])
+    //            return d
+    //        })
 
-        //        group.enter().insert("g", ".y-axis").append("g")
-        //            .classed("layer", true)
-        //            .attr("fill", d => z(d.key));
+    //        x.domain([0, d3.max(data, d => d.total)]).nice();
 
-        //        var bars = svg.selectAll("g.layer").selectAll("rect")
-        //            .data(d => d, e => e.data.State);
+    //        svg.selectAll(".x-axis").transition().duration(speed)
+    //            .call(d3.axisTop(x).ticks(null, "s"))
 
-        //        bars.exit().remove()
+    //        data.sort(d3.select("#sort").property("checked")
+    //            ? (a, b) => b.total - a.total
+    //            : (a, b) => states.indexOf(a.State) - states.indexOf(b.State))
 
-        //        bars.enter().append("rect")
-        //            .attr("height", y.bandwidth())
-        //            .merge(bars)
-        //            .transition().duration(speed)
-        //            .attr("y", d => y(d.data.State))
-        //            .attr("x", d => x(d[0]))
-        //            .attr("width", d => x(d[1]) - x(d[0]))
+    //        y.domain(data.map(d => d.State));
 
-        //        var text = svg.selectAll(".text")
-        //            .data(data, d => d.State);
+    //        svg.selectAll(".y-axis").transition().duration(speed)
+    //            .call(d3.axisLeft(y).tickSizeOuter(0))
 
-        //        text.exit().remove()
+    //        var group = svg.selectAll("g.layer")
+    //            .data(d3.stack().keys(keys)(data), d => d.key)
 
-        //        text.enter().append("text")
-        //            .attr("class", "text")
-        //            .attr("text-anchor", "start")
-        //            .merge(text)
-        //            .transition().duration(speed)
-        //            .attr("y", d => y(d.State) + y.bandwidth() / 2)
-        //            .attr("x", d => x(d.total) + 5)
-        //            .text(d => d.total)
-        //    }
+    //        group.exit().remove()
 
-        //    var select = d3.select("#year")
-        //        .on("change", function () {
-        //            update(this.value, 750)
-        //        })
+    //        group.enter().insert("g", ".y-axis").append("g")
+    //            .classed("layer", true)
+    //            .attr("fill", d => z(d.key));
 
-        //    var checkbox = d3.select("#sort")
-        //        .on("click", function () {
-        //            update(select.property("value"), 750)
-        //        })
-        //}
+    //        var bars = svg.selectAll("g.layer").selectAll("rect")
+    //            .data(d => d, e => e.data.State);
+
+    //        bars.exit().remove()
+
+    //        bars.enter().append("rect")
+    //            .attr("height", y.bandwidth())
+    //            .merge(bars)
+    //            .transition().duration(speed)
+    //            .attr("y", d => y(d.data.State))
+    //            .attr("x", d => x(d[0]))
+    //            .attr("width", d => x(d[1]) - x(d[0]))
+
+    //        var text = svg.selectAll(".text")
+    //            .data(data, d => d.State);
+
+    //        text.exit().remove()
+
+    //        text.enter().append("text")
+    //            .attr("class", "text")
+    //            .attr("text-anchor", "start")
+    //            .merge(text)
+    //            .transition().duration(speed)
+    //            .attr("y", d => y(d.State) + y.bandwidth() / 2)
+    //            .attr("x", d => x(d.total) + 5)
+    //            .text(d => d.total)
+    //    }
+
+    //    var select = d3.select("#year")
+    //        .on("change", function () {
+    //            update(this.value, 750)
+    //        })
+
+    //    var checkbox = d3.select("#sort")
+    //        .on("click", function () {
+    //            update(select.property("value"), 750)
+    //        })
+    //}
+        
         function addOnlyMappedMedsToSelectionList(atcLevel,atcDescr) {
                 $(medMap).each(function (index, item) {
 
