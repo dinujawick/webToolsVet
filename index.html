@@ -114,17 +114,17 @@
     <div class="container">
         <h1 id="pageHeader">Complex Risk Calculator</h1>
         <div class="row">
-            <div class="col-4">
-                <div class="vstack gap-2 mx-auto" id="menu">
+            <!--<div class="col-4">
+                <div class="vstack gap-2 mx-auto" id="menu">-->
                     <!--<button onclick="myFunction()" class="dropbtn btn">List your medicines: </button>-->
-                    <input type="text" placeholder="Select the medicines" id="myInput" onclick="myFunction()" onkeyup="filterFunction()">
+                    <!--<input type="text" placeholder="Select the medicines" id="myInput" onclick="myFunction()" onkeyup="filterFunction()">
                     <div id="myDropdown" class="dropdown-content dropdown-scrollbar">
                     </div>
                     <div class="accordion" id="medGroup">
                     </div>
                 </div>
-            </div>
-            <div class="col-8">
+            </div>-->
+            <div class="col-12">
                 <div id="stackGraph">
                     <!--<svg id="chart" width="650" height="420"></svg>-->
                     <!--Select year:
@@ -31686,7 +31686,7 @@
             height = 400, // outer height, in pixels
             xDomain, // array of x-values
             xRange = [marginLeft, width - marginRight], // [left, right]
-            xPadding = 0.5, // amount of x-range to reserve to separate bars
+            xPadding = 0.1, // amount of x-range to reserve to separate bars
             yType = d3.scaleLinear, // type of y-scale
             yDomain, // [ymin, ymax]
             yRange = [height - marginBottom, marginTop], // [bottom, top]
