@@ -31641,8 +31641,10 @@
 				y: d => d.risk,
                 z: d => d.medGroup,
                 xLabel: "Total Risk →",
-                xDomain: [0, d3.max(data, d => d.total) + 2],
-				yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+                xDomain: data.map(d => d.Risk),
+                yDomain: [0, d3.max(data, d => d.total) + 2], //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+                //xDomain: [0, d3.max(data, d => d.total) + 2],
+				//yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
 				zDomain: keys,
 				colors: d3.schemeSpectral[keys.length],
 				width: 860
