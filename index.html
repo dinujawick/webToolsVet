@@ -31672,7 +31672,7 @@
 		          colors = d3.schemeCategory10, // array of colors
 		} = {}) {
 			// Compute values.
-			const X = d3.map(data, x);
+			const X = d3.map(data, x) + 2;
 			const Y = d3.map(data, y);
 			const Z = d3.map(data, z);
 
