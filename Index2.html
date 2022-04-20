@@ -31636,7 +31636,7 @@
                 .paddingInner(0.2)
 
             var x = d3.scaleLinear()
-                .range([margin.left, margin.right])
+                .range([margin.left, width - margin.right])
 
             var yAxis = svg.append("g")
                 .attr("transform", `translate(${margin.left},0)`)
@@ -31667,7 +31667,7 @@
                         max = value;
                 })
 
-                x.domain([0, max + 2]).nice();
+                x.domain([0, max + 2]);
 
                 svg.selectAll(".x-axis").transition().duration(speed)
                        .call(d3.axisTop(x).ticks(null, "s"))
