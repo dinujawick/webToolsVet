@@ -31667,7 +31667,7 @@
                         max = value;
                 })
 
-                x.domain([0, 15]).nice();
+                x.domain([0, 10 ]).nice();
 
                 svg.selectAll(".x-axis").transition().duration(speed)
                        .call(d3.axisTop(x).ticks(null, "s"))
