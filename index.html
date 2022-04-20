@@ -31629,19 +31629,19 @@
             stateages = ages.flatMap(age => states.map(d => ({ state: d.Risk, age, population: d[age] }))) // pivot
             console.log(states.map(d=>d.Risk));
 
-			//chart = StackedBarChart(stateages, {
-			//	x: d => d.population ,
-			//	y: d => d.state,
-			//	z: d => d.age,
-			//	xLabel: "Med Group Count →",
-			//	yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-			//	zDomain: ages,
-			//	colors: d3.schemeSpectral[ages.length],
-			//	width: 860
-			//})
-			//key = Legend(chart.scales.color, { title: "Medicines Groups" })
-			//$('#legend').append(key);
-			//$('#chart').append(chart);
+			chart = StackedBarChart(stateages, {
+				x: d => d.population ,
+				y: d => d.state,
+				z: d => d.age,
+				xLabel: "Med Group Count →",
+				yDomain: states.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+				zDomain: ages,
+				colors: d3.schemeSpectral[ages.length],
+				width: 860
+			})
+			key = Legend(chart.scales.color, { title: "Medicines Groups" })
+			$('#legend').append(key);
+			$('#chart').append(chart);
 		}
 
 		// Copyright 2021 Observable, Inc.
