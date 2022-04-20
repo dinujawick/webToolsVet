@@ -31636,7 +31636,7 @@
                 .paddingInner(0.2)
 
             var x = d3.scaleLinear()
-                .range([margin.left, width - margin.right])
+                .range([margin.left, margin.right])
 
             var yAxis = svg.append("g")
                 .attr("transform", `translate(${margin.left},0)`)
