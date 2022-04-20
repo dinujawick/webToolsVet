@@ -31426,11 +31426,11 @@
 
             var data = totalRisk;
 
-            //console.log(data);
+            console.log(data);
 
             data.forEach(function (d) {
                 d.total = d3.sum(keys, k => +d[k]);
-                //console.log(d.total);
+                console.log(d.total);
                 return d
             })
 
@@ -31722,6 +31722,7 @@
 
                 }
             })
+            genGraph();
         }
         function createAccordionItem(medGroup) {
                 $accordion = $('<div>')
