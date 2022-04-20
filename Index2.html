@@ -31656,26 +31656,28 @@
 
                 var data = totalRisk;
 
+                
+                var max=0;
+
                 console.log(data);
 
                 $.each(data, function (key,value) {
 
-                    
-                    /*d.total = d3.sum(keys, k => +d[k]);*/
-                    console.log(key,value);
-                    /*return d*/
+                    if (value > max)
+                        max = value;
                 })
 
-                //    x.domain([0, d3.max(data, d => d.total)]).nice();
+                x.domain([0, max + 2]).nice();
 
-                //    svg.selectAll(".x-axis").transition().duration(speed)
-                //        .call(d3.axisTop(x).ticks(null, "s"))
+                svg.selectAll(".x-axis").transition().duration(speed)
+                       .call(d3.axisTop(x).ticks(null, "s"))
 
                 //    data.sort(d3.select("#sort").property("checked")
                 //        ? (a, b) => b.total - a.total
                 //        : (a, b) => states.indexOf(a.State) - states.indexOf(b.State))
 
-                //    y.domain(data.map(d => d.State));
+                console.log(data.map());
+                //   y.domain(data.map(d => d.State));
 
                 //    svg.selectAll(".y-axis").transition().duration(speed)
                 //        .call(d3.axisLeft(y).tickSizeOuter(0))
