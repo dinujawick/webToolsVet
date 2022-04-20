@@ -1,5 +1,5 @@
 Risk,H2Blockers,Laxatives,Loperamide,Prochlorperazine
-FallsFracture,1,0,0,1
+Falls_Fracture,1,0,0,1
 Constipation,0,0,1,0
 Urinary_Retention,0,0,1,0
 CNS_Depression,0,0,0,1

@@ -31626,7 +31626,7 @@
 			
 
             keys = data.columns.slice(1)
-            console.log(keys);
+            
 
             data.forEach(function (d) {
                d.total = d3.sum(keys, k => +d[k])
@@ -31634,7 +31634,8 @@
              })
 
             riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
-           
+
+
             //Vertical Stacked Bar Chart
             chart = StackedBarChart(riskmedGroups, {
                 x: d => d.risk,
@@ -31645,7 +31646,6 @@
                 yLabel: "↑ Total Risk Count",
                 zDomain: keys,
                 colors: d3.schemeSpectral[keys.length],
-                width: 1500,
                 height: 500
             })
 
