@@ -31635,18 +31635,34 @@
 
             riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
            
-
-            chart = StackedBarChart(riskmedGroups, {
-				x: d => d.status ,
-				y: d => d.risk,
+            //Vertical Stacked Bar Chart
+            chart = StackedBarChart(stateages, {
+                x: d => d.risk,
+                y: d => d.status,
                 z: d => d.medGroup,
-                xLabel: "Total Risk →",
-                xDomain: [0, d3.max(data, d => d.total) + 2],
-				yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-				zDomain: keys,
-				colors: d3.schemeSpectral[keys.length],
-				width: 860
-			},0)
+                xDomain: data.map(d => d.Risk),
+                yDomain: [0, d3.max(data, d => d.total) + 2],
+                yLabel: "↑ Total Risk Count",
+                zDomain: keys,
+                colors: d3.schemeSpectral[keys.length],
+                width,
+                height: 500
+            })
+
+
+            //Horizontal Stacked Bar Chart
+            //chart = StackedBarChart(riskmedGroups, {
+			//	x: d => d.status ,
+			//	y: d => d.risk,
+            //z: d => d.medGroup,
+            //xLabel: "Total Risk →",
+            //xDomain: [0, d3.max(data, d => d.total) + 2],
+			//	yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+			//	zDomain: keys,
+			//	colors: d3.schemeSpectral[keys.length],
+			//	width: 860
+			//},0)
+
 			key = Legend(chart.scales.color, { title: "Med Groups" })
 			$('#legend').append(key);
 			$('#chart').append(chart);
