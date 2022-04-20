@@ -153,7 +153,7 @@
                 var keys = csv.columns.slice(2);
 
                 var year = [...new Set(csv.map(d => d.Year))]
-                var states = [...new Set(csv.map(d => d.Risk))]
+                var states = [...new Set(csv.map(d => d.States))]
                 console.log(states);
 
                 var options = d3.select("#year").selectAll("option")
