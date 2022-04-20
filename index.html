@@ -31636,7 +31636,7 @@
             riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
            
             //Vertical Stacked Bar Chart
-            chart = StackedBarChart(stateages, {
+            chart = StackedBarChart(riskmedGroups, {
                 x: d => d.risk,
                 y: d => d.status,
                 z: d => d.medGroup,
