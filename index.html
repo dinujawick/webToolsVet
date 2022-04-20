@@ -31646,7 +31646,7 @@
 				zDomain: keys,
 				colors: d3.schemeSpectral[keys.length],
 				width: 860
-			})
+			},0)
 			key = Legend(chart.scales.color, { title: "Med Groups" })
 			$('#legend').append(key);
 			$('#chart').append(chart);
