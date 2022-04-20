@@ -31658,11 +31658,12 @@
 
                 console.log(data);
 
-                $.each(data, function (d) {
+                $.each(data, function (key,value) {
 
+                    
                     /*d.total = d3.sum(keys, k => +d[k]);*/
-                    console.log(d);
-                    return d
+                    console.log(key,value);
+                    /*return d*/
                 })
 
                 //    x.domain([0, d3.max(data, d => d.total)]).nice();
