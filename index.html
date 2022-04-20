@@ -208,48 +208,48 @@
                         ? (a, b) => b.total - a.total
                         : (a, b) => risks.indexOf(a.Risk) - risks.indexOf(b.Risk))
 
-                //    y.domain(data.map(d => d.State));
+                    y.domain(data.map(d => d.Risk));
 
-                //    svg.selectAll(".y-axis").transition().duration(speed)
-                //        .call(d3.axisLeft(y).tickSizeOuter(0))
+                    svg.selectAll(".y-axis").transition().duration(speed)
+                        .call(d3.axisLeft(y).tickSizeOuter(0))
 
-                //    var group = svg.selectAll("g.layer")
-                //        .data(d3.stack().keys(keys)(data), d => d.key)
+                    var group = svg.selectAll("g.layer")
+                        .data(d3.stack().keys(keys)(data), d => d.key)
 
-                //    console.log(group);
+                
 
-                //    group.exit().remove()
+                    group.exit().remove()
 
-                //    group.enter().insert("g", ".y-axis").append("g")
-                //        .classed("layer", true)
-                //        .attr("fill", d => z(d.key));
+                    group.enter().insert("g", ".y-axis").append("g")
+                        .classed("layer", true)
+                        .attr("fill", d => z(d.key));
 
-                //    var bars = svg.selectAll("g.layer").selectAll("rect")
-                //        .data(d => d, e => e.data.State);
+                    var bars = svg.selectAll("g.layer").selectAll("rect")
+                        .data(d => d, e => e.data.Risk);
 
-                //    bars.exit().remove()
+                    bars.exit().remove()
 
-                //    bars.enter().append("rect")
-                //        .attr("height", y.bandwidth())
-                //        .merge(bars)
-                //        .transition().duration(speed)
-                //        .attr("y", d => y(d.data.State))
-                //        .attr("x", d => x(d[0]))
-                //        .attr("width", d => x(d[1]) - x(d[0]))
+                    bars.enter().append("rect")
+                        .attr("height", y.bandwidth())
+                        .merge(bars)
+                        .transition().duration(speed)
+                        .attr("y", d => y(d.data.Risk))
+                        .attr("x", d => x(d[0]))
+                        .attr("width", d => x(d[1]) - x(d[0]))
 
-                //    var text = svg.selectAll(".text")
-                //        .data(data, d => d.State);
+                    var text = svg.selectAll(".text")
+                        .data(data, d => d.Risk);
 
-                //    text.exit().remove()
+                    text.exit().remove()
 
-                //    text.enter().append("text")
-                //        .attr("class", "text")
-                //        .attr("text-anchor", "start")
-                //        .merge(text)
-                //        .transition().duration(speed)
-                //        .attr("y", d => y(d.State) + y.bandwidth() / 2)
-                //        .attr("x", d => x(d.total) + 5)
-                //        .text(d => d.total)
+                    text.enter().append("text")
+                        .attr("class", "text")
+                        .attr("text-anchor", "start")
+                        .merge(text)
+                        .transition().duration(speed)
+                        .attr("y", d => y(d.Risk) + y.bandwidth() / 2)
+                        .attr("x", d => x(d.total) + 5)
+                        .text(d => d.total)
                 }
 
                 //var select = d3.select("#year")
@@ -257,10 +257,10 @@
                 //        update(this.value, 750)
                 //    })
 
-                //var checkbox = d3.select("#sort")
-                //    .on("click", function () {
-                //        update(select.property("value"), 750)
-                //    })
+                var checkbox = d3.select("#sort")
+                    .on("click", function () {
+                        update(select.property("value"), 750)
+                    })
             }
 
             // ATC medicines
