@@ -194,7 +194,7 @@
 
             //        var data = csv;
 
-            //    data.forEach(function (d) {
+            //        data.forEach(function (d) {
             //            d.total = d3.sum(keys, k => +d[k])
             //            return d
             //        })
@@ -31620,24 +31620,28 @@
         d3.csv("test.csv").then(d => initialization(d));
 
 		function initialization(data) {
-			states = data;
-            console.log(states);
+			
 
-            ages = states.columns.slice(1)
-            console.log(ages);
+            keys = data.columns.slice(1)
+            console.log(keys);
 
-            stateages = ages.flatMap(age => states.map(d => ({ state: d.Risk, age, population: d[age] }))) // pivot
-            console.log(d3.max(states.map(d => d.population)) + 2);
+            data.forEach(function (d) {
+               d.total = d3.sum(keys, k => +d[k])
+               return d
+             })
 
-			chart = StackedBarChart(stateages, {
-				x: d => d.population ,
-				y: d => d.state,
-				z: d => d.age,
+            riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
+            console.log(d3.max(data, d => d.total));
+
+            chart = StackedBarChart(riskmedGroups, {
+				x: d => d.status ,
+				y: d => d.risk,
+                z: d => d.medGroup,
                 xLabel: "Med Group Count →",
                 //xDomain: [0, d3.max(stateages.map(d => d.population)) + 2],
-				yDomain: states.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-				zDomain: ages,
-				colors: d3.schemeSpectral[ages.length],
+				yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+				zDomain: keys,
+				colors: d3.schemeSpectral[keys.length],
 				width: 860
 			})
 			key = Legend(chart.scales.color, { title: "Medicines Groups" })
