@@ -31729,7 +31729,10 @@
             if (yDomain === undefined) yDomain = d3.extent(series.flat(2));
 
             // Construct scales, axes, and formats.
+            console.log(xDomain);
+            console.log(xRange);
             const xScale = d3.scaleBand(xDomain, xRange).paddingInner(xPadding);
+            console.log(xScale);
             const yScale = yType(yDomain, yRange);
             const color = d3.scaleOrdinal(zDomain, colors);
             const xAxis = d3.axisBottom(xScale).tickSizeOuter(0);
