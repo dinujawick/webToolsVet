@@ -31756,7 +31756,7 @@
 
             data.sort(d3.select("#sort").property("checked")
                 ? (a, b) => b.total - a.total
-                : (a, b) => data.indexOf(a.Risk) - states.indexOf(b.Risk))
+                : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
 
 			const bar = svg.append("g")
 				.selectAll("g")
