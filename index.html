@@ -31627,7 +31627,7 @@
             console.log(ages);
 
             stateages = ages.flatMap(age => states.map(d => ({ state: d.Risk, age, population: d[age] }))) // pivot
-            console.log(d3.groupSort(stateages, d => d.state));
+            console.log(states.map(d=>d.Risk));
 
 			//chart = StackedBarChart(stateages, {
 			//	x: d => d.population ,
