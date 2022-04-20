@@ -31631,14 +31631,14 @@
              })
 
             riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
-            console.log(d3.max(data, d => d.total));
+           
 
             chart = StackedBarChart(riskmedGroups, {
 				x: d => d.status ,
 				y: d => d.risk,
                 z: d => d.medGroup,
                 xLabel: "Med Group Count →",
-                //xDomain: [0, d3.max(stateages.map(d => d.population)) + 2],
+                xDomain: [0, d3.max(data, d => d.total) + 2],
 				yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
 				zDomain: keys,
 				colors: d3.schemeSpectral[keys.length],
