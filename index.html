@@ -31633,7 +31633,8 @@
 				x: d => d.population ,
 				y: d => d.state,
 				z: d => d.age,
-				xLabel: "Med Group Count →",
+                xLabel: "Med Group Count →",
+                xDomain: [0 , d3.sum(D, d => d.population) + 2],
 				yDomain: states.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
 				zDomain: ages,
 				colors: d3.schemeSpectral[ages.length],
@@ -31672,7 +31673,7 @@
 		          colors = d3.schemeCategory10, // array of colors
 		} = {}) {
 			// Compute values.
-			const X = d3.map(data, x) + 2;
+			const X = d3.map(data, x);
 			const Y = d3.map(data, y);
 			const Z = d3.map(data, z);
 
