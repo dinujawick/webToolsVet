@@ -31637,8 +31637,10 @@
            
 
             chart = StackedBarChart(riskmedGroups, {
-				x: d => d.status ,
-				y: d => d.risk,
+                x: d => d.risk,
+                y: d => d.status,
+				//x: d => d.status ,
+				//y: d => d.risk,
                 z: d => d.medGroup,
                 xLabel: "Total Risk →",
                 xDomain: data.map(d => d.Risk),
