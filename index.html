@@ -31621,23 +31621,27 @@
 
 		function initialization(data) {
 			states = data;
+            console.log(states);
 
-			ages = states.columns.slice(1)
-			stateages = ages.flatMap(age => states.map(d => ({ state: d.name, age, population: d[age] }))) // pivot
+            ages = states.columns.slice(1)
+            console.log(ages);
 
-			chart = StackedBarChart(stateages, {
-				x: d => d.population / 1e6,
-				y: d => d.state,
-				z: d => d.age,
-				xLabel: "Population (millions) →",
-				yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-				zDomain: ages,
-				colors: d3.schemeSpectral[ages.length],
-				width: 860
-			})
-			key = Legend(chart.scales.color, { title: "Age (years)" })
-			$('#legend').append(key);
-			$('#chart').append(chart);
+            stateages = ages.flatMap(age => states.map(d => ({ state: d.name, age, population: d[age] }))) // pivot
+            console.log(stateages);
+
+			//chart = StackedBarChart(stateages, {
+			//	x: d => d.population / 1e6,
+			//	y: d => d.state,
+			//	z: d => d.age,
+			//	xLabel: "Population (millions) →",
+			//	yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+			//	zDomain: ages,
+			//	colors: d3.schemeSpectral[ages.length],
+			//	width: 860
+			//})
+			//key = Legend(chart.scales.color, { title: "Age (years)" })
+			//$('#legend').append(key);
+			//$('#chart').append(chart);
 		}
 
 		// Copyright 2021 Observable, Inc.
@@ -31761,10 +31765,10 @@
 			return Object.assign(svg.node(), { scales: { color } });
 		}
 
-		      // Copyright 2021, Observable Inc.
-		      // Released under the ISC license.
-		      // https://observablehq.com/@d3/color-legend
-		      function Legend(color, {
+	    // Copyright 2021, Observable Inc.
+		// Released under the ISC license.
+		// https://observablehq.com/@d3/color-legend
+	    function Legend(color, {
 		          title,
 		          tickSize = 6,
 		          width = 320,
