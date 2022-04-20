@@ -31664,7 +31664,7 @@
                     return d
                 })
 
-                //    x.domain([0, d3.max(data, d => d.total)]).nice();
+                x.domain([0, d3.max(data, d => d.total)]).nice();
 
                 //    svg.selectAll(".x-axis").transition().duration(speed)
                 //        .call(d3.axisTop(x).ticks(null, "s"))
