@@ -31634,7 +31634,7 @@
 				y: d => d.state,
 				z: d => d.age,
 				xLabel: "Med Group Count →",
-				yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population)), // sort y by x
+                yDomain: stateages.map(d => d.Risk), // sort y by x data.map(d => d.Risk)
 				zDomain: ages,
 				colors: d3.schemeSpectral[ages.length],
 				width: 860
