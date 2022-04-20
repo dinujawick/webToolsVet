@@ -31667,7 +31667,7 @@
                         max = value;
                 })
 
-                x.domain([0, 10 ]).nice();
+                x.domain([0, max + 2 ]).nice();
 
                 svg.selectAll(".x-axis").transition().duration(speed)
                        .call(d3.axisTop(x).ticks(null, "s"))
@@ -31679,8 +31679,9 @@
                 //console.log(data.map());
                 //   y.domain(data.map(d => d.State));
 
-                //    svg.selectAll(".y-axis").transition().duration(speed)
-                //        .call(d3.axisLeft(y).tickSizeOuter(0))
+                y.domain(risks);
+                svg.selectAll(".y-axis").transition().duration(speed)
+                        .call(d3.axisLeft(y).tickSizeOuter(0))
 
                 //    var group = svg.selectAll("g.layer")
                 //        .data(d3.stack().keys(keys)(data), d => d.key)
