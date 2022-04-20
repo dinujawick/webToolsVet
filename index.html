@@ -31626,7 +31626,7 @@
             ages = states.columns.slice(1)
             console.log(ages);
 
-            stateages = ages.flatMap(age => states.map(d => ({ state: d.name, age, population: d[age] }))) // pivot
+            stateages = ages.flatMap(age => states.map(d => ({ state: d.Risk, age, population: d[age] }))) // pivot
             console.log(stateages);
 
 			//chart = StackedBarChart(stateages, {
