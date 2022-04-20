@@ -201,12 +201,12 @@
 
                     x.domain([0, d3.max(data, d => d.total) + 2]).nice();
 
-                //    svg.selectAll(".x-axis").transition().duration(speed)
-                //        .call(d3.axisTop(x).ticks(null, "s"))
+                svg.selectAll(".x-axis").transition().duration(speed)
+                        .call(d3.axisTop(x).ticks(null, "s"))
 
-                //    data.sort(d3.select("#sort").property("checked")
-                //        ? (a, b) => b.total - a.total
-                //        : (a, b) => states.indexOf(a.State) - states.indexOf(b.State))
+                    data.sort(d3.select("#sort").property("checked")
+                        ? (a, b) => b.total - a.total
+                        : (a, b) => risks.indexOf(a.Risk) - risks.indexOf(b.Risk))
 
                 //    y.domain(data.map(d => d.State));
 
