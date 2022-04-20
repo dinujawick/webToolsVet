@@ -31656,9 +31656,16 @@
 
                 var data = totalRisk;
 
-                console.log(d3.max(data));
+                console.log(data);
 
-                //x.domain([0, d3.max(data, d => d.value)]).nice();
+                $.each(data, function (d) {
+
+                    /*d.total = d3.sum(keys, k => +d[k]);*/
+                    console.log(d);
+                    return d
+                })
+
+                //    x.domain([0, d3.max(data, d => d.total)]).nice();
 
                 //    svg.selectAll(".x-axis").transition().duration(speed)
                 //        .call(d3.axisTop(x).ticks(null, "s"))
