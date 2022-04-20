@@ -133,7 +133,10 @@
                     <!--<input type="checkbox" id="sort">
                     Toggle sort-->
                     <div id="legend"></div>
-                    <div id="chart"></div>
+                    <div id="chart">
+                        <input type="checkbox" id="sort">
+                        Toggle sort
+                    </div>
                 </div>
             </div>
         </div>
@@ -31637,7 +31640,7 @@
 				x: d => d.status ,
 				y: d => d.risk,
                 z: d => d.medGroup,
-                xLabel: "Med Group Count →",
+                xLabel: "Total Risk →",
                 xDomain: [0, d3.max(data, d => d.total) + 2],
 				yDomain: data.map(d=>d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
 				zDomain: keys,
