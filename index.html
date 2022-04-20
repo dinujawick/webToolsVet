@@ -31678,7 +31678,7 @@
 			xFormat, // a format specifier string for the x-axis
 			xLabel, // a label for the x-axis
 		          colors = d3.schemeCategory10, // array of colors
-		} = {}) {
+		} = {},speed) {
 			// Compute values.
 			const X = d3.map(data, x);
 			const Y = d3.map(data, y);
@@ -31736,8 +31736,10 @@
 				.attr("viewBox", [0, 0, width, height])
 				.attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-			svg.append("g")
-				.attr("transform", `translate(0,${marginTop})`)
+            //X Axis Graphical representation
+			var xAxisG = svg.append("g")
+                .attr("transform", `translate(0,${marginTop})`)
+                .attr("class","x-axis")
 				.call(xAxis)
 				.call(g => g.select(".domain").remove())
 				.call(g => g.selectAll(".tick line").clone()
@@ -31748,7 +31750,13 @@
 					.attr("y", -22)
 					.attr("fill", "currentColor")
 					.attr("text-anchor", "end")
-					.text(xLabel));
+                    .text(xLabel));
+
+            svg.selectAll(".x-axis").transition().duration(speed);
+
+            data.sort(d3.select("#sort").property("checked")
+                ? (a, b) => b.total - a.total
+                : (a, b) => data.indexOf(a.Risk) - states.indexOf(b.Risk))
 
 			const bar = svg.append("g")
 				.selectAll("g")
@@ -31766,9 +31774,13 @@
 			if (title) bar.append("title")
 				.text(({ i }) => title(i));
 
-			svg.append("g")
-				.attr("transform", `translate(${xScale(0)},0)`)
+            //Y Axis Graphical representation
+			var yAxisG = svg.append("g")
+                .attr("transform", `translate(${xScale(0)},0)`)
+                .attr("class","y-axis")
 				.call(yAxis);
+
+
 
 			return Object.assign(svg.node(), { scales: { color } });
 		}
