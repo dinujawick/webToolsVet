@@ -31627,7 +31627,7 @@
             console.log(ages);
 
             stateages = ages.flatMap(age => states.map(d => ({ state: d.Risk, age, population: d[age] }))) // pivot
-            console.log(d3.max(stateages.map(d => d.population)) + 2);
+            console.log(d3.max(states.map(d => d.population)) + 2);
 
 			chart = StackedBarChart(stateages, {
 				x: d => d.population ,
