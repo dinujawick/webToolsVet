@@ -31634,12 +31634,12 @@
 				y: d => d.state,
 				z: d => d.age,
 				xLabel: "Med Group Count →",
-				yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+				yDomain: d3.groupSort(stateages, D => d3.sum(D, d => d.population)), // sort y by x
 				zDomain: ages,
 				colors: d3.schemeSpectral[ages.length],
 				width: 860
 			})
-			key = Legend(chart.scales.color, { title: "Age (years)" })
+			key = Legend(chart.scales.color, { title: "Medicines Groups" })
 			$('#legend').append(key);
 			$('#chart').append(chart);
 		}
