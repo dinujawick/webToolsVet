@@ -31658,7 +31658,7 @@
 
                 console.log(data);
 
-                data.forEach(function (d) {
+                $.each(data,function (d) {
                     d.total = d3.sum(keys, k => +d[k]);
                     console.log(d.total);
                     return d
