@@ -31938,7 +31938,7 @@
                 : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
 
 
-			const bar = svg.append("g")
+			var bar = svg.append("g")
 				.selectAll("g")
 				.data(series)
 				.join("g")
@@ -31950,7 +31950,8 @@
 				.attr("y", ({ i }) => yScale(Y[i]))
 				.attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
                 .attr("height", yScale.bandwidth())
-                
+
+            bar.transition().duration(speed);
 
 			if (title) bar.append("title")
 				.text(({ i }) => title(i));
