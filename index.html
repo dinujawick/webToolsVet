@@ -31899,15 +31899,7 @@
 			const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
 			const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
-			// Compute titles.
-			if (title === undefined) {
-				const formatValue = xScale.tickFormat(100, xFormat);
-				title = i => `${Y[i]}\n${Z[i]}\n${formatValue(X[i])}`;
-			} else {
-				const O = d3.map(data, d => d);
-				const T = title;
-				title = i => T(O[i], i, data);
-			}
+			
 
 			const svg = d3.create("svg")
 				.attr("width", width + 100)
@@ -31917,7 +31909,17 @@
 
             update(0);
 
-            function update(speed){
+            function update(speed) {
+
+                // Compute titles.
+                if (title === undefined) {
+                    const formatValue = xScale.tickFormat(100, xFormat);
+                    title = i => `${Y[i]}\n${Z[i]}\n${formatValue(X[i])}`;
+                } else {
+                    const O = d3.map(data, d => d);
+                    const T = title;
+                    title = i => T(O[i], i, data);
+                }
 
                 //X Axis Graphical representation
                 var xAxisG = svg.append("g")
