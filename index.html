@@ -31635,6 +31635,7 @@
 
             riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
+            
 
             //Vertical Stacked Bar Chart
             chart = StackedBarChart(riskmedGroups, {
@@ -31648,6 +31649,8 @@
                 colors: d3.schemeSpectral[keys.length],
                 height: 500
             })
+
+
 
 
             //Horizontal Stacked Bar Chart
@@ -31749,7 +31752,7 @@
                 .attr("width", width)
                 .attr("height", height)
                 .attr("viewBox", [0, 0, width, height])
-                .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+                .attr("style", "height: auto; height: intrinsic;");
 
             svg.append("g")
                 .attr("transform", `translate(${marginLeft},0)`)
