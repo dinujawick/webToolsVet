@@ -31490,9 +31490,8 @@
             console.log(data);
         });
 
-        d3.csv("test.csv", function (data) {
-            console.log(data);
-        });
+        d3.csv("test.csv").then(d => console.log(d));
+        
 
     }
         function calculateTotalRisk(identifiedMedGroup) {
