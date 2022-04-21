@@ -31655,7 +31655,10 @@
                 height: 500
             })
 
-            console.log($('#chartType').val());
+            $('#chartType').on('click', function(e){
+
+                console.log($('#chartType').val());
+            });
 
 
    //         //Horizontal Stacked Bar Chart
