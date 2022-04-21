@@ -31661,7 +31661,8 @@
             $('#chartType').on('click', function(e){
 
                 if ($('#chartType').is(':checked')) {
-                    
+                    $('#legend').empty();
+                    $('#chart').empty();
                     //Horizontal Stacked Bar Chart
                     chart = StackedBarChartHorizontal(riskmedGroups, {
                         x: d => d.status,
@@ -31679,7 +31680,8 @@
                     $('#chart').append(chart);
                 }
                 else {
-
+                    $('#legend').empty();
+                    $('#chart').empty();
                     //Vertical Stacked Bar Chart
                     chart = StackedBarChartVertical(riskmedGroups, {
                         x: d => d.risk,
