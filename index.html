@@ -31797,10 +31797,7 @@
 				    .attr("viewBox", [0, 0, width, height])
                     .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-                update(0);
-
-                function update(speed) {
-
+                
                     //X Axis Graphical representation
                     var xAxisG = svg.append("g")
                         .attr("transform", `translate(0,${marginTop})`)
@@ -31820,6 +31817,7 @@
                     svg.selectAll(".x-axis").transition().duration(speed);
 
 
+                console.log(data.sort(d3.select("#sort").property("checked"));
                     data.sort(d3.select("#sort").property("checked")
                         ? (a, b) => b.total - a.total
                         : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
@@ -31854,19 +31852,8 @@
 
                     svg.selectAll(".y-axis").transition().duration(speed);
 
-
-                }
-
-                var checkbox = d3.select("#sort")
-                    .on("click", function () {
-                        update(750)
-                    })
-
-                
-
-
-
-			    return Object.assign(svg.node(), { scales: { color } });
+               
+			        return Object.assign(svg.node(), { scales: { color } });
 		    }
 
 	        // Copyright 2021, Observable Inc.
