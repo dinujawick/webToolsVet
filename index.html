@@ -31817,7 +31817,8 @@
                     svg.selectAll(".x-axis").transition().duration(speed);
 
 
-                console.log(data.sort(d3.select("#sort").property("checked"));
+                    console.log(data.sort(d3.select("#sort").property("checked")));
+
                     data.sort(d3.select("#sort").property("checked")
                         ? (a, b) => b.total - a.total
                         : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
