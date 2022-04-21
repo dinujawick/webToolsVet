@@ -31246,6 +31246,8 @@
 
             var selectedMedList = new Array();
 
+            var genCSV = [["R",2,1,2],["X",2,2,2]];
+
             var totalRisk = {
                 "falls_fracture": 0,
                 "constipation": 0,
@@ -31420,6 +31422,9 @@
                                     calculateTotalRisk(identifiedMedGroup);
 
                                     //Generate map
+                                    d3.csv(genCSV, function (data) {
+                                        console.log(data);
+                                    });
 
                                 }
                                     
@@ -31554,6 +31559,9 @@
             }
 
     //***********************************************************Graph******************************************************************
+
+
+    
     d3.csv("test.csv").then(d => initialization(d));
 
     function initialization(data) {
@@ -32035,6 +32043,8 @@
         return svg.node();
     }
 
+
+    //***********************************************************End Graph******************************************************************
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
