@@ -31490,6 +31490,10 @@
             console.log(data);
         });
 
+        d3.csv("test.csv", function (data) {
+            console.log(data);
+        });
+
     }
         function calculateTotalRisk(identifiedMedGroup) {
             
@@ -31593,6 +31597,7 @@
     d3.csv("test.csv").then(d => initialization(d));
 
     function initialization(data) {
+
 
 
         keys = data.columns.slice(1)
