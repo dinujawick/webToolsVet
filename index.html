@@ -31677,7 +31677,7 @@
                         zDomain: keys,
                         colors: d3.schemeSpectral[keys.length],
                         width: 900
-                    }, 0)
+                    }, 750)
                     key = Legend(chart.scales.color, { title: "Med Groups" })
                     $('#legend').append(key);
                     $('#chart').append(chart);
@@ -31899,7 +31899,15 @@
 			const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
 			const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
-			
+			// Compute titles.
+			if (title === undefined) {
+				const formatValue = xScale.tickFormat(100, xFormat);
+				title = i => `${Y[i]}\n${Z[i]}\n${formatValue(X[i])}`;
+			} else {
+				const O = d3.map(data, d => d);
+				const T = title;
+				title = i => T(O[i], i, data);
+			}
 
 			const svg = d3.create("svg")
 				.attr("width", width + 100)
@@ -31907,74 +31915,55 @@
 				.attr("viewBox", [0, 0, width, height])
 				.attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-            update(0);
+            //X Axis Graphical representation
+			var xAxisG = svg.append("g")
+                .attr("transform", `translate(0,${marginTop})`)
+                .attr("class","x-axis")
+				.call(xAxis)
+				.call(g => g.select(".domain").remove())
+				.call(g => g.selectAll(".tick line").clone()
+					.attr("y2", height - marginTop - marginBottom)
+					.attr("stroke-opacity", 0.1))
+				.call(g => g.append("text")
+					.attr("x", width - marginRight)
+					.attr("y", -22)
+					.attr("fill", "currentColor")
+					.attr("text-anchor", "end")
+                    .text(xLabel));
 
-            function update(speed) {
+            svg.selectAll(".x-axis").transition().duration(speed);
 
-                // Compute titles.
-                if (title === undefined) {
-                    const formatValue = xScale.tickFormat(100, xFormat);
-                    title = i => `${Y[i]}\n${Z[i]}\n${formatValue(X[i])}`;
-                } else {
-                    const O = d3.map(data, d => d);
-                    const T = title;
-                    title = i => T(O[i], i, data);
-                }
-
-                //X Axis Graphical representation
-                var xAxisG = svg.append("g")
-                    .attr("transform", `translate(0,${marginTop})`)
-                    .attr("class", "x-axis")
-                    .call(xAxis)
-                    .call(g => g.select(".domain").remove())
-                    .call(g => g.selectAll(".tick line").clone()
-                        .attr("y2", height - marginTop - marginBottom)
-                        .attr("stroke-opacity", 0.1))
-                    .call(g => g.append("text")
-                        .attr("x", width - marginRight)
-                        .attr("y", -22)
-                        .attr("fill", "currentColor")
-                        .attr("text-anchor", "end")
-                        .text(xLabel));
-
-                svg.selectAll(".x-axis").transition().duration(speed);
-
-                data.sort(d3.select("#sort").property("checked")
-                    ? (a, b) => b.total - a.total
-                    : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
+            data.sort(d3.select("#sort").property("checked")
+                ? (a, b) => b.total - a.total
+                : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
 
 
-                const bar = svg.append("g")
-                    .selectAll("g")
-                    .data(series)
-                    .join("g")
-                    .attr("fill", ([{ i }]) => color(Z[i]))
-                    .selectAll("rect")
-                    .data(d => d)
-                    .join("rect")
-                    .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
-                    .attr("y", ({ i }) => yScale(Y[i]))
-                    .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
-                    .attr("height", yScale.bandwidth())
-                    .transition().duration(speed);
+			const bar = svg.append("g")
+				.selectAll("g")
+				.data(series)
+				.join("g")
+				.attr("fill", ([{ i }]) => color(Z[i]))
+				.selectAll("rect")
+				.data(d => d)
+				.join("rect")
+				.attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
+				.attr("y", ({ i }) => yScale(Y[i]))
+				.attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
+                .attr("height", yScale.bandwidth())
+                .transition().duration(speed);
 
-                if (title) bar.append("title")
-                    .text(({ i }) => title(i));
+			if (title) bar.append("title")
+				.text(({ i }) => title(i));
 
-
-                //Y Axis Graphical representation
-                var yAxisG = svg.append("g")
-                    .attr("transform", `translate(${xScale(0)},0)`)
-                    .attr("class", "y-axis")
-                    .call(yAxis);
-
-                svg.selectAll(".y-axis").transition().duration(speed);
-            }
             
-            var checkbox = d3.select("#sort")
-                .on("click", function () {
-                    update(750)
-                })
+            //Y Axis Graphical representation
+			var yAxisG = svg.append("g")
+                .attr("transform", `translate(${xScale(0)},0)`)
+                .attr("class","y-axis")
+                .call(yAxis);
+
+            svg.selectAll(".y-axis").transition().duration(speed);
+
 
 
 			return Object.assign(svg.node(), { scales: { color } });
