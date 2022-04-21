@@ -31246,7 +31246,7 @@
 
             var selectedMedList = new Array();
 
-            var genCSV = [["R",2,1,2],["X",2,2,2]];
+            
 
             var totalRisk = {
                 "falls_fracture": 0,
@@ -31421,7 +31421,7 @@
                                     //Calculate Total risk for first med group
                                     calculateTotalRisk(identifiedMedGroup);
 
-                                    console.log(genCSV);
+                                    
 
                                 }
                                     
@@ -31450,6 +31450,7 @@
                                 }
                             }
 
+                           
                             //console.log(selectedMedList);
                             //console.log(selectedMedGroupList);
 
@@ -31459,7 +31460,17 @@
                     }
                 });
 
-            }
+    }
+
+    function createCSV() {
+
+        var genCSV = [["Name", "Age"], ["Xian", 22]];
+        let csvContent = "data:text/csv;charset=utf-8,"
+            + genCSV.map(e => e.join(",")).join("\n");
+
+        console.log(csvContent);
+
+    }
         function calculateTotalRisk(identifiedMedGroup) {
             
             $.each(riskMap, function (i, value) {
