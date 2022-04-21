@@ -31784,6 +31784,7 @@
             if (title) bar.append("title")
                 .text(({ i }) => title(i));
 
+            console.log(xAxis);
             svg.append("g")
                 .attr("transform", `translate(0,${yScale(0)})`)
                 .call(xAxis);
