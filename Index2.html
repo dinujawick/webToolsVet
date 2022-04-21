@@ -31484,8 +31484,7 @@
 
 
         
-        let csvContent = "data:text/csv;charset=utf-8,"
-            + genCSV.map(e => e.join(",")).join("\n");
+        let csvContent = genCSV.map(e => e.join(",")).join("\n");
 
         d3.csv(csvContent, function (data) {
             console.log(data);
