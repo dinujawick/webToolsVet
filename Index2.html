@@ -31484,14 +31484,10 @@
 
 
         
-        let csvContent = genCSV.map(e => e.join(",")).join("\n");
+        let csvContent = "data:text/csv;charset=utf-8,"
+            + genCSV.map(e => e.join(",")).join("\n");
 
-        d3.csv(csvContent, function (data) {
-            console.log(data);
-        });
-
-        d3.csv("test.csv").then(d => console.log(d));
-        
+        d3.csv(csvContent).then(d => console.log(d));
 
     }
         function calculateTotalRisk(identifiedMedGroup) {
@@ -31596,7 +31592,6 @@
     d3.csv("test.csv").then(d => initialization(d));
 
     function initialization(data) {
-
 
 
         keys = data.columns.slice(1)
