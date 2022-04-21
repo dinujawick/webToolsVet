@@ -31470,7 +31470,9 @@
         //Default value
         var headerFirstValue = ["Risk"];
         
-        console.log($.merge(headerFirstValue, selectedMedGroupList));
+        console.log($.merge(headerFirstValue,"Name", selectedMedGroupList));
+
+        
 
         var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
             ["Falls", 1, 0, 0, 1],
@@ -31490,7 +31492,7 @@
             ["Acglauc", 0, 0, 0, 1]];
 
 
-        
+        //create a csv file
         let csvContent = "data:text/csv;charset=utf-8,"
             + genCSV.map(e => e.join(",")).join("\n");
 
