@@ -31465,7 +31465,25 @@
 
     function createCSV() {
 
-        var genCSV = [["Name", "Age"], ["Xian", 22]];
+        var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
+            ["Falls", 1, 0, 0, 1],
+            ["Const", 0, 0, 1, 0],
+            ["Uretent", 0, 0, 1, 0],
+            ["Cnsdepr", 0, 0, 0, 1],
+            ["Bleed", 0, 0, 0, 0],
+            ["Hf", 0, 0, 0, 0],
+            ["Brady", 0, 0, 0, 1],
+            ["Cve", 0, 0, 0, 1],
+            ["Resp", 0, 0, 0, 0],
+            ["Hypoglyc", 0, 0, 0, 0],
+            ["Renal", 0, 0, 0, 0],
+            ["HypoK", 0, 1, 1, 1],
+            ["HyperK", 0, 0, 0, 0],
+            ["Serosyn", 0, 0, 0, 0],
+            ["Acglauc", 0, 0, 0, 1]];
+
+
+        
         let csvContent = "data:text/csv;charset=utf-8,"
             + genCSV.map(e => e.join(",")).join("\n");
 
