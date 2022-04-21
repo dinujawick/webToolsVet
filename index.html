@@ -31659,6 +31659,7 @@
             $('#chart').append(chart);
             
 
+            //Toggle Horizontal
             $('#chartType').on('click', function(e){
 
                 if ($('#chartType').is(':checked')) {
@@ -31710,8 +31711,6 @@
 
 			
 		}
-
-
 
         //Vertical Stacked Bar Chart
         // Copyright 2021 Observable, Inc.
@@ -31916,50 +31915,64 @@
 				.attr("viewBox", [0, 0, width, height])
 				.attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-            //X Axis Graphical representation
-			var xAxisG = svg.append("g")
-                .attr("transform", `translate(0,${marginTop})`)
-                .attr("class","x-axis")
-				.call(xAxis)
-				.call(g => g.select(".domain").remove())
-				.call(g => g.selectAll(".tick line").clone()
-					.attr("y2", height - marginTop - marginBottom)
-					.attr("stroke-opacity", 0.1))
-				.call(g => g.append("text")
-					.attr("x", width - marginRight)
-					.attr("y", -22)
-					.attr("fill", "currentColor")
-					.attr("text-anchor", "end")
-                    .text(xLabel));
+            update(0);
 
-            svg.selectAll(".x-axis").transition().duration(speed);
+            function update(speed){
 
-            data.sort(d3.select("#sort").property("checked")
-                ? (a, b) => b.total - a.total
-                : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
+                //X Axis Graphical representation
+                var xAxisG = svg.append("g")
+                    .attr("transform", `translate(0,${marginTop})`)
+                    .attr("class", "x-axis")
+                    .call(xAxis)
+                    .call(g => g.select(".domain").remove())
+                    .call(g => g.selectAll(".tick line").clone()
+                        .attr("y2", height - marginTop - marginBottom)
+                        .attr("stroke-opacity", 0.1))
+                    .call(g => g.append("text")
+                        .attr("x", width - marginRight)
+                        .attr("y", -22)
+                        .attr("fill", "currentColor")
+                        .attr("text-anchor", "end")
+                        .text(xLabel));
 
-			const bar = svg.append("g")
-				.selectAll("g")
-				.data(series)
-				.join("g")
-				.attr("fill", ([{ i }]) => color(Z[i]))
-				.selectAll("rect")
-				.data(d => d)
-				.join("rect")
-				.attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
-				.attr("y", ({ i }) => yScale(Y[i]))
-				.attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
-				.attr("height", yScale.bandwidth());
+                svg.selectAll(".x-axis").transition().duration(speed);
 
-			if (title) bar.append("title")
-				.text(({ i }) => title(i));
+                data.sort(d3.select("#sort").property("checked")
+                    ? (a, b) => b.total - a.total
+                    : (a, b) => data.indexOf(a.Risk) - data.indexOf(b.Risk))
 
-            //Y Axis Graphical representation
-			var yAxisG = svg.append("g")
-                .attr("transform", `translate(${xScale(0)},0)`)
-                .attr("class","y-axis")
-				.call(yAxis);
 
+                const bar = svg.append("g")
+                    .selectAll("g")
+                    .data(series)
+                    .join("g")
+                    .attr("fill", ([{ i }]) => color(Z[i]))
+                    .selectAll("rect")
+                    .data(d => d)
+                    .join("rect")
+                    .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
+                    .attr("y", ({ i }) => yScale(Y[i]))
+                    .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
+                    .attr("height", yScale.bandwidth())
+                    .transition().duration(speed);
+
+                if (title) bar.append("title")
+                    .text(({ i }) => title(i));
+
+
+                //Y Axis Graphical representation
+                var yAxisG = svg.append("g")
+                    .attr("transform", `translate(${xScale(0)},0)`)
+                    .attr("class", "y-axis")
+                    .call(yAxis);
+
+                svg.selectAll(".y-axis").transition().duration(speed);
+            }
+            
+            var checkbox = d3.select("#sort")
+                .on("click", function () {
+                    update(750)
+                })
 
 
 			return Object.assign(svg.node(), { scales: { color } });
