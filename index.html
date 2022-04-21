@@ -31657,7 +31657,13 @@
 
             $('#chartType').on('click', function(e){
 
-                console.log($('#chartType').val());
+                if ($('#chartType').is(':checked')) {
+                    console.log("Checked");
+                }
+                else {
+                    console.log("Not");
+                }
+               
             });
 
 
