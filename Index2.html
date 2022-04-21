@@ -31465,10 +31465,12 @@
 
     function createCSV() {
 
+        //Default value
         var headerFirstValue = ["Risk"];
-        var headerOtherValues = ["H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"];
 
-        console.log($.merge(headerFirstValue, headerOtherValues));
+        
+
+        console.log($.merge(headerFirstValue, selectedMedGroupList));
 
         var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
             ["Falls", 1, 0, 0, 1],
