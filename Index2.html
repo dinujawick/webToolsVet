@@ -31465,6 +31465,11 @@
 
     function createCSV() {
 
+        var headerFirstValue = ["Risk"];
+        var headerOtherValues = ["H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"];
+
+        console.log($.merge(headerFirstValue, headerOtherValues));
+
         var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
             ["Falls", 1, 0, 0, 1],
             ["Const", 0, 0, 1, 0],
