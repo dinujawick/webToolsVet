@@ -31421,6 +31421,7 @@
                                     //Calculate Total risk for first med group
                                     calculateTotalRisk(identifiedMedGroup);
 
+                                    //To Do: Generate dynamic data
                                     createCSV();
                                     
 
@@ -31441,7 +31442,8 @@
                                     createAccordionItem(identifiedMedGroup);
                                     //Calculate Total risk for created med group
                                     calculateTotalRisk(identifiedMedGroup);
-
+                                    //To Do: Generate dynamic data
+                                    createCSV();
                                     if (medAddedStatus != true)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
@@ -31467,9 +31469,7 @@
 
         //Default value
         var headerFirstValue = ["Risk"];
-
         
-
         console.log($.merge(headerFirstValue, selectedMedGroupList));
 
         var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
