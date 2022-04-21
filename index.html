@@ -31950,7 +31950,7 @@
 				.attr("y", ({ i }) => yScale(Y[i]))
 				.attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
                 .attr("height", yScale.bandwidth())
-                .transition().duration(speed);
+                
 
 			if (title) bar.append("title")
 				.text(({ i }) => title(i));
