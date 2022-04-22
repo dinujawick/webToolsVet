@@ -31498,35 +31498,37 @@
                     $.each(value, function (risk, status) {
                         
                         if (risk == "falls_fracture")
-                            console.log(status);
+                            fallsRisk.push(status);
                         else if (risk == "constipation")
-                            console.log(status);
+                            constRisk.push(status);
                         else if (risk == "urinary_retention")
-                            console.log(status);
+                            uretentRisk.push(status);
                         else if (risk == "CNS_depression")
-                            console.log(status);
+                            cnsdeprRisk.push(status);
                         else if (risk == "bleeding")
-                            console.log(status);
+                            bleedRisk.push(status);
                         else if (risk == "heart_failure")
-                            console.log(status);
+                            heartRisk.push(status);
                         else if (risk == "bradycardia")
-                            console.log(status);
+                            bradyRisk.push(status);
                         else if (risk == "CV_events")
-                            console.log(status);
+                            cveRisk.push(status);
                         else if (risk == "respiratory")
-                            console.log(status);
+                            respRisk.push(status);
                         else if (risk == "hypoglycaemia")
-                            console.log(status);
+                            hypoglycRisk.push(status);
                         else if (risk == "renal_injury")
-                            console.log(status);
+                            renalRisk.push(status);
                         else if (risk == "hypokalemia")
-                            console.log(status);
+                            hypoKRisk.push(status);
                         else if (risk == "hyperkalemia")
-                            console.log(status);
+                            hyperKRisk.push(status);
                         else if (risk == "serotonin_syndrome")
-                            console.log(status);
+                            serosyn.push(status);
                         else if (risk == "angle_closure_glaucoma")
-                            console.log(status);
+                            acglauc.push(status);
+                        else
+                            console.log("Something wrong with the data");
 
                     })
                 } 
@@ -31534,6 +31536,8 @@
             })
 
         })
+        console.log();
+
         
         
 
