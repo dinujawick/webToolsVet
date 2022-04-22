@@ -31541,49 +31541,13 @@
         tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
             heartRisk, cveRisk, respRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
-        //console.log(header);
-        //console.log(fallsRisk);
-        //console.log(constRisk);
-        //console.log(uretentRisk);
-        //console.log(cnsdeprRisk);
-        //console.log(bleedRisk);
-        //console.log(heartRisk);
-        //console.log(cveRisk);
-        //console.log(respRisk);
-        //console.log(hypoglycRisk);
-        //console.log(renalRisk);
-        //console.log(hypoKRisk);
-        //console.log(hyperKRisk);
-        //console.log(serosynRisk);
-        //console.log(acglaucRisk);
-
-
-        
-        
-
-        //var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
-        //    ["Falls", 1, 0, 0, 1],
-        //    ["Const", 0, 0, 1, 0],
-        //    ["Uretent", 0, 0, 1, 0],
-        //    ["Cnsdepr", 0, 0, 0, 1],
-        //    ["Bleed", 0, 0, 0, 0],
-        //    ["Hf", 0, 0, 0, 0],
-        //    ["Brady", 0, 0, 0, 1],
-        //    ["Cve", 0, 0, 0, 1],
-        //    ["Resp", 0, 0, 0, 0],
-        //    ["Hypoglyc", 0, 0, 0, 0],
-        //    ["Renal", 0, 0, 0, 0],
-        //    ["HypoK", 0, 1, 1, 1],
-        //    ["HyperK", 0, 0, 0, 0],
-        //    ["Serosyn", 0, 0, 0, 0],
-        //    ["Acglauc", 0, 0, 0, 1]];
-
-
         //create a csv file
         let csvContent = "data:text/csv;charset=utf-8,"
             + tempCSV.map(e => e.join(",")).join("\n");
 
-        d3.csv(csvContent).then(d => console.log(d));
+        d3.csv(csvContent).then(d => initialization(d));
+
+
 
     }
         function calculateTotalRisk(identifiedMedGroup) {
@@ -31685,7 +31649,7 @@
 
 
     
-    d3.csv("test.csv").then(d => initialization(d));
+    //d3.csv("test.csv").then(d => initialization(d));
 
     function initialization(data) {
 
