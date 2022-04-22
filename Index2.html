@@ -31472,17 +31472,17 @@
         
         var arry = $.merge(headerFirstValue, selectedMedGroupList);
 
-
         $.each(riskMap, function (key,value) {
-
             
             $.each(selectedMedGroupList, function (index, selectedMedG) {
-
-                console.log("inside" + selectedMedG);
+              
                 if (key == selectedMedG) {
-
-                    console.log(value);
-                }
+                    $.each(value, function (risk, status) {
+                        console.log("Risk: " + risk);
+                        console.log("Status: " + status);
+                    })
+                } 
+                
             })
 
         })
