@@ -31473,9 +31473,15 @@
         var arry = $.merge(headerFirstValue, selectedMedGroupList);
 
 
-        $.each(riskMap, function (e) {
+        $.each(riskMap, function (key,value) {
 
-            console.log(e);
+            $.each(selectedMedGroupList, function (selectedMedG) {
+
+                if (key == selectedMedG) {
+
+                    console.log(value);
+                }
+            })
 
         })
         
