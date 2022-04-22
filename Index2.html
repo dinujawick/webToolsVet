@@ -31466,10 +31466,11 @@
 
     }
 
-    //Default value
+    //CSV Header and pre-defined first cell value
     var header = ["Risk"];
 
 
+    //CSV Rows and pre-defined first cell value
     var fallsRisk = ["Falls"];
     var constRisk = ["Const"];
     var uretentRisk = ["Uretent"];
@@ -31486,13 +31487,15 @@
     var serosynRisk = ["Serosyn"];
     var acglaucRisk = ["Acglauc"];
 
+    
+
     function createCSV(identifiedMedGroup) {
 
+        var tempCSV = [];
 
         header.push(identifiedMedGroup);
 
         $.each(riskMap, function (key,value) {
-              
             if (key == identifiedMedGroup) {
                     $.each(value, function (risk, status) {
                         
@@ -31527,48 +31530,52 @@
                         else if (risk == "angle_closure_glaucoma")
                             acglaucRisk.push(status);
                         else
-                            console.log("Something wrong with the data");
+                            console.log("Something wrong with the risks");
 
                     })
                 } 
                 
         })
-        console.log(header);
-        console.log(fallsRisk);
-        console.log(constRisk);
-        console.log(uretentRisk);
-        console.log(cnsdeprRisk);
-        console.log(bleedRisk);
-        console.log(heartRisk);
-        console.log(cveRisk);
-        console.log(respRisk);
-        console.log(hypoglycRisk);
-        console.log(renalRisk);
-        console.log(hypoKRisk);
-        console.log(hyperKRisk);
-        console.log(serosynRisk);
-        console.log(acglaucRisk);
+
+
+        tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, cveRisk, respRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
+
+        //console.log(header);
+        //console.log(fallsRisk);
+        //console.log(constRisk);
+        //console.log(uretentRisk);
+        //console.log(cnsdeprRisk);
+        //console.log(bleedRisk);
+        //console.log(heartRisk);
+        //console.log(cveRisk);
+        //console.log(respRisk);
+        //console.log(hypoglycRisk);
+        //console.log(renalRisk);
+        //console.log(hypoKRisk);
+        //console.log(hyperKRisk);
+        //console.log(serosynRisk);
+        //console.log(acglaucRisk);
 
 
         
         
 
-        var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
-            ["Falls", 1, 0, 0, 1],
-            ["Const", 0, 0, 1, 0],
-            ["Uretent", 0, 0, 1, 0],
-            ["Cnsdepr", 0, 0, 0, 1],
-            ["Bleed", 0, 0, 0, 0],
-            ["Hf", 0, 0, 0, 0],
-            ["Brady", 0, 0, 0, 1],
-            ["Cve", 0, 0, 0, 1],
-            ["Resp", 0, 0, 0, 0],
-            ["Hypoglyc", 0, 0, 0, 0],
-            ["Renal", 0, 0, 0, 0],
-            ["HypoK", 0, 1, 1, 1],
-            ["HyperK", 0, 0, 0, 0],
-            ["Serosyn", 0, 0, 0, 0],
-            ["Acglauc", 0, 0, 0, 1]];
+        //var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
+        //    ["Falls", 1, 0, 0, 1],
+        //    ["Const", 0, 0, 1, 0],
+        //    ["Uretent", 0, 0, 1, 0],
+        //    ["Cnsdepr", 0, 0, 0, 1],
+        //    ["Bleed", 0, 0, 0, 0],
+        //    ["Hf", 0, 0, 0, 0],
+        //    ["Brady", 0, 0, 0, 1],
+        //    ["Cve", 0, 0, 0, 1],
+        //    ["Resp", 0, 0, 0, 0],
+        //    ["Hypoglyc", 0, 0, 0, 0],
+        //    ["Renal", 0, 0, 0, 0],
+        //    ["HypoK", 0, 1, 1, 1],
+        //    ["HyperK", 0, 0, 0, 0],
+        //    ["Serosyn", 0, 0, 0, 0],
+        //    ["Acglauc", 0, 0, 0, 1]];
 
 
         //create a csv file
