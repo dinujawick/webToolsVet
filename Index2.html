@@ -31472,14 +31472,62 @@
         
         var arry = $.merge(headerFirstValue, selectedMedGroupList);
 
+        var fallsRisk = ["Falls"];
+        var constRisk = ["Const"];
+        var uretentRisk = ["Uretent"];
+        var cnsdeprRisk = ["Cnsdepr"];
+        var bleedRisk = ["Bleed"];
+        var heartRisk = ["Hf"];
+        var bradyRisk = ["Brady"];
+        var cveRisk = ["Cve"];
+        var respRisk = ["Resp"];
+        var hypoglycRisk = ["Hypoglyc"];
+        var renalRisk = ["Renal"];
+        var hypoKRisk = ["HypoK"];
+        var hyperKRisk = ["HyperK"];
+        var serosyn = ["Serosyn"];
+        var acglauc = ["Acglauc"];
+
+
+
         $.each(riskMap, function (key,value) {
             
             $.each(selectedMedGroupList, function (index, selectedMedG) {
               
                 if (key == selectedMedG) {
                     $.each(value, function (risk, status) {
-                        console.log("Risk: " + risk);
-                        console.log("Status: " + status);
+                        
+                        if (risk == "falls_fracture")
+                            console.log(status);
+                        else if (risk == "constipation")
+                            console.log(status);
+                        else if (risk == "urinary_retention")
+                            console.log(status);
+                        else if (risk == "CNS_depression")
+                            console.log(status);
+                        else if (risk == "bleeding")
+                            console.log(status);
+                        else if (risk == "heart_failure")
+                            console.log(status);
+                        else if (risk == "bradycardia")
+                            console.log(status);
+                        else if (risk == "CV_events")
+                            console.log(status);
+                        else if (risk == "respiratory")
+                            console.log(status);
+                        else if (risk == "hypoglycaemia")
+                            console.log(status);
+                        else if (risk == "renal_injury")
+                            console.log(status);
+                        else if (risk == "hypokalemia")
+                            console.log(status);
+                        else if (risk == "hyperkalemia")
+                            console.log(status);
+                        else if (risk == "serotonin_syndrome")
+                            console.log(status);
+                        else if (risk == "angle_closure_glaucoma")
+                            console.log(status);
+
                     })
                 } 
                 
