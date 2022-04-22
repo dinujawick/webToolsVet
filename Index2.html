@@ -31421,7 +31421,7 @@
                                     calculateTotalRisk(identifiedMedGroup);
 
                                     //To Do: Generate dynamic data
-                                    createCSV();
+                                    createCSV(identifiedMedGroup);
                                     
 
                                 }
@@ -31441,8 +31441,10 @@
                                     createAccordionItem(identifiedMedGroup);
                                     //Calculate Total risk for created med group
                                     calculateTotalRisk(identifiedMedGroup);
+
                                     //To Do: Generate dynamic data
-                                    createCSV();
+                                    createCSV(identifiedMedGroup);
+
                                     if (medAddedStatus != true)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
                                 }
