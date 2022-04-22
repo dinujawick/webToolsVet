@@ -31485,8 +31485,8 @@
         var renalRisk = ["Renal"];
         var hypoKRisk = ["HypoK"];
         var hyperKRisk = ["HyperK"];
-        var serosyn = ["Serosyn"];
-        var acglauc = ["Acglauc"];
+        var serosynRisk = ["Serosyn"];
+        var acglaucRisk = ["Acglauc"];
 
 
 
@@ -31524,9 +31524,9 @@
                         else if (risk == "hyperkalemia")
                             hyperKRisk.push(status);
                         else if (risk == "serotonin_syndrome")
-                            serosyn.push(status);
+                            serosynRisk.push(status);
                         else if (risk == "angle_closure_glaucoma")
-                            acglauc.push(status);
+                            acglaucRisk.push(status);
                         else
                             console.log("Something wrong with the data");
 
@@ -31536,7 +31536,21 @@
             })
 
         })
-        console.log();
+        console.log(fallsRisk);
+        console.log(constRisk);
+        console.log(uretentRisk);
+        console.log(cnsdeprRisk);
+        console.log(bleedRisk);
+        console.log(heartRisk);
+        console.log(cveRisk);
+        console.log(respRisk);
+        console.log(hypoglycRisk);
+        console.log(renalRisk);
+        console.log(hypoKRisk);
+        console.log(hyperKRisk);
+        console.log(serosynRisk);
+        console.log(acglaucRisk);
+
 
         
         
