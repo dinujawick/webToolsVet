@@ -31471,8 +31471,14 @@
         var headerFirstValue = ["Risk"];
         
         var arry = $.merge(headerFirstValue, selectedMedGroupList);
-        console.log(arry);
 
+
+        $.each(riskMap, function (e) {
+
+            console.log(e);
+
+        })
+        
         
 
         var genCSV = [["Risk", "H2Blockers", "Laxatives", "Loperamide", "Prochlorperazine"],
