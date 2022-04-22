@@ -31465,7 +31465,7 @@
     }
 
     //Default value
-    var headerFirstValue = ["Risk"];
+    var header = ["Risk"];
 
 
     var fallsRisk = ["Falls"];
@@ -31487,7 +31487,7 @@
     function createCSV(identifiedMedGroup) {
 
 
-        headerFirstValue.push(identifiedMedGroup);
+        header.push(identifiedMedGroup);
 
         $.each(riskMap, function (key,value) {
               
@@ -31531,7 +31531,7 @@
                 } 
                 
         })
-        console.log(arry);
+        console.log(header);
         console.log(fallsRisk);
         console.log(constRisk);
         console.log(uretentRisk);
