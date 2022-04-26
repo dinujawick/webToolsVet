@@ -31858,7 +31858,7 @@
             .attr("height", ([y1, y2]) => Math.abs(yScale(y1) - yScale(y2)))
             .attr("width", xScale.bandwidth());
 
-        console.log(({ i }) => title(i));
+        console.log(title);
         if (title) bar.append("title")
             .text(({ i }) => title(i))
             .attr('data-bs-toggle', 'tooltip')
