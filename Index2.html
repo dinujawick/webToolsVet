@@ -31823,7 +31823,6 @@
             const O = d3.map(data, d => d);
             const T = title;
             title = i => T(O[i], i, data);
-            console.log(title);
         }
 
         const svg = d3.create("svg")
@@ -31860,19 +31859,17 @@
             .attr("width", xScale.bandwidth());
 
         
-        if (title) {
-
-            
-            bar.append("title")
+        if (title) bar.append("title")
                 .text(({ i }) => title(i))
                 .attr('data-bs-toggle', 'tooltip')
                 .attr('data-bs-placement', 'right');
 
             
-        }
         svg.append("g")
             .attr("transform", `translate(0,${yScale(0)})`)
             .call(xAxis);
+
+        console.log(scales);
 
         return Object.assign(svg.node(), { scales: { color } });
     }
