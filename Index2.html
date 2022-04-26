@@ -31281,11 +31281,11 @@
             });
 
 
-        // When the user clicks on the button,toggle between hiding and showing the dropdown content
-        function myFunction() {
+    // When the user clicks on the button,toggle between hiding and showing the dropdown content
+    function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
-        function filterFunction() {
+    function filterFunction() {
 
             var input, filter, ul, li, a, i;
             input = document.getElementById("myInput");
@@ -31301,7 +31301,7 @@
                 }
             }
         }
-        function createSelectedList(atcDescr, atcLevel) {
+    function createSelectedList(atcDescr, atcLevel) {
 
                 $('#' + "a" + atcLevel)
                     .attr('style', "display:none");
@@ -31324,7 +31324,7 @@
 
                 }
             }
-        function getMedGroups(atcDescr, atcLevel){
+    function getMedGroups(atcDescr, atcLevel){
 
                 var identifiedMedGroup;
 
@@ -31371,7 +31371,7 @@
 
    
         
-        function addOnlyMappedMedsToSelectionList(atcLevel,atcDescr) {
+    function addOnlyMappedMedsToSelectionList(atcLevel,atcDescr) {
                 $(medMap).each(function (index, item) {
 
                     var temp;
@@ -31859,7 +31859,9 @@
             .attr("width", xScale.bandwidth());
 
         if (title) bar.append("title")
-            .text(({ i }) => title(i));
+            .text(({ i }) => title(i))
+            .attr('data-bs-toggle', 'tooltip')
+            .attr('data-bs-placement','right');
 
         svg.append("g")
             .attr("transform", `translate(0,${yScale(0)})`)
