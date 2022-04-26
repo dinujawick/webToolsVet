@@ -31673,7 +31673,7 @@
             y: d => d.status,
             z: d => d.medGroup,
             xDomain: data.map(d => d.Risk),
-            yDomain: [0, 10],
+            yDomain: [0, getRange(d3.max(data, d => d.total))],
             /* yDomain: [0, d3.max(data, d => d.total) + 2]*/
             yLabel: "↑ Total Risk Count",
             zDomain: keys,
@@ -31701,7 +31701,7 @@
                     y: d => d.risk,
                     z: d => d.medGroup,
                     xLabel: "Total Risk →",
-                    xDomain: [0, 10]
+                    xDomain: [0, getRange(d3.max(data, d => d.total))]
                            /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
                     yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
                     zDomain: keys,
@@ -31721,7 +31721,7 @@
                     y: d => d.status,
                     z: d => d.medGroup,
                     xDomain: data.map(d => d.Risk),
-                    yDomain: [0, 10],
+                    yDomain: [0, getRange(d3.max(data, d => d.total))],
                     //yDomain: [0, d3.max(data, d => d.total) + 2],
                     yLabel: "↑ Med Group Risk Count",
                     zDomain: keys,
@@ -31740,6 +31740,14 @@
 
 
 
+    }
+
+
+    function getRange(total) {
+        if (total < 10)
+            return 10
+        else
+            return total + 2
     }
 
     //Vertical Stacked Bar Chart
