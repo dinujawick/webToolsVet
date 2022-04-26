@@ -116,6 +116,7 @@
         #stackGraph{
             overflow:scroll;
         }
+
         /*Graph*/
 
 
@@ -31487,11 +31488,11 @@
 
 
     //CSV Rows and pre-defined first cell value
-    var fallsRisk = ["Falls"];
+    var fallsRisk = ["Falls Fracture"];
     var constRisk = ["Const"];
     var uretentRisk = ["Uretent"];
     var cnsdeprRisk = ["Cnsdepr"];
-    var bleedRisk = ["Bleed"];
+    var bleedRisk = ["Bleeding"];
     var heartRisk = ["Hf"];
     var bradyRisk = ["Brady"];
     var cveRisk = ["Cve"];
@@ -31501,7 +31502,7 @@
     var hypoKRisk = ["HypoK"];
     var hyperKRisk = ["HyperK"];
     var serosynRisk = ["Serosyn"];
-    var acglaucRisk = ["Acglauc"];
+    var acglaucRisk = ["Angle_Closure_Glaucoma"];
 
     
 
@@ -31694,7 +31695,7 @@
             yLabel: "↑ Total Risk Count",
             zDomain: keys,
             colors: d3.schemeSpectral[keys.length],
-            width: 640,
+            width: 1000,
             height: 500
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
@@ -31751,11 +31752,6 @@
             }
 
         });
-
-
-
-
-
     }
 
 
