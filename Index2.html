@@ -31866,7 +31866,7 @@
                 .attr('data-bs-toggle', 'tooltip')
                 .attr('data-bs-placement', 'right');
 
-            console.log(({ i }) => title(i));
+            ({ i }) => title(i);
         }
         svg.append("g")
             .attr("transform", `translate(0,${yScale(0)})`)
