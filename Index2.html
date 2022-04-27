@@ -112,10 +112,24 @@
             background-color:white;
         }
 
+        #chart {
+            margin-top: 2rem;
+            overflow: scroll;
+            padding-top: 2.2rem;
+            padding-bottom: 2.2rem;
+            border: outset;
+        }
 
-       /* #stackGraph{
-            overflow:scroll;
-        }*/
+        #legend {
+            overflow: scroll;
+            padding-top: 2.2rem;
+            padding-bottom: 2.2rem;
+            border: outset;
+        }
+
+        .container {
+            font-family: 'Roboto Condensed',sans-serif;
+        }
 
         /*Graph*/
 
@@ -128,7 +142,7 @@
 <body class="body">
     <div class="container">
         <h1 id="pageHeader">Complex Risk Calculator</h1>
-        <div class="row" style="font-family: 'Roboto Condensed',sans-serif;" >
+        <div class="row">
             <div class="col-4">
                 <div class="vstack gap-2 mx-auto" id="menu">
                     <!--<button onclick="myFunction()" class="dropbtn btn">List your medicines: </button>-->
@@ -141,8 +155,8 @@
             </div>
             <div class="col-8">
                 <div id="stackGraph">
-                    <div id="legend" style=" padding-bottom:2.2rem; overflow:scroll;"></div>
-                    <div id="chart" style="overflow:scroll"></div>
+                    <div id="legend"></div>
+                    <div id="chart"></div>
                 </div>
                 <div id="filters" style="padding-top:2.2rem">
                     <input type="checkbox" id="sort">
