@@ -31750,7 +31750,7 @@
             yLabel: "↑ Total Risk Count",
             zDomain: keys,
             colors: d3.schemeSpectral[keys.length],
-            width: 2000,
+            width: 2200,
             height: 500
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
@@ -31778,7 +31778,7 @@
                     yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
                     zDomain: keys,
                     colors: d3.schemeSpectral[keys.length],
-                    width: 900
+                    width: 2200
                 })
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
@@ -31799,7 +31799,7 @@
                     zDomain: keys,
                     colors: d3.schemeSpectral[keys.length],
                     width: 640,
-                    height: 500
+                    height: 2200
                 })
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
@@ -31834,7 +31834,7 @@
         height = 400, // outer height, in pixels
         xDomain, // array of x-values
         xRange = [marginLeft, width - marginRight], // [left, right]
-        xPadding = 0.5, // amount of x-range to reserve to separate bars
+        xPadding = 0.75, // amount of x-range to reserve to separate bars
         yType = d3.scaleLinear, // type of y-scale
         yDomain, // [ymin, ymax]
         yRange = [height - marginBottom, marginTop], // [bottom, top]
