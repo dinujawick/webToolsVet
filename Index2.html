@@ -186,12 +186,19 @@
                 <div id="filters" >
                     <fieldset>
                         <legend>Filters</legend>
-                        <input type="checkbox" id="sort">
-                        Toggle Sort
-                        <input type="checkbox" id="chartType">
-                        Toggle Horizontal
-                    </fieldset>
-                    
+                        <table>
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" id="sort">
+                                    <label class="form-check-label" for="sort">Toggle Sort</label>                                 
+                                </td>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" id="chartType">
+                                    <label class="form-check-label" for="chartType">Toggle Horizontal</label> 
+                                </td>
+                            </tr>
+                        </table>                                               
+                    </fieldset>                    
                 </div>
                 <div id="stackGraph">
                     <div id="legend"></div>
