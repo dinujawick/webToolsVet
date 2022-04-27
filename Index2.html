@@ -31896,6 +31896,7 @@
 
         svg.append("g")
             .attr("transform", `translate(${marginLeft},0)`)
+            .attr('font-size', '14').attr('font-family','Roboto Condensed')
             .call(yAxis)
             .call(g => g.select(".domain").remove())
             .call(g => g.selectAll(".tick line").clone()
