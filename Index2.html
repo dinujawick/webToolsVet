@@ -31755,7 +31755,7 @@
             yLabel: "↑ Med Class Risk Count",
             zDomain: keys,
             colors: d3.schemeSpectral[keys.length],
-            width: 1000,
+            width: 2200,
             height: 500
         })
 
@@ -31957,7 +31957,7 @@
         y = (d, i) => i, // given d in data, returns the (ordinal) y-value
         z = () => 1, // given d in data, returns the (categorical) z-value
         title, // given d in data, returns the title text
-        marginTop = 30, // top margin, in pixels
+        marginTop = 40, // top margin, in pixels
         marginRight = 0, // right margin, in pixels
         marginBottom = 0, // bottom margin, in pixels
         marginLeft = 40, // left margin, in pixels
@@ -32033,7 +32033,7 @@
             .attr("width", width)
             .attr("height", height)
             .attr("viewBox", [0, 0, width, height])
-            .attr("style", "max-height: 100%; height:auto; height:intrinsic;");
+            .attr("style", "max-width: 100%; height:auto; height:intrinsic;");
 
         svg.append("g")
             .attr("transform", `translate(0,${marginTop})`)
@@ -32108,8 +32108,7 @@
             .attr("height", height)
             .attr("viewBox", [0, 0, width, height])
             .style("overflow", "visible")
-            .style("display", "block")
-            .style("max-width", "100%");
+            .style("display", "block");
 
         let tickAdjust = g => g.selectAll(".tick line").attr("y1", marginTop + marginBottom - height);
         let x;
