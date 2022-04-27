@@ -113,9 +113,9 @@
         }
 
 
-        #stackGraph{
+       /* #stackGraph{
             overflow:scroll;
-        }
+        }*/
 
         /*Graph*/
 
@@ -141,15 +141,14 @@
             </div>
             <div class="col-8">
                 <div id="stackGraph">
-                    <div id="legend" style=" padding-bottom:2.2rem"></div>
-                    <div id="chart">
-                    </div>
-                    <div id="filters" style="padding-top:2.2rem">
-                        <input type="checkbox" id="sort">
-                        Toggle Sort
-                        <input type="checkbox" id="chartType">
-                        Toggle Horizontal
-                    </div>
+                    <div id="legend" style=" padding-bottom:2.2rem; overflow:scroll;"></div>
+                    <div id="chart" style="overflow:scroll"></div>
+                </div>
+                <div id="filters" style="padding-top:2.2rem">
+                    <input type="checkbox" id="sort">
+                    Toggle Sort
+                    <input type="checkbox" id="chartType">
+                    Toggle Horizontal
                 </div>
             </div>
         </div>
