@@ -161,6 +161,10 @@
             border-block-color: #ddd;
             margin-bottom: 1rem;
         }
+        g {
+            font-size: 12px;
+            font-family: 'Roboto Condensed',sans-serif;
+        }
 
 
 
@@ -31895,7 +31899,6 @@
             .attr("style", "height: auto; height: intrinsic;");
 
         svg.append("g")
-            .attr('font-size', '14').attr('font-family', 'Roboto Condensed')
             .attr("transform", `translate(${marginLeft},0)`)
             .call(yAxis)
             .call(g => g.select(".domain").remove())
@@ -31931,7 +31934,6 @@
             
         svg.append("g")
             .attr("transform", `translate(0,${yScale(0)})`)
-            .attr('font-size', '14').attr('font-family', 'Roboto Condensed')
             .call(xAxis);
 
         
