@@ -127,6 +127,7 @@
             padding-top: 2.2rem;
             padding-bottom: 2.2rem;
             border: outset;
+            padding-left:2.2rem;
             /*visibility: hidden;*/
         }
 
@@ -31757,6 +31758,8 @@
             width: 2200,
             height: 500
         })
+
+        console.log(chart.scales.color);
         key = Legend(chart.scales.color, { title: "Med Groups" })
         $('#legend').append(key);
         $('#chart').append(chart);
