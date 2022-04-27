@@ -31903,7 +31903,7 @@
             .attr("width", width)
             .attr("height", height)
             .attr("viewBox", [0, 0, width + 200, height])
-            .attr("style", "height: auto; height: intrinsic;");
+            .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
         svg.append("g")
             .attr("transform", `translate(${marginLeft},0)`)
@@ -31958,8 +31958,8 @@
         z = () => 1, // given d in data, returns the (categorical) z-value
         title, // given d in data, returns the title text
         marginTop = 30, // top margin, in pixels
-        marginRight = 20, // right margin, in pixels
-        marginBottom = 20, // bottom margin, in pixels
+        marginRight = 0, // right margin, in pixels
+        marginBottom = 0, // bottom margin, in pixels
         marginLeft = 40, // left margin, in pixels
         width = 640, // outer width, in pixels
         height, // outer height, in pixels
@@ -32017,6 +32017,8 @@
         const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
         const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
+        console.log(color);
+
         // Compute titles.
         if (title === undefined) {
             const formatValue = xScale.tickFormat(100, xFormat);
@@ -32031,7 +32033,7 @@
             .attr("width", width + 100)
             .attr("height", height)
             .attr("viewBox", [0, 0, width, height])
-            .attr("style", "height: auto; height: intrinsic;");
+            .attr("style", "max-width: 100%; height:auto; height:intrinsic;");
 
         svg.append("g")
             .attr("transform", `translate(0,${marginTop})`)
