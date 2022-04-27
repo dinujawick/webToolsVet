@@ -160,6 +160,7 @@
             border: outset;
             border-block-color: #ddd;
             margin-bottom: 1rem;
+            margin-top: 1rem;
         }
         g {
             font-size: 14px;
@@ -188,19 +189,22 @@
                 </div>
             </div>
             <div class="col-8">
-                <div id="toggles" >
-                    <fieldset>
-                        <legend>Toggles</legend>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="sort">
-                            <label class="form-check-label" for="sort">Toggle Sort</label>
-                        </div>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="chartType">
-                            <label class="form-check-label" for="chartType">Toggle Horizontal</label>
-                        </div>
-                    </fieldset>                    
+                <div>
+                    <div id="toggles" class="col-4">
+                        <fieldset>
+                            <legend>Toggles</legend>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="sort">
+                                <label class="form-check-label" for="sort">Toggle Sort</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="chartType">
+                                <label class="form-check-label" for="chartType">Toggle Horizontal</label>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
+                
                 <div id="stackGraph">
                     <div id="legend"></div>
                     <div id="chart"></div>
