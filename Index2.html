@@ -31895,8 +31895,8 @@
             .attr("style", "height: auto; height: intrinsic;");
 
         svg.append("g")
+            .attr('font-size', '14').attr('font-family', 'Roboto Condensed')
             .attr("transform", `translate(${marginLeft},0)`)
-            .attr('font-size', '14').attr('font-family','Roboto Condensed')
             .call(yAxis)
             .call(g => g.select(".domain").remove())
             .call(g => g.selectAll(".tick line").clone()
@@ -31931,6 +31931,7 @@
             
         svg.append("g")
             .attr("transform", `translate(0,${yScale(0)})`)
+            .attr('font-size', '14').attr('font-family', 'Roboto Condensed')
             .call(xAxis);
 
         
