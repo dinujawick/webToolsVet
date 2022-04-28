@@ -122,7 +122,7 @@
         }
 
         #chart {
-            margin-top: 2rem;
+            
             overflow: auto;
             padding-top: 2.2rem;
             padding-bottom: 2.2rem;
@@ -134,14 +134,11 @@
             /*visibility: hidden;*/
         }
 
-        #legend {
-            
+        #legend {          
             overflow: scroll;
-            border: ridge;
             max-height: 10rem;
             width: auto;
-            height: auto;
-            padding-top: 1rem;
+            height: auto;  
             overflow-x: hidden;
         }
 
@@ -183,6 +180,10 @@
             text-align: center;
             margin-top: 2rem;
             margin-bottom: 2rem;
+        }
+
+        #legGroup {
+            border: ridge;
         }
 
 
@@ -236,7 +237,7 @@
                         </div>
                         <div id="legGroup" class="col-6">
                             <fieldset>
-                                <legend>Legend</legend>
+                                <legend style=" padding-left: 1rem;">Legend</legend>
                                 <div id="legend">
                                 </div>
                             </fieldset>
