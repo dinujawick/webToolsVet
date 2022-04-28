@@ -31567,13 +31567,17 @@
 
     
 
-    function createCSV(identifiedMedGroup) {
+    function genCSVGraph(identifiedMedGroup,status) {
+
 
         console.log(identifiedMedGroup);
 
         var tempCSV = [];
 
+
         header.push(identifiedMedGroup);
+
+        console.log(header);
 
         $.each(riskMap, function (key,value) {
             if (key == identifiedMedGroup) {
