@@ -198,13 +198,14 @@
 </head>
 
 <body class="body">
-    <!-- Header -->
-    <div id="header">
-        
-    </div>
-    <!-- End Header -->
-    <!-- Body -->
+ 
+   
     <div class="container">
+        <!-- Header -->
+        <div id="header">
+        </div>
+        <!-- End Header -->
+        <!-- Body -->
         <h1 id="pageHeader">Complex Risk Calculator</h1>
         <img id="vetMatesLogo" src="vetMatesLogo.png" />
         <div class="row">
@@ -223,29 +224,29 @@
             <div class="col-9">
                 <div id="stackGraph">
                     <div class="row">
-                            <div id="toggles" class="col-3">
-                                <fieldset>
-                                    <legend>Toggles</legend>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="sort">
-                                        <label class="form-check-label" for="sort">Toggle Sort</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="chartType">
-                                        <label class="form-check-label" for="chartType">Toggle Vertical</label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div id="filters" class="col-3">
-                                <fieldset>
-                                    <legend>Filters</legend>
-                                </fieldset>
-                            </div>
-                            <div id="tools" class="col-3">
-                                <fieldset>
-                                    <legend>Tools</legend>
-                                </fieldset>
-                            </div>
+                        <div id="toggles" class="col-3">
+                            <fieldset>
+                                <legend>Toggles</legend>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="sort">
+                                    <label class="form-check-label" for="sort">Toggle Sort</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="chartType">
+                                    <label class="form-check-label" for="chartType">Toggle Vertical</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div id="filters" class="col-3">
+                            <fieldset>
+                                <legend>Filters</legend>
+                            </fieldset>
+                        </div>
+                        <div id="tools" class="col-3">
+                            <fieldset>
+                                <legend>Tools</legend>
+                            </fieldset>
+                        </div>
                     </div>
                     <div class="row">
                         <div id="chartHeader">
@@ -257,17 +258,17 @@
                         <div id="chart">
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Body -->
-    <!-- Footer -->
-    <div id="footer">
+        <!-- End Body -->
+        <!-- Footer -->
+        <div id="footer">
 
+        </div>
     </div>
+    
+   
 </body>
 
 <script>
@@ -31488,11 +31489,9 @@
                                 else {
                                     checkAvailablity = false;
                                 }
-
                             });
                             if (checkAvailablity == false) {
                                 selectedMedGroupList.push(item.medGroup);
-
                             }
                         }
                     }
@@ -31520,8 +31519,6 @@
                     if (temp == item.atcLevel) {
                         $med = $('<a>').attr('id', "a" + atcLevel + atcDescr.replace(/\s/g, "")).
                         text(atcDescr).appendTo('#myDropdown');
-
-
 
                         $med.on('click', function (event) {
 
@@ -31556,10 +31553,8 @@
                                     calculateTotalRisk(identifiedMedGroup);
 
                                     //Generate dynamic graph
-                                    $('')
                                     createCSV(identifiedMedGroup,"ADD");
                                     
-
                                 }
                                     
                             } else {
