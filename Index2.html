@@ -157,8 +157,8 @@
 
         #toggles {
             padding-top: 1rem;
-            padding-left: 2rem;
-            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
             border: outset;
             border-block-color: #ddd;
             margin-bottom: 1rem;
@@ -170,8 +170,8 @@
 
         #filters {
             padding-top: 1rem;
-            padding-left: 2rem;
-            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
             border: outset;
             border-block-color: #ddd;
             margin-bottom: 1rem;
@@ -182,8 +182,8 @@
 
         #tools {
             padding-top: 1rem;
-            padding-left: 2rem;
-            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
             border: outset;
             border-block-color: #ddd;
             margin-bottom: 1rem;
@@ -197,6 +197,10 @@
             font-family: 'Roboto Condensed',sans-serif;
         }
 
+        #chartHeaderH4 {
+            text-align: center;
+            margin-top: 2rem;
+        }
 
 
     </style>
@@ -248,7 +252,7 @@
                 <div id="stackGraph">
                     <div id="legend"></div>
                     <div id="chartHeader">
-                        <h4>
+                        <h4 id="chartHeaderH4">
                             Cumalative Risks And Type of Adverse Drug Reaction
                         </h4>
                     </div>
@@ -31829,7 +31833,6 @@
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
         $('#legend').append(key);
-        $('#chart').append('h5').text('Cumalative Risks And Type Of Adverse Drug React');
         $('#chart').append(chart);
 
 
@@ -31860,7 +31863,6 @@
 
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
-                $('#chart').append('h5').text('Cumalative Risks And Type Of Adverse Drug React');
                 $('#chart').append(chart);
             }
             else {
@@ -31880,7 +31882,6 @@
                 })
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
-                $('#chart').append('h5').text('Cumalative Risks And Type Of Adverse Drug React');
                 $('#chart').append(chart);
             }
 
