@@ -211,7 +211,7 @@
                 <div id="stackGraph">
                     <div id="legend"></div>
                     <div id="chart">
-                        <h3>CUMALATIVE RISKS AND TYPE OF ADVERSE DRUG REACT</h3>
+                        
                     </div>
 
                 </div>
@@ -31756,8 +31756,7 @@
 
     function initialization(data) {
 
-        $('#legend').empty();
-        $('#chart').empty();
+        
 
         keys = data.columns.slice(1)
 
@@ -31771,6 +31770,8 @@
 
         $('#legend').empty();
         $('#chart').empty();
+        
+
         //Horizontal Stacked Bar Chart
         chart = StackedBarChartHorizontal(riskmedGroups, {
             x: d => d.status,
@@ -31785,6 +31786,7 @@
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
         $('#legend').append(key);
+        $('#chart').append('h5').text('Cumalative Risks And Type Of Adverse Drug React');
         $('#chart').append(chart);
 
 
@@ -31797,6 +31799,7 @@
 
                 $('#legend').empty();
                 $('#chart').empty();
+
                 //Vertical Stacked Bar Chart
                 chart = StackedBarChartVertical(riskmedGroups, {
                     x: d => d.risk,
@@ -31814,6 +31817,7 @@
 
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
+                $('#chart').append('h5').text('Cumalative Risks And Type Of Adverse Drug React');
                 $('#chart').append(chart);
             }
             else {
@@ -31833,6 +31837,7 @@
                 })
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
+                $('#chart').append('h5').text('Cumalative Risks And Type Of Adverse Drug React');
                 $('#chart').append(chart);
             }
 
