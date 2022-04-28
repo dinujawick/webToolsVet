@@ -31714,8 +31714,12 @@
                                     const index = selectedMedGroupList.indexOf(medGroup);
                                     if (index > -1) {
                                         selectedMedGroupList.splice(index, 1);
+                                        //create graph again with deleted list.
+                                        createCSV(selectedMedGroupList);
                                     }
                                     $('#' + medGroup + 'accordion').remove();
+                                    
+                                    
                                 }
 
                             })
