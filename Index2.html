@@ -107,7 +107,7 @@
             font-family: 'Roboto Condensed',sans-serif;
             padding-top: 5rem;
             padding-bottom: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
             background-image: url('headerBgImage.png');
             background-repeat: no-repeat;
@@ -32291,10 +32291,10 @@
                 .selectAll("rect")
                 .data(color.domain())
                 .join("rect")
-                .attr("x", 10)
-                .attr("y", marginTop + (50))
-                .attr("width", 50 )
-                .attr("height", 50)
+                .attr("x", x)
+                .attr("y", marginTop)
+                .attr("width", Math.max(0, x.bandwidth() - 1))
+                .attr("height", height - marginTop - marginBottom)
                 .attr("fill", color);
 
             tickAdjust = () => { };
