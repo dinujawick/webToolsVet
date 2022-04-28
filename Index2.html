@@ -31362,7 +31362,9 @@
     // When the user clicks on the button,toggle between hiding and showing the dropdown content
     function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
-            }
+    }
+
+
     function filterFunction() {
 
             var input, filter, ul, li, a, i;
@@ -31378,7 +31380,8 @@
                     a[i].style.display = "none";
                 }
             }
-        }
+    }
+
     function createSelectedList(atcDescr, atcLevel) {
 
                 $('#' + "a" + atcLevel)
@@ -31401,7 +31404,8 @@
 
 
                 }
-            }
+    }
+
     function getMedGroups(atcDescr, atcLevel){
 
                 var identifiedMedGroup;
@@ -31498,7 +31502,7 @@
                                     //Calculate Total risk for first med group
                                     calculateTotalRisk(identifiedMedGroup);
 
-                                    //To Do: Generate dynamic data
+                                    //Generate dynamic graph
                                     createCSV(identifiedMedGroup);
                                     
 
@@ -31520,7 +31524,7 @@
                                     //Calculate Total risk for created med group
                                     calculateTotalRisk(identifiedMedGroup);
 
-                                    //To Do: Generate dynamic data
+                                    //Generate dynamic graph
                                     createCSV(identifiedMedGroup);
 
                                     if (medAddedStatus != true)
@@ -31567,15 +31571,19 @@
 
     
 
-    function createCSV(identifiedMedGroup,status) {
+    function createCSV(identifiedMedGroup,process) {
 
-
-        console.log(identifiedMedGroup);
 
         var tempCSV = [];
 
 
-        header.push(identifiedMedGroup);
+        if (process = "REMOVE") {
+            header = $.merge(header, identifiedMedGroup);
+        }
+        else {
+            header.push(identifiedMedGroup);
+        }
+      
 
         console.log(header);
 
@@ -31654,7 +31662,6 @@
             })
             
     }
-        
     function createAccordionItem(medGroup) {
                 $accordion = $('<div>')
                     .attr('id',medGroup + 'accordion')
@@ -31722,9 +31729,8 @@
                                     const index = selectedMedGroupList.indexOf(medGroup);
                                     if (index > -1) {
                                         selectedMedGroupList.splice(index, 1);
-                                        //create graph again with deleted list.
-                                        console.log(selectedMedGroupList + "inside if")
-                                        createCSV(selectedMedGroupList);
+                                        //create graph again with deleted list. 
+                                        createCSV(selectedMedGroupList,"REMOVE");
                                     }
                                     $('#' + medGroup + 'accordion').remove();
                                     
@@ -31799,7 +31805,6 @@
                     width: 2200,
                     height: 500
                 })
-
 
                 key = Legend(chart.scales.color, { title: "Med Groups" })
                 $('#legend').append(key);
