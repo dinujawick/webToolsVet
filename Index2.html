@@ -32174,10 +32174,10 @@
         tickSize = 6,
         width = 44 + tickSize,
         height = 500 ,
-        marginTop = 18,
-        marginRight = 10,
-        marginBottom = 16 + tickSize,
-        marginLeft = 10,
+        marginTop = 0,
+        marginRight = 0,
+        marginBottom = 0 + tickSize,
+        marginLeft = 0,
         ticks = height / 64,
         tickFormat,
         tickValues
@@ -32282,7 +32282,7 @@
         else {
             
             // Add one dot in the legend for each name.
-            var size = 20
+            var size = 10;
             svg.selectAll("mydots")
                 .data(color.domain())
                 .enter()
