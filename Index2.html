@@ -161,6 +161,8 @@
 
         #filters {
             border: ridge;
+            margin-left: 4rem;
+            margin-right: 4rem;
         }
 
         #tools {
@@ -175,6 +177,7 @@
         #chartHeaderH4 {
             text-align: center;
             margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
 
@@ -32275,8 +32278,8 @@
                 .data(color.domain())
                 .enter()
                 .append("rect")
-                .attr("x", 100)
-                .attr("y", function (d, i) { return 100 + i * (size + 5) }) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("x", 10)
+                .attr("y", function (d, i) { return 10 + i * (size + 5) }) // 100 is where the first dot appears. 25 is the distance between dots
                 .attr("width", size)
                 .attr("height", size)
                 .style("fill", function (d) { return color(d) })
@@ -32286,8 +32289,8 @@
                 .data(keys)
                 .enter()
                 .append("text")
-                .attr("x", 100 + size * 1.2)
-                .attr("y", function (d, i) { return 100 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("x", 10 + size * 1.2)
+                .attr("y", function (d, i) { return 10 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
                 .style("fill", '#000')
                 .text(function (d) { return d })
                 .attr("text-anchor", "left")
