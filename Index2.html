@@ -198,8 +198,13 @@
 </head>
 
 <body class="body">
-    <div class="container">
+    <!-- Header -->
+    <div id="header">
         <h1 id="pageHeader">Complex Risk Calculator</h1>
+    </div>
+    <!-- End Header -->
+    <!-- Body -->
+    <div class="container">
         <div class="row">
             <div class="col-3">
                 <div class="vstack gap-2 mx-auto" id="menu">
@@ -216,29 +221,29 @@
             <div class="col-9">
                 <div id="stackGraph">
                     <div class="row">
-                            <div id="toggles" class="col-3">
-                                <fieldset>
-                                    <legend>Toggles</legend>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="sort">
-                                        <label class="form-check-label" for="sort">Toggle Sort</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="chartType">
-                                        <label class="form-check-label" for="chartType">Toggle Vertical</label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div id="filters" class="col-3">
-                                <fieldset>
-                                    <legend>Filters</legend>
-                                </fieldset>
-                            </div>
-                            <div id="tools" class="col-3">
-                                <fieldset>
-                                    <legend>Tools</legend>
-                                </fieldset>
-                            </div>
+                        <div id="toggles" class="col-3">
+                            <fieldset>
+                                <legend>Toggles</legend>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="sort">
+                                    <label class="form-check-label" for="sort">Toggle Sort</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="chartType">
+                                    <label class="form-check-label" for="chartType">Toggle Vertical</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div id="filters" class="col-3">
+                            <fieldset>
+                                <legend>Filters</legend>
+                            </fieldset>
+                        </div>
+                        <div id="tools" class="col-3">
+                            <fieldset>
+                                <legend>Tools</legend>
+                            </fieldset>
+                        </div>
                     </div>
                     <div class="row">
                         <div id="chartHeader">
@@ -250,12 +255,16 @@
                         <div id="chart">
                         </div>
                     </div>
-                   
+
 
                 </div>
-
             </div>
         </div>
+    </div>
+    <!-- End Body -->
+    <!-- Footer -->
+    <div id="footer">
+
     </div>
 </body>
 
