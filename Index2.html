@@ -31503,7 +31503,7 @@
                                     calculateTotalRisk(identifiedMedGroup);
 
                                     //Generate dynamic graph
-                                    createCSV(identifiedMedGroup);
+                                    createCSV(identifiedMedGroup,"ADD");
                                     
 
                                 }
@@ -31525,7 +31525,7 @@
                                     calculateTotalRisk(identifiedMedGroup);
 
                                     //Generate dynamic graph
-                                    createCSV(identifiedMedGroup);
+                                    createCSV(identifiedMedGroup,"ADD");
 
                                     if (medAddedStatus != true)
                                     createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
@@ -31577,10 +31577,10 @@
         var tempCSV = [];
 
 
-        if (process = "REMOVE") {
+        if (process == "REMOVE") {
             header = $.merge(header, identifiedMedGroup);
         }
-        else {
+        else if (process == "ADD" ) {
             header.push(identifiedMedGroup);
         }
       
