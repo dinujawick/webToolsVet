@@ -133,13 +133,13 @@
         }
 
         #legend {
-            margin: 5px;
-            padding: 5px;
-            background-color: green;
-            width: 500px;
+            margin: 1rem;
+            padding: 1rem;
+            width: 16rem;
             height: 110px;
             overflow: auto;
             text-align: justify;
+            border: ridge;
         }
 
         .searchPanel {
@@ -225,6 +225,11 @@
             </div>
             <div class="col-9">
                 <div id="stackGraph">
+                    <div id="chartHeader">
+                        <h4 id="chartHeaderH4">
+                            Cumulative Risks and Types of Adverse Drug Reactions
+                        </h4>
+                    </div>
                     <div class="row">
                         <div id="toggles" class="col-3">
                             <fieldset>
@@ -239,6 +244,12 @@
                                 </div>
                             </fieldset>
                         </div>
+                        <div id="legend">
+                            <fieldset>
+                                <legend>Med Classes</legend>
+                                <div id="legendFieledSet"></div>
+                            </fieldset>
+                        </div>
                         <div id="filters" class="col-3">
                             <fieldset>
                                 <legend>Filters</legend>
@@ -251,12 +262,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="chartHeader">
-                            <h4 id="chartHeaderH4">
-                                Cumulative Risks and Types of Adverse Drug Reactions
-                            </h4>
-                        </div>
-                        <div id="legend"></div>
+                        
                         <div id="chart">
                         </div>
                     </div>
@@ -31817,7 +31823,7 @@
 
         riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-        $('#legend').empty();
+        $('#legendFieledSet').empty();
         $('#chart').empty();
         
 
@@ -31838,10 +31844,8 @@
                 height: 500
             })
 
-            console.log(element);
-
-            //key = Legend(chart.scales.color, { title: "Med Groups" })
-            $('#legend').append(key);
+            key = Legend(chart.scales.color, { title: "Med Groups" })
+            $('#legendFieledSet').append(key);
             $('#chart').append(chart);
 
         }
@@ -31859,7 +31863,7 @@
                 colors: d3.schemeSpectral[keys.length]
             })
             key = Legend(chart.scales.color, { title: "Med Groups" })
-            $('#legend').append(key);
+            $('#legendFieledSet').append(key);
             $('#chart').append(chart);
         }
         
@@ -31867,7 +31871,7 @@
         $('#chartType').on('click', function (e) {
 
             if ($('#chartType').is(':checked')) {
-                $('#legend').empty();
+                $('#legendFieledSet').empty();
                 $('#chart').empty();
 
                 //Vertical Stacked Bar Chart
@@ -31886,11 +31890,11 @@
                 })
 
                 key = Legend(chart.scales.color, { title: "Med Groups" })
-                $('#legend').append(key);
+                $('#legendFieledSet').append(key);
                 $('#chart').append(chart);
             }
             else {
-                $('#legend').empty();
+                $('#legendFieledSet').empty();
                 $('#chart').empty();
                 //Horizontal Stacked Bar Chart
                 chart = StackedBarChartHorizontal(riskmedGroups, {
@@ -31905,7 +31909,7 @@
                     colors: d3.schemeSpectral[keys.length]
                 })
                 key = Legend(chart.scales.color, { title: "Med Groups" })
-                $('#legend').append(key);
+                $('#legendFieledSet').append(key);
                 $('#chart').append(chart);
             }
 
