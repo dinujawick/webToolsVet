@@ -32280,28 +32280,7 @@
 
         // Ordinal
         else {
-            x = d3.scaleBand()
-                .domain(color.domain())
-                .rangeRound([marginTop, height - marginBottom]);
-
-
-
-            svg.append("g")
-                .selectAll("rect")
-                .data(color.domain())
-                .join("rect")
-                .attr("x", marginLeft)
-                .attr("y", x )
-                /*.attr("x", x)*/
-                /*.attr("y", marginTop)*/
-                //.attr("width", Math.max(0, x.bandwidth() - 1))
-                //.attr("height", height - marginTop - marginBottom)
-                .attr("width", 50)
-                .attr("height", 50)
-                .attr("fill", color);
-
-
-
+            
             // Add one dot in the legend for each name.
             var size = 20
             svg.selectAll("mydots")
