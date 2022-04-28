@@ -31715,6 +31715,7 @@
                                     if (index > -1) {
                                         selectedMedGroupList.splice(index, 1);
                                         //create graph again with deleted list.
+                                        console.log(selectedMedGroupList + "inside if")
                                         createCSV(selectedMedGroupList);
                                     }
                                     $('#' + medGroup + 'accordion').remove();
