@@ -31836,9 +31836,11 @@
                 height: 500
             })
 
-            Swatches(d3.scaleOrdinal(["Wholesale and Retail Trade", "Manufacturing", "Leisure and hospitality", "Business services", "Construction", "Education and Health", "Government", "Finance", "Self-employed", "Other"], d3.schemeTableau10), {
+            const element = Swatches(d3.scaleOrdinal(["Wholesale and Retail Trade", "Manufacturing", "Leisure and hospitality", "Business services", "Construction", "Education and Health", "Government", "Finance", "Self-employed", "Other"], d3.schemeTableau10), {
                 columns: "180px"
             })
+
+            console.log(element);
 
             //key = Legend(chart.scales.color, { title: "Med Groups" })
             $('#legend').append(key);
