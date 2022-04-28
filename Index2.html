@@ -31811,6 +31811,24 @@
 
         if ($('#chartType').is(':checked')) {
 
+            //Vertical Stacked Bar Chart
+            chart = StackedBarChartVertical(riskmedGroups, {
+                x: d => d.risk,
+                y: d => d.status,
+                z: d => d.medGroup,
+                xDomain: data.map(d => d.Risk),
+                yDomain: [0, getRange(d3.max(data, d => d.total))],
+                /* yDomain: [0, d3.max(data, d => d.total) + 2]*/
+                yLabel: "↑ Med Class Risk Count",
+                zDomain: keys,
+                colors: d3.schemeSpectral[keys.length],
+                width: 2200,
+                height: 500
+            })
+
+            key = Legend(chart.scales.color, { title: "Med Groups" })
+            $('#legend').append(key);
+            $('#chart').append(chart);
 
         }
         else {
@@ -31835,8 +31853,6 @@
         $('#chartType').on('click', function (e) {
 
             if ($('#chartType').is(':checked')) {
-
-
                 $('#legend').empty();
                 $('#chart').empty();
 
