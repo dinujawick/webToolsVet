@@ -32283,7 +32283,9 @@
             x = d3.scaleBand()
                 .domain(color.domain())
                 .rangeRound([marginTop, height - marginBottom]);
-            
+
+
+
             svg.append("g")
                 .selectAll("rect")
                 .data(color.domain())
@@ -32298,26 +32300,52 @@
                 .attr("height", 50)
                 .attr("fill", color);
 
+
+
+            // Add one dot in the legend for each name.
+            var size = 20
+            svg.selectAll("mydots")
+                .data(color.domain())
+                .enter()
+                .append("rect")
+                .attr("x", 100)
+                .attr("y", function (d, i) { return 100 + i * (size + 5) }) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("width", size)
+                .attr("height", size)
+                .style("fill", function (d) { return color(d) })
+
+            // Add one dot in the legend for each name.
+            svg.selectAll("mylabels")
+                .data(keys)
+                .enter()
+                .append("text")
+                .attr("x", 100 + size * 1.2)
+                .attr("y", function (d, i) { return 100 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
+                .style("fill", function (d) { return color(d) })
+                .text(function (d) { return d })
+                .attr("text-anchor", "left")
+                .style("alignment-baseline", "middle")
+
             tickAdjust = () => { };
         }
 
-        svg.append("g")
-            .attr("transform", `translate(0,${height - marginBottom})`)
-            .call(d3.axisBottom(x)
-                .ticks(ticks, typeof tickFormat === "string" ? tickFormat : undefined)
-                .tickFormat(typeof tickFormat === "function" ? tickFormat : undefined)
-                .tickSize(tickSize)
-                .tickValues(tickValues))
-            .call(tickAdjust)
-            .call(g => g.select(".domain").remove())
-            .call(g => g.append("text")
-                .attr("x", marginLeft)
-                .attr("y", marginTop + marginBottom - height - 6)
-                .attr("fill", "currentColor")
-                .attr("text-anchor", "start")
-                .attr("font-weight", "bold")
-                .attr("class", "title")
-                .text(title));
+        //svg.append("g")
+        //    .attr("transform", `translate(0,${height - marginBottom})`)
+        //    .call(d3.axisBottom(x)
+        //        .ticks(ticks, typeof tickFormat === "string" ? tickFormat : undefined)
+        //        .tickFormat(typeof tickFormat === "function" ? tickFormat : undefined)
+        //        .tickSize(tickSize)
+        //        .tickValues(tickValues))
+        //    .call(tickAdjust)
+        //    .call(g => g.select(".domain").remove())
+        //    .call(g => g.append("text")
+        //        .attr("x", marginLeft)
+        //        .attr("y", marginTop + marginBottom - height - 6)
+        //        .attr("fill", "currentColor")
+        //        .attr("text-anchor", "start")
+        //        .attr("font-weight", "bold")
+        //        .attr("class", "title")
+        //        .text(title));
 
         return svg.node();
     }
