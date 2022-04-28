@@ -129,7 +129,7 @@
             border: outset;
             padding-left:2.2rem;
             padding-right:2.2rem;
-            visibility: hidden;
+            /*visibility: hidden;*/
         }
 
         #legend {
@@ -137,7 +137,7 @@
             padding-top: 2.2rem;
             padding-bottom: 2.2rem;
             border: outset;
-            visibility:hidden;
+            /*visibility:hidden;*/
         }
 
         .searchPanel {
@@ -163,7 +163,7 @@
             border-block-color: #ddd;
             margin-bottom: 1rem;
             margin-top: 1rem;
-            visibility: hidden;
+            /*visibility: hidden;*/
         }
         g {
             font-size: 14px;
@@ -209,8 +209,9 @@
                 </div>
                 
                 <div id="stackGraph">
-                    <div id="legend"></div>
                     <div id="chart"></div>
+                    <div id="legend"></div>
+
                 </div>
 
             </div>
@@ -31409,7 +31410,7 @@
 
     function getMedGroups(atcDescr, atcLevel){
 
-                var identifiedMedGroup;
+                var identifiedMedGroup = "";
 
                 $(medMap).each(function (index, item){
 
@@ -31504,6 +31505,7 @@
                                     calculateTotalRisk(identifiedMedGroup);
 
                                     //Generate dynamic graph
+                                    $('')
                                     createCSV(identifiedMedGroup,"ADD");
                                     
 
