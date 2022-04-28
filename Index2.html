@@ -123,7 +123,7 @@
 
         #chart {
             margin-top: 2rem;
-            overflow: scroll;
+            overflow: auto;
             padding-top: 2.2rem;
             padding-bottom: 2.2rem;
             border: outset;
@@ -226,9 +226,7 @@
                             </fieldset>
                         </div>
                         <div id="legend" class="col-3">
-                            <h6>Med Classes</h6>
-                            <div id="legendFieledSet"></div>
-                            
+                                                       
                         </div>
                         <div id="filters" class="col-3">
                             <fieldset>
@@ -31803,7 +31801,7 @@
 
         riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-        $('#legendFieledSet').empty();
+        $('#legend').empty();
         $('#chart').empty();
         
 
@@ -31825,7 +31823,7 @@
             })
 
             key = Legend(chart.scales.color, { title: "Med Groups" })
-            $('#legendFieledSet').append(key);
+            $('#legend').append(key);
             $('#chart').append(chart);
 
         }
@@ -31843,7 +31841,7 @@
                 colors: d3.schemeSpectral[keys.length]
             })
             key = Legend(chart.scales.color, { title: "Med Groups" })
-            $('#legendFieledSet').append(key);
+            $('#legend').append(key);
             $('#chart').append(chart);
         }
         
@@ -31851,7 +31849,7 @@
         $('#chartType').on('click', function (e) {
 
             if ($('#chartType').is(':checked')) {
-                $('#legendFieledSet').empty();
+                $('#legend').empty();
                 $('#chart').empty();
 
                 //Vertical Stacked Bar Chart
@@ -31870,7 +31868,7 @@
                 })
 
                 key = Legend(chart.scales.color, { title: "Med Groups" })
-                $('#legendFieledSet').append(key);
+                $('#legend').append(key);
                 $('#chart').append(chart);
             }
             else {
@@ -31889,7 +31887,7 @@
                     colors: d3.schemeSpectral[keys.length]
                 })
                 key = Legend(chart.scales.color, { title: "Med Groups" })
-                $('#legendFieledSet').append(key);
+                $('#legend').append(key);
                 $('#chart').append(chart);
             }
 
