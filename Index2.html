@@ -31760,7 +31760,7 @@
 
         keys = data.columns.slice(1)
 
-        console.log(d3.schemeSpectral[keys.length][0]);
+        
 
         data.forEach(function (d) {
             d.total = d3.sum(keys, k => +d[k])
