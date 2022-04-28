@@ -31621,6 +31621,8 @@
         tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
             heartRisk, cveRisk, respRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
+
+
         //create a csv file
         let csvContent = "data:text/csv;charset=utf-8,"
             + tempCSV.map(e => e.join(",")).join("\n");
@@ -31776,6 +31778,9 @@
 
             if ($('#chartType').is(':checked')) {
 
+
+                $('#legend').empty();
+                $('#chart').empty();
                 //Vertical Stacked Bar Chart
                 chart = StackedBarChartVertical(riskmedGroups, {
                     x: d => d.risk,
