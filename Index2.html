@@ -132,10 +132,7 @@
             /*visibility: hidden;*/
         }
 
-        #legend {
-            margin: 1rem;
-            padding: 1rem;
-            width: 16rem;
+        #legend { 
             overflow: auto;
             text-align: justify;
             border: ridge;
@@ -157,31 +154,15 @@
         /*Graph*/
 
         #toggles {
-            padding-top: 1rem;
-            padding-left: 1rem;
-            padding-bottom: 1rem;
-            border: outset;
-            border-block-color: #ddd;
-            margin: 1rem 1rem 1rem 1rem;
-            /*visibility: hidden;*/
+            border: ridge;
         }
 
         #filters {
-            padding-top: 1rem;
-            padding-left: 1rem;
-            padding-bottom: 1rem;
-            border: outset;
-            border-block-color: #ddd;
-            margin: 1rem 1rem 1rem 1rem;
+            border: ridge;
         }
 
         #tools {
-            padding-top: 1rem;
-            padding-left: 1rem;
-            padding-bottom: 1rem;
-            border: outset;
-            border-block-color: #ddd;
-            margin: 1rem 1rem 1rem 1rem;
+            border: ridge;
         }
 
         g {
@@ -243,7 +224,7 @@
                                 </div>
                             </fieldset>
                         </div>
-                        <div id="legend">
+                        <div id="legend" class="col-3">
                             <fieldset>
                                 <legend>Med Classes</legend>
                                 <div id="legendFieledSet"></div>
@@ -252,6 +233,11 @@
                         <div id="filters" class="col-3">
                             <fieldset>
                                 <legend>Filters</legend>
+                            </fieldset>
+                        </div>
+                        <div id="tools" class="col-3">
+                            <fieldset>
+                                <legend>Tools</legend>
                             </fieldset>
                         </div>
                     </div>
