@@ -32172,8 +32172,8 @@
     function Legend(color, {
         title,
         tickSize = 6,
-        width = 500,
-        height = 44 + tickSize,
+        width = 100 + + tickSize,
+        height = 500 ,
         marginTop = 18,
         marginRight = 10,
         marginBottom = 16 + tickSize,
@@ -32283,13 +32283,13 @@
             x = d3.scaleBand()
                 .domain(color.domain())
                 .rangeRound([marginLeft, width - marginRight]);
-            console.log(x);
+            
             svg.append("g")
                 .selectAll("rect")
                 .data(color.domain())
                 .join("rect")
-                .attr("x", x)
-                .attr("y", marginTop)
+                .attr("x", marginTop)
+                .attr("y", x)
                 /*.attr("x", x)*/
                 /*.attr("y", marginTop)*/
                 .attr("width", Math.max(0, x.bandwidth() - 1))
