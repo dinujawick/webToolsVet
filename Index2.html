@@ -31686,7 +31686,7 @@
         tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
             heartRisk, cveRisk, respRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
-
+        console.log(tempCSV);
 
         //create a csv file
         let csvContent = "data:text/csv;charset=utf-8,"
@@ -31803,13 +31803,7 @@
 
     function initialization(data) {
 
-        
-
         keys = data.columns.slice(1)
-
-        console.log(keys.length);
-       
-        
 
         data.forEach(function (d) {
             d.total = d3.sum(keys, k => +d[k])
