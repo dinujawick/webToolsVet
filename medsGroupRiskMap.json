@@ -154,7 +154,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "ACE_ARB_combo": {
+  "ACE_ARB_Combo": {
     "falls_fracture": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -205,7 +205,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "CCB_dihydro": {
+  "CCB_Dihydro": {
     "falls_fracture": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -222,7 +222,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "CCB_dv": {
+  "CCB_Dv": {
     "falls_fracture": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -239,7 +239,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "Nitrates_nicorandil": {
+  "Nitrates_Nicorandil": {
     "falls_fracture": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -382,7 +382,7 @@
     "angle_closure_glaucoma": 0
 
   },
-  "Sedating antihistamines": {
+  "Sedating_Antihistamines": {
     "falls_fracture": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -418,7 +418,7 @@
     "angle_closure_glaucoma": 0
 
   },
-  "Antipsychotics_(excl_prochlorperazine)": {
+  "Antipsychotics_Excl_Prochlorperazine": {
     "falls_fracture": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -489,7 +489,7 @@
     "angle_closure_glaucoma": 1
 
   },
-  "MAO_inhibitors": {
+  "MAO_Inhibitors": {
     "falls_fracture": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -524,7 +524,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "Antimicrobials_(renal)": {
+  "Antimicrobials_Renal": {
     "falls_fracture": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -649,7 +649,7 @@
     "angle_closure_glaucoma": 0
 
   },
-  "Hypoglycemics_combo": {
+  "Hypoglycemics_Combo": {
     "falls_fracture": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -754,7 +754,7 @@
     "angle_closure_glaucoma": 0
 
   },
-  "Antiplt_exclPAH": {
+  "Antiplt_Excl_PAH": {
     "falls_fracture": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -771,7 +771,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "Pregabalin/Gabapentin_(Gabapentinoid)": {
+  "PregabalinOrGabapentin": {
     "falls_fracture": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -788,7 +788,7 @@
     "serotonin_syndrome": 0,
     "angle_closure_glaucoma": 0
   },
-  "Antiepileptic_(excl_gabapentinoid)": {
+  "Antiepileptic_Excl_Gabapentinoid": {
     "falls_fracture": 1,
     "constipation": 0,
     "urinary_retention": 0,

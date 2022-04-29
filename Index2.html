@@ -30069,1310 +30069,1310 @@
             //medGroupAndRisk
             const riskMap = {
 
-              "H2Blockers": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Laxatives": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Loperamide": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        "H2Blockers": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Laxatives": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Loperamide": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Prochlorperazine": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 1,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 1
-              },
-              "Metoclopramide": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 1,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "PPI": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "ACE_ARB": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 0,
-                "hyperkalemia": 1,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Thiazide": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Loop": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "ACE_ARB_combo": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Spironolactone": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 0,
-                "hyperkalemia": 1,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Betablockers": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 1,
-                "bradycardia": 1,
-                "CV_events": 0,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "CCB_dihydro": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "CCB_dv": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 1,
-                "bradycardia": 1,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Nitrates_nicorandil": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Digoxin": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 1,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Prochlorperazine": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 1,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 1
+        },
+        "Metoclopramide": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 1,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "PPI": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "ACE_ARB": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 0,
+            "hyperkalemia": 1,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Thiazide": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Loop": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "ACE_ARB_Combo": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Spironolactone": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 0,
+            "hyperkalemia": 1,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Betablockers": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 1,
+            "bradycardia": 1,
+            "CV_events": 0,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "CCB_Dihydro": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "CCB_Dv": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 1,
+            "bradycardia": 1,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Nitrates_Nicorandil": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Digoxin": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 1,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Antihypertensive": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Antihypertensive": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Amiodarone": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Amiodarone": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Theophylline": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Theophylline": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Steroid": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 1,
-                "heart_failure": 1,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 1,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 1
+        },
+        "Steroid": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 1,
+            "heart_failure": 1,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 1,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 1
 
-              },
-              "Opioid": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 1,
-                "angle_closure_glaucoma": 0
+        },
+        "Opioid": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 1,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Benzodiazepines": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Benzodiazepines": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Sedating_Antihistamines": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Sedating_Antihistamines": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "H1Blockers": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "H1Blockers": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Antipsychotics_(excl_prochlorperazine)": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "SSRI": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 1,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 1,
-                "angle_closure_glaucoma": 0
+        },
+        "Antipsychotics_Excl_Prochlorperazine": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "SSRI": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 1,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 1,
+            "angle_closure_glaucoma": 0
 
-              },
-              "SNRI": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 1,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 1,
-                "angle_closure_glaucoma": 0
+        },
+        "SNRI": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 1,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 1,
+            "angle_closure_glaucoma": 0
 
-              },
-              "TCA": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 1,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 1,
-                "angle_closure_glaucoma": 1
+        },
+        "TCA": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 1,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 1,
+            "angle_closure_glaucoma": 1
 
-              },
-              "MAO_inhibitors": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 1,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 1,
-                "angle_closure_glaucoma": 1
+        },
+        "MAO_Inhibitors": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 1,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 1,
+            "angle_closure_glaucoma": 1
 
-              },
-              "OtherAntidep": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Antimicrobials_(renal)": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 0,
-                "hyperkalemia": 1,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Sulfonylurea": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "OtherAntidep": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Antimicrobials_Renal": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 0,
+            "hyperkalemia": 1,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Sulfonylurea": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Gliptins": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Gliptins": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Glutides": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Glutides": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Gliflozins": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Gliflozins": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Pioglitazone": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 1,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 1,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Pioglitazone": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 1,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 1,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Insulin": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Insulin": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Hypoglycemics_combo": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Metformin": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "UrinaryAntispasm": {
-                "falls_fracture": 1,
-                "constipation": 1,
-                "urinary_retention": 1,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 1,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 1
-              },
-              "SelectiveAlphaBlockers": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Hypoglycemics_Combo": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Metformin": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "UrinaryAntispasm": {
+            "falls_fracture": 1,
+            "constipation": 1,
+            "urinary_retention": 1,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 1,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 1
+        },
+        "SelectiveAlphaBlockers": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "NSAIDs": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 1,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 1,
-                "hypoglycaemia": 0,
-                "renal_injury": 1,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "NSAIDs": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 1,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 1,
+            "hypoglycaemia": 0,
+            "renal_injury": 1,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Anticoagulant": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 1,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
+        },
+        "Anticoagulant": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 1,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
 
-              },
-              "Antiplt_exclPAH": {
-                "falls_fracture": 0,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 1,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Pregabalin/Gabapentin_(Gabapentinoid)": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 0,
-                "bleeding": 0,
-                "heart_failure": 1,
-                "bradycardia": 0,
-                "CV_events": 0,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              },
-              "Antiepileptic_(excl_gabapentinoid)": {
-                "falls_fracture": 1,
-                "constipation": 0,
-                "urinary_retention": 0,
-                "CNS_depression": 1,
-                "bleeding": 0,
-                "heart_failure": 0,
-                "bradycardia": 0,
-                "CV_events": 1,
-                "respiratory": 0,
-                "hypoglycaemia": 0,
-                "renal_injury": 0,
-                "hypokalemia": 0,
-                "hyperkalemia": 0,
-                "serotonin_syndrome": 0,
-                "angle_closure_glaucoma": 0
-              }
+        },
+        "Antiplt_Excl_PAH": {
+            "falls_fracture": 0,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 1,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "PregabalinOrGabapentin": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 0,
+            "bleeding": 0,
+            "heart_failure": 1,
+            "bradycardia": 0,
+            "CV_events": 0,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        },
+        "Antiepileptic_Excl_Gabapentinoid": {
+            "falls_fracture": 1,
+            "constipation": 0,
+            "urinary_retention": 0,
+            "CNS_depression": 1,
+            "bleeding": 0,
+            "heart_failure": 0,
+            "bradycardia": 0,
+            "CV_events": 1,
+            "respiratory": 0,
+            "hypoglycaemia": 0,
+            "renal_injury": 0,
+            "hypokalemia": 0,
+            "hyperkalemia": 0,
+            "serotonin_syndrome": 0,
+            "angle_closure_glaucoma": 0
+        }
 
-};
+    };
 
             //ATC med and med group map
             const medMap = [
 
-                {
-                    "atcLevel": "N05CD",
-                    "medGroup": "Benzodiazepines"
-                },
-                {
-                    "atcLevel": "N05BA",
-                    "medGroup": "Benzodiazepines"
-                },
-                {
-                    "atcLevel": "N06AB",
-                    "medGroup": "SSRI"
-                },
-                {
-                    "atcLevel": "N06AF",
-                    "medGroup": "MAO Inhibitors"
-                },
-                {
-                    "atcLevel": "N06AG",
-                    "medGroup": "MAO Inhibitors"
-                },
-                {
-                    "atcLevel": "N06AA",
-                    "medGroup": "TCA"
-                },
-                {
-                    "atcLevel": "N02A",
-                    "medGroup": "Opioid"
-                },
-                {
-                    "atcLevel": "N05A",
-                    "medGroup": "Antipsychotics_Excl_Prochlorperazine"
-
-                },
-                {
-                    "atcLevel": "N06AX16",
-                    "medGroup": "SNRI"
-
-                },
-                {
-                    "atcLevel": "N06AX17",
-                    "medGroup": "SNRI"
-
-                },
-                {
-                    "atcLevel": "N06AX21",
-                    "medGroup": "SNRI"
-
-                },
-                {
-                    "atcLevel": "N06AX23",
-                    "medGroup": "SNRI"
-
-                },
-                {
-                    "atcLevel": "N06AX03",
-                    "medGroup": "OtherAntidep"
-
-                },
-                {
-                    "atcLevel": "N06AX11",
-                    "medGroup": "OtherAntidep"
-
-                },
-                {
-                    "atcLevel": "N06AX18",
-                    "medGroup": "OtherAntidep"
-
-                },
-                {
-                    "atcLevel": "N06AX22",
-                    "medGroup": "OtherAntidep"
-
-                },
-                {
-                    "atcLevel": "N06AX26",
-                    "medGroup": "OtherAntidep"
-
-                },
-                {
-                    "atcLevel": "C03CA",
-                    "medGroup": "Loop"
-
-                },
-                {
-                    "atcLevel": "C03AA",
-                    "medGroup": "Thiazide"
-
-                },
-                {
-                    "atcLevel": "C09AA",
-                    "medGroup": "ACE_ARB"
-
-                },
-                {
-                    "atcLevel": "C09CA",
-                    "medGroup": "ACE_ARB"
-
-                },
-                {
-                    "atcLevel": "C09BA",
-                    "medGroup": "ACE_ARB_Combo"
-
-                },
-                {
-                    "atcLevel": "C09BB",
-                    "medGroup": "ACE_ARB_Combo"
-
-                },
-                {
-                    "atcLevel": "C09DA",
-                    "medGroup": "ACE_ARB_Combo"
-
-                },
-                {
-                    "atcLevel": "C09DB",
-                    "medGroup": "ACE_ARB_Combo"
-
-                },
-                {
-                    "atcLevel": "C09DX",
-                    "medGroup": "ACE_ARB_Combo"
-
-                },
-                {
-                    "atcLevel": "C03DA01",
-                    "medGroup": "Spironolactone"
-
-                },
-                {
-                    "atcLevel": "C01AA05",
-                    "medGroup": "Digoxin"
-
-                },
-                {
-                    "atcLevel": "C07",
-                    "medGroup": "Betablockers"
-
-                },
-                {
-                    "atcLevel": "C01DA",
-                    "medGroup": "Nitrates_Nicorandil"
-
-                },
-                {
-                    "atcLevel": "C01DX",
-                    "medGroup": "Nitrates_Nicorandil"
-
-                },
-                {
-                    "atcLevel": "C08C",
-                    "medGroup": "CCB_Dihydro"
-
-                },
-                {
-                    "atcLevel": "C08D",
-                    "medGroup": "CCB_Dv"
-
-                },
-                {
-                    "atcLevel": "C01BD01",
-                    "medGroup": "Amiodarone"
-
-                },
-                {
-                    "atcLevel": "C02A",
-                    "medGroup": "Antihypertensive"
-
-                },
-                {
-                    "atcLevel": "C02C",
-                    "medGroup": "Antihypertensive"
-
-                },
-                {
-                    "atcLevel": "C02D",
-                    "medGroup": "Antihypertensive"
-
-                },
-                {
-                    "atcLevel": "A10A",
-                    "medGroup": "Insulin"
-
-                },
-                {
-                    "atcLevel": "A10BB",
-                    "medGroup": "Sulfonylurea"
-
-                },
-                {
-                    "atcLevel": "A10BD",
-                    "medGroup": "Hypoglycemics_Combo"
-
-                },
-                {
-                    "atcLevel": "A10BH",
-                    "medGroup": "Gliptins"
-
-                },
-                {
-                    "atcLevel": "A10BJ",
-                    "medGroup": "Glutides"
-
-                },
-                {
-                    "atcLevel": "A10BK",
-                    "medGroup": "Gliflozins"
-
-                },
-                {
-                    "atcLevel": "A10BA02",
-                    "medGroup": "Metformin"
-
-                },
-                {
-                    "atcLevel": "A10BG03",
-                    "medGroup": "Pioglitazone"
-
-                },
-                {
-                    "atcLevel": "B01AA",
-                    "medGroup": "Anticoagulant"
-
-                },
-                {
-                    "atcLevel": "B01AB",
-                    "medGroup": "Anticoagulant"
-
-                },
-                {
-                    "atcLevel": "B01AE",
-                    "medGroup": "Anticoagulant"
-
-                },
-                {
-                    "atcLevel": "B01AF",
-                    "medGroup": "Anticoagulant"
-
-                },
-                {
-                    "atcLevel": "B01AX",
-                    "medGroup": "Anticoagulant"
-
-                },
-                {
-                    "atcLevel": "B01AC04",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC05",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC07",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC13",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC16",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC17",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC22",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC24",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "B01AC30",
-                    "medGroup": "Antiplt_Excl_PAH"
-
-                },
-                {
-                    "atcLevel": "H02AB",
-                    "medGroup": "Steroid"
-
-                },
-                {
-                    "atcLevel": "M01A",
-                    "medGroup": "NSAIDs"
-
-                },
-                {
-                    "atcLevel": "R03DA04",
-                    "medGroup": "Theophylline"
-
-                },
-                {
-                    "atcLevel": "A02BA",
-                    "medGroup": "H2Blockers"
-
-                },
-                {
-                    "atcLevel": "A02BC",
-                    "medGroup": "PPI"
-
-                },
-                {
-                    "atcLevel": "J01DH",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J01MA",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J01XB",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J01G",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J01EE01",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J01XA01",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J01XX09",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J02AA01",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "J02AX04",
-                    "medGroup": "Antimicrobials_Renal"
-
-                },
-                {
-                    "atcLevel": "A07DA03",
-                    "medGroup": "Loperamide"
-
-                },
-                {
-                    "atcLevel": "R06AE07",
-                    "medGroup": "H1Blockers"
-
-                },
-                {
-                    "atcLevel": "R06AX13",
-                    "medGroup": "H1Blockers"
-
-                },
-                {
-                    "atcLevel": "R06AX26",
-                    "medGroup": "H1Blockers"
-
-                },
-                {
-                    "atcLevel": "R06AX27",
-                    "medGroup": "H1Blockers"
-
-                },
-                {
-                    "atcLevel": "G04CA01",
-                    "medGroup": "SelectiveAlphaBlockers"
-
-                },
-                {
-                    "atcLevel": "G04CA02",
-                    "medGroup": "SelectiveAlphaBlockers"
-
-                },
-                {
-                    "atcLevel": "G04CA04",
-                    "medGroup": "SelectiveAlphaBlockers"
-
-                },
-                {
-                    "atcLevel": "A03AB05",
-                    "medGroup": "UrinaryAntispasm"
-
-                },
-                {
-                    "atcLevel": "G04BD03",
-                    "medGroup": "UrinaryAntispasm"
-
-                },
-                {
-                    "atcLevel": "G04BD07",
-                    "medGroup": "UrinaryAntispasm"
-
-                },
-                {
-                    "atcLevel": "G04BD08",
-                    "medGroup": "UrinaryAntispasm"
-
-                },
-                {
-                    "atcLevel": "G04BD10",
-                    "medGroup": "UrinaryAntispasm"
-
-                },
-                {
-                    "atcLevel": "A06",
-                    "medGroup": "Laxatives"
-
-                },
-                {
-                    "atcLevel": "N05AB04",
-                    "medGroup": "Prochlorperazine"
-
-                },
-                {
-                    "atcLevel": "A03FA01",
-                    "medGroup": "Metoclopramide"
-
-                },
-                {
-                    "atcLevel": "R06AD01",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AD02",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AA02",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AA09",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AB02",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AB05",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AE03",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "R06AX02",
-                    "medGroup": "Sedating_Antihistamines"
-
-                },
-                {
-                    "atcLevel": "N03AX16",
-                    "medGroup": "PregabalinOrGabapentin"
-
-                },
-                {
-                    "atcLevel": "N03AX12",
-                    "medGroup": "PregabalinOrGabapentin"
-
-                },
-                {
-                    "atcLevel": "N03A",
-                    "medGroup": "Antiepileptic"
-                }
-            ];
+        {
+            "atcLevel": "N05CD",
+            "medGroup": "Benzodiazepines"
+        },
+        {
+            "atcLevel": "N05BA",
+            "medGroup": "Benzodiazepines"
+        },
+        {
+            "atcLevel": "N06AB",
+            "medGroup": "SSRI"
+        },
+        {
+            "atcLevel": "N06AF",
+            "medGroup": "MAO_Inhibitors"
+        },
+        {
+            "atcLevel": "N06AG",
+            "medGroup": "MAO_Inhibitors"
+        },
+        {
+            "atcLevel": "N06AA",
+            "medGroup": "TCA"
+        },
+        {
+            "atcLevel": "N02A",
+            "medGroup": "Opioid"
+        },
+        {
+            "atcLevel": "N05A",
+            "medGroup": "Antipsychotics_Excl_Prochlorperazine"
+
+        },
+        {
+            "atcLevel": "N06AX16",
+            "medGroup": "SNRI"
+
+        },
+        {
+            "atcLevel": "N06AX17",
+            "medGroup": "SNRI"
+
+        },
+        {
+            "atcLevel": "N06AX21",
+            "medGroup": "SNRI"
+
+        },
+        {
+            "atcLevel": "N06AX23",
+            "medGroup": "SNRI"
+
+        },
+        {
+            "atcLevel": "N06AX03",
+            "medGroup": "OtherAntidep"
+
+        },
+        {
+            "atcLevel": "N06AX11",
+            "medGroup": "OtherAntidep"
+
+        },
+        {
+            "atcLevel": "N06AX18",
+            "medGroup": "OtherAntidep"
+
+        },
+        {
+            "atcLevel": "N06AX22",
+            "medGroup": "OtherAntidep"
+
+        },
+        {
+            "atcLevel": "N06AX26",
+            "medGroup": "OtherAntidep"
+
+        },
+        {
+            "atcLevel": "C03CA",
+            "medGroup": "Loop"
+
+        },
+        {
+            "atcLevel": "C03AA",
+            "medGroup": "Thiazide"
+
+        },
+        {
+            "atcLevel": "C09AA",
+            "medGroup": "ACE_ARB"
+
+        },
+        {
+            "atcLevel": "C09CA",
+            "medGroup": "ACE_ARB"
+
+        },
+        {
+            "atcLevel": "C09BA",
+            "medGroup": "ACE_ARB_Combo"
+
+        },
+        {
+            "atcLevel": "C09BB",
+            "medGroup": "ACE_ARB_Combo"
+
+        },
+        {
+            "atcLevel": "C09DA",
+            "medGroup": "ACE_ARB_Combo"
+
+        },
+        {
+            "atcLevel": "C09DB",
+            "medGroup": "ACE_ARB_Combo"
+
+        },
+        {
+            "atcLevel": "C09DX",
+            "medGroup": "ACE_ARB_Combo"
+
+        },
+        {
+            "atcLevel": "C03DA01",
+            "medGroup": "Spironolactone"
+
+        },
+        {
+            "atcLevel": "C01AA05",
+            "medGroup": "Digoxin"
+
+        },
+        {
+            "atcLevel": "C07",
+            "medGroup": "Betablockers"
+
+        },
+        {
+            "atcLevel": "C01DA",
+            "medGroup": "Nitrates_Nicorandil"
+
+        },
+        {
+            "atcLevel": "C01DX",
+            "medGroup": "Nitrates_Nicorandil"
+
+        },
+        {
+            "atcLevel": "C08C",
+            "medGroup": "CCB_Dihydro"
+
+        },
+        {
+            "atcLevel": "C08D",
+            "medGroup": "CCB_Dv"
+
+        },
+        {
+            "atcLevel": "C01BD01",
+            "medGroup": "Amiodarone"
+
+        },
+        {
+            "atcLevel": "C02A",
+            "medGroup": "Antihypertensive"
+
+        },
+        {
+            "atcLevel": "C02C",
+            "medGroup": "Antihypertensive"
+
+        },
+        {
+            "atcLevel": "C02D",
+            "medGroup": "Antihypertensive"
+
+        },
+        {
+            "atcLevel": "A10A",
+            "medGroup": "Insulin"
+
+        },
+        {
+            "atcLevel": "A10BB",
+            "medGroup": "Sulfonylurea"
+
+        },
+        {
+            "atcLevel": "A10BD",
+            "medGroup": "Hypoglycemics_Combo"
+
+        },
+        {
+            "atcLevel": "A10BH",
+            "medGroup": "Gliptins"
+
+        },
+        {
+            "atcLevel": "A10BJ",
+            "medGroup": "Glutides"
+
+        },
+        {
+            "atcLevel": "A10BK",
+            "medGroup": "Gliflozins"
+
+        },
+        {
+            "atcLevel": "A10BA02",
+            "medGroup": "Metformin"
+
+        },
+        {
+            "atcLevel": "A10BG03",
+            "medGroup": "Pioglitazone"
+
+        },
+        {
+            "atcLevel": "B01AA",
+            "medGroup": "Anticoagulant"
+
+        },
+        {
+            "atcLevel": "B01AB",
+            "medGroup": "Anticoagulant"
+
+        },
+        {
+            "atcLevel": "B01AE",
+            "medGroup": "Anticoagulant"
+
+        },
+        {
+            "atcLevel": "B01AF",
+            "medGroup": "Anticoagulant"
+
+        },
+        {
+            "atcLevel": "B01AX",
+            "medGroup": "Anticoagulant"
+
+        },
+        {
+            "atcLevel": "B01AC04",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC05",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC07",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC13",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC16",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC17",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC22",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC24",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "B01AC30",
+            "medGroup": "Antiplt_Excl_PAH"
+
+        },
+        {
+            "atcLevel": "H02AB",
+            "medGroup": "Steroid"
+
+        },
+        {
+            "atcLevel": "M01A",
+            "medGroup": "NSAIDs"
+
+        },
+        {
+            "atcLevel": "R03DA04",
+            "medGroup": "Theophylline"
+
+        },
+        {
+            "atcLevel": "A02BA",
+            "medGroup": "H2Blockers"
+
+        },
+        {
+            "atcLevel": "A02BC",
+            "medGroup": "PPI"
+
+        },
+        {
+            "atcLevel": "J01DH",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J01MA",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J01XB",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J01G",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J01EE01",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J01XA01",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J01XX09",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J02AA01",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "J02AX04",
+            "medGroup": "Antimicrobials_Renal"
+
+        },
+        {
+            "atcLevel": "A07DA03",
+            "medGroup": "Loperamide"
+
+        },
+        {
+            "atcLevel": "R06AE07",
+            "medGroup": "H1Blockers"
+
+        },
+        {
+            "atcLevel": "R06AX13",
+            "medGroup": "H1Blockers"
+
+        },
+        {
+            "atcLevel": "R06AX26",
+            "medGroup": "H1Blockers"
+
+        },
+        {
+            "atcLevel": "R06AX27",
+            "medGroup": "H1Blockers"
+
+        },
+        {
+            "atcLevel": "G04CA01",
+            "medGroup": "SelectiveAlphaBlockers"
+
+        },
+        {
+            "atcLevel": "G04CA02",
+            "medGroup": "SelectiveAlphaBlockers"
+
+        },
+        {
+            "atcLevel": "G04CA04",
+            "medGroup": "SelectiveAlphaBlockers"
+
+        },
+        {
+            "atcLevel": "A03AB05",
+            "medGroup": "UrinaryAntispasm"
+
+        },
+        {
+            "atcLevel": "G04BD03",
+            "medGroup": "UrinaryAntispasm"
+
+        },
+        {
+            "atcLevel": "G04BD07",
+            "medGroup": "UrinaryAntispasm"
+
+        },
+        {
+            "atcLevel": "G04BD08",
+            "medGroup": "UrinaryAntispasm"
+
+        },
+        {
+            "atcLevel": "G04BD10",
+            "medGroup": "UrinaryAntispasm"
+
+        },
+        {
+            "atcLevel": "A06",
+            "medGroup": "Laxatives"
+
+        },
+        {
+            "atcLevel": "N05AB04",
+            "medGroup": "Prochlorperazine"
+
+        },
+        {
+            "atcLevel": "A03FA01",
+            "medGroup": "Metoclopramide"
+
+        },
+        {
+            "atcLevel": "R06AD01",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AD02",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AA02",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AA09",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AB02",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AB05",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AE03",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "R06AX02",
+            "medGroup": "Sedating_Antihistamines"
+
+        },
+        {
+            "atcLevel": "N03AX16",
+            "medGroup": "PregabalinOrGabapentin"
+
+        },
+        {
+            "atcLevel": "N03AX12",
+            "medGroup": "PregabalinOrGabapentin"
+
+        },
+        {
+            "atcLevel": "N03A",
+            "medGroup": "Antiepileptic"
+        }
+    ];
 
             var selectedMedGroupList = new Array();
 

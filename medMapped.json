@@ -14,11 +14,11 @@
 	},
 	{
 		"atcLevel": "N06AF",
-		"medGroup": "MAO inhibitors"
+		"medGroup": "MAO_Inhibitors"
 	},
 	{
 		"atcLevel": "N06AG",
-		"medGroup": "MAO inhibitors"
+		"medGroup": "MAO_Inhibitors"
 	},
 	{
 		"atcLevel": "N06AA",
@@ -30,7 +30,7 @@
 	},
 	{
 		"atcLevel": "N05A",
-		"medGroup": "Antipsychotics (excl prochlorperazine)"
+		"medGroup": "Antipsychotics_Excl_Prochlorperazine"
 
 	},
 	{
@@ -100,27 +100,27 @@
 	},
 	{
 		"atcLevel": "C09BA",
-		"medGroup": "ACE_ARB_combo"
+		"medGroup": "ACE_ARB_Combo"
 
 	},
 	{
 		"atcLevel": "C09BB",
-		"medGroup": "ACE_ARB_combo"
+		"medGroup": "ACE_ARB_Combo"
 
 	},
 	{
 		"atcLevel": "C09DA",
-		"medGroup": "ACE_ARB_combo"
+		"medGroup": "ACE_ARB_Combo"
 
 	},
 	{
 		"atcLevel": "C09DB",
-		"medGroup": "ACE_ARB_combo"
+		"medGroup": "ACE_ARB_Combo"
 
 	},
 	{
 		"atcLevel": "C09DX",
-		"medGroup": "ACE_ARB_combo"
+		"medGroup": "ACE_ARB_Combo"
 
 	},
 	{
@@ -140,22 +140,22 @@
 	},
 	{
 		"atcLevel": "C01DA",
-		"medGroup": "Nitrates_nicorandil"
+		"medGroup": "Nitrates_Nicorandil"
 
 	},
 	{
 		"atcLevel": "C01DX",
-		"medGroup": "Nitrates_nicorandil"
+		"medGroup": "Nitrates_Nicorandil"
 
 	},
 	{
 		"atcLevel": "C08C",
-		"medGroup": "CCB_dihydro"
+		"medGroup": "CCB_Dihydro"
 
 	},
 	{
 		"atcLevel": "C08D",
-		"medGroup": "CCB_dv"
+		"medGroup": "CCB_Dv"
 
 	},
 	{
@@ -190,7 +190,7 @@
 	},
 	{
 		"atcLevel": "A10BD",
-		"medGroup": "Hypoglycemics_combo"
+		"medGroup": "Hypoglycemics_Combo"
 
 	},
 	{
@@ -245,47 +245,47 @@
 	},
 	{
 		"atcLevel": "B01AC04",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC05",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC07",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC13",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC16",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC17",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC22",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC24",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
 		"atcLevel": "B01AC30",
-		"medGroup": "Antiplt_exclPAH"
+		"medGroup": "Antiplt_Excl_PAH"
 
 	},
 	{
@@ -315,47 +315,47 @@
 	},
 	{
 		"atcLevel": "J01DH",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J01MA",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J01XB",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J01G",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J01EE01",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J01XA01",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J01XX09",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J02AA01",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
 		"atcLevel": "J02AX04",
-		"medGroup": "Antimicrobials (renal)"
+		"medGroup": "Antimicrobials_Renal"
 
 	},
 	{
@@ -440,52 +440,52 @@
 	},
 	{
 		"atcLevel": "R06AD01",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AD02",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AA02",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AA09",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AB02",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AB05",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AE03",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "R06AX02",
-		"medGroup": "Sedating antihistamines (AMH)"
+		"medGroup": "Sedating_Antihistamines"
 
 	},
 	{
 		"atcLevel": "N03AX16",
-		"medGroup": "Pregabalin/Gabapentin (Gabapentinoid)"
+		"medGroup": "PregabalinOrGabapentin"
 
 	},
 	{
 		"atcLevel": "N03AX12",
-		"medGroup": "Pregabalin/Gabapentin (Gabapentinoid)"
+		"medGroup": "PregabalinOrGabapentin"
 
 	},
 	{
