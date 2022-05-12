@@ -283,21 +283,43 @@
         </div>
     </div>
     <script>
-        function printDiv() {
+        function print() {
 
-            var divToPrint = document.getElementById('DivIdToPrint');
+
+            $doc = $('<html>')
+
+            $head = $('<head>').appendTo($doc);
+            $body = $('<body>').appendTo($doc);
+
+            $('<h1>').text("Patient Information Handout").appendTo($body);
+            $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid®) to treat your COVID infection").appendTo($body);
+            $('<p>').text("The dosage is").appendTo($body);
+            $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($body);
+
+            $table = $('<table>').appendTo($body);
+            $tHeader = $('<tr>');
+
+            $('<th>').text("Medicine Name").appendTo($tHeader);
+            $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($tHeader);
+                
+
+            console.log($doc);
+
+
 
             
+            
+            //var newWin = window.open('', 'Print-Window');
 
-            var newWin = window.open('', 'Print-Window');
+            //newWin.document.open();
 
-            newWin.document.open();
+            //$('html')
 
-            newWin.document.write('<html><head> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> </head><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
+            //newWin.document.write('<html><head>< </body></html>');
 
-            newWin.document.close();
+            //newWin.document.close();
 
-            //setTimeout(function () { newWin.close(); }, 10);
+            ////setTimeout(function () { newWin.close(); }, 10);
 
         }
     </script>
