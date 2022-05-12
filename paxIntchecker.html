@@ -305,11 +305,11 @@
 
             console.log($doc[0].outerHTML);
             
-            //var newWin = window.open('', 'Print-Window');
+            var newWin = window.open('', 'Print-Window');
 
-            //newWin.document.open();
-            //newWin.document.write();
-            //newWin.document.close();
+            newWin.document.open();
+            newWin.document.write($doc[0].outerHTML);
+            newWin.document.close();
 
 
             ////setTimeout(function () { newWin.close(); }, 10);
