@@ -288,7 +288,7 @@
 
             $doc = $('<html>')
 
-            $head = $('<head>').attr('onload',print()).appendTo($doc);
+            $head = $('<head>').appendTo($doc);
             $body = $('<body>').appendTo($doc);
 
             $('<h1>').text("Patient Information Handout").appendTo($body);
@@ -303,14 +303,14 @@
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($tHeader);
 
 
-            //console.log($doc[0].outerHTML);
+            console.log($doc);
             
             var newWin = window.open('', 'Print-Window');
 
             newWin.document.open();
             newWin.document.write($doc[0].outerHTML);
             newWin.document.close();
-            setTimeout(function () { newWin.close(); }, 10);
+            //setTimeout(function () { newWin.close(); }, 10);
 
         }
     </script>
