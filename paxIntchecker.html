@@ -240,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9">
+            <div id="DivIdToPrint" class="col-9">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -280,7 +280,7 @@
                     </div>
 
                     <div class="col-3">
-                        <button type="button" class="btn ">Print patient handout</button>
+                        <button type="button" class="btn" onclick="printDiv();">Print patient handout</button>
                     </div>
                     
                 </div>
@@ -292,6 +292,23 @@
 
         </div>
     </div>
+    <script>
+        function printDiv() {
+
+            var divToPrint = document.getElementById('DivIdToPrint');
+
+            var newWin = window.open('', 'Print-Window');
+
+            newWin.document.open();
+
+            newWin.document.write('<html><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
+
+            newWin.document.close();
+
+            setTimeout(function () { newWin.close(); }, 10);
+
+        }
+    </script>
 
 </body>
 
