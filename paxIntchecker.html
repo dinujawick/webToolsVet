@@ -286,10 +286,10 @@
         function print() {
 
 
-            var doc = $('<html>')
+            $doc = $('<html>')
 
-            $head = $('<head>').appendTo(doc);
-            $body = $('<body>').appendTo(doc);
+            $head = $('<head>').appendTo($doc);
+            $body = $('<body>').appendTo($doc);
 
             $('<h1>').text("Patient Information Handout").appendTo($body);
             $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid®) to treat your COVID infection").appendTo($body);
@@ -303,7 +303,7 @@
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($tHeader);
 
 
-            console.log(doc);
+            console.log($doc[0].outerHTML);
             
             //var newWin = window.open('', 'Print-Window');
 
