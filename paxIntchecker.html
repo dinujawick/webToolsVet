@@ -307,12 +307,13 @@
             
             var newWin = window.open('', 'Print-Window');
 
-            $head.attr('onload', newWin.print());
+            //$head.attr('onload', newWin.print());
             $head.appendTo($doc);
             $body.appendTo($doc);
             
             newWin.document.open();
             newWin.document.write($doc[0].outerHTML);
+            newWin.print();
             newWin.document.close();
             //setTimeout(function () { newWin.close(); }, 10);
 
