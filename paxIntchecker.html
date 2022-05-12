@@ -288,7 +288,7 @@
 
             $doc = $('<html>')
 
-            $head = $('<head>').appendTo($doc);
+            $head = $('<head>').attr('onload', window.print()).appendTo($doc);
             $body = $('<body>').appendTo($doc);
 
             $('<h1>').text("Patient Information Handout").appendTo($body);
