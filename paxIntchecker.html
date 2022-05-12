@@ -288,7 +288,7 @@
 
             $doc = $('<html>')
 
-            $head = $('<head>').attr('onload', window.print()).appendTo($doc);
+            $head = $('<head>').appendTo($doc);
             $body = $('<body>').appendTo($doc);
 
             $('<h1>').text("Patient Information Handout").appendTo($body);
@@ -309,6 +309,7 @@
 
             newWin.document.open();
             newWin.document.write($doc[0].outerHTML);
+            newWin.document.onload(window.print());
             newWin.document.close();
             //setTimeout(function () { newWin.close(); }, 10);
 
