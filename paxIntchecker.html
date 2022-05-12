@@ -288,8 +288,8 @@
 
             $doc = $('<html>')
 
-            $head = $('<head>').attr('onload',$doc.print()).appendTo($doc);
-            $body = $('<body>').appendTo($doc);
+            $head = $('<head>')
+            $body = $('<body>')
 
             $('<h1>').text("Patient Information Handout").appendTo($body);
             $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid®) to treat your COVID infection").appendTo($body);
@@ -307,6 +307,9 @@
             
             var newWin = window.open('', 'Print-Window');
 
+            $head.attr('onload', newWin.print());
+            $head.appendTo($doc);
+            $body.appendTo($doc);
             
             newWin.document.open();
             newWin.document.write($doc[0].outerHTML);
