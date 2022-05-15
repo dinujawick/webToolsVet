@@ -319,6 +319,18 @@
             $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").attr('scope','col').appendTo($tHeaderRow);
 
+            $tBody = $('<tbody>').appendTo($table);
+
+            $tBody.append(
+                $('<tr>').append(
+                    $('<th>').text('Sildenafil (Viagra)'),  
+                    $('<td>').text('Cease during Paxlovid treatment.')),
+                $('<tr>').append(
+                    $('<th>').text('Zolpidem'),
+                    $('<td>').text('You may notice increased drowsiness or sedation. Do not drive or operate machinery; alcohol.')
+                    )
+                )
+            
 
             var newWin = window.open('', 'Print-Window');
 
