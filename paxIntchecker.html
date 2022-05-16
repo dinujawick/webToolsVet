@@ -300,8 +300,8 @@
             //Read JSON and add the med generic values into dropdown.
             $.getJSON("fullATCTable.json", function (data) {
 
-                console.log(data.generic_name);
-                $('<a>').text(data.generic_name).appendTo('#myDropdown');
+                console.log(data[0].generic_name);
+                //$('<a>').text(data.generic_name).appendTo('#myDropdown');
 
             });
 
