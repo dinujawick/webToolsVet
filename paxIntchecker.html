@@ -299,7 +299,18 @@
                     //For remove duplication on the generic names
                     if (item.generic_name != prevAddedItem) {
                         $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#myDropdown');
-                        addMed($med,item);
+
+
+                        //Med added status
+                        var medAddedStatus = false;
+
+                        //Med Click Event
+                        $med.on('click', function (event) {
+
+                            addMed(item);
+                        });
+
+                        addMed($med, item);
                         prevAddedItem = item.generic_name;
                         
                     }
@@ -312,23 +323,18 @@
         });
 
 
-        function addMed(selectedMed,medDetails) {
+        function addMed(selectedMedDetails) {
 
-            console.log(medDetails);
+            console.log(selectedMedDetails);
 
-            var medAddedStatus = false;
-
-            selectedMed.on('click', function (event) {
-
-                $tableRow = $('<tr>').appendTo($('#tbody'));
-                $('<th>').attr('scope', 'row').text(medDetails.generic_name).appendTo($tableRow);
-                $('<td>').addClass('close').appendTo($tableRow);
-                $('<td>').text(medDetails.recommendation);
-                $('<td>').text(medDetails.clinical_comments);
+            $tableRow = $('<tr>').appendTo($('#tbody'));
+            $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
+            $('<td>').addClass('close').appendTo($tableRow);
+            $('<td>').text(selectedMedDetails.recommendation);
+            $('<td>').text(selectedMedDetails.clinical_comments);
 
 
 
-            });
 
             //<table class="table table-bordered">
             //    <thead>
