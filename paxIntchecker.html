@@ -9,6 +9,19 @@
     <title>Paxlovid Interaction Checker</title>
 
     <script>
+
+        $(document).ready(function () {
+
+            //Read JSON and add the med generic values into dropdown.
+            $.getJSON("fullATCTable.json", function (data) {
+
+                $('<a>').text(data.generic_name).appendTo('#myDropdown');
+
+            });
+
+           
+        });
+
         // When the user clicks on the button,toggle between hiding and showing the dropdown content
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
