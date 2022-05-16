@@ -289,6 +289,45 @@
             $tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);
 
 
+            
+
+            //Read JSON and add the med generic values into dropdown.
+            $.getJSON("fullATCTable.json", function (data) {
+
+                $.each(data, function (index, item) {
+
+                    //For remove duplication on the generic names
+                    if (item.generic_name != prevAddedItem) {
+                        $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#myDropdown');
+                        addMed($med,item);
+                        prevAddedItem = item.generic_name;
+                        
+                    }
+                })
+                
+                
+            });
+
+
+        });
+
+
+        function addMed(selectedMed,medDetails) {
+
+            var medAddedStatus = false;
+
+            selectedMed.on('click', function (event) {
+
+                $tableRow = $('<tr>').appendTo($('#tbody'));
+                $('<th>').attr('scope', 'row').text(medDetails.generic_name).appendTo($tableRow);
+                $('<td>').addClass(close).appendTo($tableRow);
+                $('<td>').text(item.recommendation);
+                $('<td>').text(item.clinical_comments);
+
+
+
+            });
+
             //<table class="table table-bordered">
             //    <thead>
             //        <tr>
@@ -318,33 +357,6 @@
             //        </tr>
             //    </tbody>
             //</table>
-
-            //Read JSON and add the med generic values into dropdown.
-            $.getJSON("fullATCTable.json", function (data) {
-
-                $.each(data, function (index, item) {
-
-                    //For remove duplication on the generic names
-                    if (item.generic_name != prevAddedItem) {
-                        $medAnchor = $('<a>');
-                        $medAnchor.text(item.generic_name).appendTo('#myDropdown');
-                        prevAddedItem = item.generic_name;
-                    }
-                })
-                
-                
-            });
-
-
-        });
-
-
-        function addMed(medAnchor) {
-
-            
-
-
-
         }
 
 
