@@ -109,7 +109,6 @@
 
 
         .close {
-            padding:1rem;
             cursor: pointer;
             background-position-y: 4px;
             background-size: 29px;
@@ -327,10 +326,12 @@
 
             //console.log(selectedMedDetails);
 
-            if (!$('tr' + selectedMedDetails.atc_level).length) {
+            if ($('tr' + selectedMedDetails.atc_level).length) {
+                console.log('inside the true');
+            } else {
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
-                $('<td>').addClass('close').appendTo($tableRow);
+                $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
             }
