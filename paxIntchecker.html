@@ -301,16 +301,15 @@
                         $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#myDropdown');
 
 
-                        //Med added status
+                        //Med Added Status
                         var medAddedStatus = false;
 
                         //Med Click Event
                         $med.on('click', function (event) {
-
                             addMed(item);
                         });
 
-                        addMed($med, item);
+                        /*addMed($med, item);*/
                         prevAddedItem = item.generic_name;
                         
                     }
