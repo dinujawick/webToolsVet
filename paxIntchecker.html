@@ -329,8 +329,8 @@
             $tableRow = $('<tr>').appendTo($('#tbody'));
             $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
             $('<td>').addClass('close').appendTo($tableRow);
-            $('<td>').text(selectedMedDetails.recommendation);
-            $('<td>').text(selectedMedDetails.clinical_comments);
+            $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
+            $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
 
 
 
