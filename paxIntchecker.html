@@ -326,6 +326,7 @@
             var medAddedStatus = false;
 
             const tableRowIDs = $.map($('#tbody > .tr'), tableRow => tableRow.id);
+            console.log(tableRowIDs);
             $(tableRowIDs).each(function (index, id) {
                 if (id == 'tr' + selectedMedDetails.atc_level) {
                     medAddedStatus = true;
