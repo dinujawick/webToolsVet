@@ -327,12 +327,16 @@
 
             const tableRowIDs = $.map($('#tbody > .tr'), tableRow => tableRow.id);
             $(tableRowIDs).each(function (index, id) {
-                if (id == 'tr' + selectedMedDetails.atc_level)
+                if (id == 'tr' + selectedMedDetails.atc_level) {
                     medAddedStatus = true;
+                    console.log('change to true');
+                }
+                    
             });
 
 
             if (medAddedStatus != true) {
+                console.log('!true');
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
                 $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
