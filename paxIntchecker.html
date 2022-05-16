@@ -287,7 +287,9 @@
             $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
 
             $tBody = $('<tbody>').attr('id', 'tbody').append(
-                $('<tr>'),$('<tr>')
+                $('<tr>').append(
+                    $('<th>'), $('<td>')
+                ), $('<tr>').append($('<th>'), $('<td>'))
             ).appendTo($table);
 
 
