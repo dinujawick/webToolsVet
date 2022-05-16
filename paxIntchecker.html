@@ -286,7 +286,10 @@
             $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
             $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
 
-            $tBody = $('<tbody>').attr('id','tbody').appendTo($table);
+            $tBody = $('<tbody>').attr('id', 'tbody').append(
+                $('<tr>'),$('<tr>')
+            ).appendTo($table);
+
 
             //<table class="table table-bordered">
             //    <thead>
