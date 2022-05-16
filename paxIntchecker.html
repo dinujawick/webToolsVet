@@ -295,14 +295,21 @@
     </div>
     <script>
 
+        //to store previous generic name
+        var prevAddedItem;
+
         $(document).ready(function () {
 
             //Read JSON and add the med generic values into dropdown.
             $.getJSON("fullATCTable.json", function (data) {
 
                 $.each(data, function (index, item) {
-                    console.log(item.generic_name);
-                     $('<a>').text(item.generic_name).appendTo('#myDropdown');
+
+                    //For remove duplication on the generic names
+                    if (item.generic_name != prevAddedItem) {
+                        $('<a>').text(item.generic_name).appendTo('#myDropdown');
+                        prevAddedItem = item.generic_name;
+                    }
                 })
                 //$('<a>').text(data.generic_name).appendTo('#myDropdown');
 
