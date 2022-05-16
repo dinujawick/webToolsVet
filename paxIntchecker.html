@@ -300,10 +300,6 @@
                     if (item.generic_name != prevAddedItem) {
                         $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#myDropdown');
 
-
-                        //Med Added Status
-                        var medAddedStatus = false;
-
                         //Med Click Event
                         $med.on('click', function (event) {
                             addMed(item);
@@ -326,9 +322,17 @@
 
             //console.log(selectedMedDetails);
 
-            if ($('tr' + selectedMedDetails.atc_level).length) {
-                console.log('inside the true');
-            } else {
+            //Med Added Status
+            var medAddedStatus = false;
+
+            const tableRowIDs = $.map($('#tbody > .tr'), tableRow => tableRow.id);
+            $(tableRowIDs).each(function (index, id) {
+                if (id == 'tr' + selectedMedDetails.atc_level)
+                    medAddedStatus = true;
+            });
+
+
+            if (medAddedStatus != true) {
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
                 $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
