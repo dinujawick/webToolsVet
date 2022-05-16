@@ -1134,8 +1134,8 @@
   },
   {
     "drug_class": "Herbal products ",
-    "drugs_within_class": "St. John’s Wort (hypericum perforatum)",
-    "generic_name": "St. John’s Wort (hypericum perforatum)",
+    "drugs_within_class": "St. John's Wort (hypericum perforatum)",
+    "generic_name": "St. John's Wort (hypericum perforatum)",
     "clinical_comments": "Co-administration contraindicated due to potential loss of virologic response and possible resistance (see Product Information, Section 4.3 Contraindications). ",
     "recode_effect_on_concentration_1": "<down> nirmatrelvir/ ritonavir ",
     "recode_effect_on_concentration_2": "",
