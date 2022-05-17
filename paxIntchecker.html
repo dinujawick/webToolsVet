@@ -429,7 +429,7 @@
 
             $tableRows.appendTo($table);
             
-            
+            console.log($doc.html());
             
             ////$tBody.append(
             ////    $('<tr>').append(
@@ -442,14 +442,13 @@
             ////    )
             
 
-            var newWin = window.open('Paxlovid Patient Handout', 'Print-Window');
+            /*var newWin = window.open('Paxlovid Patient Handout', 'Print-Window');*/
 
-            console.log($doc.html());
-            newWin.document.open();
-            console.log($doc.html());
+            
+            /*newWin.document.open();*/
             /*newWin.document.write($doc[0);*/
-            newWin.print();
-            newWin.document.close();
+            //newWin.print();
+            //newWin.document.close();
             ///*setTimeout(function () { newWin.close(); }, 10);*/
 
         }
