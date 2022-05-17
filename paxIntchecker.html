@@ -308,7 +308,7 @@
 
             $('#btnPrint').on('click', function (event) {
                 //Array to store rows.
-                var tableBRows = new Array();
+                var tableBRows = [];
 
 
                 //Read JSON and add the mapping med into patient handout.
@@ -327,7 +327,7 @@
                         });
                     });
                 });
-                console.log(tableBRows[0][0]);
+                console.log(tableBRows);
                 //var tbodyString = "";
                 
                 /*console.log(tbodyString);*/
