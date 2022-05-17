@@ -322,7 +322,7 @@
             if (checkDuplicates(selectedMedDetails)) {
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
-                $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
+                $('<td>').append($('<span>').text('Close Icon')).appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
             }
