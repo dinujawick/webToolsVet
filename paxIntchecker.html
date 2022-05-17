@@ -419,7 +419,7 @@
             $('<p>').text("The dosage is").appendTo($body);
             $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($body);
             
-            $table = $('<table>').addClass("table table-bordered").appendTo($body);
+            $table = $('<table>').addClass("table table-bordered");
 
             $tHead = $('<thead>').appendTo($table);
             $tableRows.appendTo($table);
@@ -429,6 +429,7 @@
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").attr('scope','col').appendTo($tHeaderRow);
 
 
+            $table.appendTo($body);
             $head.appendTo($doc);
             $body.appendTo($doc);
             
