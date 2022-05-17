@@ -418,7 +418,7 @@
             $('<p>').text("The dosage is").appendTo($body);
             $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($body);
             
-            $table = $('<table>').addClass("table table-bordered")
+            $table = $('<table>').addClass("table table-bordered").appendTo($body);
 
             $tHead = $('<thead>').appendTo($table);
             $tableRows.appendTo($table);
@@ -427,7 +427,7 @@
             $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").attr('scope','col').appendTo($tHeaderRow);
 
-            $($table).appendTo($body);
+
             
             //console.log($table);
             //console.log($doc[0]);
@@ -440,9 +440,9 @@
             ////        $('<td>').text('You may notice increased drowsiness or sedation. Do not drive or operate machinery; alcohol.')
             ////        )
             ////    )
-            
-            console.log($doc[0]);
-            console.log($doc.html());
+
+            console.log($.toString($doc[0]));
+            console.log($doc[0].innerHTML);
             //var newWin = window.open('', 'Print-Window');
 
             //newWin.document.open();
