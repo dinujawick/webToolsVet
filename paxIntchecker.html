@@ -443,13 +443,11 @@
 
             var newWin = window.open('', 'Print-Window');
 
-            console.log(newWin.document.embeds);
-            
-            /*newWin.document.open();*/
-            /*newWin.document.write($doc[0);*/
-            //newWin.print();
-            //newWin.document.close();
-            ///*setTimeout(function () { newWin.close(); }, 10);*/
+            newWin.document.open();
+            newWin.document.write($doc[0]);
+            newWin.print();
+            newWin.document.close();
+            /*setTimeout(function () { newWin.close(); }, 10);*/
 
         }
     </script>
