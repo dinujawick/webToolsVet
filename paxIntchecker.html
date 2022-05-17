@@ -326,6 +326,7 @@
                 $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
 
                 $btnRemove.on('click', function (event) {
+                    console.log('clicked');
                     $tableRow.remove();
                 });
 
