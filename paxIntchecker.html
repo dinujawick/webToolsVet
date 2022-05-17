@@ -254,7 +254,7 @@
                 <div id="divTable">
                 </div>              
                 <div id="btnPrintDiv" class="col-3">
-                    <button id="btnPrint" type="button" class="btn" onclick="printPatHandOut();">Print patient handout</button>
+                    <button id="btnPrint" type="button" class="btn">Print patient handout</button>
                 </div>
             </div>           
         </div>
@@ -304,6 +304,11 @@
                         prevAddedItem = item.generic_name;                        
                     }
                 })
+            });
+
+            $('#btnPrint').on('click', function (event) {
+
+                printPatHandOut();
             });
         });
 
@@ -368,10 +373,12 @@
             return isValid;
         }
 
+
+
         //Function to create new html document for print as a patien handout
         //@selectedMedList : selected medicines list
         //@comment: 
-        function printPatHandOut(selectedMedList) {
+        function printPatHandOut() {
 
             //Read JSON and add the mapping med into patient handout.
             $.getJSON("fullATCTable.json", function (data) {
