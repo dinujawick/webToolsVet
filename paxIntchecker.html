@@ -322,44 +322,14 @@
 
             //console.log(selectedMedDetails);
 
-            console.log(CheckDuplicates(selectedMedDetails));
+            if (CheckDuplicates(selectedMedDetails)) {
+                $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
+                $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
+                $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
+                $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
+                $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
+            }
 
-            $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
-            $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
-            $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
-            $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
-            $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
-
-          
-            //<table class="table table-bordered">
-            //    <thead>
-            //        <tr>
-            //            <th scope="col" colspan="2">Medicine Name</th>
-            //            <th scope="col">Contraindication or interaction</th>
-            //            <th scope="col">Clinical Comments</th>
-            //        </tr>
-            //    </thead>
-            //    <tbody>
-            //        <tr>
-            //            <th scope="row">Sildenafil</th>
-            //            <td class="close"></td>
-            //            <td></td>
-            //            <td></td>
-            //        </tr>
-            //        <tr>
-            //            <th scope="row">Zolpidem</th>
-            //            <td class="close"></td>
-            //            <td></td>
-            //            <td></td>
-            //        </tr>
-            //        <tr>
-            //            <th scope="row">Metoprolol</th>
-            //            <td class="close"></td>
-            //            <td></td>
-            //            <td></td>
-            //        </tr>
-            //    </tbody>
-            //</table>
         }
         function CheckDuplicates(medItem) {
 
