@@ -381,7 +381,7 @@
         function printPatHandOut() {
 
             //Variable to store all rows
-            var tableRows;
+            
 
             //Read JSON and add the mapping med into patient handout.
             $.getJSON("fullATCTable.json", function (data) {
@@ -392,14 +392,14 @@
                             $('<tr>').append(
                                 $('<th>').text(item.generic_name),
                                 $('<td>').text(item.clinical_comments)
-                            ).appendTo(tableRows);
+                            ).appendTo($tableRows);
                            
                         }
                     });
                 });
             });
 
-            console.log(tableRows);
+            console.log($tableRows);
 
             //$doc = $('<html>')
 
