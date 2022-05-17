@@ -380,8 +380,8 @@
         //@comment: 
         function printPatHandOut() {
 
-            //Variable to store all rows
             
+            $tableRows = $('<tbody>');
 
             //Read JSON and add the mapping med into patient handout.
             $.getJSON("fullATCTable.json", function (data) {
