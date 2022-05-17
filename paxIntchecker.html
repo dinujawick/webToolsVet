@@ -441,14 +441,16 @@
             ////    )
             
 
-            var newWin = window.open('', 'Print-Window');
+            var newWin = window.open('Paxlovid Patient Handout', 'Print-Window');
 
             
-            //$head.appendTo($doc);
-            //$body.appendTo($doc);
+            $head.appendTo($doc);
+            $body.appendTo($doc);
 
-            $(newWin.document.head).html($head);
-            $(newWin.document.body).html($body);
+            console.log($doc.html())
+
+            //$(newWin.document.head).html($head);
+            //$(newWin.document.body).html($body);
 
             newWin.document.open();
 
