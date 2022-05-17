@@ -90,17 +90,17 @@
             z-index: 1;
         }
 
-            /* Links inside the dropdown */
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-                /* Change color of dropdown links on hover */
-                .dropdown-content a:hover {
-                    background-color: #d1d1d1
-                }
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #d1d1d1
+        }
 
         /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
         .show {
@@ -230,8 +230,6 @@
 </head>
 
 <body class="body">
-
-
     <div class="container">
         <!-- Header -->
         <div id="header">
@@ -244,7 +242,6 @@
             <div class="col-3">
                 <div class="vstack gap-2 mx-auto" id="menu">
                     <div class="searchPanel">
-                        <!--<button onclick="myFunction()" class="dropbtn btn">List your medicines: </button>-->
                         <input type="text" placeholder="Select the medicines" id="myInput" onclick="myFunction()" onkeyup="filterFunction()">
                         <div id="myDropdown" class="dropdown-content dropdown-scrollbar">
                         </div>
@@ -255,7 +252,6 @@
             </div>
             <div class="col-9">
                 <div id="divTable">
-
                 </div>              
                 <div id="btnPrintDiv" class="col-3">
                     <button id="btnPrint" type="button" class="btn" onclick="printPatHandOut();">Print patient handout</button>
@@ -270,14 +266,16 @@
     </div>
     <script>
 
-        //to store previous generic name
-        var prevAddedItem;
+        //variable to store previous generic name
+        var prevAddedItem = "";
 
-     
+        //Array to store selected medlist
+        var selectedMedList = new Array();
+
+        .
         $(document).ready(function () {
 
             //Create Empty Table
-
             $table = $('<table>').attr('id','medTable').addClass("table table-bordered").appendTo($('#divTable'));
             $tHead = $('<thead>').appendTo($table);
 
@@ -288,9 +286,6 @@
             $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
 
             $tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);
-
-
-            
 
             //Read JSON and add the med generic values into dropdown.
             $.getJSON("fullATCTable.json", function (data) {
@@ -306,34 +301,48 @@
                             addMed(item);
                         });
 
-                        prevAddedItem = item.generic_name;
-                        
+                        prevAddedItem = item.generic_name;                        
                     }
                 })
-                
-                
             });
-
-
         });
 
-
+        //Function to add medicines into the table
+        //@selectedMedDetails : selected med object from the search dropdown
         function addMed(selectedMedDetails) {
 
             if (checkDuplicates(selectedMedDetails)) {
+
+                //Add New med to the table
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
                 $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
-
-                $btnRemove.on('click', function (event) {
-                    $('#' + 'tr' + selectedMedDetails.atc_level).remove();
-                });
-
                 $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
+
+                //Add selected med atc level into the array
+                selectedMedList.push(selectedMedDetails.atc_level);
+
+                //Remove med from the table when click the btnRemove
+                $btnRemove.on('click', function (event) {
+                    console.log(selectedMedList);
+
+                    //Remove the removed medicine's atc code from selectedMedList array
+                    const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
+                    if (index > -1) {
+                        selectedMedList.splice(index, 1);
+                    }
+                    //Remove the table row
+                    $('#' + 'tr' + selectedMedDetails.atc_level).remove();
+
+                    console.log(selectedMedList);
+                });
             }
 
         }
+
+        //Function to checkduplicates in the current datagrid
+        //@medItem : selected med object from the search dropdown 
         function checkDuplicates(medItem) {
 
             var isValid = false;
@@ -363,9 +372,10 @@
             return isValid;
         }
 
-        function printPatHandOut(selectedMedList,comment) {
-
-
+        //Function to create new html document for print as a patien handout
+        //@selectedMedList : selected medicines list
+        //@comment: 
+        function printPatHandOut(selectedMedList, comment) {
 
             $doc = $('<html>')
 
@@ -407,7 +417,7 @@
 
             var newWin = window.open('', 'Print-Window');
 
-            //$head.attr('onload', newWin.print());
+            
             $head.appendTo($doc);
             $body.appendTo($doc);
             
