@@ -374,9 +374,9 @@
                 isValid = true;
                 return isValid;
             } else {
-                for (var i = 1; i < rows.length - 1; i++) {
+                for (var i = 0; i < rows.length - 1; i++) {
 
-                    var cells = rows[i].childNodes;
+                    var cells = rows[i+1].childNodes;
                     console.log(cells);
                     //var medName = cells[1].innerHTML;
                     //var icon = cells[2].innerHTML;
