@@ -406,6 +406,8 @@
                 $.each(data, function (index, item) {
                     $.each(selectedMedList, function (i, med) {
                         if (med == item.atc_level) {
+                            console.log(med);
+                            console.log(item.atc_level);
                             $('<tr>').append(
                                 $('<th>').text(item.generic_name),
                                 $('<td>').text(item.clinical_comments)
