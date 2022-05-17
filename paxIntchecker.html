@@ -327,9 +327,6 @@
                     });
                 });
 
-                $.each(tbRow, function (index, item) {
-                    console.log(index, item);
-                });
                 
                 //var tbodyString = "";
                 
@@ -353,6 +350,12 @@
 
                 //Add selected med atc level into the array
                 selectedMedList.push(selectedMedDetails.atc_level);
+
+
+                $.each(tbRow, function (index, item) {
+                    console.log(index);
+                    console.log(item);
+                });
 
                 //Remove med from the table when click the btnRemove
                 $btnRemove.on('click', function (event) {
