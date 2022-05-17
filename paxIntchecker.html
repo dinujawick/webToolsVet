@@ -325,8 +325,6 @@
 
                 //Remove med from the table when click the btnRemove
                 $btnRemove.on('click', function (event) {
-                    console.log(selectedMedList);
-
                     //Remove the removed medicine's atc code from selectedMedList array
                     const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
                     if (index > -1) {
@@ -334,8 +332,6 @@
                     }
                     //Remove the table row
                     $('#' + 'tr' + selectedMedDetails.atc_level).remove();
-
-                    console.log(selectedMedList);
                 });
             }
 
