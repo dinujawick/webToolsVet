@@ -446,18 +446,11 @@
             ////    )
             
 
-            /*var newWin = window.open('Paxlovid Patient Handout', 'Print-Window');*/
-
-            console.log($doc.html());
-
-            //$(newWin.document.head).html($head);
-            //$(newWin.document.body).html($body);
-
-            //newWin.document.open();
-
-            
-            //newWin.print();
-            //newWin.document.close();
+            var newWin = window.open('Paxlovid Patient Handout', 'Print-Window');
+            newWin.document.open();
+            newWin.document.write($doc.html());
+            newWin.print();
+            newWin.document.close();
             ///*setTimeout(function () { newWin.close(); }, 10);*/
 
         }
