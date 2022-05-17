@@ -273,7 +273,7 @@
         var selectedMedList = new Array();
 
         //Array to store rows.
-        var tbRow = new Array();
+        var tbRow = [];
 
         $(document).ready(function () {
 
@@ -322,7 +322,7 @@
                                     $('<td>').text(item.clinical_comments)
                                 );
                                 /*console.log(row[0].outerHTML);*/
-                                tbRow.push("Dinuja");
+                                tbRow.push(item.generic_name + item.clinical_comments);
                             }
                         });
                     });
