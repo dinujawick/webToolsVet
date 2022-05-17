@@ -380,10 +380,6 @@
         //@comment:
         function printPatHandOut() {
 
-
-           
-            
-
             $doc = $('<html>')
 
             $head = $('<head>').appendTo($doc);
@@ -450,7 +446,8 @@
 
             console.log($doc.html());
             newWin.document.open();
-            newWin.document.write($doc.html());
+            console.log($doc.html());
+            /*newWin.document.write($doc[0);*/
             newWin.print();
             newWin.document.close();
             ///*setTimeout(function () { newWin.close(); }, 10);*/
