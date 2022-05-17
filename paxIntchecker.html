@@ -266,12 +266,14 @@
     </div>
     <script>
 
-        //variable to store previous generic name
+        //Variable to store previous generic name
         var prevAddedItem = "";
 
         //Array to store selected medlist
         var selectedMedList = new Array();
 
+        //Array to store rows.
+        var tableBRows = new Array();
 
         $(document).ready(function () {
 
@@ -307,10 +309,7 @@
             });
 
             $('#btnPrint').on('click', function (event) {
-                //Array to store rows.
-                var tableBRows = new Array();
-
-
+               
                 //Read JSON and add the mapping med into patient handout.
                 $.getJSON("fullATCTable.json", function (data) {
                     $.each(data, function (index, item) {
