@@ -305,7 +305,6 @@
                             addMed(item);
                         });
 
-                        /*addMed($med, item);*/
                         prevAddedItem = item.generic_name;
                         
                     }
@@ -320,9 +319,7 @@
 
         function addMed(selectedMedDetails) {
 
-            //console.log(selectedMedDetails);
-
-            if (CheckDuplicates(selectedMedDetails)) {
+            if (checkDuplicates(selectedMedDetails)) {
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
                 $('<td>').addClass('close').attr('style', 'padding:1rem').appendTo($tableRow);
@@ -331,7 +328,7 @@
             }
 
         }
-        function CheckDuplicates(medItem) {
+        function checkDuplicates(medItem) {
 
             var isValid = false;
             var grid = document.getElementById("medTable");
@@ -350,8 +347,6 @@
                     var icon = cells[2].innerHTML;
                     var cliCom = cells[3].innerHTML;
 
-                    console.log(medName, icon, cliCom);
-
                     if (medItem.generic_name == medName && medItem.recommendation == icon && medItem.clinical_comments == cliCom) {
                         return false;
                     } else {
@@ -362,7 +357,8 @@
             return isValid;
         }
 
-        function printPatHandOut() {
+        function printPatHandOut(selectedMedList,comment) {
+
 
 
             $doc = $('<html>')
