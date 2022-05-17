@@ -365,14 +365,14 @@
 
             var isValid = false;
             var grid = document.getElementById("medTable");
-            var rows = grid.getElementsByTagName("tr");
+            var rows = grid.getElementsByTagName("TR");
             if (rows.length == 1) {
                 isValid = true;
                 return isValid;
             } else {
                 for (var i = 0; i < rows.length - 1; i++) {
 
-                    var cells = rows[i].getElementsByTagName("td");
+                    var cells = rows[i].getElementsByTagName("TD");
                     var medName = cells[1].innerHTML;
                     var icon = cells[2].innerHTML;
                     var cliCom = cells[3].innerHTML;
