@@ -322,7 +322,7 @@
                                     $('<td>').text(item.clinical_comments)
                                 );
 
-                                tableBRows.push((row[0].outerHTML).toString);
+                                tableBRows.push(toString(row[0].outerHTML));
                             }
                         });
                     });
