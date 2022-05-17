@@ -381,23 +381,7 @@
         function printPatHandOut() {
 
 
-            $tableRows = $('<tbody>');
-
-            //Read JSON and add the mapping med into patient handout.
-            $.getJSON("fullATCTable.json", function (data) {
-                $.each(data, function (index, item) {
-                    $.each(selectedMedList, function (i, med) {
-                        if (med == item.atc_level) {
-
-                            $('<tr>').append(
-                                $('<th>').text(item.generic_name),
-                                $('<td>').text(item.clinical_comments)
-                            ).appendTo($tableRows);
-
-                        }
-                    });
-                });
-            });
+           
             
 
             $doc = $('<html>')
@@ -426,6 +410,26 @@
 
             $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").attr('scope','col').appendTo($tHeaderRow);
+
+
+
+            $tableRows = $('<tbody>');
+
+            //Read JSON and add the mapping med into patient handout.
+            $.getJSON("fullATCTable.json", function (data) {
+                $.each(data, function (index, item) {
+                    $.each(selectedMedList, function (i, med) {
+                        if (med == item.atc_level) {
+
+                            $('<tr>').append(
+                                $('<th>').text(item.generic_name),
+                                $('<td>').text(item.clinical_comments)
+                            ).appendTo($tableRows);
+
+                        }
+                    });
+                });
+            });
 
             $tableRows.appendTo($table);
             
