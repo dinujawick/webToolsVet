@@ -389,7 +389,7 @@
                     .attr('rel', "stylesheet")
                     .attr('integrity', "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3")
                     .attr('crossorigin', "anonymous"),
-                /*$('<script>').attr('src',"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")*/
+                $('<script>').attr('src',"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
             )
 
             $body = $('<body>').appendTo($doc);
@@ -445,6 +445,7 @@
 
             newWin.document.open();
             newWin.document.write($doc[0]);
+            console.log($doc[0].innerText);
             newWin.print();
             newWin.document.close();
             /*setTimeout(function () { newWin.close(); }, 10);*/
