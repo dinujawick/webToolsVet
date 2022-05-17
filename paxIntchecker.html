@@ -326,8 +326,7 @@
                 $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
 
                 $btnRemove.on('click', function (event) {
-                    console.log($btnRemove);
-                    $tableRow.remove();
+                    $('#' + 'tr' + selectedMedDetails.atc_level).remove();
                 });
 
                 $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
