@@ -380,7 +380,10 @@
         //@comment:
         function printPatHandOut() {
 
-            $tableRows = $('<tbody>');
+
+            //Array to store rows.
+            var tableBRows = new Array();
+
 
             //Read JSON and add the mapping med into patient handout.
             $.getJSON("fullATCTable.json", function (data) {
@@ -388,10 +391,10 @@
                     $.each(selectedMedList, function (i, med) {
                         if (med == item.atc_level) {
 
-                            $('<tr>').append(
+                            console.log($('<tr>').append(
                                 $('<th>').text(item.generic_name),
                                 $('<td>').text(item.clinical_comments)
-                            ).appendTo($tableRows);
+                            ).outerHTML);
 
                         }
                     });
@@ -421,7 +424,7 @@
             $table = $('<table>').addClass("table table-bordered").appendTo($body);
 
             $tHead = $('<thead>').appendTo($table);
-            $tableRows.appendTo($table);
+            
             $tHeaderRow = $('<tr>').appendTo($tHead);
 
             $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
@@ -429,17 +432,7 @@
 
 
             
-            //console.log($table);
-            //console.log($doc[0]);
-            ////$tBody.append(
-            ////    $('<tr>').append(
-            ////        $('<th>').text('Sildenafil (Viagra)'),  
-            ////        $('<td>').text('Cease during Paxlovid treatment.')),
-            ////    $('<tr>').append(
-            ////        $('<th>').text('Zolpidem'),
-            ////        $('<td>').text('You may notice increased drowsiness or sedation. Do not drive or operate machinery; alcohol.')
-            ////        )
-            ////    )
+           
             console.log($body);
             console.log($body[0].innerHTML);
             //var newWin = window.open('', 'Print-Window');
