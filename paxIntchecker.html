@@ -317,10 +317,12 @@
                         $.each(selectedMedList, function (i, med) {
                             if (med == item.atc_level) {
 
-                                console.log(($('<tr>').append(
+                                var row = $('<tr>').append(
                                     $('<th>').text(item.generic_name),
                                     $('<td>').text(item.clinical_comments)
-                                )).outerHTML);
+                                );
+
+                                console.log(row);
 
                             }
                         });
@@ -399,9 +401,6 @@
         function printPatHandOut() {
 
 
-            
-
-
             $doc = $('<html>')
 
             $head = $('<head>').appendTo($doc);
@@ -431,17 +430,13 @@
             $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").attr('scope','col').appendTo($tHeaderRow);
 
 
-            
-           
-            console.log($body);
-            console.log($body[0].innerHTML);
-            //var newWin = window.open('', 'Print-Window');
+            var newWin = window.open('', 'Print-Window');
 
-            //newWin.document.open();
-            //newWin.document.write($doc.html());
-            //newWin.print();
-            //newWin.document.close();
-            /*setTimeout(function () { newWin.close(); }, 10);*/
+            newWin.document.open();
+            newWin.document.write($doc.html());
+            newWin.print();
+            newWin.document.close();
+            setTimeout(function () { newWin.close(); }, 10);
 
         }
     </script>
