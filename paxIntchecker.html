@@ -322,17 +322,16 @@
                                     $('<td>').text(item.clinical_comments)
                                 );
 
-                                tableBRows.push(row[0].outerHTML);
-
+                                tableBRows.push((row[0].outerHTML).toString);
                             }
                         });
                     });
                 });
-                //console.log(tableBRows);
+                console.log(tableBRows);
                 //var tbodyString = "";
-                $.each(tableBRows, function (ind,tr) {
+                $.each(tableBRows, function (ind, tr) {
                     console.log(tr);
-                    
+
 
                 });
                 /*console.log(tbodyString);*/
