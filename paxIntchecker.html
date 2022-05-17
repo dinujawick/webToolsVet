@@ -444,14 +444,15 @@
             var newWin = window.open('', 'Print-Window');
 
             
-            $head.appendTo($doc);
-            $body.appendTo($doc);
-            
-            newWin.document.open();
-            //console.log($doc[0]);
-            //console.log($doc[0].outerHTML);
+            //$head.appendTo($doc);
+            //$body.appendTo($doc);
 
-            newWin.document.write($doc[0]);
+            $(newWin.document.head).html($head);
+            $(newWin.document.body).html($body);
+
+            newWin.document.open();
+
+            
             newWin.print();
             newWin.document.close();
             ///*setTimeout(function () { newWin.close(); }, 10);*/
