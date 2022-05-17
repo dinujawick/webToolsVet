@@ -272,16 +272,16 @@
         //Array to store selected medlist
         var selectedMedList = new Array();
 
-        
+
         $(document).ready(function () {
 
             //Create Empty Table
-            $table = $('<table>').attr('id','medTable').addClass("table table-bordered").appendTo($('#divTable'));
+            $table = $('<table>').attr('id', 'medTable').addClass("table table-bordered").appendTo($('#divTable'));
             $tHead = $('<thead>').appendTo($table);
 
             $tHeaderRow = $('<tr>').appendTo($tHead);
 
-            $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan','2').appendTo($tHeaderRow);
+            $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
             $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
             $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
 
@@ -301,7 +301,7 @@
                             addMed(item);
                         });
 
-                        prevAddedItem = item.generic_name;                        
+                        prevAddedItem = item.generic_name;
                     }
                 })
             });
@@ -343,7 +343,7 @@
         }
 
         //Function to checkduplicates in the current datagrid
-        //@medItem : selected med object from the search dropdown 
+        //@medItem : selected med object from the search dropdown
         function checkDuplicates(medItem) {
 
             var isValid = false;
@@ -357,8 +357,8 @@
             } else {
                 for (var i = 0; i < rows.length - 1; i++) {
 
-                    var cells = rows[i+1].childNodes;
-                    
+                    var cells = rows[i + 1].childNodes;
+
                     var medName = cells[0].innerHTML;
                     var icon = cells[2].innerHTML;
                     var cliCom = cells[3].innerHTML;
@@ -377,10 +377,10 @@
 
         //Function to create new html document for print as a patien handout
         //@selectedMedList : selected medicines list
-        //@comment: 
+        //@comment:
         function printPatHandOut() {
 
-            
+
             $tableRows = $('<tbody>');
 
             //Read JSON and add the mapping med into patient handout.
@@ -388,17 +388,17 @@
                 $.each(data, function (index, item) {
                     $.each(selectedMedList, function (i, med) {
                         if (med == item.atc_level) {
-                            
+
                             $('<tr>').append(
                                 $('<th>').text(item.generic_name),
                                 $('<td>').text(item.clinical_comments)
                             ).appendTo($tableRows);
-                           
+
                         }
                     });
                 });
             });
-;
+            ;
 
             $doc = $('<html>')
 
@@ -407,7 +407,8 @@
                 $('<link>').attr('href', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css")
                     .attr('rel', "stylesheet")
                     .attr('integrity', "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3")
-                    .attr('crossorigin',"anonymous")
+                    .attr('crossorigin', "anonymous"),
+                $('<script>').attr('src',"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
             )
 
             $body = $('<body>')
