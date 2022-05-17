@@ -314,20 +314,22 @@
                 $.getJSON("fullATCTable.json", function (data) {
                     $.each(data, function (index, item) {
                         $.each(selectedMedList, function (i, med) {
+
                             if (med == item.atc_level) {
 
                                 var row = $('<tr>').append(
                                     $('<th>').text(item.generic_name),
                                     $('<td>').text(item.clinical_comments)
                                 );
-                                console.log(row[0].outerHTML);
+                                /*console.log(row[0].outerHTML);*/
                                 tbRow.push("Dinuja");
                             }
                         });
                     });
                 });
 
-                
+                console.log(selectedMedList);
+                console.log(tbRow);
                 //var tbodyString = "";
                 
                 /*console.log(tbodyString);*/
@@ -351,11 +353,6 @@
                 //Add selected med atc level into the array
                 selectedMedList.push(selectedMedDetails.atc_level);
 
-
-                $.each(tbRow, function (index, item) {
-                    console.log(index);
-                    console.log(item);
-                });
 
                 //Remove med from the table when click the btnRemove
                 $btnRemove.on('click', function (event) {
