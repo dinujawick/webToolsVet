@@ -389,15 +389,17 @@
                     $.each(selectedMedList, function (i, med) {
                         if (med == item.atc_level) {
                             
-                            $row = $('<tr>').append(
+                            $('<tr>').append(
                                 $('<th>').text(item.generic_name),
                                 $('<td>').text(item.clinical_comments)
-                            );
-                            console.log($row.outerHTML);
+                            ).appendTo(tableRows);
+                           
                         }
                     });
                 });
             });
+
+            console.log(tableRows);
 
             //$doc = $('<html>')
 
