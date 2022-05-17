@@ -367,8 +367,6 @@
             var grid = document.getElementById("medTable");
             var rows = grid.getElementsByTagName("TR");
 
-            console.log(grid);
-            console.log(rows);
 
             if (rows.length == 1) {
                 isValid = true;
@@ -377,18 +375,18 @@
                 for (var i = 0; i < rows.length - 1; i++) {
 
                     var cells = rows[i+1].childNodes;
-                    console.log(cells);
-                    //var medName = cells[1].innerHTML;
-                    //var icon = cells[2].innerHTML;
-                    //var cliCom = cells[3].innerHTML;
+                    
+                    var medName = cells[0].innerHTML;
+                    var icon = cells[2].innerHTML;
+                    var cliCom = cells[3].innerHTML;
 
-                    /*console.log(medName, icon, cliCom);*/
+                    console.log(medName, icon, cliCom);
 
-                    //if (medItem.generic_name == medName && medItem.recommendation == icon && medItem.clinical_comments == cliCom) {
-                    //    return false;
-                    //} else {
-                    //    isValid = true;
-                    //}
+                    if (medItem.generic_name == medName && medItem.recommendation == icon && medItem.clinical_comments == cliCom) {
+                        return false;
+                    } else {
+                        isValid = true;
+                    }
                 }
             }
             return isValid;
