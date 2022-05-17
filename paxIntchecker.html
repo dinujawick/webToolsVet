@@ -110,11 +110,11 @@
 
         .close {
             cursor: pointer;
-            background-position-y: 4px;
+            background-position-y: 15px;
             background-size: 29px;
             background-image: url('Images/remove.png');
             background-repeat: no-repeat;
-            padding:1rem;
+            
         }
 
         .medGroupColur {
@@ -323,7 +323,7 @@
             if (checkDuplicates(selectedMedDetails)) {
                 $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
-                $('<td>').addClass('close').appendTo($tableRow);
+                $('<td>').addClass('close').attr('style','padding:0.85rem;').appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
             }
