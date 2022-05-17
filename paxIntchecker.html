@@ -371,7 +371,7 @@
         //Function to create new html document for print as a patien handout
         //@selectedMedList : selected medicines list
         //@comment: 
-        function printPatHandOut(selectedMedList, comment) {
+        function printPatHandOut(selectedMedList) {
 
             $doc = $('<html>')
 
@@ -400,15 +400,30 @@
 
             $tBody = $('<tbody>').appendTo($table);
 
-            $tBody.append(
-                $('<tr>').append(
-                    $('<th>').text('Sildenafil (Viagra)'),  
-                    $('<td>').text('Cease during Paxlovid treatment.')),
-                $('<tr>').append(
-                    $('<th>').text('Zolpidem'),
-                    $('<td>').text('You may notice increased drowsiness or sedation. Do not drive or operate machinery; alcohol.')
-                    )
-                )
+
+            //Read JSON and add the mapping med into patient handout.
+            $.getJSON("fullATCTable.json", function (data) {
+                $.each(data, function (index, item) {
+                    $.each(selectedMedList, function (i, med) {
+                        if (med == item.atc_level) {
+                            $('<tr>').append(
+                                $('<th>').text(item.generic_name),
+                                $('<td>').text(item.clinical_comments)
+                            ).appendTo($tBody);
+                        }
+                    });
+                });
+            });
+            
+            //$tBody.append(
+            //    $('<tr>').append(
+            //        $('<th>').text('Sildenafil (Viagra)'),  
+            //        $('<td>').text('Cease during Paxlovid treatment.')),
+            //    $('<tr>').append(
+            //        $('<th>').text('Zolpidem'),
+            //        $('<td>').text('You may notice increased drowsiness or sedation. Do not drive or operate machinery; alcohol.')
+            //        )
+            //    )
             
 
             var newWin = window.open('', 'Print-Window');
