@@ -79,7 +79,8 @@ $(document).ready(function () {
                         );
 
                         tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
-                        //console.log(tbl_body_head);
+                        console.log(tbl_body_head);
+                        console.log(i);
                     }
                 });
             });
@@ -161,11 +162,7 @@ function checkDuplicates(medItem) {
     return isValid;
 }
 
-
-
 //Function to create new html document for print as a patien handout
-//@selectedMedList : selected medicines list
-//@comment:
 function printPatHandOut() {
 
 
