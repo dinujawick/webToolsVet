@@ -65,6 +65,7 @@ $(document).ready(function () {
     $('#btnPrint').on('click', function (event) {
 
         var tbl_body_head = "<tbody>";
+        var tbl_body_tail = "</tbody>";
 
         //Read JSON and add the mapping med into patient handout.
         $.getJSON("fullATCTable.json", function (data) {
@@ -79,17 +80,20 @@ $(document).ready(function () {
                         );
 
                         tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
-                        console.log(tbl_body_head);
-                        console.log(i);
+                        
+                        
+                        if ((selectedMedList.list - 1) == i) {
+                            printPatHandOut(tbl_body_head.concat(tbl_body_tail));
+                        }
                     }
                 });
             });
 
         });
 
-        console.log(tbl_body_head);
+       
 
-        //printPatHandOut();
+        
     });
 });
 
@@ -163,8 +167,10 @@ function checkDuplicates(medItem) {
 }
 
 //Function to create new html document for print as a patien handout
-function printPatHandOut() {
+//@tblBody : tblBody 
+function printPatHandOut(tblBody) {
 
+    console.log(tblBody);
 
     $doc = $('<html>')
 
@@ -194,11 +200,12 @@ function printPatHandOut() {
     $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
     $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid)").attr('scope', 'col').appendTo($tHeaderRow);
 
+    tblBody.appendTo($table);
 
     var newWin = window.open('', 'Print-Window');
 
     newWin.document.open();
-    newWin.document.write($doc.html());
+    newWin.document.write($doc[0].outerHTML);
     newWin.print();
     newWin.document.close();
     setTimeout(function () { newWin.close(); }, 10);
