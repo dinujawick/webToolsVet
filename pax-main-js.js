@@ -63,7 +63,7 @@ $('#btnPrint').on('click', function (event) {
         });
 
     });
-    console.log(selectedMedObjList[0][0]);
+    console.log(selectedMedObjList.pop());
 
 
 });
