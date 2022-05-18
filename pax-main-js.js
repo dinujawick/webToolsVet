@@ -66,9 +66,9 @@ $('#btnPrint').on('click', function (event) {
     });
 
     console.log(selectedMedObjList);
-    $.each(selectedMedObjList, function (index,item) {
-        console.log(item);
-    });
+    for (var i = 0; i < selectedMedObjList.length; i++) {
+        console.log(selectedMedObjList[i]);
+    }
 
 
 });
