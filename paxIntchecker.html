@@ -307,7 +307,10 @@
             });
 
             $('#btnPrint').on('click', function (event) {
-                var row = "";
+
+                
+                var tbrows = "";
+                
                 //Read JSON and add the mapping med into patient handout.
                 $.getJSON("fullATCTable.json", function (data) {
                     $.each(data, function (index, item) {
@@ -315,22 +318,19 @@
 
                             if (med == item.atc_level) {
 
-                                row = row + $('<tr>').append(
+                                $row = $('<tr>').append(
                                     $('<th>').text(item.generic_name),
                                     $('<td>').text(item.clinical_comments)
                                 );
-                                /*console.log(row[0].outerHTML);*/
-                               
+                                tbrows = tbrows + $row[0].outerHTML;
+                                console.log($row[0].outerHTML);
                             }
                         });
                     });
+                    
                 });
-              
+                console.log(tbrows);
 
-                console.log(row);
-                //var tbodyString = "";
-                
-                /*console.log(tbodyString);*/
                 //printPatHandOut();
             });
         });
