@@ -77,7 +77,7 @@ $(document).ready(function () {
 
                     if (med == item.atc_level) {
 
-                        selectedMedObjList.push(item);
+                        selectedMedObjList.push(index,item);
                         //$row = $('<tr>').append(
                         //    $('<th>').text(item.generic_name),
                         //    $('<td>').text(item.clinical_comments)
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
         });
 
-        console.log(selectedMedObjList[0]);
+        
 
     });
 });
