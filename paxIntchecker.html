@@ -46,11 +46,11 @@
             border: none;
             cursor: pointer;
         }
-        /* Dropdown button on hover & focus */
-        .dropbtn:hover, .dropbtn:focus {
-            background-image: linear-gradient(to bottom,#8b0e04,#720b03);
-         }
-            
+
+            /* Dropdown button on hover & focus */
+            .dropbtn:hover, .dropbtn:focus {
+                background-image: linear-gradient(to bottom,#8b0e04,#720b03);
+            }
 
         /* The search field */
         #myInput {
@@ -65,10 +65,10 @@
             width: -webkit-fill-available;
         }
 
-        /* The search field when it gets focus/clicked on */
-        #myInput:focus {
-            outline: 3px solid #ddd;
-        }
+            /* The search field when it gets focus/clicked on */
+            #myInput:focus {
+                outline: 3px solid #ddd;
+            }
 
         /* The container <div> - needed to position the dropdown content */
         .dropdown {
@@ -126,11 +126,13 @@
             transform: translate(0%, -50%);
         }
 
-        body {
-            border: 1px solid;
-            height: 603px;
+        .body {
+            background-color: #e5e5e5;
         }
 
+        #vetMatesLogo {
+            margin-bottom: 2rem;
+        }
 
         #pageHeader {
             font-family: 'Roboto Condensed',sans-serif;
@@ -146,7 +148,6 @@
         }
 
         .container {
-            border: 1px solid;
             background-color: white;
             font-family: 'Roboto Condensed',sans-serif;
         }
@@ -230,8 +231,15 @@
 
 <body class="body">
     <div class="container">
+        <!-- Header -->
+        <div id="header">
+        </div>
+        <!-- End Header -->
+        <!-- Body -->
+        <h1 id="pageHeader">Paxlovid Interaction Checker</h1>
+        <img id="vetMatesLogo" src="Images/vetMatesLogo.png" />
         <div class="row">
-            <div class="col-4">
+            <div class="col-3">
                 <div class="vstack gap-2 mx-auto" id="menu">
                     <div class="searchPanel">
                         <input type="text" placeholder="Select the medicines" id="myInput" onclick="myFunction()" onkeyup="filterFunction()">
@@ -242,13 +250,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-9">
                 <div id="divTable">
                 </div>              
                 <div id="btnPrintDiv" class="col-3">
                     <button id="btnPrint" type="button" class="btn">Print patient handout</button>
                 </div>
             </div>           
+        </div>
+        <!-- End Body -->
+        <!-- Footer -->
+        <div id="footer">
+
         </div>
     </div>
     <script>
@@ -309,12 +322,8 @@
                                     $('<th>').text(item.generic_name),
                                     $('<td>').text(item.clinical_comments)
                                 );
-                                tbrows = tbrows + $row[0].outerHTML;
-                                console.log($row[0].outerHTML);
-
                             }
                         });
-                        console.log(tbrows);
                     });
                     
                 });
