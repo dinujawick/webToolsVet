@@ -64,6 +64,8 @@ $('#btnPrint').on('click', function (event) {
         });
 
     });
+
+    console.log(selectedMedObjList);
     $.each(selectedMedObjList, function (index, item) {
         console.log(item);
     });
