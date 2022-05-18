@@ -127,7 +127,7 @@
         }
 
         .body {
-            background-color: #e5e5e5;
+            background-color: white;
         }
 
         #vetMatesLogo {
@@ -152,25 +152,7 @@
             font-family: 'Roboto Condensed',sans-serif;
         }
 
-        #chart {
-            overflow: auto;
-            padding-top: 2.2rem;
-            padding-bottom: 2.2rem;
-            border: outset;
-            padding-left: 2.2rem;
-            padding-right: 2.2rem;
-            width: auto;
-            height: auto;
-            /*visibility: hidden;*/
-        }
-
-        #legend {
-            overflow: scroll;
-            max-height: 10rem;
-            width: auto;
-            height: auto;
-            overflow-x: hidden;
-        }
+       
 
         .searchPanel {
             border: outset;
@@ -245,8 +227,9 @@
                         <input type="text" placeholder="Select the medicines" id="myInput" onclick="myFunction()" onkeyup="filterFunction()">
                         <div id="myDropdown" class="dropdown-content dropdown-scrollbar">
                         </div>
-                        <button id="btnPrint" type="button" class="btn">Print patient handout</button>
-                    </div>                 
+                        
+                    </div>
+                    <button id="btnPrint" type="button" class="btn">Print patient handout</button>
                 </div>
             </div>
             <div class="col-7">
