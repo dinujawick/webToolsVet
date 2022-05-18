@@ -46,15 +46,15 @@ $('#btnPrint').on('click', function (event) {
 
                 if (med == item.atc_level) {
 
-                    selectedMedObjList[count] = item;
+                    /*selectedMedObjList[count] = item;*/
+                   
+                    $row = $('<tr>').append(
+                        $('<th>').text(item.generic_name),
+                        $('<td>').text(item.clinical_comments)
+                    );
+
+                    selectedMedObjList[count] = $row[0].outerHTML;
                     count++;
-                    //$row = $('<tr>').append(
-                    //    $('<th>').text(item.generic_name),
-                    //    $('<td>').text(item.clinical_comments)
-                    //);
-
-                    //tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
-
 
                     //if ((selectedMedList.list - 1) == i) {
                     //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
@@ -66,8 +66,8 @@ $('#btnPrint').on('click', function (event) {
     });
 
     console.log(selectedMedObjList);
-    $.each(selectedMedObjList, function (index) {
-        console.log(index);
+    $.each(selectedMedObjList, function (index,item) {
+        console.log(item);
     });
 
 
