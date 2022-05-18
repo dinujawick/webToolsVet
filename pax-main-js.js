@@ -28,6 +28,47 @@ var prevAddedItem = "";
 var selectedMedList = new Array();
 
 
+
+$('#btnPrint').on('click', function (event) {
+
+    var tbl_body_head = "<tbody>";
+    var tbl_body_tail = "</tbody>";
+
+    var selectedMedObjList;
+
+
+    //Read JSON and add the mapping med into patient handout.
+    $.getJSON("fullATCTable.json", function (data) {
+        $.each(data, function (index, item) {
+            $.each(selectedMedList, function (i, med) {
+
+                if (med == item.atc_level) {
+
+                    selectedMedList = new Array();
+                    selectedMedObjList.push(item);
+
+                    //$row = $('<tr>').append(
+                    //    $('<th>').text(item.generic_name),
+                    //    $('<td>').text(item.clinical_comments)
+                    //);
+
+                    //tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
+
+
+                    //if ((selectedMedList.list - 1) == i) {
+                    //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
+                    //}
+                }
+            });
+        });
+
+    });
+    console.log(selectedMedObjList);
+
+
+});
+
+
 $(document).ready(function () {
 
     //Create Empty Table
@@ -60,45 +101,6 @@ $(document).ready(function () {
                 prevAddedItem = item.generic_name;
             }
         })
-    });
-
-    $('#btnPrint').on('click', function (event) {
-
-        var tbl_body_head = "<tbody>";
-        var tbl_body_tail = "</tbody>";
-
-        var selectedMedObjList;
-
-
-        //Read JSON and add the mapping med into patient handout.
-        $.getJSON("fullATCTable.json", function (data) {
-            $.each(data, function (index, item) {
-                $.each(selectedMedList, function (i, med) {
-
-                    if (med == item.atc_level) {
-
-                        selectedMedList = new Array();
-                        selectedMedObjList.push(item);
-
-                        //$row = $('<tr>').append(
-                        //    $('<th>').text(item.generic_name),
-                        //    $('<td>').text(item.clinical_comments)
-                        //);
-
-                        //tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
-                        
-                        
-                        //if ((selectedMedList.list - 1) == i) {
-                        //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
-                        //}
-                    }
-                });
-            });
-
-        });
-        console.log(selectedMedObjList);
-        
-
     });
 });
 
