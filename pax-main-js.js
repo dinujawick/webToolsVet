@@ -77,7 +77,7 @@ $(document).ready(function () {
 
                     if (med == item.atc_level) {
 
-                        selectedMedObjList.push(index,item);
+                        selectedMedObjList[index]=item;
                         //$row = $('<tr>').append(
                         //    $('<th>').text(item.generic_name),
                         //    $('<td>').text(item.clinical_comments)
