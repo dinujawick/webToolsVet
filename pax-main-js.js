@@ -34,7 +34,8 @@ $('#btnPrint').on('click', function (event) {
     var tbl_body_head = "<tbody>";
     var tbl_body_tail = "</tbody>";
 
-    var selectedMedObjList = new Array(selectedMedList);
+
+    var selectedMedObjList = new Array(selectedMedList.length);
 
     var count = 0;
 
