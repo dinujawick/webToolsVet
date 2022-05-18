@@ -36,15 +36,16 @@ $('#btnPrint').on('click', function (event) {
 
     var selectedMedObjList = new Array(selectedMedList);
 
+    var count = 0;
+
     //Read JSON and add the mapping med into patient handout.
     $.getJSON("fullATCTable.json", function (data) {
         $.each(data, function (index, item) {
-            var count = 0;
+            
             $.each(selectedMedList, function (i, med) {
 
                 if (med == item.atc_level) {
 
-                    
                     selectedMedObjList[count] = item;
                     count++;
                     //$row = $('<tr>').append(
