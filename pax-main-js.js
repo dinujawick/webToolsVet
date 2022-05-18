@@ -67,7 +67,7 @@ $(document).ready(function () {
         var tbl_body_head = "<tbody>";
         var tbl_body_tail = "</tbody>";
 
-        var selectedMedObjList = new Array();
+        var selectedMedObjList;
 
 
         //Read JSON and add the mapping med into patient handout.
@@ -77,7 +77,9 @@ $(document).ready(function () {
 
                     if (med == item.atc_level) {
 
-                        selectedMedObjList[index]=item;
+                        selectedMedList = new Array();
+                        selectedMedObjList.push(item);
+
                         //$row = $('<tr>').append(
                         //    $('<th>').text(item.generic_name),
                         //    $('<td>').text(item.clinical_comments)
