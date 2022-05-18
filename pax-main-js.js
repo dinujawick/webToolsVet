@@ -68,7 +68,7 @@ $('#btnPrint').on('click', function (event) {
 
     console.log(selectedMedObjList);
     for (var i = 0; i < selectedMedObjList.length; i++) {
-        console.log(selectedMedObjList[i]);
+        console.log(selectedMedObjList[null][i]);
     }
 
 
