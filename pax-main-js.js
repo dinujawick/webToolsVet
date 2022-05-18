@@ -24,8 +24,11 @@ function filterFunction() {
 //Variable to store previous generic name
 var prevAddedItem = "";
 
-//Array to store selected medlist
+//Array to store selected medlist ATCs
 var selectedMedList = new Array();
+
+//Array to store selected medOjects
+var selectedMedObjList = new Array();
 
 
 
@@ -33,43 +36,39 @@ $('#btnPrint').on('click', function (event) {
 
     var tbl_body_head = "<tbody>";
     var tbl_body_tail = "</tbody>";
-
-
-    var selectedMedObjList = new Array(selectedMedList.length);
-
     var count = 0;
 
-    //Read JSON and add the mapping med into patient handout.
-    $.getJSON("fullATCTable.json", function (data) {
-        $.each(data, function (index, item) {
+    ////Read JSON and add the mapping med into patient handout.
+    //$.getJSON("fullATCTable.json", function (data) {
+    //    $.each(data, function (index, item) {
             
-            $.each(selectedMedList, function (i, med) {
+    //        $.each(selectedMedList, function (i, med) {
 
-                if (med == item.atc_level) {
+    //            if (med == item.atc_level) {
 
-                    /*selectedMedObjList[count] = item;*/
+    //                /*selectedMedObjList[count] = item;*/
                    
-                    $row = $('<tr>').append(
-                        $('<th>').text(item.generic_name),
-                        $('<td>').text(item.clinical_comments)
-                    );
+    //                $row = $('<tr>').append(
+    //                    $('<th>').text(item.generic_name),
+    //                    $('<td>').text(item.clinical_comments)
+    //                );
 
-                    selectedMedObjList[count] = $row[0].outerHTML;
-                    count++;
+    //                selectedMedObjList[count] = $row[0].outerHTML;
+    //                count++;
 
-                    //if ((selectedMedList.list - 1) == i) {
-                    //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
-                    //}
-                }
-            });
-        });
+    //                //if ((selectedMedList.list - 1) == i) {
+    //                //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
+    //                //}
+    //            }
+    //        });
+    //    });
 
-    });
+    //});
 
     console.log(selectedMedObjList);
-    for (var i = 0; i < selectedMedObjList.length; i++) {
-        console.log(selectedMedObjList[null][i]);
-    }
+    $.each(selectedMedObjList, function (index, item) {
+        console.log(item);
+    })
 
 
 });
@@ -133,6 +132,8 @@ function addMed(selectedMedDetails) {
         //Add selected med atc level into the array
         selectedMedList.push(selectedMedDetails.atc_level);
 
+        //Add selected med object into the array
+        selectedMedObjList.push(selectedMedDetails);
 
         //Remove med from the table when click the btnRemove
         $btnRemove.on('click', function (event) {
