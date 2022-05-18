@@ -44,7 +44,7 @@ $('#btnPrint').on('click', function (event) {
 
                 if (med == item.atc_level) {
 
-                    
+                    console.log(item);
                     selectedMedObjList.push(item);
 
                     //$row = $('<tr>').append(
