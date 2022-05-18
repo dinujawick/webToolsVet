@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     $('#btnPrint').on('click', function (event) {
 
-        var tbl_body = "";
+        var tbl_body_head = "<tbody>";
 
         //Read JSON and add the mapping med into patient handout.
         $.getJSON("fullATCTable.json", function (data) {
@@ -78,14 +78,15 @@ $(document).ready(function () {
                             $('<td>').text(item.clinical_comments)
                         );
 
-                        console.log($row);
+                        tbl_body_head = tbl_body.concat($row[0].outerHTML);
+                        console.log(tbl_body_head);
                     }
                 });
             });
 
         });
 
-        console.log(tbody);
+       
 
         //printPatHandOut();
     });
