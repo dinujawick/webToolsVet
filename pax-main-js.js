@@ -91,9 +91,6 @@ $(document).ready(function () {
 
         });
 
-       
-
-        
     });
 });
 
@@ -172,7 +169,7 @@ function printPatHandOut(tblBody) {
 
     console.log(tblBody);
 
-    $doc = $('<html>')
+    $doc = $('<html>');
 
     $head = $('<head>').appendTo($doc);
 
@@ -182,7 +179,7 @@ function printPatHandOut(tblBody) {
             .attr('integrity', "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3")
             .attr('crossorigin', "anonymous"),
         $('<script>').attr('src', "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
-    )
+    );
 
     $body = $('<body>').appendTo($doc);
 
@@ -202,12 +199,12 @@ function printPatHandOut(tblBody) {
 
     tblBody.appendTo($table);
 
-    var newWin = window.open('', 'Print-Window');
+    //var newWin = window.open('', 'Print-Window');
 
-    newWin.document.open();
-    newWin.document.write($doc[0].outerHTML);
-    newWin.print();
-    newWin.document.close();
-    setTimeout(function () { newWin.close(); }, 10);
+    //newWin.document.open();
+    //newWin.document.write($doc[0].outerHTML);
+    //newWin.print();
+    //newWin.document.close();
+    //setTimeout(function () { newWin.close(); }, 10);
 
 }
