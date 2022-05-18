@@ -34,7 +34,7 @@ $('#btnPrint').on('click', function (event) {
     var tbl_body_head = "<tbody>";
     var tbl_body_tail = "</tbody>";
 
-    var selectedMedObjList;
+    var selectedMedList = new Array();
 
 
     //Read JSON and add the mapping med into patient handout.
@@ -44,7 +44,7 @@ $('#btnPrint').on('click', function (event) {
 
                 if (med == item.atc_level) {
 
-                    selectedMedList = new Array();
+                    
                     selectedMedObjList.push(item);
 
                     //$row = $('<tr>').append(
