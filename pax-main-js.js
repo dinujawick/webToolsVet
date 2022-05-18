@@ -36,8 +36,6 @@ $('#btnPrint').on('click', function (event) {
 
     var selectedMedObjList = new Array(selectedMedList);
 
-    console.log(selectedMedObjList);
-
     //Read JSON and add the mapping med into patient handout.
     $.getJSON("fullATCTable.json", function (data) {
         $.each(data, function (index, item) {
@@ -64,7 +62,9 @@ $('#btnPrint').on('click', function (event) {
         });
 
     });
-    console.log(selectedMedObjList);
+    $.each(selectedMedObjList, function (index, item) {
+        console.log(item);
+    });
 
 
 });
