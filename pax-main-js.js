@@ -67,6 +67,9 @@ $(document).ready(function () {
         var tbl_body_head = "<tbody>";
         var tbl_body_tail = "</tbody>";
 
+        var selectedMedObjList = new Array();
+
+
         //Read JSON and add the mapping med into patient handout.
         $.getJSON("fullATCTable.json", function (data) {
             $.each(data, function (index, item) {
@@ -74,22 +77,25 @@ $(document).ready(function () {
 
                     if (med == item.atc_level) {
 
-                        $row = $('<tr>').append(
-                            $('<th>').text(item.generic_name),
-                            $('<td>').text(item.clinical_comments)
-                        );
+                        selectedMedObjList.push(item);
+                        //$row = $('<tr>').append(
+                        //    $('<th>').text(item.generic_name),
+                        //    $('<td>').text(item.clinical_comments)
+                        //);
 
-                        tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
+                        //tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
                         
                         
-                        if ((selectedMedList.list - 1) == i) {
-                            printPatHandOut(tbl_body_head.concat(tbl_body_tail));
-                        }
+                        //if ((selectedMedList.list - 1) == i) {
+                        //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
+                        //}
                     }
                 });
             });
 
         });
+
+        console.log(selectedMedObjList);
 
     });
 });
