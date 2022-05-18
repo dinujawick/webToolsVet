@@ -272,8 +272,6 @@
         //Array to store selected medlist
         var selectedMedList = new Array();
 
-        //Array to store rows.
-        var tbRow = [];
 
         $(document).ready(function () {
 
@@ -309,7 +307,7 @@
             });
 
             $('#btnPrint').on('click', function (event) {
-               
+                var row = "";
                 //Read JSON and add the mapping med into patient handout.
                 $.getJSON("fullATCTable.json", function (data) {
                     $.each(data, function (index, item) {
@@ -317,7 +315,7 @@
 
                             if (med == item.atc_level) {
 
-                                var row = $('<tr>').append(
+                                row = row + $('<tr>').append(
                                     $('<th>').text(item.generic_name),
                                     $('<td>').text(item.clinical_comments)
                                 );
@@ -327,11 +325,9 @@
                         });
                     });
                 });
-                tbRow.push("Dinuja");
-                tbRow.push("Sanuja");
+              
 
-                console.log(selectedMedList);
-                console.log(tbRow);
+                console.log(row);
                 //var tbodyString = "";
                 
                 /*console.log(tbodyString);*/
