@@ -79,14 +79,14 @@ $(document).ready(function () {
                         );
 
                         tbl_body_head = tbl_body_head.concat($row[0].outerHTML);
-                        console.log(tbl_body_head);
+                        //console.log(tbl_body_head);
                     }
                 });
             });
 
         });
 
-       
+        console.log(tbl_body_head);
 
         //printPatHandOut();
     });
