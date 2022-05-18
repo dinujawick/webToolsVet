@@ -34,8 +34,9 @@ $('#btnPrint').on('click', function (event) {
     var tbl_body_head = "<tbody>";
     var tbl_body_tail = "</tbody>";
 
-    var selectedMedObjList = new Array();
+    var selectedMedObjList = new Array(selectedMedList);
 
+    console.log(selectedMedObjList);
 
     //Read JSON and add the mapping med into patient handout.
     $.getJSON("fullATCTable.json", function (data) {
@@ -44,9 +45,9 @@ $('#btnPrint').on('click', function (event) {
 
                 if (med == item.atc_level) {
 
-                    console.log(item);
-                    selectedMedObjList.push(item);
-
+                    var count = 0;
+                    selectedMedObjList[count] = item;
+                    count++;
                     //$row = $('<tr>').append(
                     //    $('<th>').text(item.generic_name),
                     //    $('<td>').text(item.clinical_comments)
@@ -63,7 +64,7 @@ $('#btnPrint').on('click', function (event) {
         });
 
     });
-    console.log(selectedMedObjList.pop());
+    console.log(selectedMedObjList);
 
 
 });
