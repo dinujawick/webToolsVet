@@ -35,38 +35,6 @@ var selectedMedObjList = new Array();
 $('#btnPrint').on('click', function (event) {
 
     printPatHandOut();
-    ////Read JSON and add the mapping med into patient handout.
-    //$.getJSON("fullATCTable.json", function (data) {
-    //    $.each(data, function (index, item) {
-            
-    //        $.each(selectedMedList, function (i, med) {
-
-    //            if (med == item.atc_level) {
-
-    //                /*selectedMedObjList[count] = item;*/
-                   
-    //                $row = $('<tr>').append(
-    //                    $('<th>').text(item.generic_name),
-    //                    $('<td>').text(item.clinical_comments)
-    //                );
-
-    //                selectedMedObjList[count] = $row[0].outerHTML;
-    //                count++;
-
-    //                //if ((selectedMedList.list - 1) == i) {
-    //                //    printPatHandOut(tbl_body_head.concat(tbl_body_tail));
-    //                //}
-    //            }
-    //        });
-    //    });
-
-    //});
-
-    //console.log(selectedMedObjList);
-    //$.each(selectedMedObjList, function (index, item) {
-        
-    //})
-
 
 });
 
@@ -220,12 +188,12 @@ function printPatHandOut() {
 
     console.log($doc[0].outerHTML);
 
-    //var newWin = window.open('', 'Print-Window');
+    var newWin = window.open('', 'Print-Window');
 
-    //newWin.document.open();
-    //newWin.document.write($doc[0].outerHTML);
-    //newWin.print();
-    //newWin.document.close();
-    //setTimeout(function () { newWin.close(); }, 10);
+    newWin.document.open();
+    newWin.document.write($doc[0].outerHTML);
+    newWin.print();
+    newWin.document.close();
+    setTimeout(function () { newWin.close(); }, 10);
 
 }
