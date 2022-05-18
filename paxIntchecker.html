@@ -253,6 +253,7 @@
 
             $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
             $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
+            $('<th>').text("Effect on concentration").attr('scope', 'col').appendTo($tHeaderRow);
             $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
 
             $tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);
@@ -278,9 +279,6 @@
 
             $('#btnPrint').on('click', function (event) {
 
-                
-                
-                
                 //Read JSON and add the mapping med into patient handout.
                 $.getJSON("fullATCTable.json", function (data) {
                     $.each(data, function (index, item) {
@@ -314,6 +312,13 @@
                 $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
                 $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
                 $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
+
+                if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
+                    $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);
+                } else {
+                    $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
+                }
+
                 $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
 
                 //Add selected med atc level into the array
