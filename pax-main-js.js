@@ -34,7 +34,7 @@ $('#btnPrint').on('click', function (event) {
     var tbl_body_head = "<tbody>";
     var tbl_body_tail = "</tbody>";
 
-    var selectedMedList = new Array();
+    var selectedMedObjList = new Array();
 
 
     //Read JSON and add the mapping med into patient handout.
