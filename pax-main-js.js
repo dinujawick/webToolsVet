@@ -95,7 +95,7 @@ $(document).ready(function () {
 
         });
 
-        console.log(selectedMedObjList);
+        console.log(selectedMedObjList[0]);
 
     });
 });
