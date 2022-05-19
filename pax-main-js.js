@@ -111,15 +111,38 @@ function addMed(selectedMedDetails) {
             console.log(selectedMedDetails.recode_effect_on_concentration_2.split("|"));
             $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);
         } else {
-            $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
+            //$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
             const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
             switch (temp[0]) {
 
-                case "<up>": console.log(temp[0]);break;
-                case "<down>": console.log(temp[0]);break;
+                case "<up>":
+                    console.log(temp[0]);
+                    //Add up arrow icon
+                    $('<td>').append(
+                        $('<span>').append(
+                            $('<svg>')
+                                .attr('xmlns', "http://www.w3.org/2000/svg")
+                                .attr('width', "16")
+                                .attr('height', "16")
+                                .attr('fill', 'currentColor')
+                                .attr('class', 'bi bi-arrow-up-short')
+                                .attr('viewBox', "0 0 16 16").append(
+                                    $('<path>')
+                                        .attr('fill-rule', "evenodd")
+                                        .attr('d', "M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z")
+
+                            )
+                        )).text(temp[1]);
+                    break;
+                case "<down>": console.log(temp[0]); break;
+                case "<up><down>": console.log(temp[0]); break;
                 default: console.log(temp[0]);
 
             }
+
+            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+            //    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+            //</svg>
             
         }
 
