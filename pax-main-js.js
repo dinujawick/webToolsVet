@@ -1,6 +1,6 @@
 // When the user clicks on the button,toggle between hiding and showing the dropdown content
 function myFunction() {
-    $('#seacrchList').classList.toggle("show");
+    document.getElementById("seacrchList").classList.toggle("show");
     
 }
 
