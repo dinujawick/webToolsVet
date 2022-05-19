@@ -40,22 +40,19 @@ var selectedMedObjList = new Array();
 
 $('#btnReset').on('click', function (event) {
 
-    console.log(selectedMedList);
+    //Remove array allocation
     while (selectedMedList.length) {
         selectedMedList.pop();
     }
-    console.log(selectedMedList);
-
-    console.log(selectedMedObjList);
+    
+    //Remove array allocation
     while (selectedMedObjList.length) {
         selectedMedObjList.pop();
     }
-    console.log(selectedMedObjList);
-
-
 
     $('#tbody').remove();
     $('<tbody>').attr('id', 'tbody').appendTo($('#medTable'));
+
 });
 
 $('#btnPrint').on('click', function (event) {
