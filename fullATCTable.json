@@ -81,7 +81,7 @@
     "drugs_within_class": "amitriptyline",
     "generic_name": "amitriptyline",
     "clinical_comments": "Careful monitoring of therapeutic and adverse effects is recommended when these medicines are concomitantly administered with antiretroviral doses of ritonavir.",
-    "recode_effect_on_concentration_1": "<up>amitriptyline,, ",
+    "recode_effect_on_concentration_1": "<up>|amitriptyline",
     "recode_effect_on_concentration_2": "",
     "recommendation": "Attention",
     "atc_level": "N06AA09",
