@@ -136,7 +136,7 @@
     "drugs_within_class": "atovaquone",
     "generic_name": "atovaquone",
     "clinical_comments": "Careful monitoring of serum levels or therapeutic effects is recommended when atovaquone is co-administered with ritonavir.",
-    "recode_effect_on_concentration_1": "<down>atovaquone",
+    "recode_effect_on_concentration_1": "<down>|atovaquone",
     "recode_effect_on_concentration_2": "",
     "recommendation": "Attention",
     "atc_level": "P01AX06",
