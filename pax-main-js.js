@@ -113,7 +113,14 @@ function addMed(selectedMedDetails) {
         } else {
             $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
             const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
-            console.log(temp);
+            switch (temp[0]) {
+
+                case "<up>": console.log(temp[0]);break;
+                case "<down>": console.log(temp[0]);break;
+                default: console.log(temp[0]);
+
+            }
+            
         }
 
         $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
