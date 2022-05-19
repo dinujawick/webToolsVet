@@ -169,9 +169,9 @@ function checkDuplicates(medItem) {
 //Function to create new html document for print as a patien handout
 function printPatHandOut() {
 
-    $doc = $('<html>');
+    var doc = $('<html>');
 
-    $head = $('<head>').appendTo($doc);
+    $head = $('<head>').appendTo(doc);
 
     $head.append(
         $('<link>').attr('href', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css")
@@ -181,7 +181,7 @@ function printPatHandOut() {
         $('<script>').attr('src', "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
     );
 
-    $body = $('<body>').appendTo($doc);
+    $body = $('<body>').appendTo(doc);
 
     $('<h1>').text("Patient Information Handout").appendTo($body);
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($body);
@@ -211,7 +211,8 @@ function printPatHandOut() {
     var newWin = window.open('', 'Print-Window');
 
     newWin.document.open();
-    newWin.document.write($doc[0].outerHTML);
+    newWin.document.write(doc[0].outerHTML);
+    
     newWin.print();
     newWin.document.close();
     setTimeout(function () { newWin.close(); }, 10);
