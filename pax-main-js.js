@@ -62,7 +62,7 @@ $(document).ready(function () {
 
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
-                $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#myDropdown');
+                $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#seacrchList');
 
                 //Med Click Event
                 $med.on('click', function (event) {
