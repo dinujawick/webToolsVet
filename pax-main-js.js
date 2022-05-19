@@ -1,19 +1,23 @@
 // When the user clicks on the button,toggle between hiding and showing the dropdown content
-function myFunction() {
+function toggleSearchList() {
     document.getElementById("seacrchList").classList.toggle("show");
     
 }
 
 
 function filterFunction() {
+
     if (!$('#seacrchList').hasClass("show")) {
-        myFunction();
+        toggleSearchList();
     }
+
     var input, filter, ul, li, a, i;
+
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     div = document.getElementById("seacrchList");
     a = div.getElementsByTagName("a");
+
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -22,6 +26,7 @@ function filterFunction() {
             a[i].style.display = "none";
         }
     }
+
 }
 
 //Variable to store previous generic name
@@ -36,9 +41,7 @@ var selectedMedObjList = new Array();
 
 
 $('#btnPrint').on('click', function (event) {
-
     printPatHandOut();
-
 });
 
 
