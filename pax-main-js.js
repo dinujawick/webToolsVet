@@ -39,7 +39,7 @@ var selectedMedObjList = new Array();
 
 
 $('#btnReset').on('click', function (event) {
-    $('#tbody').remove(this.children);
+    $('#tbody').remove($('#tbody').children());
 })
 
 $('#btnPrint').on('click', function (event) {
