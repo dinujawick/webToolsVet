@@ -130,7 +130,7 @@ function addMed(selectedMedDetails) {
                                         .attr('fill-rule', "evenodd")
                                         .attr('d', "M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z")
                             )
-                        )).text(temp[1]).appendTo($tableRow);
+                        )).appendTo($tableRow);
                     break;
                 case "<down>": console.log(temp[0]); break;
                 case "<up><down>": console.log(temp[0]); break;
