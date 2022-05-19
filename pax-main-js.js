@@ -124,11 +124,11 @@ function addMed(selectedMedDetails) {
                                 .attr('width', "16")
                                 .attr('height', "16")
                                 .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-up-short')
+                                .attr('class', 'bi bi-arrow-up')
                                 .attr('viewBox', "0 0 16 16").append(
                                     $('<path>')
                                         .attr('fill-rule', "evenodd")
-                                        .attr('d', "M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z")
+                                        .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
                             )
                         )).appendTo($tableRow);
                     break;
@@ -137,7 +137,12 @@ function addMed(selectedMedDetails) {
                 default: console.log(temp[0]);
 
             }
+            //arrow-up
+            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            //    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            //</svg>
 
+            //arrow-up short
             //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
             //    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
             //</svg>
