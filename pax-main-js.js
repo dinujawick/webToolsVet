@@ -1,11 +1,12 @@
 // When the user clicks on the button,toggle between hiding and showing the dropdown content
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    $('#seacrchList').classList.toggle("show");
+    
 }
 
 
 function filterFunction() {
-
+    $('#seacrchList').attr('visible', 'true');
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
