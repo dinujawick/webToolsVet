@@ -4,7 +4,6 @@ function toggleSearchList() {
     
 }
 
-
 function filterFunction() {
 
     if (!$('#seacrchList').hasClass("show")) {
@@ -39,6 +38,9 @@ var selectedMedList = new Array();
 var selectedMedObjList = new Array();
 
 
+$('#btnReset').on('click', function (event) {
+    $('#tbody').children.remove();
+})
 
 $('#btnPrint').on('click', function (event) {
     printPatHandOut();
