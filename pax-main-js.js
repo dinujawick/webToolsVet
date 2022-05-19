@@ -192,7 +192,6 @@ function printPatHandOut() {
         ).appendTo($tblBody);
     })
 
-    console.log($doc[0].outerHTML);
 
     var newWin = window.open('', 'Print-Window');
 
