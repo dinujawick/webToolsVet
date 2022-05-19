@@ -165,15 +165,16 @@ g {
     color: white;
 }
 
-#divTableCol {
+/*#divTableCol {
     border-left: 1px solid #ffc107;
     border-right: 1px solid #ffc107;
-}
+}*/
 
 
-#divTable {
+/*#divTable {
     padding: 0.25rem;
-}
+}*/
+
 #toolHeader {
     text-align: center;
     color: #720b03;
