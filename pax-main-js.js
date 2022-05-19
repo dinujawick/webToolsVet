@@ -39,7 +39,8 @@ var selectedMedObjList = new Array();
 
 
 $('#btnReset').on('click', function (event) {
-    $('#tbody').remove($('#tbody').children());
+    $('#tbody').remove();
+    $('<tbody>').attr('id', 'tbody').appendTo($('#medTable'));
 });
 
 $('#btnPrint').on('click', function (event) {
