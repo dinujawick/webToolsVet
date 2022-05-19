@@ -6,7 +6,9 @@ function myFunction() {
 
 
 function filterFunction() {
-    //myFunction();
+    if (!$('#seacrchList').hasClass("show")) {
+        myFunction();
+    }
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
