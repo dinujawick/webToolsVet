@@ -39,13 +39,20 @@ var selectedMedObjList = new Array();
 
 
 $('#btnReset').on('click', function (event) {
+
     console.log(selectedMedList);
-    selectedMedList = new Array();
+    while (selectedMedList.length) {
+        selectedMedList.pop();
+    }
     console.log(selectedMedList);
 
     console.log(selectedMedObjList);
-    selectedMedObjList = new Array();
+    while (selectedMedObjList.length) {
+        selectedMedObjList.pop();
+    }
     console.log(selectedMedObjList);
+
+
 
     $('#tbody').remove();
     $('<tbody>').attr('id', 'tbody').appendTo($('#medTable'));
