@@ -40,7 +40,7 @@ var selectedMedObjList = new Array();
 
 $('#btnReset').on('click', function (event) {
     $('#tbody').remove($('#tbody').children());
-})
+});
 
 $('#btnPrint').on('click', function (event) {
     printPatHandOut();
