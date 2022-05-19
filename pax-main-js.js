@@ -212,8 +212,7 @@ function printPatHandOut() {
 
     newWin.document.open();
     newWin.document.write(doc[0].outerHTML);
-    
-    newWin.print();
+    setTimeout(function () { newWin.print(); }, 10);
     newWin.document.close();
     setTimeout(function () { newWin.close(); }, 10);
 
