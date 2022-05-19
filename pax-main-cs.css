@@ -158,7 +158,7 @@ g {
     margin-bottom: 1rem;
 }
 
-#btnPrint #btnReset  {
+#btnPrint,#btnReset  {
     background-color: #8b0e04;
     background-image: linear-gradient(to bottom,#8b0e04,#720b03);
     background-repeat: repeat-x;
