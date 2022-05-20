@@ -95,6 +95,101 @@ $(document).ready(function () {
     });
 });
 
+
+//Function to return arrows
+//@arrowType : stripped arrow type
+//@medName : stripped med name
+//return: div with a arrow
+
+function getArrow(arrowType,medName) {
+
+    switch (arrowType) {
+        case "<up>":
+            //Add up arrow icon
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'tblArrows').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-up')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        case "<down>":
+            //Add down arrow icon
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'tblArrows').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-down')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        case "<up><down>":
+            //Add up-down arrow icon
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'tblArrows').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-down-up')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        case "<double-arrow>":
+            //Add left-right arrow icon
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'tblArrows').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-left-right')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        default:
+    }
+
+}
+
+
 //Function to add medicines into the table
 //@selectedMedDetails : selected med object from the search dropdown
 function addMed(selectedMedDetails) {
@@ -118,114 +213,102 @@ function addMed(selectedMedDetails) {
             console.log(selectedMedDetails.recode_effect_on_concentration_2.split("|"));
             $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);
 
+            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
+
+
+           
+
 
         }
         //One recode effect on concentration
         else {
             //$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
             const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
-            switch (temp[0]) {
-                case "<up>":
-                    //Add up arrow icon
-                    $('<td>').append(
-                        $('<span>').attr('id','tblArrows').append(
-                            $('<svg>')
-                                .attr('xmlns', "http://www.w3.org/2000/svg")
-                                .attr('width', "16")
-                                .attr('height', "16")
-                                .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-up')
-                                .attr('viewBox', "0 0 16 16").append(
-                                    $('<path>')
-                                        .attr('fill-rule', "evenodd")
-                                        .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
-                                )
-                        ),
-                        $('<span>').text(temp[1])
-                    ).appendTo($tableRow);
-                    break;
-                case "<down>":
-                    //Add down arrow icon
-                    $('<td>').append(
-                        $('<span>').attr('id', 'tblArrows').append(
-                            $('<svg>')
-                                .attr('xmlns', "http://www.w3.org/2000/svg")
-                                .attr('width', "16")
-                                .attr('height', "16")
-                                .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-down')
-                                .attr('viewBox', "0 0 16 16").append(
-                                    $('<path>')
-                                        .attr('fill-rule', "evenodd")
-                                        .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
-                                )
-                        ),
-                        $('<span>').text(temp[1])
-                    ).appendTo($tableRow);
-                    break;
-                case "<up><down>":
-                    //Add up-down arrow icon
-                    $('<td>').append(
-                        $('<span>').attr('id', 'tblArrows').append(
-                            $('<svg>')
-                                .attr('xmlns', "http://www.w3.org/2000/svg")
-                                .attr('width', "16")
-                                .attr('height', "16")
-                                .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-down-up')
-                                .attr('viewBox', "0 0 16 16").append(
-                                    $('<path>')
-                                        .attr('fill-rule', "evenodd")
-                                        .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
-                                )
-                        ),
-                        $('<span>').text(temp[1])
-                    ).appendTo($tableRow);
-                    break;
-                case "<double-arrow>":
-                    //Add left-right arrow icon
-                    $('<td>').append(
-                        $('<span>').attr('id', 'tblArrows').append(
-                            $('<svg>')
-                                .attr('xmlns', "http://www.w3.org/2000/svg")
-                                .attr('width', "16")
-                                .attr('height', "16")
-                                .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-left-right')
-                                .attr('viewBox', "0 0 16 16").append(
-                                    $('<path>')
-                                        .attr('fill-rule', "evenodd")
-                                        .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
-                                )
-                        ),
-                        $('<span>').text(temp[1])
-                    ).appendTo($tableRow);
-                    break;
-                default: console.log(temp[0]);
 
-            }
+            var div = getArrow(temp[0].temp[1]);
 
-            //arrow-leftright
-            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-            //    <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
-            //</svg>
-            //arrow-updown
-            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
-            //    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
-            //</svg>
-            //arrow-down
-            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-            //    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
-            //</svg>
-            //arrow-up
-            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-            //    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-            //</svg>
+            console.log(div);
+            //switch (temp[0]) {
+            //    case "<up>":
+            //        //Add up arrow icon
+            //        $('<td>').append(
+            //            $('<span>').attr('id','tblArrows').append(
+            //                $('<svg>')
+            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
+            //                    .attr('width', "16")
+            //                    .attr('height', "16")
+            //                    .attr('fill', 'currentColor')
+            //                    .attr('class', 'bi bi-arrow-up')
+            //                    .attr('viewBox', "0 0 16 16").append(
+            //                        $('<path>')
+            //                            .attr('fill-rule', "evenodd")
+            //                            .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
+            //                    )
+            //            ),
+            //            $('<span>').text(temp[1])
+            //        ).appendTo($tableRow);
+            //        break;
+            //    case "<down>":
+            //        //Add down arrow icon
+            //        $('<td>').append(
+            //            $('<span>').attr('id', 'tblArrows').append(
+            //                $('<svg>')
+            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
+            //                    .attr('width', "16")
+            //                    .attr('height', "16")
+            //                    .attr('fill', 'currentColor')
+            //                    .attr('class', 'bi bi-arrow-down')
+            //                    .attr('viewBox', "0 0 16 16").append(
+            //                        $('<path>')
+            //                            .attr('fill-rule', "evenodd")
+            //                            .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
+            //                    )
+            //            ),
+            //            $('<span>').text(temp[1])
+            //        ).appendTo($tableRow);
+            //        break;
+            //    case "<up><down>":
+            //        //Add up-down arrow icon
+            //        $('<td>').append(
+            //            $('<span>').attr('id', 'tblArrows').append(
+            //                $('<svg>')
+            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
+            //                    .attr('width', "16")
+            //                    .attr('height', "16")
+            //                    .attr('fill', 'currentColor')
+            //                    .attr('class', 'bi bi-arrow-down-up')
+            //                    .attr('viewBox', "0 0 16 16").append(
+            //                        $('<path>')
+            //                            .attr('fill-rule', "evenodd")
+            //                            .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
+            //                    )
+            //            ),
+            //            $('<span>').text(temp[1])
+            //        ).appendTo($tableRow);
+            //        break;
+            //    case "<double-arrow>":
+            //        //Add left-right arrow icon
+            //        $('<td>').append(
+            //            $('<span>').attr('id', 'tblArrows').append(
+            //                $('<svg>')
+            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
+            //                    .attr('width', "16")
+            //                    .attr('height', "16")
+            //                    .attr('fill', 'currentColor')
+            //                    .attr('class', 'bi bi-arrow-left-right')
+            //                    .attr('viewBox', "0 0 16 16").append(
+            //                        $('<path>')
+            //                            .attr('fill-rule', "evenodd")
+            //                            .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
+            //                    )
+            //            ),
+            //            $('<span>').text(temp[1])
+            //        ).appendTo($tableRow);
+            //        break;
+            //    default: 
 
-            //arrow-up short
-            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-            //    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
-            //</svg>
+            //}
             
         }
 
