@@ -113,12 +113,15 @@ function addMed(selectedMedDetails) {
         $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
         $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
+        //Two recode effect on concentration
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
             console.log(selectedMedDetails.recode_effect_on_concentration_2.split("|"));
             $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);
 
 
-        } else {
+        }
+        //One recode effect on concentration
+        else {
             //$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
             const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
             switch (temp[0]) {
@@ -264,7 +267,7 @@ function checkDuplicates(medItem) {
         for (var i = 0; i < rows.length - 1; i++) {
 
             var cells = rows[i + 1].childNodes;
-
+            console.log(cells);
             var medName = cells[0].innerHTML;
             var icon = cells[2].innerHTML;
             var cliCom = cells[3].innerHTML;
