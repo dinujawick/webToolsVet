@@ -211,7 +211,7 @@ function addMed(selectedMedDetails) {
         //Two recode effect on concentration
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
 
-            $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);
+            /*$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);*/
 
             //split the REOC1
             const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
