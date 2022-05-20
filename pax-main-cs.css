@@ -71,7 +71,7 @@
 .close {
     cursor: pointer;
     background-size: 29px;
-    background-image: url('Images/remove.png');
+    background-image: url('Images/table-remove-icon.png');
     background-repeat: no-repeat;
 }
 
@@ -92,19 +92,6 @@
     margin-bottom: 2rem;
 }
 
-#pageHeader {
-    font-family: 'Roboto Condensed',sans-serif;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    background-image: url('Images/headerBgImage.png');
-    background-repeat: no-repeat;
-    color: #f9f9f9;
-    padding-left: 2rem;
-    font-size: 2rem;
-    background-size: cover;
-}
 
 .container {
     background-color: white;
