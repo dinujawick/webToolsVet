@@ -179,3 +179,10 @@ g {
     text-align: center;
     color: #720b03;
 }
+
+arrowClass {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-right: 5px;
+    border-style: groove;
+}
