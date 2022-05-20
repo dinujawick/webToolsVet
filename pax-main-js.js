@@ -118,7 +118,7 @@ function addMed(selectedMedDetails) {
                     console.log(temp[0]);
                     //Add up arrow icon
                     $('<td>').append(
-                        $('<span>').append(
+                        $('<p>').append(
                             $('<svg>')
                                 .attr('xmlns', "http://www.w3.org/2000/svg")
                                 .attr('width', "16")
