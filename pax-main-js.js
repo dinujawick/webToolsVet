@@ -210,108 +210,29 @@ function addMed(selectedMedDetails) {
 
         //Two recode effect on concentration
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
-            console.log(selectedMedDetails.recode_effect_on_concentration_2.split("|"));
+
             $('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);
 
+            //split the REOC1
             const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            //split the REOC2
             const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
 
+            var div1 = getArrow(firstREOC[0], firstREOC[1]);
+            var div2 = getArrow(secondREOC[0], secondREOC[1]);
 
-           
-
+            $('<td>').append(div1, div2).appendTo($tableRow);
 
         }
         //One recode effect on concentration
         else {
-            //$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
-            const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
 
-            var div = getArrow(temp[0],temp[1]);
+            //split the REOC1
+            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
 
-            $('<td>').append(div).appendTo($tableRow);
+            //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
+            $('<td>').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
 
-            
-            //switch (temp[0]) {
-            //    case "<up>":
-            //        //Add up arrow icon
-            //        $('<td>').append(
-            //            $('<span>').attr('id','tblArrows').append(
-            //                $('<svg>')
-            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
-            //                    .attr('width', "16")
-            //                    .attr('height', "16")
-            //                    .attr('fill', 'currentColor')
-            //                    .attr('class', 'bi bi-arrow-up')
-            //                    .attr('viewBox', "0 0 16 16").append(
-            //                        $('<path>')
-            //                            .attr('fill-rule', "evenodd")
-            //                            .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
-            //                    )
-            //            ),
-            //            $('<span>').text(temp[1])
-            //        ).appendTo($tableRow);
-            //        break;
-            //    case "<down>":
-            //        //Add down arrow icon
-            //        $('<td>').append(
-            //            $('<span>').attr('id', 'tblArrows').append(
-            //                $('<svg>')
-            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
-            //                    .attr('width', "16")
-            //                    .attr('height', "16")
-            //                    .attr('fill', 'currentColor')
-            //                    .attr('class', 'bi bi-arrow-down')
-            //                    .attr('viewBox', "0 0 16 16").append(
-            //                        $('<path>')
-            //                            .attr('fill-rule', "evenodd")
-            //                            .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
-            //                    )
-            //            ),
-            //            $('<span>').text(temp[1])
-            //        ).appendTo($tableRow);
-            //        break;
-            //    case "<up><down>":
-            //        //Add up-down arrow icon
-            //        $('<td>').append(
-            //            $('<span>').attr('id', 'tblArrows').append(
-            //                $('<svg>')
-            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
-            //                    .attr('width', "16")
-            //                    .attr('height', "16")
-            //                    .attr('fill', 'currentColor')
-            //                    .attr('class', 'bi bi-arrow-down-up')
-            //                    .attr('viewBox', "0 0 16 16").append(
-            //                        $('<path>')
-            //                            .attr('fill-rule', "evenodd")
-            //                            .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
-            //                    )
-            //            ),
-            //            $('<span>').text(temp[1])
-            //        ).appendTo($tableRow);
-            //        break;
-            //    case "<double-arrow>":
-            //        //Add left-right arrow icon
-            //        $('<td>').append(
-            //            $('<span>').attr('id', 'tblArrows').append(
-            //                $('<svg>')
-            //                    .attr('xmlns', "http://www.w3.org/2000/svg")
-            //                    .attr('width', "16")
-            //                    .attr('height', "16")
-            //                    .attr('fill', 'currentColor')
-            //                    .attr('class', 'bi bi-arrow-left-right')
-            //                    .attr('viewBox', "0 0 16 16").append(
-            //                        $('<path>')
-            //                            .attr('fill-rule', "evenodd")
-            //                            .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
-            //                    )
-            //            ),
-            //            $('<span>').text(temp[1])
-            //        ).appendTo($tableRow);
-            //        break;
-            //    default: 
-
-            //}
-            
         }
 
         $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
