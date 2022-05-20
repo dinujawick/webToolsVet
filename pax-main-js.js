@@ -104,13 +104,13 @@ function addMed(selectedMedDetails) {
         //Add New med to the table
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
         $('<th>').attr('scope', 'row').attr('colspan', '2').text(selectedMedDetails.generic_name)
-            .append(
-                $('<span>').attr('id','btnRemove').append(
-                    $('<img>').attr('src', 'Images/delete.png')
-                  )  
-            )
+            //.append(
+            //    $('<span>').attr('id','btnRemove').append(
+            //        $('<img>').attr('src', 'Images/delete.png')
+            //      )  
+            //)
             .appendTo($tableRow);
-        /*$btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);*/
+        $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
         $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
@@ -209,16 +209,16 @@ function addMed(selectedMedDetails) {
         //Add selected med object into the array
         selectedMedObjList.push(selectedMedDetails);
 
-        ////Remove med from the table when click the btnRemove
-        //$btnRemove.on('click', function (event) {
-        //    //Remove the removed medicine's atc code from selectedMedList array
-        //    const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
-        //    if (index > -1) {
-        //        selectedMedList.splice(index, 1);
-        //    }
-        //    //Remove the table row
-        //    $('#' + 'tr' + selectedMedDetails.atc_level).remove();
-        //});
+        //Remove med from the table when click the btnRemove
+        $btnRemove.on('click', function (event) {
+            //Remove the removed medicine's atc code from selectedMedList array
+            const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
+            if (index > -1) {
+                selectedMedList.splice(index, 1);
+            }
+            //Remove the table row
+            $('#' + 'tr' + selectedMedDetails.atc_level).remove();
+        });
     }
 
 }
