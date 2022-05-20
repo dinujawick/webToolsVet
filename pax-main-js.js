@@ -267,12 +267,9 @@ function checkDuplicates(medItem) {
         for (var i = 0; i < rows.length - 1; i++) {
 
             var cells = rows[i + 1].childNodes;
-            console.log(cells);
             var medName = cells[0].innerHTML;
-            var icon = cells[2].innerHTML;
-            var cliCom = cells[3].innerHTML;
 
-            if (medItem.generic_name == medName && medItem.recommendation == icon && medItem.clinical_comments == cliCom) {
+            if (medItem.generic_name == medName) {
                 return false;
             } else {
                 isValid = true;
