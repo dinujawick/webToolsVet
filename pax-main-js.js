@@ -228,7 +228,9 @@ function addMed(selectedMedDetails) {
 
             var div = getArrow(temp[0],temp[1]);
 
-            console.log(div);
+            $('<td>').append(div).appendTo($tableRow);
+
+            
             //switch (temp[0]) {
             //    case "<up>":
             //        //Add up arrow icon
