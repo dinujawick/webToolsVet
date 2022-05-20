@@ -104,7 +104,9 @@ function addMed(selectedMedDetails) {
         //Add New med to the table
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
         $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).append(
-            $('<span>').addClass('close')
+            $('<span>').append(
+                $('<img>').attr('src',"Images/remove.png")
+            )
 
         ).appendTo($tableRow);
        /* $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);*/
