@@ -226,7 +226,7 @@ function addMed(selectedMedDetails) {
             //$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1).appendTo($tableRow);
             const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
 
-            var div = getArrow(temp[0].temp[1]);
+            var div = getArrow(temp[0],temp[1]);
 
             console.log(div);
             //switch (temp[0]) {
