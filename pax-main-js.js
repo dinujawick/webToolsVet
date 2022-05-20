@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     $tHeaderRow = $('<tr>').appendTo($tHead);
 
-    $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
+    $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
     $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
     $('<th>').text("Effect on concentration").attr('scope', 'col').appendTo($tHeaderRow);
     $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
@@ -103,13 +103,8 @@ function addMed(selectedMedDetails) {
 
         //Add New med to the table
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
-        $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).append(
-            $('<span>').append(
-                $('<img>').attr('src',"Images/remove.png")
-            )
-
-        ).appendTo($tableRow);
-       /* $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);*/
+        $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name).appendTo($tableRow);
+        $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
         $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
