@@ -115,7 +115,6 @@ function addMed(selectedMedDetails) {
             const temp = selectedMedDetails.recode_effect_on_concentration_1.split("|");
             switch (temp[0]) {
                 case "<up>":
-                    console.log(temp[0]);
                     //Add up arrow icon
                     $('<td>').append(
                         $('<span>').attr('id','tblArrows').append(
@@ -134,11 +133,56 @@ function addMed(selectedMedDetails) {
                         $('<span>').text(temp[1])
                     ).appendTo($tableRow);
                     break;
-                case "<down>": console.log(temp[0]); break;
-                case "<up><down>": console.log(temp[0]); break;
+                case "<down>":
+                    //Add down arrow icon
+                    $('<td>').append(
+                        $('<span>').attr('id', 'tblArrows').append(
+                            $('<svg>')
+                                .attr('xmlns', "http://www.w3.org/2000/svg")
+                                .attr('width', "16")
+                                .attr('height', "16")
+                                .attr('fill', 'currentColor')
+                                .attr('class', 'bi bi-arrow-down')
+                                .attr('viewBox', "0 0 16 16").append(
+                                    $('<path>')
+                                        .attr('fill-rule', "evenodd")
+                                        .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
+                                )
+                        ),
+                        $('<span>').text(temp[1])
+                    ).appendTo($tableRow);
+                    break;
+                case "<up><down>":
+                    //Add up-down arrow icon
+                    $('<td>').append(
+                        $('<span>').attr('id', 'tblArrows').append(
+                            $('<svg>')
+                                .attr('xmlns', "http://www.w3.org/2000/svg")
+                                .attr('width', "16")
+                                .attr('height', "16")
+                                .attr('fill', 'currentColor')
+                                .attr('class', 'bi bi-arrow-down-up')
+                                .attr('viewBox', "0 0 16 16").append(
+                                    $('<path>')
+                                        .attr('fill-rule', "evenodd")
+                                        .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
+                                )
+                        ),
+                        $('<span>').text(temp[1])
+                    ).appendTo($tableRow);
+                    break;
                 default: console.log(temp[0]);
 
             }
+
+            //arrow-updown
+            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+            //    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+            //</svg>
+            //arrow-down
+            //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+            //    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+            //</svg>
             //arrow-up
             //<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
             //    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
