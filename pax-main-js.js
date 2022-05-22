@@ -222,7 +222,7 @@ function addMed(selectedMedDetails) {
             var div1 = getArrow(firstREOC[0], firstREOC[1]);
             var div2 = getArrow(secondREOC[0], secondREOC[1]);
 
-            $('<td>').attr('width','19rem').append(div1, div2).appendTo($tableRow);
+            $('<td>').attr('style','width:19rem;').append(div1, div2).appendTo($tableRow);
 
         }
         //One recode effect on concentration
@@ -232,7 +232,7 @@ function addMed(selectedMedDetails) {
             const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
 
             //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
-            $('<td>').attr('width', '19rem').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
+            $('<td>').attr('style', 'width:19rem;').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
 
         }
 
