@@ -249,6 +249,11 @@ function addMed(selectedMedDetails) {
             if (index > -1) {
                 selectedMedList.splice(index, 1);
             }
+            const index2 = selectedMedObjList.indexOf(selectedMedDetails);
+            if (index > -1) {
+                selectedMedObjList.splice(index, 1);
+            }
+
             //Remove the table row
             $('#' + 'tr' + selectedMedDetails.atc_level).remove();
         });
