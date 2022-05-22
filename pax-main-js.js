@@ -244,6 +244,7 @@ function addMed(selectedMedDetails) {
         //Add selected med object into the array
         selectedMedObjList.push(selectedMedDetails);
 
+        $btnRemove = $('#btnRemove');
         //Remove med from the table when click the btnRemove
         $btnRemove.on('click', function (event) {
             //Remove the removed medicine's atc code from selectedMedList array
