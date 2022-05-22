@@ -200,9 +200,8 @@ function addMed(selectedMedDetails) {
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
         $('<th>').attr('scope', 'row').attr('colspan','2').text(selectedMedDetails.generic_name)
             .append(
-                $('<div>').attr('id', 'btnRemove').attr('style','padding-left:2rem;').append(
-                    $('<img>').attr('src', 'Images/delete.png')
-                )
+                $('<img>').attr('src', 'Images/delete.png')
+               
             )
             .appendTo($tableRow);
 
