@@ -198,13 +198,13 @@ function addMed(selectedMedDetails) {
 
         //Add New med to the table
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
-        $('<th>').attr('scope', 'row').attr('colspan','2').attr('style','width:15rem;').text(selectedMedDetails.generic_name)
-            .append(
-                $('<img>').attr('src', 'Images/delete.png')
-            )
+        $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name)
+            //.append(
+            //    $('<img>').attr('src', 'Images/delete.png')
+            //)
             .appendTo($tableRow);
 
-        /*$btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);*/
+        $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
         $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
         //Two recode effect on concentration
@@ -242,7 +242,6 @@ function addMed(selectedMedDetails) {
         //Add selected med object into the array
         selectedMedObjList.push(selectedMedDetails);
 
-        $btnRemove = $('#btnRemove');
         //Remove med from the table when click the btnRemove
         $btnRemove.on('click', function (event) {
             //Remove the removed medicine's atc code from selectedMedList array
