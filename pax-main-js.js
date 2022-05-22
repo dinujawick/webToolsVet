@@ -198,14 +198,15 @@ function addMed(selectedMedDetails) {
 
         //Add New med to the table
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
-        $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name)
-            //.append(
-            //    $('<span>').attr('id','btnRemove').append(
-            //        $('<img>').attr('src', 'Images/delete.png')
-            //      )  
-            //)
+        $('<th>').attr('scope', 'row').attr('colspan','2').text(selectedMedDetails.generic_name)
+            .append(
+                $('<div>').attr('id', 'btnRemove').attr('style','padding-left:2rem;').append(
+                    $('<img>').attr('src', 'Images/delete.png')
+                )
+            )
             .appendTo($tableRow);
-        $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
+
+        /*$btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);*/
         $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
         //Two recode effect on concentration
@@ -221,7 +222,7 @@ function addMed(selectedMedDetails) {
             var div1 = getArrow(firstREOC[0], firstREOC[1]);
             var div2 = getArrow(secondREOC[0], secondREOC[1]);
 
-            $('<td>').append(div1, div2).appendTo($tableRow);
+            $('<td>').attr('width','19rem').append(div1, div2).appendTo($tableRow);
 
         }
         //One recode effect on concentration
@@ -231,7 +232,7 @@ function addMed(selectedMedDetails) {
             const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
 
             //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
-            $('<td>').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
+            $('<td>').attr('width', '19rem').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
 
         }
 
