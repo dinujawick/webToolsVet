@@ -201,7 +201,6 @@ function addMed(selectedMedDetails) {
         $('<th>').attr('scope', 'row').attr('colspan','2').text(selectedMedDetails.generic_name)
             .append(
                 $('<img>').attr('src', 'Images/delete.png')
-               
             )
             .appendTo($tableRow);
 
