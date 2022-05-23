@@ -314,6 +314,11 @@ function checkDuplicatesOnCard(generic_name) {
 
     var isValid = false;
 
+    //Get all the accordion-item Ids into const liIDs variable.
+    const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
+
+    console.log(cardIDs);
+
    
 
 }
