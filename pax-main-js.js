@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     //***************************************************Card Way******************************************************
     //Create Card Deck
-    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('card-group').appendTo($('#divMedCon'));
+    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('card-column').appendTo($('#divMedCon'));
     //*****************************************************************************************************************
 
 
@@ -314,10 +314,10 @@ function checkDuplicatesOnCard(generic_name) {
 
     var isValid = false;
 
-    //Get all the accordion-item Ids into const liIDs variable.
+    //Get all the card IDs into const cardIDs variable.
     const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
 
-    console.log(cardIDs);
+    
 
    
 
