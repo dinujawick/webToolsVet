@@ -359,7 +359,7 @@ function checkDuplicatesOnCard(atc_level) {
             console.log('Item ' + item);
             console.log('atc_Level ' + atc_level);
 
-            if (item == atc_level + 'cardCol') {
+            if (item == (atc_level + 'cardCol')) {
                 console.log('inside if');
                 return false;
             } else {
