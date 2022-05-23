@@ -205,10 +205,12 @@ function getArrow(arrowType,medName) {
 
 function createCard(atcLevel) {
 
-    var card = $('<div>').attr('id', atcLevel+ 'card').addClass('class');
-    var cardH = $('<div>').addClass('card-header');
-    var cardB = $('<div>').addClass('card-body');
-    var cardF = $('<div>').addClass('card-footer');
+
+
+    var card = $('<div>').attr('id', atcLevel + 'card').addClass('class').appendTo('#mainDeck');
+    var cardH = $('<div>').addClass('card-header').appendTo(card);
+    var cardB = $('<div>').addClass('card-body').appendTo(card);
+    var cardF = $('<div>').addClass('card-footer').appendTo(card);
 
     return { 'card': this.card, 'header': this.cardH, 'body': this.cardB, 'footer': this.cardF }
 
@@ -225,7 +227,7 @@ function addMed(selectedMedDetails) {
 
     var currentMed = createCard(selectedMedDetails.atc_level);
 
-    currentMed.card.appendTo($('#mainDeck'));
+    
 
 
 
