@@ -349,18 +349,21 @@ function checkDuplicatesOnCard(atc_level) {
     const cardIDs = $.map($('#mainDeck > .col'), card => card.id);
 
     
-
     if (cardIDs.length == 0) {
         isValid = true;
         return isValid;
     } else {
+
         $(cardIDs).each(function (index, item) {
+
             console.log('Item ' + item);
             console.log('atc_Level ' + atc_level);
 
             if (item == atc_level + 'cardCol') {
+                console.log('inside if');
                 return false;
             } else {
+                console.log('inside if');
                 isValid = true;
             }
                 
