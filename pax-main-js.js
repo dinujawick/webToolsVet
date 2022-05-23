@@ -236,7 +236,7 @@ function addMed(selectedMedDetails) {
 
         }
 
-        $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableComments);
+        $('<tr>').text(selectedMedDetails.clinical_comments).appendTo($tableComments);
 
         //Add selected med atc level into the array
         selectedMedList.push(selectedMedDetails.atc_level);
