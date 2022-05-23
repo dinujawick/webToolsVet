@@ -206,10 +206,10 @@ function getArrow(arrowType,medName) {
 function createCard(atcLevel) {
 
     $col = $('<div>').attr('id', atcLevel + 'cardCol').addClass('col').appendTo('#mainDeck');
-    $('<div>').attr('id', atcLevel + 'card').addClass('card h-100').appendTo($col);
-    $('<div>').attr('id', atcLevel + 'cardHead').addClass('card-header').appendTo(card);
-    $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').appendTo(card);
-    $('<div>').attr('id', atcLevel + 'cardFoot').addClass('card-footer').appendTo(card);
+    $card = $('<div>').attr('id', atcLevel + 'card').addClass('card h-100').appendTo($col);
+    $('<div>').attr('id', atcLevel + 'cardHead').addClass('card-header').appendTo($card);
+    $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').appendTo($card);
+    $('<div>').attr('id', atcLevel + 'cardFoot').addClass('card-footer').appendTo($card);
 
     return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'header': atcLevel + 'cardHead', 'body': atcLevel + 'cardBody', 'footer': atcLevel + 'cardFoot' }
 
