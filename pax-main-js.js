@@ -354,16 +354,14 @@ function checkDuplicatesOnCard(atc_level) {
         return isValid;
     } else {
 
-        $(cardIDs).each(function (index, item) {
+        for (var i = 0; i < cardIDs.length; i++) {
 
-            console.log('Item ' + item);
-            console.log('atc_Level ' + atc_level);
-
-            if (item == (atc_level + 'cardCol')) {
-                console.log('inside if');
+            if (cardIDs[i] == (atc_level + 'cardCol')) {
                 return false;
-            }      
-        });
+            } else {
+                isValid = true;
+            }
+        }      
     }
     return isValid;
     
