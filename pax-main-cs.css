@@ -174,5 +174,9 @@ g {
     border-style: groove;
 }
 
-.medCard{
+.medCardRemoveBtn {
+    background-color: #8b0e04;
+    background-image: linear-gradient(to bottom,#8b0e04,#720b03);
+    background-repeat: repeat-x;
+    color: white;
 }
