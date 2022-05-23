@@ -226,7 +226,7 @@ function addMed(selectedMedDetails) {
 
         var currentMed = createCard(selectedMedDetails.atc_level);
 
-        currentMed.cardH.append(
+        currentMed.header.append(
             $('<h4>').text(selectedMedDetails.generic_name)
         );
 
