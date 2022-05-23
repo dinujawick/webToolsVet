@@ -180,3 +180,6 @@ g {
     background-repeat: repeat-x;
     color: white;
 }
+medCardRemoveBtn:hover{
+    color:white;
+}
