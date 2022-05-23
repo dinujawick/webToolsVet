@@ -318,7 +318,7 @@ function checkDuplicatesOnCard(generic_name) {
     var cards = deck.getElementsByClassName("card");
     
 
-    console.log(card);
+    console.log(cards);
     if (cards.length == 1) {
         isValid = true;
         console.log('first card');
