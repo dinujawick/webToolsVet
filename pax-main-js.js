@@ -227,7 +227,7 @@ function addMed(selectedMedDetails) {
 
     var currentMed = createCard(selectedMedDetails.atc_level);
 
-   checkDuplicatesOnCard(selectedMedDetails.generic_name);
+    checkDuplicatesOnCard(selectedMedDetails.generic_name);
 
 
 
@@ -316,7 +316,8 @@ function checkDuplicatesOnCard(generic_name) {
 
     //Get all the cards Ids into const cardIDs variable.
     const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
-    
+
+    console.log(cardIDs);
 
 
 }
