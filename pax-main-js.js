@@ -315,7 +315,7 @@ function checkDuplicatesOnCard(generic_name) {
     var isValid = false;
 
     var deck = document.getElementById("mainDeck");
-    var card = grid.getElementsByClassName("card");
+    var card = deck.getElementsByClassName("card");
     
 
     console.log(card);
