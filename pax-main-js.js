@@ -62,18 +62,28 @@ $('#btnPrint').on('click', function (event) {
 
 $(document).ready(function () {
 
-    //Create Empty Table
-    $table = $('<table>').attr('id', 'medTable').addClass("table table-bordered").appendTo($('#divTable'));
-    $tHead = $('<thead>').appendTo($table);
+    //***************************************************Card Way******************************************************
+    //Create Card Deck
+    $cardDeck = $('<div>').attr('id','mainDeck').addClass('card-deck');
+    //*****************************************************************************************************************
 
-    $tHeaderRow = $('<tr>').appendTo($tHead);
 
-    $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
-    $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
-    $('<th>').text("Effect on concentration").attr('scope', 'col').appendTo($tHeaderRow);
-   /* $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);*/
+    //***************************************************Table Way*****************************************************
 
-    $tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);
+    // //Create Empty Table
+    // $table = $('<table>').attr('id', 'medTable').addClass("table table-bordered").appendTo($('#divTable'));
+    // $tHead = $('<thead>').appendTo($table);
+
+    // $tHeaderRow = $('<tr>').appendTo($tHead);
+
+    // $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
+    // $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
+    // $('<th>').text("Effect on concentration").attr('scope', 'col').appendTo($tHeaderRow);
+    ///* $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);*/
+
+    /*$tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);*/
+
+    //******************************************************************************************************************
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("fullATCTable.json", function (data) {
@@ -190,81 +200,125 @@ function getArrow(arrowType,medName) {
 }
 
 
+//Function to created a card according to selectedmed
+//@selectedMedDetails : selected med object from the search dropdown
+
+function createCard(atcLevel) {
+
+    var card = $('<div>').attr('id', atcLevel+ 'card').addClass('class');
+    var cardH = $('<div>').addClass('card-header');
+    var cardB = $('<div>').addClas('card-body');
+    var cardF = $('<div>').addClass('card-footer');
+
+    return { 'card': this.card, 'header': this.cardH, 'body': this.cardB, 'footer': this.cardF }
+
+}
+
+
 //Function to add medicines into the table
 //@selectedMedDetails : selected med object from the search dropdown
 function addMed(selectedMedDetails) {
 
-    if (checkDuplicates(selectedMedDetails)) {
 
-        //Add New med to the table
-        $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
-        $tableComments = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level + 'clinical_com').appendTo($('#tbody'));
+    //***************************************************Card Way******************************************************
+    checkDuplicatesOnCard(selectedMedDetails.generic_name);
 
-        $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name)
-            //.append(
-            //    $('<img>').attr('src', 'Images/delete.png')
-            //)
-            .appendTo($tableRow);
+    //var currentMed = createCard(selectedMedDetails.atc_level);
 
-        $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
-        $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
-        //Two recode effect on concentration
-        if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
 
-            /*$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);*/
 
-            //split the REOC1
-            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
-            //split the REOC2
-            const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
+    //*****************************************************************************************************************
 
-            var div1 = getArrow(firstREOC[0], firstREOC[1]);
-            var div2 = getArrow(secondREOC[0], secondREOC[1]);
 
-            $('<td>').attr('style','width:19rem;').append(div1, div2).appendTo($tableRow);
+    //***************************************************Table Way*****************************************************
+    //if (checkDuplicates(selectedMedDetails)) {
 
-        }
-        //One recode effect on concentration
-        else {
+    //    //Add New med to the table
+    //    $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
+    //    $tableComments = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level + 'clinical_com').appendTo($('#tbody'));
 
-            //split the REOC1
-            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+    //    $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name)
+    //        //.append(
+    //        //    $('<img>').attr('src', 'Images/delete.png')
+    //        //)
+    //        .appendTo($tableRow);
 
-            //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
-            $('<td>').attr('style', 'width:19rem;').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
+    //    $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
+    //    $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
 
-        }
+    //    //Two recode effect on concentration
+    //    if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
 
-        $('<th>').text('Clinical Comments').appendTo($tableComments);
-        $('<td>').attr('colspan','3').text(selectedMedDetails.clinical_comments).appendTo($tableComments);
+    //        /*$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);*/
 
-        //Add selected med atc level into the array
-        selectedMedList.push(selectedMedDetails.atc_level);
+    //        //split the REOC1
+    //        const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+    //        //split the REOC2
+    //        const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
 
-        //Add selected med object into the array
-        selectedMedObjList.push(selectedMedDetails);
+    //        var div1 = getArrow(firstREOC[0], firstREOC[1]);
+    //        var div2 = getArrow(secondREOC[0], secondREOC[1]);
 
-        //Remove med from the table when click the btnRemove
-        $btnRemove.on('click', function (event) {
-            //Remove the removed medicine's atc code from selectedMedList array
-            const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
-            if (index > -1) {
-                selectedMedList.splice(index, 1);
-            }
-            const index2 = selectedMedObjList.indexOf(selectedMedDetails);
-            if (index > -1) {
-                selectedMedObjList.splice(index, 1);
-            }
+    //        $('<td>').attr('style','width:19rem;').append(div1, div2).appendTo($tableRow);
 
-            //Remove the table row
-            $('#' + 'tr' + selectedMedDetails.atc_level).remove();
-            $('#' + 'tr' + selectedMedDetails.atc_level + 'clinical_com').remove();
+    //    }
+    //    //One recode effect on concentration
+    //    else {
 
-        });
-    }
+    //        //split the REOC1
+    //        const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+
+    //        //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
+    //        $('<td>').attr('style', 'width:19rem;').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
+
+    //    }
+
+    //    $('<th>').text('Clinical Comments').appendTo($tableComments);
+    //    $('<td>').attr('colspan','3').text(selectedMedDetails.clinical_comments).appendTo($tableComments);
+
+    //    //Add selected med atc level into the array
+    //    selectedMedList.push(selectedMedDetails.atc_level);
+
+    //    //Add selected med object into the array
+    //    selectedMedObjList.push(selectedMedDetails);
+
+    //    //Remove med from the table when click the btnRemove
+    //    $btnRemove.on('click', function (event) {
+    //        //Remove the removed medicine's atc code from selectedMedList array
+    //        const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
+    //        if (index > -1) {
+    //            selectedMedList.splice(index, 1);
+    //        }
+    //        const index2 = selectedMedObjList.indexOf(selectedMedDetails);
+    //        if (index > -1) {
+    //            selectedMedObjList.splice(index, 1);
+    //        }
+
+    //        //Remove the table row
+    //        $('#' + 'tr' + selectedMedDetails.atc_level).remove();
+    //        $('#' + 'tr' + selectedMedDetails.atc_level + 'clinical_com').remove();
+
+    //    });
+    //}
+    //******************************************************************************************************************
 
 }
+
+//Function to checkduplicates in the current card deck
+//@medItem : selected med object from the search dropdown
+function checkDuplicatesOnCard(generic_name) {
+
+    var isValid = false;
+
+    //Get all the cards Ids into const cardIDs variable.
+    const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
+    console.log(cardIDs)
+
+
+}
+
+
 
 //Function to checkduplicates in the current datagrid
 //@medItem : selected med object from the search dropdown
