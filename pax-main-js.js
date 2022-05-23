@@ -259,6 +259,8 @@ function addMed(selectedMedDetails) {
 
             //Remove the table row
             $('#' + 'tr' + selectedMedDetails.atc_level).remove();
+            $('#' + 'tr' + selectedMedDetails.atc_level + 'clinical_com').remove();
+
         });
     }
 
