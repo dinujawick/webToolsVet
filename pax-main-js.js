@@ -314,10 +314,11 @@ function checkDuplicatesOnCard(generic_name) {
 
     var isValid = false;
 
-    //Get all the cards Ids into const cardIDs variable.
-    const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
+    var deck = document.getElementById("mainDeck");
+    var card = grid.getElementsByClassName("card");
+    
 
-    console.log(cardIDs);
+    console.log(card);
 
 
 }
