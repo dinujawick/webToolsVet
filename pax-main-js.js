@@ -340,7 +340,7 @@ function checkDuplicatesOnCard(atc_level) {
         return isValid;
     } else {
         $(cardIDs).each(function (index, item) {
-            if (item == atc_level + 'card') {
+            if (item == atc_level + 'cardCol') {
                 return false;
             } else {
                 isValid = true;
