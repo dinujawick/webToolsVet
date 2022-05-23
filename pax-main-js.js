@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     //***************************************************Card Way******************************************************
     //Create Card Deck
-    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('card-deck').appendTo($('#divMedCon'));
+    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('card-group').appendTo($('#divMedCon'));
     //*****************************************************************************************************************
 
 
@@ -223,11 +223,11 @@ function addMed(selectedMedDetails) {
 
 
     //***************************************************Card Way******************************************************
-    
+    checkDuplicatesOnCard(selectedMedDetails.generic_name);
 
     var currentMed = createCard(selectedMedDetails.atc_level);
 
-    checkDuplicatesOnCard(selectedMedDetails.generic_name);
+    
 
 
 
