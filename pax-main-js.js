@@ -231,7 +231,7 @@ function addMed(selectedMedDetails) {
         );
 
         $('#' + currentMed.footer).append(
-            $('<a>').attr('id', selectedMedDetails.atc_level + 'btnRemove').addClass('btn btn-warning').text(Remove)
+            $('<a>').attr('id', selectedMedDetails.atc_level + 'btnRemove').addClass('btn btn-warning').text('Remove')
         );
 
 
