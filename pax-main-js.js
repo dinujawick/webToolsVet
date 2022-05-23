@@ -363,7 +363,7 @@ function checkDuplicatesOnCard(atc_level) {
                 console.log('inside if');
                 return false;
             } else {
-                console.log('inside if');
+                console.log('inside else');
                 isValid = true;
             }
                 
