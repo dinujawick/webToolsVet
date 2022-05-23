@@ -316,6 +316,7 @@ function checkDuplicatesOnCard(generic_name) {
     //Get all the card IDs into const cardIDs variable.
     const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
 
+    console.log(cardIDs);
     
 
    
