@@ -223,11 +223,11 @@ function addMed(selectedMedDetails) {
 
 
     //***************************************************Card Way******************************************************
-    //checkDuplicatesOnCard(selectedMedDetails.generic_name);
+    
 
     var currentMed = createCard(selectedMedDetails.atc_level);
 
-    
+   checkDuplicatesOnCard(selectedMedDetails.generic_name);
 
 
 
