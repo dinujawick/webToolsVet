@@ -207,7 +207,7 @@ function createCard(atcLevel) {
 
     var card = $('<div>').attr('id', atcLevel+ 'card').addClass('class');
     var cardH = $('<div>').addClass('card-header');
-    var cardB = $('<div>').addClas('card-body');
+    var cardB = $('<div>').addClass('card-body');
     var cardF = $('<div>').addClass('card-footer');
 
     return { 'card': this.card, 'header': this.cardH, 'body': this.cardB, 'footer': this.cardF }
