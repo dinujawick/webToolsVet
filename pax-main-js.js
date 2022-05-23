@@ -314,19 +314,7 @@ function checkDuplicatesOnCard(generic_name) {
 
     var isValid = false;
 
-    var deck = document.getElementById("mainDeck");
-    var cards = deck.getElementsByClassName("card");
-    
-
-    console.log(cards);
-    if (cards.length == 1) {
-        isValid = true;
-        console.log('first card');
-    } else {
-        for (var i = 0; i < cards.length - 1; i++) {
-            console.log(cards[i]);
-        }
-    }
+   
 
 }
 
