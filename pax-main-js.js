@@ -227,7 +227,7 @@ function addMed(selectedMedDetails) {
         var currentMed = createCard(selectedMedDetails.atc_level);
 
         $('#'+currentMed.header).append(
-            $('<h4>').text(selectedMedDetails.generic_name)
+            $('<h4>').text('Medicine : '+selectedMedDetails.generic_name)
         );
 
         $('#' + currentMed.footer).append(
@@ -348,12 +348,16 @@ function checkDuplicatesOnCard(atc_level) {
     //Get all the card IDs into const cardIDs variable.
     const cardIDs = $.map($('#mainDeck > .col'), card => card.id);
 
+    
 
     if (cardIDs.length == 0) {
         isValid = true;
         return isValid;
     } else {
         $(cardIDs).each(function (index, item) {
+            console.log('Item ' + item);
+            console.log('atc_Level ' + atc_level);
+
             if (item == atc_level + 'cardCol') {
                 return false;
             } else {
