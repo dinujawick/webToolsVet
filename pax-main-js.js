@@ -205,13 +205,13 @@ function getArrow(arrowType,medName) {
 
 function createCard(atcLevel) {
 
-    $col = $('<div>').attr('id', atcLevel + 'card').addClass('col').appendTo('#mainDeck');
-    var card = $('<div>').addClass('card h-100').appendTo($col);
-    var cardH = $('<div>').addClass('card-header').appendTo(card);
-    var cardB = $('<div>').addClass('card-body').appendTo(card);
-    var cardF = $('<div>').addClass('card-footer').appendTo(card);
+    $col = $('<div>').attr('id', atcLevel + 'cardCol').addClass('col').appendTo('#mainDeck');
+    $('<div>').attr('id', atcLevel + 'card').addClass('card h-100').appendTo($col);
+    $('<div>').attr('id', atcLevel + 'cardHead').addClass('card-header').appendTo(card);
+    $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').appendTo(card);
+    $('<div>').attr('id', atcLevel + 'cardFoot').addClass('card-footer').appendTo(card);
 
-    return { 'card': this.card, 'header': this.cardH, 'body': this.cardB, 'footer': this.cardF }
+    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'header': atcLevel + 'cardHead', 'body': atcLevel + 'cardBody', 'footer': atcLevel + 'cardFoot' }
 
 }
 
@@ -226,11 +226,11 @@ function addMed(selectedMedDetails) {
 
         var currentMed = createCard(selectedMedDetails.atc_level);
 
-        currentMed.header.append(
+        $('#'+currentMed.header).append(
             $('<h4>').text(selectedMedDetails.generic_name)
         );
 
-        currentMed.footer.append(
+        $('#'+currentMed.footer).append(
             $('<span>').addClass('close')
         );
 
