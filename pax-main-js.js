@@ -117,7 +117,7 @@ function getArrow(arrowType,medName) {
         case "<up>":
             //Add up arrow icon
             var div = $('<div>').append(
-                $('<span>').attr('id', 'tblArrows').append(
+                $('<span>').attr('id', 'upArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -137,7 +137,7 @@ function getArrow(arrowType,medName) {
         case "<down>":
             //Add down arrow icon
             var div = $('<div>').append(
-                $('<span>').attr('id', 'tblArrows').append(
+                $('<span>').attr('id', 'downArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -157,7 +157,7 @@ function getArrow(arrowType,medName) {
         case "<up><down>":
             //Add up-down arrow icon
             var div = $('<div>').append(
-                $('<span>').attr('id', 'tblArrows').append(
+                $('<span>').attr('id', 'updownArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -177,7 +177,7 @@ function getArrow(arrowType,medName) {
         case "<double-arrow>":
             //Add left-right arrow icon
             var div = $('<div>').append(
-                $('<span>').attr('id', 'tblArrows').append(
+                $('<span>').attr('id', 'doubleArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -237,9 +237,23 @@ function addMed(selectedMedDetails) {
 
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
 
+            //split the REOC1
+            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            //split the REOC2
+            const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
+
+            $('#' + currentMed.body).append(getArrow(firstREOC[0], firstREOC[1]));
+            $('#' + currentMed.body).append(getArrow(secondREOC[0], secondREOC[1]));
 
         }
+        //One recode effect on concentration
+        else {
 
+            //split the REOC
+            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            $('#' + currentMed.body).append(getArrow(firstREOC[0], firstREOC[1]));
+
+        }
     }
 
     
