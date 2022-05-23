@@ -230,8 +230,8 @@ function addMed(selectedMedDetails) {
             $('<h4>').text(selectedMedDetails.generic_name)
         );
 
-        $('#'+currentMed.footer).append(
-            $('<span>').addClass('close')
+        $('#' + currentMed.footer).append(
+            $('<a>').attr('id', selectedMedDetails.atc_level + 'btnRemove').addClass('btn btn-warning').text(Remove)
         );
 
 
