@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     //***************************************************Card Way******************************************************
     //Create Card Deck
-    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('card-columns').appendTo($('#divMedCon'));
+    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-3 g-4').appendTo($('#divMedCon'));
     //*****************************************************************************************************************
 
 
@@ -205,7 +205,8 @@ function getArrow(arrowType,medName) {
 
 function createCard(atcLevel) {
 
-    var card = $('<div>').attr('id', atcLevel + 'card').addClass('card').appendTo('#mainDeck');
+    $col = $('<div>').addClass('col').appendTo('#mainDeck');
+    var card = $('<div>').attr('id', atcLevel + 'card').addClass('card h-100').appendTo($col);
     var cardH = $('<div>').addClass('card-header').appendTo(card);
     var cardB = $('<div>').addClass('card-body').appendTo(card);
     var cardF = $('<div>').addClass('card-footer').appendTo(card);
