@@ -221,10 +221,11 @@ function addMed(selectedMedDetails) {
 
 
     //***************************************************Card Way******************************************************
-    checkDuplicatesOnCard(selectedMedDetails.generic_name);
+    //checkDuplicatesOnCard(selectedMedDetails.generic_name);
 
-    //var currentMed = createCard(selectedMedDetails.atc_level);
+    var currentMed = createCard(selectedMedDetails.atc_level);
 
+    currentMed.card.appendTo($('#mainDeck'));
 
 
 
@@ -313,7 +314,7 @@ function checkDuplicatesOnCard(generic_name) {
 
     //Get all the cards Ids into const cardIDs variable.
     const cardIDs = $.map($('#mainDeck > .card'), card => card.id);
-    console.log(cardIDs)
+    
 
 
 }
