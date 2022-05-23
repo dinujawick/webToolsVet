@@ -71,7 +71,7 @@ $(document).ready(function () {
     $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
     $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
     $('<th>').text("Effect on concentration").attr('scope', 'col').appendTo($tHeaderRow);
-    $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);
+   /* $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);*/
 
     $tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);
 
@@ -198,6 +198,8 @@ function addMed(selectedMedDetails) {
 
         //Add New med to the table
         $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
+        $tableComments = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level + 'clinical_com').appendTo($('#tbody'));
+
         $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name)
             //.append(
             //    $('<img>').attr('src', 'Images/delete.png')
@@ -234,7 +236,7 @@ function addMed(selectedMedDetails) {
 
         }
 
-        $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableRow);
+        $('<td>').text(selectedMedDetails.clinical_comments).appendTo($tableComments);
 
         //Add selected med atc level into the array
         selectedMedList.push(selectedMedDetails.atc_level);
