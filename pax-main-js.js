@@ -222,9 +222,13 @@ function addMed(selectedMedDetails) {
 
 
     //***************************************************Card Way******************************************************
-    checkDuplicatesOnCard(selectedMedDetails.generic_name);
+    if (checkDuplicatesOnCard(selectedMedDetails.atc_level)) {
 
-    var currentMed = createCard(selectedMedDetails.atc_level);
+        var currentMed = createCard(selectedMedDetails.atc_level);
+
+    }
+
+    
 
     
 
@@ -308,8 +312,8 @@ function addMed(selectedMedDetails) {
 }
 
 //Function to checkduplicates in the current card deck
-//@medItem : selected med object from the search dropdown
-function checkDuplicatesOnCard(generic_name) {
+//@atc_level : selected med atc_level from the search dropdown
+function checkDuplicatesOnCard(atc_level) {
 
     var isValid = false;
 
@@ -317,9 +321,22 @@ function checkDuplicatesOnCard(generic_name) {
     const cardIDs = $.map($('#mainDeck > .col'), card => card.id);
 
     console.log(cardIDs);
-    
 
-   
+    if (cardIDs.length == 0) {
+        isValid = true;
+        return isValid;
+    } else {
+        $(cardIDs).each(function (index, item) {
+            if (item == atcLevel + 'card') {
+                return false;
+            } else {
+                isValid = true;
+            }
+                
+        });
+    }
+    return isValid;
+    
 
 }
 
