@@ -362,11 +362,7 @@ function checkDuplicatesOnCard(atc_level) {
             if (item == (atc_level + 'cardCol')) {
                 console.log('inside if');
                 return false;
-            } else {
-                console.log('inside else');
-                isValid = true;
-            }
-                
+            }      
         });
     }
     return isValid;
