@@ -211,7 +211,7 @@ function getArrow(arrowType) {
     switch (arrowType) {
         case "<up>":
             //Add up arrow icon
-            var arrow = $('<span>').attr('id', 'upArrow').append(
+            var arrow = $('<span>').attr('id', 'arrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -228,7 +228,7 @@ function getArrow(arrowType) {
             break;
         case "<down>":
             //Add down arrow icon
-            var arrow = $('<span>').attr('id', 'downArrow').append(
+            var arrow = $('<span>').attr('id', 'arrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -245,7 +245,7 @@ function getArrow(arrowType) {
             break;
         case "<up><down>":
             //Add up-down arrow icon
-            var arrow = $('<span>').attr('id', 'updownArrow').append(
+            var arrow = $('<span>').attr('id', 'arrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -262,7 +262,7 @@ function getArrow(arrowType) {
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
-            var arrow = $('<span>').attr('id', 'doubleArrow').append(
+            var arrow = $('<span>').attr('id', 'arrow').append(
                             $('<svg>')
                                 .attr('xmlns', "http://www.w3.org/2000/svg")
                                 .attr('width', "16")
