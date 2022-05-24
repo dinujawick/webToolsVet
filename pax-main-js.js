@@ -35,8 +35,14 @@ $('#btnPrint').on('click', function (event) {
 $(document).ready(function () {
 
     //QueryString standard : ?paramName=value1,value2,value3
-    console.log(window.location.href.match(/[?]/g));
-    //var queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+    var queryStringValues = null;
+
+    console.log(window.location.href.match(/[;]/g).length);
+
+    if (window.location.href.match(/[?]/g).length == 1) {
+        queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+    }
+    
 
     //function GetParameterValues(param) {
     //    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -78,11 +84,14 @@ $(document).ready(function () {
         $.each(data, function (index, item) {
 
             ////Add med with query string
-            //for (var i = 0; i < queryStringValues.length; i++) {
-            //    if (queryStringValues[i] == item.atc_level) {
-            //        addMed(item);
-            //    }
-            //}
+            if (queryStringValues != null) {
+                for (var i = 0; i < queryStringValues.length; i++) {
+                    if (queryStringValues[i] == item.atc_level) {
+                        addMed(item);
+                    }
+                }
+            }
+            
 
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
