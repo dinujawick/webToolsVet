@@ -1,37 +1,9 @@
-// When the user clicks on the button,toggle between hiding and showing the dropdown content
-function toggleSearchList() {
-    document.getElementById("seacrchList").classList.toggle("show");
-    
-}
 
-function filterFunction() {
-
-    if (!$('#seacrchList').hasClass("show")) {
-        toggleSearchList();
-    }
-
-    var input, filter, ul, li, a, i;
-
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("seacrchList");
-    a = div.getElementsByTagName("a");
-
-    for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
-
-}
 
 //Variable to store previous generic name
 var prevAddedItem = "";
 
-//Array to store selected medlist ATCs
+//Array to store selected medlist ATC levels
 var selectedMedList = new Array();
 
 //Array to store selected medOjects
@@ -59,7 +31,7 @@ $('#btnPrint').on('click', function (event) {
     printPatHandOut();
 });
 
-
+//Page On Load Function
 $(document).ready(function () {
 
     //QueryString standard : ?paramName=value1,value2,value3
@@ -110,7 +82,6 @@ $(document).ready(function () {
                     addMed(item);
                 }
             }
-
 
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
@@ -386,7 +357,7 @@ function getArrow(arrowType) {
 
 //Function to created a card according to selectedmed
 //@selectedMedDetails : selected med object from the search dropdown
-function createCard(atcLevel) {
+function createCardLayout(atcLevel) {
 
     $col = $('<div>').attr('id', atcLevel + 'cardCol').addClass('col').appendTo('#mainDeck');
     $card = $('<div>').attr('id', atcLevel + 'card').addClass('card h-100').appendTo($col);
@@ -413,31 +384,29 @@ function createCard(atcLevel) {
 }
 
 
-//Function to add medicines into the table
-//@selectedMedDetails : selected med object from the search dropdown
-function addMed(selectedMedDetails) {
-
-
+//Function to generate a card using med object
+//@selectedMedObject
+function createCard(selectedMedObject) {
     //***************************************************Card Way******************************************************
-    if (checkDuplicatesOnCard(selectedMedDetails.atc_level)) {
+    if (checkDuplicatesOnCard(selectedMedObject.atc_level)) {
 
-        var currentMed = createCard(selectedMedDetails.atc_level);
+        var currentMed = createCardLayout(selectedMedObject.atc_level);
 
         $('#' + currentMed.headerID).append(
-            $('<h4>').text(selectedMedDetails.generic_name)
+            $('<h4>').text(selectedMedObject.generic_name)
         );
 
         $('#' + currentMed.footerID).append(
-            $btnRemove = $('<a>').attr('id', selectedMedDetails.atc_level + 'btnRemove').addClass('btn medCardRemoveBtn').text('Remove')
+            $btnRemove = $('<a>').attr('id', selectedMedObject.atc_level + 'btnRemove').addClass('btn medCardRemoveBtn').text('Remove')
         );
 
         //Two recode effect on concentration
-        if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
+        if (selectedMedObject.recode_effect_on_concentration_2 != "") {
 
             //split the REOC1
-            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            const firstREOC = selectedMedObject.recode_effect_on_concentration_1.split("|");
             //split the REOC2
-            const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
+            const secondREOC = selectedMedObject.recode_effect_on_concentration_2.split("|");
 
             $('#' + currentMed.vstackActionID).append(
                 $('<div>').addClass('row').append(
@@ -456,14 +425,14 @@ function addMed(selectedMedDetails) {
 
             );
 
-            
+
 
         }
         //One recode effect on concentration
         else {
 
             //split the REOC
-            const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            const firstREOC = selectedMedObject.recode_effect_on_concentration_1.split("|");
 
             //Action:
             $('#' + currentMed.vstackActionID).append(
@@ -474,23 +443,23 @@ function addMed(selectedMedDetails) {
         }
 
         $('#' + currentMed.comments).append(
-            $('<p>').text(selectedMedDetails.clinical_comments)
+            $('<p>').text(selectedMedObject.clinical_comments)
         );
 
         //Add selected med atc level into the array
-        selectedMedList.push(selectedMedDetails.atc_level);
+        selectedMedList.push(selectedMedObject.atc_level);
 
         //Add selected med object into the array
-        selectedMedObjList.push(selectedMedDetails);
+        selectedMedObjList.push(selectedMedObject);
 
         //Remove med card from the card deck when click the btnRemove
         $btnRemove.on('click', function (event) {
             //Remove the removed medicine's atc code from selectedMedList array
-            const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
+            const index = selectedMedList.indexOf(selectedMedObject.atc_level);
             if (index > -1) {
                 selectedMedList.splice(index, 1);
             }
-            const index2 = selectedMedObjList.indexOf(selectedMedDetails);
+            const index2 = selectedMedObjList.indexOf(selectedMedObject);
             if (index > -1) {
                 selectedMedObjList.splice(index, 1);
             }
@@ -503,79 +472,98 @@ function addMed(selectedMedDetails) {
 
     }
     //*****************************************************************************************************************
+}
 
+
+//Function to generate a gridrow using med object
+//@selectedMedObject
+function createGridRow(selectedMedObject) {
 
     //***************************************************Table Way*****************************************************
-    //if (checkDuplicates(selectedMedDetails)) {
+    if (checkDuplicates(selectedMedObject)) {
 
-    //    //Add New med to the table
-    //    $tableRow = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level).appendTo($('#tbody'));
-    //    $tableComments = $('<tr>').attr('id', 'tr' + selectedMedDetails.atc_level + 'clinical_com').appendTo($('#tbody'));
+        //Add New med to the table
+        $tableRow = $('<tr>').attr('id', 'tr' + selectedMedObject.atc_level).appendTo($('#tbody'));
+        $tableComments = $('<tr>').attr('id', 'tr' + selectedMedObject.atc_level + 'clinical_com').appendTo($('#tbody'));
 
-    //    $('<th>').attr('scope', 'row').text(selectedMedDetails.generic_name)
-    //        //.append(
-    //        //    $('<img>').attr('src', 'Images/delete.png')
-    //        //)
-    //        .appendTo($tableRow);
+        $('<th>').attr('scope', 'row').text(selectedMedObject.generic_name)
+            //.append(
+            //    $('<img>').attr('src', 'Images/delete.png')
+            //)
+            .appendTo($tableRow);
 
-    //    $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
-    //    $('<td>').text(selectedMedDetails.recommendation).appendTo($tableRow);
+        $btnRemove = $('<td>').addClass('close').attr('style', 'padding:0.85rem;').appendTo($tableRow);
+        $('<td>').text(selectedMedObject.recommendation).appendTo($tableRow);
 
-    //    //Two recode effect on concentration
-    //    if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
+        //Two recode effect on concentration
+        if (selectedMedObject.recode_effect_on_concentration_2 != "") {
 
-    //        /*$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);*/
+            /*$('<td>').text(selectedMedDetails.recode_effect_on_concentration_1 + selectedMedDetails.recode_effect_on_concentration_2).appendTo($tableRow);*/
 
-    //        //split the REOC1
-    //        const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
-    //        //split the REOC2
-    //        const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
+            //split the REOC1
+            const firstREOC = selectedMedObject.recode_effect_on_concentration_1.split("|");
+            //split the REOC2
+            const secondREOC = selectedMedObject.recode_effect_on_concentration_2.split("|");
 
-    //        var div1 = getArrow(firstREOC[0], firstREOC[1]);
-    //        var div2 = getArrow(secondREOC[0], secondREOC[1]);
+            var div1 = getArrow(firstREOC[0], firstREOC[1]);
+            var div2 = getArrow(secondREOC[0], secondREOC[1]);
 
-    //        $('<td>').attr('style','width:19rem;').append(div1, div2).appendTo($tableRow);
+            $('<td>').attr('style','width:19rem;').append(div1, div2).appendTo($tableRow);
 
-    //    }
-    //    //One recode effect on concentration
-    //    else {
+        }
+        //One recode effect on concentration
+        else {
 
-    //        //split the REOC1
-    //        const firstREOC = selectedMedDetails.recode_effect_on_concentration_1.split("|");
+            //split the REOC1
+            const firstREOC = selectedMedObject.recode_effect_on_concentration_1.split("|");
 
-    //        //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
-    //        $('<td>').attr('style', 'width:19rem;').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
+            //Get the arrow with med name by passing the type of arrow and med name; append that to table cell.
+            $('<td>').attr('style', 'width:19rem;').append(getArrow(firstREOC[0], firstREOC[1])).appendTo($tableRow);
 
-    //    }
+        }
 
-    //    $('<th>').text('Clinical Comments').appendTo($tableComments);
-    //    $('<td>').attr('colspan','3').text(selectedMedDetails.clinical_comments).appendTo($tableComments);
+        $('<th>').text('Clinical Comments').appendTo($tableComments);
+        $('<td>').attr('colspan', '3').text(selectedMedObject.clinical_comments).appendTo($tableComments);
 
-    //    //Add selected med atc level into the array
-    //    selectedMedList.push(selectedMedDetails.atc_level);
+        //Add selected med atc level into the array
+        selectedMedList.push(selectedMedDetails.atc_level);
 
-    //    //Add selected med object into the array
-    //    selectedMedObjList.push(selectedMedDetails);
+        //Add selected med object into the array
+        selectedMedObjList.push(selectedMedDetails);
 
-    //    //Remove med from the table when click the btnRemove
-    //    $btnRemove.on('click', function (event) {
-    //        //Remove the removed medicine's atc code from selectedMedList array
-    //        const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
-    //        if (index > -1) {
-    //            selectedMedList.splice(index, 1);
-    //        }
-    //        const index2 = selectedMedObjList.indexOf(selectedMedDetails);
-    //        if (index > -1) {
-    //            selectedMedObjList.splice(index, 1);
-    //        }
+        //Remove med from the table when click the btnRemove
+        $btnRemove.on('click', function (event) {
+            //Remove the removed medicine's atc code from selectedMedList array
+            const index = selectedMedList.indexOf(selectedMedObject.atc_level);
+            if (index > -1) {
+                selectedMedList.splice(index, 1);
+            }
+            const index2 = selectedMedObjList.indexOf(selectedMedObject);
+            if (index > -1) {
+                selectedMedObjList.splice(index, 1);
+            }
 
-    //        //Remove the table row
-    //        $('#' + 'tr' + selectedMedDetails.atc_level).remove();
-    //        $('#' + 'tr' + selectedMedDetails.atc_level + 'clinical_com').remove();
+            //Remove the table row
+            $('#' + 'tr' + selectedMedObject.atc_level).remove();
+            $('#' + 'tr' + selectedMedObject.atc_level + 'clinical_com').remove();
 
-    //    });
-    //}
+        });
+    }
     //******************************************************************************************************************
+
+}
+
+//Function to add medicines into the table
+//@selectedMedObject : selected med object from the search dropdown
+function addMed(selectedMedObject) {
+
+
+    //Create card using med
+    createCard(selectedMedObject);
+
+    //Create table row 
+    //createGridRow(selectedMedObject);
+
 
 }
 
@@ -608,7 +596,6 @@ function checkDuplicatesOnCard(atc_level) {
 }
 
 
-
 //Function to checkduplicates in the current datagrid
 //@medItem : selected med object from the search dropdown
 function checkDuplicates(medItem) {
@@ -637,7 +624,7 @@ function checkDuplicates(medItem) {
     return isValid;
 }
 
-//Function to create new html document for print as a patien handout
+//Function to create new html document for print as a patient handout
 function printPatHandOut() {
 
     var doc = $('<html>');
@@ -686,5 +673,36 @@ function printPatHandOut() {
     setTimeout(function () { newWin.print(); }, 5);
     newWin.document.close();
     setTimeout(function () { newWin.close(); }, 10);
+
+}
+
+//Function to when the user clicks on the button,toggle between hiding and showing the dropdown content
+function toggleSearchList() {
+    document.getElementById("seacrchList").classList.toggle("show");
+
+}
+
+//Functon to filter the search dropdown according to input text
+function filterFunction() {
+
+    if (!$('#seacrchList').hasClass("show")) {
+        toggleSearchList();
+    }
+
+    var input, filter, ul, li, a, i;
+
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("seacrchList");
+    a = div.getElementsByTagName("a");
+
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
 
 }
