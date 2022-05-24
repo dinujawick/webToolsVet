@@ -37,9 +37,8 @@ $(document).ready(function () {
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
 
-    console.log(window.location.href.match(/[;]/g).length);
-
-    if (window.location.href.match(/[?]/g).length == 1) {
+    //Check only one '?' and no ';' in query string to prevent X-Site Scripting.
+    if (window.location.href.match(/[?]/g).length == 1 && window.location.href.match(/[;]/g) == null) {
         queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
     }
     
