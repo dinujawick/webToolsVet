@@ -62,11 +62,8 @@ $('#btnPrint').on('click', function (event) {
 
 $(document).ready(function () {
 
-    //Parm standard : ?paramName=value1,value2,value3
+    //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
-
-
-    console.log(queryStringValues);
 
     //function GetParameterValues(param) {
     //    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -107,10 +104,19 @@ $(document).ready(function () {
 
         $.each(data, function (index, item) {
 
+            //Add med with query string
+            for (var i = 0; i < queryStringValues.length; i++) {
+                if (queryStringValues[i] == item.atc_level) {
+                    addMed(item);
+                }
+            }
+
+
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
                 $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#seacrchList');
 
+                
                 //Med Click Event
                 $med.on('click', function (event) {
                     addMed(item);
