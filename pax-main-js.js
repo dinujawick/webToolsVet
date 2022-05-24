@@ -35,7 +35,7 @@ $('#btnPrint').on('click', function (event) {
 $(document).ready(function () {
 
     //QueryString standard : ?paramName=value1,value2,value3
-    console.log(window.location.href.match("[?]/g"));
+    console.log(window.location.href.search("?"));
     //var queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
 
     //function GetParameterValues(param) {
