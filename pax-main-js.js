@@ -111,124 +111,124 @@ $(document).ready(function () {
 //@medName : stripped med name
 //return: div with a arrow
 
-//function getArrow(arrowType,medName) {
-
-//    switch (arrowType) {
-//        case "<up>":
-//            //Add up arrow icon
-//            var div = $('<div>').append(
-//                $('<span>').attr('id', 'upArrow').append(
-//                    $('<svg>')
-//                        .attr('xmlns', "http://www.w3.org/2000/svg")
-//                        .attr('width', "16")
-//                        .attr('height', "16")
-//                        .attr('fill', 'currentColor')
-//                        .attr('class', 'bi bi-arrow-up')
-//                        .attr('viewBox', "0 0 16 16").append(
-//                            $('<path>')
-//                                .attr('fill-rule', "evenodd")
-//                                .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
-//                        )
-//                ),
-//                $('<span>').text(medName)
-//            );
-//            return div;
-//            break;
-//        case "<down>":
-//            //Add down arrow icon
-//            var div = $('<div>').append(
-//                $('<span>').attr('id', 'downArrow').append(
-//                    $('<svg>')
-//                        .attr('xmlns', "http://www.w3.org/2000/svg")
-//                        .attr('width', "16")
-//                        .attr('height', "16")
-//                        .attr('fill', 'currentColor')
-//                        .attr('class', 'bi bi-arrow-down')
-//                        .attr('viewBox', "0 0 16 16").append(
-//                            $('<path>')
-//                                .attr('fill-rule', "evenodd")
-//                                .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
-//                        )
-//                ),
-//                $('<span>').text(medName)
-//            );
-//            return div;
-//            break;
-//        case "<up><down>":
-//            //Add up-down arrow icon
-//            var div = $('<div>').append(
-//                $('<span>').attr('id', 'updownArrow').append(
-//                    $('<svg>')
-//                        .attr('xmlns', "http://www.w3.org/2000/svg")
-//                        .attr('width', "16")
-//                        .attr('height', "16")
-//                        .attr('fill', 'currentColor')
-//                        .attr('class', 'bi bi-arrow-down-up')
-//                        .attr('viewBox', "0 0 16 16").append(
-//                            $('<path>')
-//                                .attr('fill-rule', "evenodd")
-//                                .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
-//                        )
-//                ),
-//                $('<span>').text(medName)
-//            );
-//            return div;
-//            break;
-//        case "<double-arrow>":
-//            //Add left-right arrow icon
-//            var div = $('<div>').append(
-//                $('<span>').attr('id', 'doubleArrow').append(
-//                    $('<svg>')
-//                        .attr('xmlns', "http://www.w3.org/2000/svg")
-//                        .attr('width', "16")
-//                        .attr('height', "16")
-//                        .attr('fill', 'currentColor')
-//                        .attr('class', 'bi bi-arrow-left-right')
-//                        .attr('viewBox', "0 0 16 16").append(
-//                            $('<path>')
-//                                .attr('fill-rule', "evenodd")
-//                                .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
-//                        )
-//                ),
-//                $('<span>').text(medName)
-//            );
-//            return div;
-//            break;
-//        default:
-//    }
-
-//}
-
-
-
-//Function to return arrows
-//@arrowType : stripped arrow type
-//@medName : stripped med name
-//return: div with a arrow
-
-function getArrow(arrowType) {
+function getArrow(arrowType,medName) {
 
     switch (arrowType) {
         case "<up>":
             //Add up arrow icon
-            var arrow = $('<span>').attr('id', 'upArrow').append(
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'upArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
                         .attr('height', "16")
                         .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-up arrow-back')
+                        .attr('class', 'bi bi-arrow-up')
                         .attr('viewBox', "0 0 16 16").append(
                             $('<path>')
                                 .attr('fill-rule', "evenodd")
                                 .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
                         )
-                )
-            return arrow;
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
             break;
         case "<down>":
             //Add down arrow icon
-            var arrow = $('<span>').attr('id', 'downArrow').append(
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'downArrow').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-down')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        case "<up><down>":
+            //Add up-down arrow icon
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'updownArrow').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-down-up')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        case "<double-arrow>":
+            //Add left-right arrow icon
+            var div = $('<div>').append(
+                $('<span>').attr('id', 'doubleArrow').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "16")
+                        .attr('height', "16")
+                        .attr('fill', 'currentColor')
+                        .attr('class', 'bi bi-arrow-left-right')
+                        .attr('viewBox', "0 0 16 16").append(
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
+                        )
+                ),
+                $('<span>').text(medName)
+            );
+            return div;
+            break;
+        default:
+    }
+
+}
+
+//Function to return interaction icon
+//@arrowType : stripped arrow type
+//return: span with a arrow
+function getInteractionIcon(contraType) {
+
+    switch (contraType) {
+        case "contra-indicated":
+            //Add up arrow icon
+            var intIcon = $('<span>').attr('id', 'ci').append(
+                    $('<svg>')
+                        .attr('xmlns', "http://www.w3.org/2000/svg")
+                        .attr('width', "48")
+                        .attr('height', "48")
+                        .attr('fill', 'none')
+                    .attr('viewBox', "0 0 48 48").append(
+                            $('<path>')
+                                .attr('d', "M30 25.1409V12.5C30 11.6716 29.3285 11 28.5 11C27.6716 11 27 11.6716 27 12.5V23H25V9.5C25 8.67157 24.3285 8 23.5 8C22.6716 8 22 8.67157 22 9.5V23H20V12.5C20 11.6716 19.3285 11 18.5 11C17.6716 11 17 11.6716 17 12.5V25H15V16.5C15 15.6716 14.3285 15 13.5 15C12.6716 15 12 15.6716 12 16.5V29.7375C12 35.4053 16.5947 40 22.2625 40C26.0571 40 29.542 37.9061 31.3236 34.5557L37.2298 23.4485C37.667 22.6263 37.4098 21.6065 36.635 21.09C35.7542 20.5028 34.5598 20.7924 34.0458 21.7177L31.8742 25.6265C31.3731 26.5285 30 26.1727 30 25.1409Z")
+                                .attr('fill', "#8B0E04"),
+                            $('<path>')
+                                .attr('fill-rule', "evenodd")
+                                .attr('clip-rule',"evenodd")
+                                .attr('d', "M24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4ZM42.0952 24C42.0952 14.0063 33.9937 5.90476 24 5.90476C14.0063 5.90476 5.90476 14.0063 5.90476 24C5.90476 33.9937 14.0063 42.0952 24 42.0952C33.9937 42.0952 42.0952 33.9937 42.0952 24Z")
+                                .attr('fill', "#8B0E04")
+                        )
+                )
+            return intIcon;
+            break;
+        case "attention":
+            //Add down arrow icon
+            var intIcon = $('<span>').attr('id', 'downArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -241,11 +241,11 @@ function getArrow(arrowType) {
                                 .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
                         )
                     )
-            return arrow;
+            return intIcon;
             break;
-        case "<up><down>":
+        case "resistance inducing":
             //Add up-down arrow icon
-            var arrow = $('<span>').attr('id', 'updownArrow').append(
+            var intIcon = $('<span>').attr('id', 'updownArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
@@ -258,11 +258,11 @@ function getArrow(arrowType) {
                                 .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
                         )
                 )
-            return arrow;
+            return intIcon;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
-            var arrow = $('<span>').attr('id', 'doubleArrow').append(
+            var intIcon = $('<span>').attr('id', 'doubleArrow').append(
                             $('<svg>')
                                 .attr('xmlns', "http://www.w3.org/2000/svg")
                                 .attr('width', "16")
@@ -275,6 +275,85 @@ function getArrow(arrowType) {
                                     .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
                             )
                         )
+            return intIcon;
+            break;
+        default:
+    }
+
+}
+
+//Function to return arrows
+//@arrowType : stripped arrow type
+//return: span with a arrow
+function getArrow(arrowType) {
+
+    switch (arrowType) {
+        case "<up>":
+            //Add up arrow icon
+            var arrow = $('<span>').attr('id', 'upArrow').append(
+                $('<svg>')
+                    .attr('xmlns', "http://www.w3.org/2000/svg")
+                    .attr('width', "16")
+                    .attr('height', "16")
+                    .attr('fill', 'currentColor')
+                    .attr('class', 'bi bi-arrow-up arrow-back')
+                    .attr('viewBox', "0 0 16 16").append(
+                        $('<path>')
+                            .attr('fill-rule', "evenodd")
+                            .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
+                    )
+            )
+            return arrow;
+            break;
+        case "<down>":
+            //Add down arrow icon
+            var arrow = $('<span>').attr('id', 'downArrow').append(
+                $('<svg>')
+                    .attr('xmlns', "http://www.w3.org/2000/svg")
+                    .attr('width', "16")
+                    .attr('height', "16")
+                    .attr('fill', 'currentColor')
+                    .attr('class', 'bi bi-arrow-down arrow-back')
+                    .attr('viewBox', "0 0 16 16").append(
+                        $('<path>')
+                            .attr('fill-rule', "evenodd")
+                            .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
+                    )
+            )
+            return arrow;
+            break;
+        case "<up><down>":
+            //Add up-down arrow icon
+            var arrow = $('<span>').attr('id', 'updownArrow').append(
+                $('<svg>')
+                    .attr('xmlns', "http://www.w3.org/2000/svg")
+                    .attr('width', "16")
+                    .attr('height', "16")
+                    .attr('fill', 'currentColor')
+                    .attr('class', 'bi bi-arrow-down-up arrow-back')
+                    .attr('viewBox', "0 0 16 16").append(
+                        $('<path>')
+                            .attr('fill-rule', "evenodd")
+                            .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
+                    )
+            )
+            return arrow;
+            break;
+        case "<double-arrow>":
+            //Add left-right arrow icon
+            var arrow = $('<span>').attr('id', 'doubleArrow').append(
+                $('<svg>')
+                    .attr('xmlns', "http://www.w3.org/2000/svg")
+                    .attr('width', "16")
+                    .attr('height', "16")
+                    .attr('fill', 'currentColor')
+                    .attr('class', 'bi bi-arrow-left-right arrow-back')
+                    .attr('viewBox', "0 0 16 16").append(
+                        $('<path>')
+                            .attr('fill-rule', "evenodd")
+                            .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
+                    )
+            )
             return arrow;
             break;
         default:
@@ -285,7 +364,6 @@ function getArrow(arrowType) {
 
 //Function to created a card according to selectedmed
 //@selectedMedDetails : selected med object from the search dropdown
-
 function createCard(atcLevel) {
 
     $col = $('<div>').attr('id', atcLevel + 'cardCol').addClass('col').appendTo('#mainDeck');
@@ -324,7 +402,7 @@ function addMed(selectedMedDetails) {
         var currentMed = createCard(selectedMedDetails.atc_level);
 
         $('#' + currentMed.headerID).append(
-            $('<h4>').text('Medicine: '+selectedMedDetails.generic_name)
+            $('<h4>').text(selectedMedDetails.generic_name)
         );
 
         $('#' + currentMed.footerID).append(
