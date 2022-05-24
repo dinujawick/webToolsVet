@@ -35,7 +35,8 @@ $('#btnPrint').on('click', function (event) {
 $(document).ready(function () {
 
     //QueryString standard : ?paramName=value1,value2,value3
-    var queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+    console.log (window.location.href.slice(window.location.href.indexOf('?') + 1))
+    //var queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
 
     //function GetParameterValues(param) {
     //    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
