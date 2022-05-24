@@ -294,12 +294,12 @@ function createCard(atcLevel) {
     $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').append(
         $('<div>').attr('id', atcLevel + 'iconLayer').addClass('row').append(
             $('<div>').addClass('col-6').append(
-                $('<div>').attr('id', atc_level + 'vstackContra').addClass('vstack gap-2 mx-auto').append(
+                $('<div>').attr('id', atcLevel + 'vstackContra').addClass('vstack gap-2 mx-auto').append(
                     $('<h6>').text('Interaction')
                 )
             ),
             $('<div>').addClass('col-6').append(
-                $('<div>').attr('id', atc_level + 'vstackEffect').addClass('vstack gap-2 mx-auto').append(
+                $('<div>').attr('id', atcLevel + 'vstackEffect').addClass('vstack gap-2 mx-auto').append(
                     $('<h6>').text('Action')
                 )
             )
@@ -308,7 +308,7 @@ function createCard(atcLevel) {
     ).appendTo($card);
     $('<div>').attr('id', atcLevel + 'cardFoot').addClass('card-footer').attr('style','text-align:right;').appendTo($card);
 
-    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atc_level + 'vstackContra', 'vstackActionID': atc_level + 'vstackEffect' }
+    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atcLevel + 'vstackContra', 'vstackActionID': atcLevel + 'vstackEffect' }
 
 }
 
