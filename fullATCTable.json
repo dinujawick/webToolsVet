@@ -1082,7 +1082,7 @@
     "drugs_within_class": "loratadine",
     "generic_name": "loratadine",
     "clinical_comments": "Careful monitoring of therapeutic and adverse effects is recommended when loratadine is co-administered with ritonavir.",
-    "recode_effect_on_concentration_1": "<up>loratadine",
+    "recode_effect_on_concentration_1": "<up>|loratadine",
     "recode_effect_on_concentration_2": "",
     "recommendation": "Attention",
     "atc_level": "R06AX13",

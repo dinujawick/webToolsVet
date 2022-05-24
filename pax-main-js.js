@@ -62,19 +62,22 @@ $('#btnPrint').on('click', function (event) {
 
 $(document).ready(function () {
 
-    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=');
-    console.log(url);
+    //Parm standard : ?paramName=value1,value2,value3
+    var queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
 
-    function GetParameterValues(param) {
-        var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-        console.log(url);
-        for (var i = 0; i < url.length; i++) {
-            var urlparam = url[i].split('=');
-            if (urlparam[0] == param) {
-                return urlparam[1];
-            }
-        }
-    }
+
+    console.log(queryStringValues);
+
+    //function GetParameterValues(param) {
+    //    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    //    console.log(url);
+    //    for (var i = 0; i < url.length; i++) {
+    //        var urlparam = url[i].split('=');
+    //        if (urlparam[0] == param) {
+    //            return urlparam[1];
+    //        }
+    //    }
+    //}
 
     //***************************************************Card Way******************************************************
     //Create Card Deck
