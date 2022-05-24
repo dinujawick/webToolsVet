@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     //***************************************************Card Way******************************************************
     //Create Card Deck
-    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-3 g-4').appendTo($('#divMedCon'));
+    $cardDeck = $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-2 g-4').appendTo($('#divMedCon'));
     //*****************************************************************************************************************
 
 
