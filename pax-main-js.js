@@ -110,7 +110,6 @@ $(document).ready(function () {
 //@arrowType : stripped arrow type
 //@medName : stripped med name
 //return: div with a arrow
-
 function getArrow(arrowType,medName) {
 
     switch (arrowType) {
@@ -406,10 +405,10 @@ function addMed(selectedMedDetails) {
         );
 
         $('#' + currentMed.footerID).append(
-            $('<a>').attr('id', selectedMedDetails.atc_level + 'btnRemove').addClass('btn medCardRemoveBtn').text('Remove')
+            $btnRemove = $('<a>').attr('id', selectedMedDetails.atc_level + 'btnRemove').addClass('btn medCardRemoveBtn').text('Remove')
         );
 
-
+        //Two recode effect on concentration
         if (selectedMedDetails.recode_effect_on_concentration_2 != "") {
 
             //split the REOC1
@@ -453,17 +452,33 @@ function addMed(selectedMedDetails) {
 
         $('#' + currentMed.comments).append(
             $('<p>').text(selectedMedDetails.clinical_comments)
-        )
+        );
+
+        //Add selected med atc level into the array
+        selectedMedList.push(selectedMedDetails.atc_level);
+
+        //Add selected med object into the array
+        selectedMedObjList.push(selectedMedDetails);
+
+        //Remove med card from the card deck when click the btnRemove
+        $btnRemove.on('click', function (event) {
+            //Remove the removed medicine's atc code from selectedMedList array
+            const index = selectedMedList.indexOf(selectedMedDetails.atc_level);
+            if (index > -1) {
+                selectedMedList.splice(index, 1);
+            }
+            const index2 = selectedMedObjList.indexOf(selectedMedDetails);
+            if (index > -1) {
+                selectedMedObjList.splice(index, 1);
+            }
+
+            //Remove the table row
+            $('#' + currentMed.colID).remove();
+
+        });
 
 
     }
-
-    
-
-    
-
-
-
     //*****************************************************************************************************************
 
 
