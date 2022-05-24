@@ -339,6 +339,23 @@ function addMed(selectedMedDetails) {
             //split the REOC2
             const secondREOC = selectedMedDetails.recode_effect_on_concentration_2.split("|");
 
+            $('#' + currentMed.vstackActionID).append(
+                $('<div>').addClass('row').append(
+
+                    $('<div>').addClass('col-6').append(
+                        getArrow(firstREOC[0]),
+                        $('<p>').text(firstREOC[1])
+
+                    ),
+                    $('<div>').addClass('col-6').append(
+                        getArrow(secondREOC[0]),
+                        $('<p>').text(secondREOC[1])
+
+                    )
+                )
+
+            );
+
             $('#' + currentMed.bodyID).append(getArrow(firstREOC[0], firstREOC[1]));
             $('#' + currentMed.bodyID).append(getArrow(secondREOC[0], secondREOC[1]));
 
