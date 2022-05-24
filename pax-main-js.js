@@ -293,12 +293,12 @@ function createCard(atcLevel) {
     $('<div>').attr('id', atcLevel + 'cardHead').addClass('card-header').appendTo($card);
     $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').append(
         $('<div>').attr('id', atcLevel + 'iconLayer').addClass('row').append(
-            $('<div>').addClass('col-6').attr('style','text-align:centre;').append(
+            $('<div>').addClass('col-6').attr('style','text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackContra').addClass('vstack gap-2 mx-auto').append(
                     $('<h6>').text('Interaction')
                 )
             ),
-            $('<div>').addClass('col-6').attr('style', 'text-align:centre;').append(
+            $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackEffect').addClass('vstack gap-2 mx-auto').append(
                     $('<h6>').text('Action')
                 )
