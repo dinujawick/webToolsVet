@@ -211,13 +211,13 @@ function getArrow(arrowType) {
     switch (arrowType) {
         case "<up>":
             //Add up arrow icon
-            var arrow = $('<span>').attr('id', 'arrow').append(
+            var arrow = $('<span>').attr('id', 'upArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
                         .attr('height', "16")
                         .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-up')
+                        .attr('class', 'bi bi-arrow-up arrow-back')
                         .attr('viewBox', "0 0 16 16").append(
                             $('<path>')
                                 .attr('fill-rule', "evenodd")
@@ -228,13 +228,13 @@ function getArrow(arrowType) {
             break;
         case "<down>":
             //Add down arrow icon
-            var arrow = $('<span>').attr('id', 'arrow').append(
+            var arrow = $('<span>').attr('id', 'downArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
                         .attr('height', "16")
                         .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-down')
+                        .attr('class', 'bi bi-arrow-down arrow-back')
                         .attr('viewBox', "0 0 16 16").append(
                             $('<path>')
                                 .attr('fill-rule', "evenodd")
@@ -245,13 +245,13 @@ function getArrow(arrowType) {
             break;
         case "<up><down>":
             //Add up-down arrow icon
-            var arrow = $('<span>').attr('id', 'arrow').append(
+            var arrow = $('<span>').attr('id', 'updownArrow').append(
                     $('<svg>')
                         .attr('xmlns', "http://www.w3.org/2000/svg")
                         .attr('width', "16")
                         .attr('height', "16")
                         .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-down-up')
+                        .attr('class', 'bi bi-arrow-down-up arrow-back')
                         .attr('viewBox', "0 0 16 16").append(
                             $('<path>')
                                 .attr('fill-rule', "evenodd")
@@ -262,13 +262,13 @@ function getArrow(arrowType) {
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
-            var arrow = $('<span>').attr('id', 'arrow').append(
+            var arrow = $('<span>').attr('id', 'doubleArrow').append(
                             $('<svg>')
                                 .attr('xmlns', "http://www.w3.org/2000/svg")
                                 .attr('width', "16")
                                 .attr('height', "16")
                                 .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-left-right')
+                                .attr('class', 'bi bi-arrow-left-right arrow-back')
                                 .attr('viewBox', "0 0 16 16").append(
                                 $('<path>')
                                     .attr('fill-rule', "evenodd")
@@ -324,7 +324,7 @@ function addMed(selectedMedDetails) {
         var currentMed = createCard(selectedMedDetails.atc_level);
 
         $('#' + currentMed.headerID).append(
-            $('<h4>').text('Medicine : '+selectedMedDetails.generic_name)
+            $('<h4>').text('Medicine: '+selectedMedDetails.generic_name)
         );
 
         $('#' + currentMed.footerID).append(
@@ -356,8 +356,7 @@ function addMed(selectedMedDetails) {
 
             );
 
-            $('#' + currentMed.bodyID).append(getArrow(firstREOC[0], firstREOC[1]));
-            $('#' + currentMed.bodyID).append(getArrow(secondREOC[0], secondREOC[1]));
+            
 
         }
         //One recode effect on concentration

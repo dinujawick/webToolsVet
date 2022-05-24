@@ -174,7 +174,7 @@ g {
     border-style: groove;
 }
 
-#arrow {
+.arrow-back {
     background-color: #e9ecef;
     border-radius: 4px;
     border-style: groove;
