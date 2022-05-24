@@ -62,8 +62,7 @@ $('#btnPrint').on('click', function (event) {
 
 $(document).ready(function () {
 
-
-    var url = window.location.href.slice(window.location.href.indexOf('?') + 1);
+    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=');
     console.log(url);
 
     function GetParameterValues(param) {
