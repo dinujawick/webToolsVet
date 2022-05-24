@@ -308,7 +308,7 @@ function createCard(atcLevel) {
     ).appendTo($card);
     $('<div>').attr('id', atcLevel + 'cardFoot').addClass('card-footer').attr('style','text-align:right;').appendTo($card);
 
-    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atcLevel + 'vstackContra', 'vstackActionID': atcLevel + 'vstackEffect' }
+    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atcLevel + 'vstackContra', 'vstackActionID': atcLevel + 'vstackEffect', 'comments': atcLevel + 'commentsLayer' }
 
 }
 
@@ -356,6 +356,12 @@ function addMed(selectedMedDetails) {
             );
 
         }
+
+        $('#' + currentMed.comments).append(
+            $('<p>').text(selectedMedDetails.clinical_comments)
+        )
+
+
     }
 
     
