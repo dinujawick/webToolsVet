@@ -77,12 +77,12 @@ $(document).ready(function () {
 
         $.each(data, function (index, item) {
 
-            //Add med with query string
-            for (var i = 0; i < queryStringValues.length; i++) {
-                if (queryStringValues[i] == item.atc_level) {
-                    addMed(item);
-                }
-            }
+            ////Add med with query string
+            //for (var i = 0; i < queryStringValues.length; i++) {
+            //    if (queryStringValues[i] == item.atc_level) {
+            //        addMed(item);
+            //    }
+            //}
 
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
