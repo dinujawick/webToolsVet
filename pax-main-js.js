@@ -445,8 +445,8 @@ function createCard(selectedMedObject) {
         }
 
         $('#' + currentMed.vstackIntID).append(
-            getInteractionIcon(selectedMedObject.recommendation.toLowerCase())
-            $('<p>').text(selectedMedObject.recommendation.toLowerCase());
+            getInteractionIcon(selectedMedObject.recommendation.toLowerCase()),
+            $('<p>').text(selectedMedObject.recommendation.toLowerCase())
           )
 
         $('#' + currentMed.comments).append(
