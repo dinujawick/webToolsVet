@@ -275,28 +275,28 @@ function getArrow(arrowType) {
         case "<up>":
             //Add up arrow icon
             var arrow = $('<span>').attr('id', 'upArrow').append(
-                $('<img>').src('Images/up_arrow.svg')                   
+                $('<img>').attr('src','Images/up_arrow.svg')
             )
             return arrow;
             break;
         case "<down>":
             //Add down arrow icon
             var arrow = $('<span>').attr('id', 'downArrow').append(
-                $('<img>').src('Images/down_arrow.svg')
+                $('<img>').attr('src','Images/down_arrow.svg')
             )
             return arrow;
             break;
         case "<up><down>":
             //Add up-down arrow icon
             var arrow = $('<span>').attr('id', 'updownArrow').append(
-                $('<img>').src('Images/up_down_arrow.svg')
+                $('<img>').attr('src','Images/up_down_arrow.svg')
             )
             return arrow;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
             var arrow = $('<span>').attr('id', 'doubleArrow').append(
-                $('<img>').src('Images/right_left_arrow.svg')
+                $('<img>').attr('src','Images/right_left_arrow.svg')
             )
             return arrow;
             break;
