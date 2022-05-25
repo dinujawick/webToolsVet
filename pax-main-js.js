@@ -270,8 +270,8 @@ function getInteractionIcon(contraType) {
 //return: span with a arrow
 function getArrow(arrowType) {
 
-    const arrowWidth = 48; //default size can be change
-    const arrowHeight = 48; //default size can be change
+    const arrowWidth = 96; //default size can be change
+    const arrowHeight = 96; //default size can be change
 
     switch (arrowType) {
         case "<up>":
