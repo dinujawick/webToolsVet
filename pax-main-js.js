@@ -22,8 +22,13 @@ $('#btnReset').on('click', function (event) {
         selectedMedObjList.pop();
     }
 
-    $('#tbody').remove();
-    $('<tbody>').attr('id', 'tbody').appendTo($('#medTable'));
+    //Card Deck Reset
+    $('#mainDeck').remove();
+
+
+    //Table Reset
+    //$('#tbody').remove();
+    //$('<tbody>').attr('id', 'tbody').appendTo($('#medTable'));
 
 });
 
