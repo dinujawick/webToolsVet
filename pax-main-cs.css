@@ -8,13 +8,13 @@
     cursor: pointer;
 }
 
-    /* Dropdown button on hover & focus */
-    .dropbtn:hover, .dropbtn:focus {
-        background-image: linear-gradient(to bottom,#8b0e04,#720b03);
-    }
+ /* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-image: linear-gradient(to bottom,#8b0e04,#720b03);
+ }
 
 /* The search field */
-#myInput {
+#searchTxt {
     box-sizing: border-box;
     background-image: url('Images/search.png');
     background-position: 14px 19px;

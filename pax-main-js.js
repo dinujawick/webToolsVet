@@ -643,7 +643,7 @@ function filterFunction() {
 
     var input, filter, ul, li, a, i;
 
-    input = document.getElementById("myInput");
+    input = document.getElementById("searchTxt");
     filter = input.value.toUpperCase();
     div = document.getElementById("seacrchList");
     a = div.getElementsByTagName("a");
