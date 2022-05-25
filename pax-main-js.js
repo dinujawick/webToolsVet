@@ -270,75 +270,33 @@ function getInteractionIcon(contraType) {
 //return: span with a arrow
 function getArrow(arrowType) {
 
-    const arrowWidth = 96; //default size can be change
-    const arrowHeight = 96; //default size can be change
-
+ 
     switch (arrowType) {
         case "<up>":
             //Add up arrow icon
             var arrow = $('<span>').attr('id', 'upArrow').append(
-                $('<svg>')
-                    .attr('xmlns', "http://www.w3.org/2000/svg")
-                    .attr('width', arrowWidth)
-                    .attr('height', arrowHeight)
-                    .attr('fill', 'currentColor')
-                    .attr('class', 'bi bi-arrow-up arrow-back')
-                    .attr('viewBox', "0 0 " + arrowWidth + " " + arrowHeight).append(
-                        $('<path>')
-                            .attr('fill-rule', "evenodd")
-                            .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
-                    )
+                $('<img>').src('Images/up_arrow.svg')                   
             )
             return arrow;
             break;
         case "<down>":
             //Add down arrow icon
             var arrow = $('<span>').attr('id', 'downArrow').append(
-                $('<svg>')
-                    .attr('xmlns', "http://www.w3.org/2000/svg")
-                    .attr('width', arrowWidth)
-                    .attr('height', arrowHeight)
-                    .attr('fill', 'currentColor')
-                    .attr('class', 'bi bi-arrow-down arrow-back')
-                    .attr('viewBox', "0 0 " + arrowWidth + " " + arrowHeight).append(
-                        $('<path>')
-                            .attr('fill-rule', "evenodd")
-                            .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
-                    )
+                $('<img>').src('Images/down_arrow.svg')
             )
             return arrow;
             break;
         case "<up><down>":
             //Add up-down arrow icon
             var arrow = $('<span>').attr('id', 'updownArrow').append(
-                $('<svg>')
-                    .attr('xmlns', "http://www.w3.org/2000/svg")
-                    .attr('width', arrowWidth)
-                    .attr('height', arrowHeight)
-                    .attr('fill', 'currentColor')
-                    .attr('class', 'bi bi-arrow-down-up arrow-back')
-                    .attr('viewBox', "0 0 " + arrowWidth + " " + arrowHeight).append(
-                        $('<path>')
-                            .attr('fill-rule', "evenodd")
-                            .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
-                    )
+                $('<img>').src('Images/up_down_arrow.svg')
             )
             return arrow;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
             var arrow = $('<span>').attr('id', 'doubleArrow').append(
-                $('<svg>')
-                    .attr('xmlns', "http://www.w3.org/2000/svg")
-                    .attr('width', arrowWidth)
-                    .attr('height', arrowHeight)
-                    .attr('fill', 'currentColor')
-                    .attr('class', 'bi bi-arrow-left-right arrow-back')
-                    .attr('viewBox', "0 0 " + arrowWidth + " " + arrowHeight).append(
-                        $('<path>')
-                            .attr('fill-rule', "evenodd")
-                            .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
-                    )
+                $('<img>').src('Images/right_left_arrow.svg')
             )
             return arrow;
             break;
