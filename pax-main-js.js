@@ -38,11 +38,11 @@ $(document).ready(function () {
     var queryStringValues = null;
 
     //Check only one '?' and no ';' in query string to prevent X-Site Scripting.
-    //if (window.location.href.match(/[?]/g) != null && window.location.href.match(/[;]/g) == null) {
-    //    console.log('inside');
-    //    if (window.location.href.match(/[?]/g).length == 1)
-    //    queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
-    // }
+    if (window.location.href.match(/[?]/g) != null && window.location.href.match(/[;]/g) == null) {
+        console.log('inside');
+        if (window.location.href.match(/[?]/g).length == 1)
+        queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+     }
     
     
 
