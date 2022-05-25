@@ -223,58 +223,58 @@ function getInteractionIcon(contraType) {
                 )
             return intIcon;
             break;
-        case "attention":
-            //Add down arrow icon
-            var intIcon = $('<span>').attr('id', 'downArrow').append(
-                    $('<svg>')
-                        .attr('xmlns', "http://www.w3.org/2000/svg")
-                        .attr('width', "16")
-                        .attr('height', "16")
-                        .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-down arrow-back')
-                        .attr('viewBox', "0 0 16 16").append(
-                            $('<path>')
-                                .attr('fill-rule', "evenodd")
-                                .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
-                        )
-                    )
-            return intIcon;
-            break;
-        case "resistance inducing":
-            //Add up-down arrow icon
-            var intIcon = $('<span>').attr('id', 'updownArrow').append(
-                    $('<svg>')
-                        .attr('xmlns', "http://www.w3.org/2000/svg")
-                        .attr('width', "16")
-                        .attr('height', "16")
-                        .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-down-up arrow-back')
-                        .attr('viewBox', "0 0 16 16").append(
-                            $('<path>')
-                                .attr('fill-rule', "evenodd")
-                                .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
-                        )
-                )
-            return intIcon;
-            break;
-        case "<double-arrow>":
-            //Add left-right arrow icon
-            var intIcon = $('<span>').attr('id', 'doubleArrow').append(
-                            $('<svg>')
-                                .attr('xmlns', "http://www.w3.org/2000/svg")
-                                .attr('width', "16")
-                                .attr('height', "16")
-                                .attr('fill', 'currentColor')
-                                .attr('class', 'bi bi-arrow-left-right arrow-back')
-                                .attr('viewBox', "0 0 16 16").append(
-                                $('<path>')
-                                    .attr('fill-rule', "evenodd")
-                                    .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
-                            )
-                        )
-            return intIcon;
-            break;
-        default:
+        //case "attention":
+        //    //Add down arrow icon
+        //    var intIcon = $('<span>').attr('id', 'downArrow').append(
+        //            $('<svg>')
+        //                .attr('xmlns', "http://www.w3.org/2000/svg")
+        //                .attr('width', "16")
+        //                .attr('height', "16")
+        //                .attr('fill', 'currentColor')
+        //                .attr('class', 'bi bi-arrow-down arrow-back')
+        //                .attr('viewBox', "0 0 16 16").append(
+        //                    $('<path>')
+        //                        .attr('fill-rule', "evenodd")
+        //                        .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
+        //                )
+        //            )
+        //    return intIcon;
+        //    break;
+        //case "resistance inducing":
+        //    //Add up-down arrow icon
+        //    var intIcon = $('<span>').attr('id', 'updownArrow').append(
+        //            $('<svg>')
+        //                .attr('xmlns', "http://www.w3.org/2000/svg")
+        //                .attr('width', "16")
+        //                .attr('height', "16")
+        //                .attr('fill', 'currentColor')
+        //                .attr('class', 'bi bi-arrow-down-up arrow-back')
+        //                .attr('viewBox', "0 0 16 16").append(
+        //                    $('<path>')
+        //                        .attr('fill-rule', "evenodd")
+        //                        .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
+        //                )
+        //        )
+        //    return intIcon;
+        //    break;
+        //case "<double-arrow>":
+        //    //Add left-right arrow icon
+        //    var intIcon = $('<span>').attr('id', 'doubleArrow').append(
+        //                    $('<svg>')
+        //                        .attr('xmlns', "http://www.w3.org/2000/svg")
+        //                        .attr('width', "16")
+        //                        .attr('height', "16")
+        //                        .attr('fill', 'currentColor')
+        //                        .attr('class', 'bi bi-arrow-left-right arrow-back')
+        //                        .attr('viewBox', "0 0 16 16").append(
+        //                        $('<path>')
+        //                            .attr('fill-rule', "evenodd")
+        //                            .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
+        //                    )
+        //                )
+        //    return intIcon;
+        //    break;
+        default: return ($('<span>'));
     }
 
 }
@@ -358,7 +358,6 @@ function getArrow(arrowType) {
 
 }
 
-
 //Function to created a card according to selectedmed
 //@selectedMedDetails : selected med object from the search dropdown
 function createCardLayout(atcLevel) {
@@ -386,7 +385,6 @@ function createCardLayout(atcLevel) {
     return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atcLevel + 'vstackContra', 'vstackActionID': atcLevel + 'vstackEffect', 'comments': atcLevel + 'commentsLayer' }
 
 }
-
 
 //Function to generate a card using med object
 //@selectedMedObject
@@ -446,6 +444,11 @@ function createCard(selectedMedObject) {
 
         }
 
+        $('#' + currentMed.vstackIntID).append(
+            getInteractionIcon(selectedMedObject.recommendation.toLowerCase())
+            $('<p>').text(selectedMedObject.recommendation.toLowerCase());
+          )
+
         $('#' + currentMed.comments).append(
             $('<p>').text(selectedMedObject.clinical_comments)
         );
@@ -477,7 +480,6 @@ function createCard(selectedMedObject) {
     }
     //*****************************************************************************************************************
 }
-
 
 //Function to generate a gridrow using med object
 //@selectedMedObject
@@ -598,7 +600,6 @@ function checkDuplicatesOnCard(atc_level) {
     return isValid;
     
 }
-
 
 //Function to checkduplicates in the current datagrid
 //@medItem : selected med object from the search dropdown
