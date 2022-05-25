@@ -39,23 +39,10 @@ $(document).ready(function () {
 
     //Check only one '?' and no ';' in query string to prevent X-Site Scripting.
     if (window.location.href.match(/[?]/g) != null && window.location.href.match(/[;]/g) == null) {
-        console.log('inside');
-        if (window.location.href.match(/[?]/g).length == 1)
-        queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
-     }
+        if (window.location.href.match(/[?]/g).length == 1 && window.location.href.slice(window.location.href.indexOf('?') + 1) != "")
+            queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+    }
 
-
-
-    //function GetParameterValues(param) {
-    //    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    //    console.log(url);
-    //    for (var i = 0; i < url.length; i++) {
-    //        var urlparam = url[i].split('=');
-    //        if (urlparam[0] == param) {
-    //            return urlparam[1];
-    //        }
-    //    }
-    //}
 
     //***************************************************Card Way******************************************************
     //Create Card Deck
