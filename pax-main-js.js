@@ -38,10 +38,13 @@ $(document).ready(function () {
     var queryStringValues = null;
 
     //Check only one '?' and no ';' in query string to prevent X-Site Scripting.
-    if (window.location.href.match(/[?]/g).length == 1 || window.location.href.match(/[;]/g) == null) {
-        console.log('inside');
-        queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+    if (window.location.href.match(/[;]/g) == null) {
+        if (window.location.href.match(/[?]/g).length == 1) {
+            console.log('inside');
+            queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
+        }
     }
+    
     
 
     //function GetParameterValues(param) {
