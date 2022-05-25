@@ -38,9 +38,8 @@ $(document).ready(function () {
     var queryStringValues = null;
 
     //Check only one '?' and no ';' in query string to prevent X-Site Scripting.
-    if (window.location.href.match(/[?]/g) != null && window.location.href.match(/[;]/g) == null) {
-        console.log(window.location.href.slice(window.location.href.indexOf('?') + 1));
-        if (window.location.href.match(/[?]/g).length == 1)
+    if (window.location.href.match(/[?]/g) != null && window.location.href.match(/[;]/g) == null) {  
+        if (window.location.href.match(/[?]/g).length == 1 && window.location.href.slice(window.location.href.indexOf('?') + 1) != null)
         queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
      }
     
