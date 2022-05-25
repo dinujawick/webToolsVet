@@ -310,7 +310,7 @@ function getArrow(arrowType) {
 function createCardLayout(atcLevel) {
 
     $col = $('<div>').attr('id', atcLevel + 'cardCol').addClass('col').appendTo('#mainDeck');
-    $card = $('<div>').attr('id', atcLevel + 'card').addClass('card h-100').appendTo($col);
+    $card = $('<div>').attr('id', atcLevel + 'card').addClass('card shadow-sm h-100').appendTo($col);
     $('<div>').attr('id', atcLevel + 'cardHead').addClass('card-header').appendTo($card);
     $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').append(
         $('<div>').attr('id', atcLevel + 'iconLayer').addClass('row').append(
