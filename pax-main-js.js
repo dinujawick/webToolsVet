@@ -342,7 +342,7 @@ function createCard(selectedMedObject) {
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
         $('#' + currentMed.headerID).append(
-            $('<h4>').text(selectedMedObject.generic_name)
+            $('<h4>').text(toTitleCase(selectedMedObject.generic_name))
         );
 
         $('#' + currentMed.footerID).append(
@@ -657,4 +657,12 @@ function filterFunction() {
         }
     }
 
+}
+
+//Fucntion to convert normal lover case into capitelize each word.
+//@str : the string need to convert
+function toTitleCase(str) {
+    return str.replace(/(?:^|\s)\w/g, function (match) {
+        return match.toUpperCase();
+    });
 }
