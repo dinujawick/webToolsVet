@@ -266,6 +266,13 @@ g {
     color:white;
 }
 
+.h-45{
+    height:45px;
+}
+.w-45{
+    width:45px;
+}
+
 /* Icarus addition */
 
 @media only screen and (max-width: 800px) {
