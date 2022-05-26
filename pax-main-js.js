@@ -245,7 +245,7 @@ function getArrow(arrowType) {
         case "<up>":
             //Add up arrow icon
             var arrow = $('<span>').attr('id', 'upArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/arrow_up.svg')
+                $('<img>').attr('src', 'Images/Icarus/arrow-up.svg')
                 /*$('<img>').attr('src','Images/up_arrow.svg')*/
             )
             return arrow;
@@ -253,7 +253,7 @@ function getArrow(arrowType) {
         case "<down>":
             //Add down arrow icon
             var arrow = $('<span>').attr('id', 'downArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/arrow_down.svg')
+                $('<img>').attr('src', 'Images/Icarus/arrow-down.svg')
                 /*$('<img>').attr('src','Images/down_arrow.svg')*/
             )
             return arrow;
