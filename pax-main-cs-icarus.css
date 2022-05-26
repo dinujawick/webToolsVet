@@ -26,6 +26,7 @@
     padding: 14px 5px 12px 45px;
     box-shadow: none;
     border: none;
+    width: 205px;
 }
     /* The search field when it gets focus/clicked on */
     #myInput:focus {
@@ -82,12 +83,6 @@
     font-family:'Roboto Condensed',sans-serif;
 }
 
-
-
-.container {
-    background-color: white;
-    font-family: 'Roboto Condensed',sans-serif;
-}
 
 /* Icarus edit */
 .searchPanel {
@@ -182,23 +177,6 @@
 }
 
 
-/* Icarus edit */
-.arrow-back {
-  background-color: #fff;
-  border-radius: 4px;
-  border-style: none;
-  font-size: 24px;
-}
-
-.medCardRemoveBtn {
-    background-color: #8b0e04;
-    background-image: linear-gradient(to bottom,#8b0e04,#720b03);
-    background-repeat: repeat-x;
-    color: white;
-}
-.medCardRemoveBtn:hover{
-    color:white;
-}
 
 .h-45{
     height:45px;
