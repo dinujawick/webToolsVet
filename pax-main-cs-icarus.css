@@ -26,7 +26,6 @@
     padding: 14px 5px 12px 45px;
     box-shadow: none;
     border: none;
-    width: -webkit-fill-available;
 }
     /* The search field when it gets focus/clicked on */
     #myInput:focus {
@@ -40,7 +39,6 @@
 .dropdown {
     position: relative;
     display: inline-block;
-    width: -webkit-fill-available;
 }
 
 .dropdown-scrollbar {
@@ -77,30 +75,13 @@
     display: block;
 }
 
-.close {
-    cursor: pointer;
-    background-size: 29px;
-    background-image: url('Images/delete.png');
-    background-repeat: no-repeat;
-}
 
-.medGroupColur {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 25%;
-    padding: 16px 16px;
-    transform: translate(0%, -50%);
-}
 
 .body {
     background-color: white;
     font-family:'Roboto Condensed',sans-serif;
 }
 
-#vetMatesLogo {
-    margin-bottom: 2rem;
-}
 
 
 .container {
@@ -121,40 +102,7 @@
     padding: 0rem;
 }
 
-/*Graph*/
 
-#toggles {
-    border: ridge;
-}
-
-#filters {
-    border: ridge;
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
-
-#tools {
-    border: ridge;
-}
-
-g {
-    font-size: 14px;
-    font-family: 'Roboto Condensed',sans-serif;
-}
-
-#chartHeaderH4 {
-    /*text-align: center;*/
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-#legGroup {
-    border: ridge;
-}
-
-#btnPrintDiv {
-    margin-bottom: 1rem;
-}
 
 #btnPrint,#btnReset  {
     background-color: #8b0e04;
@@ -165,15 +113,7 @@ g {
     /*! padding: 0px; */
 }
 
-/*#divTableCol {
-    border-left: 1px solid #ffc107;
-    border-right: 1px solid #ffc107;
-}*/
 
-
-/*#divTable {
-    padding: 0.25rem;
-}*/
 
 /* Icarus addition */
 .card-header {
@@ -211,7 +151,7 @@ g {
 
 #btnReset {
     width: 57%;
-       background-image: none !important;
+    background-image: none !important;
     display: inline-block;
     justify-content: flex-end;
     margin-left: 43%;
@@ -241,12 +181,6 @@ g {
 	margin-bottom: 20px;
 }
 
-#tblArrows {
-    background-color: #e9ecef;
-    border-radius: 4px;
-    margin-right: 5px;
-    border-style: groove;
-}
 
 /* Icarus edit */
 .arrow-back {

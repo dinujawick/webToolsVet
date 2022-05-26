@@ -48,29 +48,10 @@ $(document).ready(function () {
         queryStringValues = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1].split(',');
      }
     
-
     //***************************************************Card Way******************************************************
     //Create Card Deck
     $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-2 g-4').appendTo($('#divMedCon'));
     //*****************************************************************************************************************
-
-
-    //***************************************************Table Way*****************************************************
-
-    // //Create Empty Table
-    // $table = $('<table>').attr('id', 'medTable').addClass("table table-bordered").appendTo($('#divTable'));
-    // $tHead = $('<thead>').appendTo($table);
-
-    // $tHeaderRow = $('<tr>').appendTo($tHead);
-
-    // $('<th>').text("Medicine Name").attr('scope', 'col').attr('colspan', '2').appendTo($tHeaderRow);
-    // $('<th>').text("Contraindication or Interaction").attr('scope', 'col').appendTo($tHeaderRow);
-    // $('<th>').text("Effect on concentration").attr('scope', 'col').appendTo($tHeaderRow);
-    ///* $('<th>').text("Clinical Comments").attr('scope', 'col').appendTo($tHeaderRow);*/
-
-    /*$tBody = $('<tbody>').attr('id', 'tbody').appendTo($table);*/
-
-    //******************************************************************************************************************
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("fullATCTable.json", function (data) {
@@ -104,97 +85,6 @@ $(document).ready(function () {
 });
 
 
-//Function to return arrows
-//@arrowType : stripped arrow type
-//@medName : stripped med name
-//return: div with a arrow
-function getArrow(arrowType,medName) {
-
-    switch (arrowType) {
-        case "<up>":
-            //Add up arrow icon
-            var div = $('<div>').append(
-                $('<span>').attr('id', 'upArrow').append(
-                    $('<svg>')
-                        .attr('xmlns', "http://www.w3.org/2000/svg")
-                        .attr('width', "48")
-                        .attr('height', "48")
-                        .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-up')
-                        .attr('viewBox', "0 0 48 48").append(
-                            $('<path>')
-                                .attr('fill-rule', "evenodd")
-                                .attr('d', "M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z")
-                        )
-                ),
-                $('<span>').text(medName)
-            );
-            return div;
-            break;
-        case "<down>":
-            //Add down arrow icon
-            var div = $('<div>').append(
-                $('<span>').attr('id', 'downArrow').append(
-                    $('<svg>')
-                        .attr('xmlns', "http://www.w3.org/2000/svg")
-                        .attr('width', "48")
-                        .attr('height', "48")
-                        .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-down')
-                        .attr('viewBox', "0 0 48 48").append(
-                            $('<path>')
-                                .attr('fill-rule', "evenodd")
-                                .attr('d', "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z")
-                        )
-                ),
-                $('<span>').text(medName)
-            );
-            return div;
-            break;
-        case "<up><down>":
-            //Add up-down arrow icon
-            var div = $('<div>').append(
-                $('<span>').attr('id', 'updownArrow').append(
-                    $('<svg>')
-                        .attr('xmlns', "http://www.w3.org/2000/svg")
-                        .attr('width', "48")
-                        .attr('height', "48")
-                        .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-down-up')
-                        .attr('viewBox', "0 0 48 48").append(
-                            $('<path>')
-                                .attr('fill-rule', "evenodd")
-                                .attr('d', "M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z")
-                        )
-                ),
-                $('<span>').text(medName)
-            );
-            return div;
-            break;
-        case "<double-arrow>":
-            //Add left-right arrow icon
-            var div = $('<div>').append(
-                $('<span>').attr('id', 'doubleArrow').append(
-                    $('<svg>')
-                        .attr('xmlns', "http://www.w3.org/2000/svg")
-                        .attr('width', "48")
-                        .attr('height', "48")
-                        .attr('fill', 'currentColor')
-                        .attr('class', 'bi bi-arrow-left-right')
-                        .attr('viewBox', "0 0 48 48").append(
-                            $('<path>')
-                                .attr('fill-rule', "evenodd")
-                                .attr('d', "M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z")
-                        )
-                ),
-                $('<span>').text(medName)
-            );
-            return div;
-            break;
-        default:
-    }
-
-}
 
 //Function to return interaction icon
 //@arrowType : stripped arrow type
@@ -211,21 +101,21 @@ function getInteractionIcon(contraType) {
             break;
         case "attention":
             //Add down arrow icon
-            var intIcon = $('<span>').attr('id', 'downArrow').append(
+            var intIcon = $('<span>').append(
                 $('<img>').attr('src', 'Images/Icarus/cease-temporarily.svg').addClass('h-45')
                 )
             return intIcon;
             break;
         case "resistance inducing":
             //Add up-down arrow icon
-            var intIcon = $('<span>').attr('id', 'updownArrow').append(
+            var intIcon = $('<span>').append(
                 $('<img>').attr('src', 'Images/Icarus/reduce-dose.svg').addClass('h-45')
                 )
             return intIcon;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
-            var intIcon = $('<span>').attr('id', 'doubleArrow').append(
+            var intIcon = $('<span>').append(
                 $('<img>').attr('src', 'Images/Icarus/monitor.svg').addClass('h-45')
                         )
             return intIcon;
@@ -261,14 +151,14 @@ function getArrow(arrowType) {
         case "<up><down>":
             //Add up-down arrow icon
             var arrow = $('<span>').attr('id', 'updownArrow').append(
-                $('<img>').attr('src', 'Images/up_down_arrow.svg').addClass('h-45')
+                $('<img>').attr('src', 'Images/Icarus/up_down.svg').addClass('h-45')
             )
             return arrow;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
             var arrow = $('<span>').attr('id', 'doubleArrow').append(
-                $('<img>').attr('src', 'Images/right_left_arrow.svg').addClass('h-45')
+                $('<img>').attr('src', 'Images/Icarus/left_right.svg').addClass('h-45')
             )
             return arrow;
             break;

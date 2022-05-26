@@ -1,0 +1,17 @@
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
+ <title>up-down</title>
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_8">
+   <line id="svg_1" stroke-linecap="round" stroke-width="3" stroke="#666666" fill="none" y2="6" x2="15.25883" y1="39.8" x1="15.25883" class="st0"/>
+   <polyline id="svg_2" stroke-linecap="round" stroke-width="3" stroke="#666666" fill="none" points="6.15881983935833,15.899999618530273 15.258815452456474,6 24.458816215395927,15.899999618530273 " class="st0"/>
+   <rect id="svg_3" fill="none" height="40.6" width="21.2" class="st1" y="3.43529" x="4.75883"/>
+   <g transform="rotate(180 31.5941 23.5)" id="svg_7">
+    <line id="svg_4" stroke-linecap="round" stroke-width="3" stroke="#666666" fill="none" y2="6" x2="31.49411" y1="39.8" x1="31.49411" class="st0"/>
+    <polyline id="svg_5" stroke-linecap="round" stroke-width="3" stroke="#666666" fill="none" points="22.394124671816826,15.899999618530273 31.494125053286552,6 40.694125816226006,15.899999618530273 " class="st0"/>
+    <rect id="svg_6" fill="none" height="40.6" width="21.2" class="st1" y="3.2" x="20.99411"/>
+   </g>
+  </g>
+ </g>
+</svg>
