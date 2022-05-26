@@ -1,5 +1,3 @@
-
-
 //Variable to store previous generic name
 var prevAddedItem = "";
 
@@ -25,10 +23,6 @@ $('#btnReset').on('click', function (event) {
     //Card Deck Reset
     $('#mainDeck').remove();
     $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-2 g-4').appendTo($('#divMedCon'));
-
-    //Table Reset
-    //$('#tbody').remove();
-    //$('<tbody>').attr('id', 'tbody').appendTo($('#medTable'));
 
 });
 
@@ -125,6 +119,7 @@ function getInteractionIcon(contraType) {
 
 }
 
+
 //Function to return arrows
 //@arrowType : stripped arrow type
 //return: span with a arrow
@@ -136,7 +131,6 @@ function getArrow(arrowType) {
             //Add up arrow icon
             var arrow = $('<span>').attr('id', 'upArrow').append(
                 $('<img>').attr('src', 'Images/Icarus/arrow-up.svg').addClass('h-45')
-                /*$('<img>').attr('src','Images/up_arrow.svg')*/
             )
             return arrow;
             break;
@@ -144,7 +138,6 @@ function getArrow(arrowType) {
             //Add down arrow icon
             var arrow = $('<span>').attr('id', 'downArrow').append(
                 $('<img>').attr('src', 'Images/Icarus/arrow-down.svg').addClass('h-45')
-                /*$('<img>').attr('src','Images/down_arrow.svg')*/
             )
             return arrow;
             break;
