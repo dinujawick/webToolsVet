@@ -205,28 +205,28 @@ function getInteractionIcon(contraType) {
         case "contra-indicated":
             //Add up arrow icon
             var intIcon = $('<span>').append(
-                $('<img>').attr('src','Images/Icarus/contraindicated.svg')
+                $('<img>').attr('src', 'Images/Icarus/contraindicated.svg').addClass('h-45')
                 )
             return intIcon;
             break;
         case "attention":
             //Add down arrow icon
             var intIcon = $('<span>').attr('id', 'downArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/cease-temporarily.svg')
+                $('<img>').attr('src', 'Images/Icarus/cease-temporarily.svg').addClass('h-45')
                 )
             return intIcon;
             break;
         case "resistance inducing":
             //Add up-down arrow icon
             var intIcon = $('<span>').attr('id', 'updownArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/reduce-dose.svg')
+                $('<img>').attr('src', 'Images/Icarus/reduce-dose.svg').addClass('h-45')
                 )
             return intIcon;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
             var intIcon = $('<span>').attr('id', 'doubleArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/monitor.svg')
+                $('<img>').attr('src', 'Images/Icarus/monitor.svg').addClass('h-45')
                         )
             return intIcon;
             break;
@@ -245,7 +245,7 @@ function getArrow(arrowType) {
         case "<up>":
             //Add up arrow icon
             var arrow = $('<span>').attr('id', 'upArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/arrow-up.svg')
+                $('<img>').attr('src', 'Images/Icarus/arrow-up.svg').addClass('h-45')
                 /*$('<img>').attr('src','Images/up_arrow.svg')*/
             )
             return arrow;
@@ -253,7 +253,7 @@ function getArrow(arrowType) {
         case "<down>":
             //Add down arrow icon
             var arrow = $('<span>').attr('id', 'downArrow').append(
-                $('<img>').attr('src', 'Images/Icarus/arrow-down.svg')
+                $('<img>').attr('src', 'Images/Icarus/arrow-down.svg').addClass('h-45')
                 /*$('<img>').attr('src','Images/down_arrow.svg')*/
             )
             return arrow;
@@ -261,14 +261,14 @@ function getArrow(arrowType) {
         case "<up><down>":
             //Add up-down arrow icon
             var arrow = $('<span>').attr('id', 'updownArrow').append(
-                $('<img>').attr('src','Images/up_down_arrow.svg')
+                $('<img>').attr('src', 'Images/up_down_arrow.svg').addClass('h-45')
             )
             return arrow;
             break;
         case "<double-arrow>":
             //Add left-right arrow icon
             var arrow = $('<span>').attr('id', 'doubleArrow').append(
-                $('<img>').attr('src','Images/right_left_arrow.svg')
+                $('<img>').attr('src', 'Images/right_left_arrow.svg').addClass('h-45')
             )
             return arrow;
             break;
