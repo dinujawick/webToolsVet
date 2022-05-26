@@ -171,12 +171,12 @@ function createCardLayout(atcLevel) {
         $('<div>').attr('id', atcLevel + 'iconLayer').addClass('row').append(
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackEffect').addClass('vstack gap-2 mx-auto').append(
-                    $('<h6>').text('Action')
+                    $('<h6>').text('EFFECT ON CONCENTRATION')
                 )
             ),
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackContra').addClass('vstack gap-2 mx-auto').append(
-                    $('<h6>').text('Interaction')
+                    $('<h6>').text('ADVICE').attr('style','margin:0.75rem')
                 )
             )
         ),
