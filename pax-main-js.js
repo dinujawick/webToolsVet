@@ -161,7 +161,7 @@ function getArrow(arrowType) {
 }
 
 //Function to created a card according to selectedmed
-//@selectedMedDetails : selected med object from the search dropdown
+//@selectedMedDetails : selected med object from the search dropdown vstack gap-2 mx-auto
 function createCardLayout(atcLevel) {
 
     $col = $('<div>').attr('id', atcLevel + 'cardCol').addClass('col').appendTo('#mainDeck');
@@ -170,12 +170,12 @@ function createCardLayout(atcLevel) {
     $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').append(
         $('<div>').attr('id', atcLevel + 'iconLayer').addClass('row').append(
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
-                $('<div>').attr('id', atcLevel + 'vstackEffect').addClass('vstack gap-2 mx-auto').append(
+                $('<div>').attr('id', atcLevel + 'vstackEffect').addClass('col').append(
                     $('<h6>').text('EFFECT ON CONCENTRATION')
                 )
             ),
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
-                $('<div>').attr('id', atcLevel + 'vstackContra').addClass('vstack gap-2 mx-auto').append(
+                $('<div>').attr('id', atcLevel + 'vstackContra').addClass('col').append(
                     $('<h6>').text('ADVICE')
                 )
             )
