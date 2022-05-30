@@ -485,7 +485,7 @@ function printPatHandOut() {
 
 //Function to when the user clicks on the button,toggle between hiding and showing the dropdown content
 function toggleSearchList() {
-    document.getElementById("seacrchList").classList.toggle("show");
+    document.getElementById("searchList").classList.toggle("show");
 
 }
 
