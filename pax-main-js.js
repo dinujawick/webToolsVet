@@ -367,7 +367,7 @@ function createCard(selectedMedObject) {
         }
 
         $('#' + currentMed.vstackIntID).append(
-            getInteractionIcon(selectedMedObject.evaluation_alt.toLowerCase()),
+            getInteractionIcon(selectedMedObject.evaluation_alt.toLowerCase(), selectedMedObject.action_alt.toLowerCase()),
             $('<p>').text(selectedMedObject.evaluation_alt.toLowerCase()).attr('style','margin-top:0.05rem;')
           )
 
