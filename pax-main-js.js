@@ -205,12 +205,12 @@ function createCard(selectedMedObject) {
         );
 
         //Two recode effect on concentration
-        if (selectedMedObject.recode_effect_on_concentration_2 != "") {
+        if (selectedMedObject.effect_on_concentration_2 != "") {
 
             //split the REOC1
-            const firstREOC = selectedMedObject.recode_effect_on_concentration_1.split("|");
+            const firstREOC = selectedMedObject.effect_on_concentration_1.split("|");
             //split the REOC2
-            const secondREOC = selectedMedObject.recode_effect_on_concentration_2.split("|");
+            const secondREOC = selectedMedObject.effect_on_concentration_2.split("|");
 
             $('#' + currentMed.vstackActionID).append(
                 $('<div>').addClass('row').append(
@@ -236,7 +236,7 @@ function createCard(selectedMedObject) {
         else {
 
             //split the REOC
-            const firstREOC = selectedMedObject.recode_effect_on_concentration_1.split("|");
+            const firstREOC = selectedMedObject.effect_on_concentration_1.split("|");
 
             //Action:
             $('#' + currentMed.vstackActionID).append(
@@ -247,12 +247,12 @@ function createCard(selectedMedObject) {
         }
 
         $('#' + currentMed.vstackIntID).append(
-            getInteractionIcon(selectedMedObject.recommendation.toLowerCase()),
-            $('<p>').text(selectedMedObject.recommendation.toLowerCase()).attr('style','margin-top:0.05rem;')
+            getInteractionIcon(selectedMedObject.evaluation_alt.toLowerCase()),
+            $('<p>').text(selectedMedObject.evaluation_alt.toLowerCase()).attr('style','margin-top:0.05rem;')
           )
 
         $('#' + currentMed.comments).append(
-            $('<p>').text(selectedMedObject.clinical_comments)
+            $('<p>').text(selectedMedObject.clinical_comment)
         );
 
         //Add selected med atc level into the array
