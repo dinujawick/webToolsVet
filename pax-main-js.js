@@ -365,7 +365,7 @@ function createGridRow(selectedMedObject) {
 //@selectedMedObject : selected med object from the search dropdown
 function addMed(selectedMedObject) {
 
-
+    console.log(selectedMedObject);
     //Create card using med
     createCard(selectedMedObject);
 
