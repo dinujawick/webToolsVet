@@ -366,7 +366,9 @@ function createGridRow(selectedMedObject) {
 function addMed(selectedMedObject) {
 
     const medIDs = $.map($('#searchList > a'), clicks => clicks.id);
-    console.log(medIDs);
+    console.log($('#mainFrame'));
+
+
     //Create card using med
     createCard(selectedMedObject);
 
