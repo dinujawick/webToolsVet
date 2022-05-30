@@ -468,7 +468,7 @@ function printPatHandOut() {
     $.each(selectedMedObjList, function (index, item) {
         $('<tr>').append(
                         $('<th>').text(item.generic_name),
-            $('<td>').text(item.clinical_comments)
+            $('<td>').text("")
         ).appendTo($tblBody);
     })
 
