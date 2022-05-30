@@ -64,7 +64,7 @@ $(document).ready(function () {
 
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
-                $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).appendTo('#searchList');
+                $med = $('<a>').addClass('clicks').attr('id', item.atc_level).text(item.generic_name).appendTo('#searchList');
 
                 
                 //Med Click Event
