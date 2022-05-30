@@ -83,37 +83,157 @@ $(document).ready(function () {
 //Function to return interaction icon
 //@arrowType : stripped arrow type
 //return: span with a arrow
-function getInteractionIcon(contraType) {
+function getInteractionIcon(contraType,action_alt) {
 
     switch (contraType) {
         case "contra-indicated":
-            //Add up arrow icon
-            var intIcon = $('<span>').append(
-                $('<img>').attr('src', 'Images/Icarus/contraindicated.svg').addClass('h-45')
-                )
-            return intIcon;
+            switch (action_alt) {
+                case "consider alternative covid-19 treatment":
+                    //Red Alert
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/alert_red.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "withhold if clinically appropriate":
+                    //Red Stop
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/stop_red.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "seek specialist advice":
+                    //Red Specialist
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/specialist_red.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "review risk":
+                    //Red Stop
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/stop_red.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                default: return ($('<span>'));
+            }        
             break;
-        case "attention":
-            //Add down arrow icon
-            var intIcon = $('<span>').append(
-                $('<img>').attr('src', 'Images/Icarus/cease-temporarily.svg').addClass('h-45')
-                )
-            return intIcon;
+        case "attention required":
+            switch (action_alt) {
+                case "monitor therapeutic concentration":
+                    //Orange Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "review risk":
+                    //Orange Stop
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/stop_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "consider alternative covid-19 treatment":
+                    //Orange Alert
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/alert_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "withhold if clinically appropriate":
+                    //Orange Stop
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/stop_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "combination product, see clinical comment":
+                    //Orange Stop
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/stop_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "consider additional contraceptive":
+                    //Orange Switch
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "consider alternative antibiotic":
+                    //Orange Switch
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "monitor":
+                    //Orange Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "review dose":
+                    //Orange Medicines
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "seek specialist advice":
+                    //Orange Specialist
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/specialist_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "monitor clinical response":
+                    //Orange Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "monitor side effects":
+                    //Orange Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                default: return ($('<span>'));
+            }
             break;
-        case "resistance inducing":
-            //Add up-down arrow icon
-            var intIcon = $('<span>').append(
-                $('<img>').attr('src', 'Images/Icarus/reduce-dose.svg').addClass('h-45')
-                )
-            return intIcon;
-            break;
-        case "<double-arrow>":
-            //Add left-right arrow icon
-            var intIcon = $('<span>').append(
-                $('<img>').attr('src', 'Images/Icarus/monitor.svg').addClass('h-45')
-                        )
-            return intIcon;
-            break;
+        case "follow up":
+            switch (action_alt) {
+                case "monitor side effects":
+                    //Grey Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_grey.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "monitor clinical response":
+                    //Grey Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_grey.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                case "monitor":
+                    //Grey Magnifying glass
+                    var intIcon = $('<span>').append(
+                        $('<img>').attr('src', 'Images/Icarus/glass_grey.svg').addClass('h-45')
+                    )
+                    return intIcon;
+                    break;
+                default: return ($('<span>'));
+            }
+            break;   
         default: return ($('<span>'));
     }
 
@@ -365,7 +485,6 @@ function createGridRow(selectedMedObject) {
 //@selectedMedObject : selected med object from the search dropdown
 function addMed(selectedMedObject) {
 
-    console.log(selectedMedObject);
     //Create card using med
     createCard(selectedMedObject);
 
