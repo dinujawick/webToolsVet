@@ -176,7 +176,7 @@ function createCardLayout(atcLevel) {
             ),
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackContra').addClass('col').append(
-                    $('<h6>').text('ACTIONS').attr('style','margin-bottom:1.5rem;')
+                    $('<h6>').text('ACTION').attr('style','margin-bottom:1.5rem;')
                 )
             )
         ),
