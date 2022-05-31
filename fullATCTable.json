@@ -490,7 +490,7 @@
     "clinical_comment": "Co-administration is contraindicated due to potential hypotension."
   },
   {
-    "atc_level": "H02AB01 ",
+    "atc_level": "H02AB01",
     "lookback": "3 months ",
     "generic_name": "Bethametasone (systemic)",
     "evaluation_alt": "Follow up",
@@ -510,7 +510,7 @@
     "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant. "
   },
   {
-    "atc_level": "H02AB04 ",
+    "atc_level": "H02AB04",
     "lookback": "6 months",
     "generic_name": "Methylprednisolone",
     "evaluation_alt": "Follow up",
@@ -520,7 +520,7 @@
     "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant. "
   },
   {
-    "atc_level": "H02AB06 ",
+    "atc_level": "H02AB06",
     "lookback": "6 months",
     "generic_name": "Prednisolone",
     "evaluation_alt": "Follow up",
@@ -530,7 +530,7 @@
     "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.   Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant. "
   },
   {
-    "atc_level": "H02AB07 ",
+    "atc_level": "H02AB07",
     "lookback": "6 months",
     "generic_name": "Prednisone",
     "evaluation_alt": "Follow up",

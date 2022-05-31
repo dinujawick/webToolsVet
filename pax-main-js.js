@@ -491,8 +491,6 @@ function addMed(selectedMedObject) {
 
     //Create table row 
     //createGridRow(selectedMedObject);
-
-
 }
 
 //Function to checkduplicates in the current card deck
