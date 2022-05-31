@@ -317,7 +317,7 @@ function createCard(selectedMedObject) {
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
         $('#' + currentMed.headerID).append(
-            $('<h4>').text(toTitleCase(selectedMedObject.generic_name))
+            $('<h4>').text(selectedMedObject.generic_name)
         );
 
         $('#' + currentMed.footerID).append(
