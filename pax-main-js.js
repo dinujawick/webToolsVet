@@ -35,9 +35,11 @@ $(document).ready(function () {
 
     //initialize all tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    console.log(tooltipTriggerList);
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+    console.log(tooltipList);
 
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
