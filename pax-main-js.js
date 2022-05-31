@@ -337,12 +337,12 @@ function createCard(selectedMedObject) {
 
                     $('<div>').addClass('col-6').append(
                         getArrow(firstREOC[0]),
-                        $('<p>').text(firstREOC[1])
+                        $('<p>').text(toTitleCase(firstREOC[1]))
 
                     ),
                     $('<div>').addClass('col-6').append(
                         getArrow(secondREOC[0]),
-                        $('<p>').text(secondREOC[1])
+                        $('<p>').text(toTitleCase(secondREOC[1]))
 
                     )
                 )
@@ -361,14 +361,14 @@ function createCard(selectedMedObject) {
             //Action:
             $('#' + currentMed.vstackActionID).append(
                 getArrow(firstREOC[0]),
-                $('<p>').text(firstREOC[1])
+                $('<p>').text(toTitleCase(firstREOC[1]))
             );
 
         }
 
         $('#' + currentMed.vstackIntID).append(
             getInteractionIcon(selectedMedObject.evaluation_alt.toLowerCase(), selectedMedObject.action_alt.toLowerCase()),
-            $('<p>').text(selectedMedObject.evaluation_alt.toLowerCase()).attr('style','margin-top:0.05rem;')
+            $('<p>').text(selectedMedObject.action_alt).attr('style','margin-top:0.05rem;')
           )
 
         $('#' + currentMed.comments).append(
