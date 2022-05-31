@@ -94,7 +94,8 @@
 /* Icarus edit */
 .searchPanel {
     border: 1px solid #dddddd;
-    /*width: -webkit-fill-available;*/
+    width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 /* Icarus edit */
