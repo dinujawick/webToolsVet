@@ -33,7 +33,9 @@ $('#btnPrint').on('click', function (event) {
 //Page On Load Function
 $(document).ready(function () {
 
-
+    console.log($.grep([{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }], function (n, i) {
+        return n.website === 'google';
+    }));
 
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
@@ -54,7 +56,7 @@ $(document).ready(function () {
 
         $.each(data, function (index, item) {
 
-            ////Add med with query string
+            //Add med with query string
             if (queryStringValues != null) {
                 for (var i = 0; i < queryStringValues.length; i++) {
                     if (queryStringValues[i] == item.atc_level) {
@@ -299,7 +301,6 @@ function getInteractionIcon(contraType, action_alt) {
 
 
 }
-
 
 //Function to return arrows
 //@arrowType : stripped arrow type
@@ -677,6 +678,7 @@ function toggleSearchList() {
 //Functon to filter the search dropdown according to input text
 function filterFunction() {
 
+   
     if (!$('#searchList').hasClass("show")) {
         toggleSearchList();
     }
