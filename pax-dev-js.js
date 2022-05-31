@@ -34,7 +34,7 @@ $('#btnPrint').on('click', function (event) {
 $(document).ready(function () {
 
     console.log($.grep([{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }], function (n, i) {
-        return n.website === '%goog%';
+        return n.filter(item => item.website.toLowerCase().indexOf("go") > -1);
     }));
 
     //QueryString standard : ?paramName=value1,value2,value3
