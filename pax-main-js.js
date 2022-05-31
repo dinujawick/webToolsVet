@@ -612,7 +612,7 @@ function toggleSearchList() {
 //Functon to filter the search dropdown according to input text
 function filterFunction() {
 
-    if (!$('#seacrchList').hasClass("show")) {
+    if (!$('#searchList').hasClass("show")) {
         toggleSearchList();
     }
 
@@ -620,7 +620,7 @@ function filterFunction() {
 
     input = document.getElementById("searchTxt");
     filter = input.value.toUpperCase();
-    div = document.getElementById("seacrchList");
+    div = document.getElementById("searchList");
     a = div.getElementsByTagName("a");
 
     for (i = 0; i < a.length; i++) {
