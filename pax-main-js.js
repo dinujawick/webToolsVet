@@ -662,8 +662,6 @@ function printPatHandOut() {
 
     newWin.document.open();
     newWin.document.write(doc[0].outerHTML);
-    newWin.document.close();
-
     setTimeout(function () { newWin.print(); }, 500);
     setTimeout(function () { newWin.close(); }, 10);
 
