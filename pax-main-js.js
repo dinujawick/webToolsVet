@@ -96,7 +96,7 @@ function getInteractionIcon(contraType,action_alt) {
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/alert_red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
-                            .attr('title', "<b>For these medicines, there is a risk of serious side effects or reduced treatment efficacy, and withholding medicines is not an effective or feasible strategy.</b>")
+                            .attr('title', "For these medicines, there is a risk of serious side effects or reduced treatment efficacy, and withholding medicines is not an effective or feasible strategy.")
                     )
                     return intIcon;
                     break;
