@@ -48,7 +48,7 @@ $(document).ready(function () {
     //*****************************************************************************************************************
 
     //Read JSON and add the med generic values into dropdown.
-    $.getJSON("fullATCTable.json", function (data) {
+    $.getJSON("nirmatrelvir_ritonavir_interaction_checker.json", function (data) {
 
         $.each(data, function (index, item) {
 
