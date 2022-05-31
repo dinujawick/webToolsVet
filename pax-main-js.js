@@ -296,7 +296,7 @@ function createCardLayout(atcLevel) {
             ),
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackContra').addClass('col').append(
-                    $('<h6>').text('ACTION').attr('style','margin-bottom:1.5rem;')
+                    
                 )
             )
         ),
@@ -367,6 +367,7 @@ function createCard(selectedMedObject) {
         }
 
         $('#' + currentMed.vstackIntID).append(
+            $('<h6>').text(selectedMedObject.evaluation_alt).attr('style', 'margin-bottom:1.5rem;'),
             getInteractionIcon(selectedMedObject.evaluation_alt.toLowerCase(), selectedMedObject.action_alt.toLowerCase()),
             $('<p>').text(selectedMedObject.action_alt).attr('style','margin-top:0.05rem;')
           )
