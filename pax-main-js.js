@@ -85,7 +85,7 @@ $(document).ready(function () {
 //Function to return interaction icon
 //@arrowType : stripped arrow type
 //@action_alt : action type
-//return: span with a arrow
+//return: span with an icon
 function getInteractionIcon(contraType,action_alt) {
 
     //consider alternative covid-19 treatment
