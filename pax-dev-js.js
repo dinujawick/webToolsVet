@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     jsonData = '[{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }]';
     array = JSON.parse(jsonData);
-    var result = array.filter((x) => x.website.toLowerCase().indexOf("go") > -1);
+    var result = array.filter((x) => x.website.toLowerCase().indexOf("1") > -1);
     console.log(result);
 
 
