@@ -34,7 +34,10 @@ $('#btnPrint').on('click', function (event) {
 $(document).ready(function () {
 
     //initialize all tooltips
-    $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
