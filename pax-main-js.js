@@ -33,13 +33,7 @@ $('#btnPrint').on('click', function (event) {
 //Page On Load Function
 $(document).ready(function () {
 
-    //initialize all tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    console.log(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-    console.log(tooltipList);
+    
 
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
@@ -252,6 +246,8 @@ function getInteractionIcon(contraType,action_alt) {
             break;   
         default: return ($('<span>'));
     }
+
+   
 
 }
 
@@ -504,6 +500,12 @@ function addMed(selectedMedObject) {
 
     //Create card using med
     createCard(selectedMedObject);
+
+    //initialize all tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 
     //Create table row 
     //createGridRow(selectedMedObject);
