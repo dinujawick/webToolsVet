@@ -88,6 +88,24 @@ $(document).ready(function () {
 //return: span with a arrow
 function getInteractionIcon(contraType,action_alt) {
 
+    //consider alternative covid-19 treatment
+    const conAltCovid19T = "For these medicines, there is a risk of serious side effects or reduced treatment efficacy, and withholding medicines is not an effective or feasible strategy."
+    //withhold if clinically appropriate
+    const withClinApp = "For these medicines, there is a risk of serious adverse events. Only start nirmatrelvir plus ritonavir if the medicine can be safely stopped. The medicine can be resumed 3 days after treatment completion. Some medicines may need to be withheld for longer if the patient is elderly or the medication has a long half-life."
+    //seek specialist advice
+    const seekSpecAdvi = "Concomitant treatment with nirmatrelvir plus ritonavir may affect therapeutic efficacy. Seek specialist advice about possibility of withholding current treatment and consult product information for further details.";
+    //dose adjustment may be needed
+    const doseAdj = "If medicine cannot be safely stopped or replaced, adjust the dose and monitor for potential side effects. Information about individual dosing can be found at the Liverpool COVID-19 Drug Interactions website.";
+    //educate and monitor
+    const eduAndMoni = "A priori dose adjustment is not required, but may be considered or needed. Educate your patient about potential effects and to contact GP as required.";
+    //swtich medicine
+    const swtichMed = "There is a small potential for interaction and there are alternative medicines that can be prescribed for similar indications. Consider switching this medicine during nirmatrelvir plus ritonavir treatment.";
+    //review risk
+    const reviewRisk = "The clinical evaluation is dependent on particular patient events or conditions. Please refer to the clinical comments for further information.";
+
+
+
+
     switch (contraType) {
         case "contra-indicated":
             switch (action_alt) {
@@ -96,7 +114,7 @@ function getInteractionIcon(contraType,action_alt) {
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/alert_red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
-                            .attr('title', "For these medicines, there is a risk of serious side effects or reduced treatment efficacy, and withholding medicines is not an effective or feasible strategy.")
+                            .attr('title', conAltCovid19T)
                     )
                     return intIcon;
                     break;
@@ -105,7 +123,7 @@ function getInteractionIcon(contraType,action_alt) {
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
-                            .attr('title', "For these medicines, there is a risk of serious adverse events. Only start nirmatrelvir plus ritonavir if the medicine can be safely stopped. The medicine can be resumed 3 days after treatment completion. Some medicines may need to be withheld for longer if the patient is elderly or the medication has a long half-life.")
+                            .attr('title', withClinApp)
                     )
                     return intIcon;
                     break;
@@ -114,7 +132,7 @@ function getInteractionIcon(contraType,action_alt) {
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/specialist_red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
-                            .attr('title', "Concomitant treatment with nirmatrelvir plus ritonavir may affect therapeutic efficacy. Seek specialist advice about possibility of withholding current treatment and consult product information for further details.")
+                            .attr('title', seekSpecAdvi)
                     )
                     return intIcon;
                     break;
@@ -123,7 +141,7 @@ function getInteractionIcon(contraType,action_alt) {
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
-                            .attr('title', "The clinical evaluation is dependent on particular patient events or conditions. Please refer to the clinical comments for further information.")
+                            .attr('title', reviewRisk)
                     )
                     return intIcon;
                     break;
@@ -136,6 +154,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
@@ -143,6 +163,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Stop
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', reviewRisk)
                     )
                     return intIcon;
                     break;
@@ -150,6 +172,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Alert
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/alert_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', conAltCovid19T)
                     )
                     return intIcon;
                     break;
@@ -157,6 +181,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Stop
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', withClinApp)
                     )
                     return intIcon;
                     break;
@@ -164,6 +190,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Stop
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', reviewRisk)
                     )
                     return intIcon;
                     break;
@@ -171,6 +199,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Switch
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', swtichMed)
                     )
                     return intIcon;
                     break;
@@ -178,6 +208,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Switch
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', swtichMed)
                     )
                     return intIcon;
                     break;
@@ -185,6 +217,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
@@ -192,6 +226,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Medicines
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', doseAdj)
                     )
                     return intIcon;
                     break;
@@ -199,6 +235,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Specialist
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/specialist_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', seekSpecAdvi)
                     )
                     return intIcon;
                     break;
@@ -206,6 +244,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
@@ -213,6 +253,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Orange Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_orange.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
@@ -225,6 +267,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Grey Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_grey.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
@@ -232,6 +276,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Grey Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_grey.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
@@ -239,6 +285,8 @@ function getInteractionIcon(contraType,action_alt) {
                     //Grey Magnifying glass
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/glass_grey.svg').addClass('h-45')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
+                            .attr('title', eduAndMoni)
                     )
                     return intIcon;
                     break;
