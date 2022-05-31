@@ -662,7 +662,7 @@ function printPatHandOut() {
 
     newWin.document.open();
     newWin.document.write(doc[0].outerHTML);
-    setTimeout(function () { newWin.print(); }, 500);
+    setTimeout(function () { newWin.print(); }, 5);
 
 }
 
