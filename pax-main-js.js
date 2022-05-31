@@ -664,6 +664,8 @@ function printPatHandOut() {
     newWin.document.write(doc[0].outerHTML);
     setTimeout(function () { newWin.print(); }, 5);
 
+    setTimeout(function () { newWin.close(); }, 10000);
+
 }
 
 //Function to when the user clicks on the button,toggle between hiding and showing the dropdown content
