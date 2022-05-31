@@ -27,6 +27,7 @@
     box-shadow: none;
     border: none;
     width: -webkit-fill-available;
+    width: -moz-available;
 }
     /* The search field when it gets focus/clicked on */
     #myInput:focus {
