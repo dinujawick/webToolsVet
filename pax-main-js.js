@@ -95,7 +95,7 @@ function getInteractionIcon(contraType,action_alt) {
                     //Red Alert
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/alert_red.svg').addClass('h-45')
-                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', "For these medicines, there is a risk of serious side effects or reduced treatment efficacy, and withholding medicines is not an effective or feasible strategy.")
                     )
                     return intIcon;
@@ -104,7 +104,7 @@ function getInteractionIcon(contraType,action_alt) {
                     //Red Stop
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_red.svg').addClass('h-45')
-                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', "For these medicines, there is a risk of serious adverse events. Only start nirmatrelvir plus ritonavir if the medicine can be safely stopped. The medicine can be resumed 3 days after treatment completion. Some medicines may need to be withheld for longer if the patient is elderly or the medication has a long half-life.")
                     )
                     return intIcon;
@@ -113,7 +113,7 @@ function getInteractionIcon(contraType,action_alt) {
                     //Red Specialist
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/specialist_red.svg').addClass('h-45')
-                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', "Concomitant treatment with nirmatrelvir plus ritonavir may affect therapeutic efficacy. Seek specialist advice about possibility of withholding current treatment and consult product information for further details.")
                     )
                     return intIcon;
@@ -122,7 +122,7 @@ function getInteractionIcon(contraType,action_alt) {
                     //Red Stop
                     var intIcon = $('<span>').append(
                         $('<img>').attr('src', 'Images/Icarus/stop_red.svg').addClass('h-45')
-                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
+                            .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', "The clinical evaluation is dependent on particular patient events or conditions. Please refer to the clinical comments for further information.")
                     )
                     return intIcon;
