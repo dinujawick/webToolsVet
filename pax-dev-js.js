@@ -33,9 +33,18 @@ $('#btnPrint').on('click', function (event) {
 //Page On Load Function
 $(document).ready(function () {
 
-    console.log($.grep([{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }], function (n, i) {
-        return n.filter(item => item.website.toLowerCase().indexOf("go") > -1);
-    }));
+    jsonData = '[{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }]';
+    array = JSON.parse(jsonData);
+    var result = array.filter((x) => x.website.toLowerCase().indexOf("go") > -1);
+    console.log(result);
+
+
+    //console.log($.grep([{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }], function (n, i) {
+    //    return n.filter(item => item.website.toLowerCase().indexOf("go") > -1);
+    //}));
+
+
+
 
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
