@@ -702,15 +702,16 @@ function filterFunction() {
     console.log(result);
 
 
-    $.each(result, function (index, item) {
+    for (j = 0; j < result.length; j++) {
         for (i = 0; i < a.length; i++) {
 
             txtValue = a[i].textContent || a[i].innerText;
 
             if (txtValue.toLowerCase() == item.generic_name.toLowerCase()) {
+                a[i].style.display = "";
                 console.log(txtValue.toLowerCase());
                 console.log(item.generic_name.toLowerCase());
-                a[i].style.display = "";
+                console.log(a[i]);
             }
             else {
                 a[i].style.display = "none";
@@ -720,11 +721,11 @@ function filterFunction() {
             //    a[i].style.display = "";
 
             //} else {
-                //    a[i].style.display = "none";
+            //    a[i].style.display = "none";
             //}
 
         }
-    });
+    }
      
                 
                 
