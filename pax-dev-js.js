@@ -700,7 +700,7 @@ function filterFunction() {
 
 
     console.log(input.value);
-    var result = array.filter((x) => x.brand_name.toLowerCase("ta").indexOf() > -1);
+    var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value) > -1);
     console.log(result);
 
 
