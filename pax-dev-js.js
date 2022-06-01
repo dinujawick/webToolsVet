@@ -736,6 +736,7 @@ function filterFunction() {
             //}
 
         }
+        console.log('finish' + j);
     }
      
                 
