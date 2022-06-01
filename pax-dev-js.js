@@ -33,12 +33,7 @@ $('#btnPrint').on('click', function (event) {
 //Page On Load Function
 $(document).ready(function () {
 
-    jsonData = '[{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }]';
-    array = JSON.parse(jsonData);
-    var result = array.filter((x) => x.website.toLowerCase().indexOf("1") > -1);
-    console.log(result);
-
-
+    
     //console.log($.grep([{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }], function (n, i) {
     //    return n.filter(item => item.website.toLowerCase().indexOf("go") > -1);
     //}));
@@ -692,16 +687,24 @@ function filterFunction() {
         toggleSearchList();
     }
 
-    var input, filter, ul, li, a, i;
+    var input, filter, a, i;
 
     input = document.getElementById("searchTxt");
     filter = input.value.toUpperCase();
     div = document.getElementById("searchList");
     a = div.getElementsByTagName("a");
 
+    jsonData = '[{ "atc_level": "L01EC02", "brand_name": "Tafinlar","generic_name":"Dabrafenib"},{ "atc_level": "N05BA12", "brand_name": "Kalma","generic_name":"Alprazolam"},{ "atc_level": "N05BA12", "brand_name": "Alprax", "generic_name": "Alprazolam" },{ "atc_level": "J04AB04", "brand_name": "Mycobutin", "generic_name": "Rifabutin" }]';
+    array = JSON.parse(jsonData);
+    var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(filter) > -1);
+    console.log(result);
+
+
+
+
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
             a[i].style.display = "";
         } else {
             a[i].style.display = "none";
