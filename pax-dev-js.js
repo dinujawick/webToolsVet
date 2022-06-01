@@ -696,7 +696,11 @@ function filterFunction() {
 
     jsonData = '[{ "atc_level": "L01EC02", "brand_name": "Tafinlar","generic_name":"Dabrafenib"},{ "atc_level": "N05BA12", "brand_name": "Kalma","generic_name":"Alprazolam"},{ "atc_level": "N05BA12", "brand_name": "Alprax", "generic_name": "Alprazolam" },{ "atc_level": "J04AB04", "brand_name": "Mycobutin", "generic_name": "Rifabutin" }]';
     array = JSON.parse(jsonData);
-    var result = array.filter((x) => x.brand_name.toLowerCase(input.value.toLowerCase()).indexOf() > -1);
+
+
+
+    console.log(input.value);
+    var result = array.filter((x) => x.brand_name.toLowerCase("ta").indexOf() > -1);
     console.log(result);
 
 
