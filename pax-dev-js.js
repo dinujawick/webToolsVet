@@ -704,7 +704,11 @@ function filterFunction() {
 
     $.each(result, function (index, item) {
         for (i = 0; i < a.length; i++) {
+
             txtValue = a[i].textContent || a[i].innerText;
+
+            console.log(txtValue.toLowerCase());
+            console.log(item.generic_name.toLowerCase());
 
             if (txtValue.toLowerCase() == item.generic_name.toLowerCase()) {
                 a[i].style.display = "";
