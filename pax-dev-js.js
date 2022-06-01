@@ -714,6 +714,7 @@ function filterFunction() {
         $.each(result, function (index, item) {
 
             if (txtValue.toLowerCase().indexOf(item.generic_name.toLowerCase()) > -1) {
+                console.log(a[i]);
                 a[i].style.display = "";
             } else {
                 a[i].style.display = "none";
