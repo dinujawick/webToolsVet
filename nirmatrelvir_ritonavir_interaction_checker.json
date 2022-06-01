@@ -42,7 +42,7 @@
   {
     "atc_level": "N05BA12",
     "lookback": "6 months",
-    "generic_name": "Alprazolam ",
+    "generic_name": "Alprazolam",
     "evaluation_alt": "Attention required",
     "action_alt": "Review dose",
     "effect_on_concentration_1": "<up>|alprazolam",
@@ -81,7 +81,7 @@
   },
   {
     "atc_level": "C10BX03",
-    "lookback": "3 months ",
+    "lookback": "3 months",
     "generic_name": "Amlodipine/Atorvastatin",
     "evaluation_alt": "Attention required",
     "action_alt": "Combination product, see clinical comment",
@@ -142,7 +142,7 @@
   {
     "atc_level": "C10AA05",
     "lookback": "3 months",
-    "generic_name": "Atorvastatin ",
+    "generic_name": "Atorvastatin",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|atorvastatin",
@@ -222,7 +222,7 @@
   {
     "atc_level": "N06AX12",
     "lookback": "3 months",
-    "generic_name": "Bupropion ",
+    "generic_name": "Bupropion",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<down>|bupropion and active metabolite hydroxy-bupropion",
@@ -242,7 +242,7 @@
   {
     "atc_level": "L01ED02",
     "lookback": "3 months",
-    "generic_name": "Ceritinib ",
+    "generic_name": "Ceritinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|ceritinib",
@@ -262,7 +262,7 @@
   {
     "atc_level": "J01FA09",
     "lookback": "3 months",
-    "generic_name": "Clarithromycin ",
+    "generic_name": "Clarithromycin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|clarithromycin",
@@ -272,7 +272,7 @@
   {
     "atc_level": "N03AE01",
     "lookback": "4 months",
-    "generic_name": "Clonazepam ",
+    "generic_name": "Clonazepam",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|clonazepam",
@@ -372,7 +372,7 @@
   {
     "atc_level": "H02AB02",
     "lookback": "3 months",
-    "generic_name": "Dexamethasone ",
+    "generic_name": "Dexamethasone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|dexamethasone",
@@ -392,7 +392,7 @@
   {
     "atc_level": "C01AA05",
     "lookback": "9 months",
-    "generic_name": "Digoxin ",
+    "generic_name": "Digoxin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
     "effect_on_concentration_1": "<up>|digoxin",
@@ -402,7 +402,7 @@
   {
     "atc_level": "C08DB01",
     "lookback": "3 months",
-    "generic_name": "Diltiazem ",
+    "generic_name": "Diltiazem",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|diltiazem",
@@ -652,7 +652,7 @@
   {
     "atc_level": "N03AX09",
     "lookback": "3 months",
-    "generic_name": "Lamotrigine ",
+    "generic_name": "Lamotrigine",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
     "effect_on_concentration_1": "<down>|lamotrigine",
@@ -702,7 +702,7 @@
   {
     "atc_level": "L01ED05",
     "lookback": "3 months",
-    "generic_name": "Lorlatinib ",
+    "generic_name": "Lorlatinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|lorlatinib",
@@ -752,7 +752,7 @@
   {
     "atc_level": "N05CD08",
     "lookback": "hospital only?",
-    "generic_name": "Midazolam (parenteral) ",
+    "generic_name": "Midazolam (parenteral)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|midazolam",
@@ -922,7 +922,7 @@
   {
     "atc_level": "N03AB02",
     "lookback": "6 months",
-    "generic_name": "Phenytoin ",
+    "generic_name": "Phenytoin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
@@ -972,7 +972,7 @@
   {
     "atc_level": "N05AH04",
     "lookback": "3 months",
-    "generic_name": "Quetiapine ",
+    "generic_name": "Quetiapine",
     "evaluation_alt": "Attention required",
     "action_alt": "Review dose",
     "effect_on_concentration_1": "<up>|quetiapine",
@@ -1002,7 +1002,7 @@
   {
     "atc_level": "J04AB04",
     "lookback": "3 months",
-    "generic_name": "Rifabutin ",
+    "generic_name": "Rifabutin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|rifabutin",
@@ -1012,7 +1012,7 @@
   {
     "atc_level": "J04AB02",
     "lookback": "3 months",
-    "generic_name": "Rifampicin ",
+    "generic_name": "Rifampicin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
@@ -1082,7 +1082,7 @@
   {
     "atc_level": "C10AA07",
     "lookback": "3 months",
-    "generic_name": "Rosuvastatin ",
+    "generic_name": "Rosuvastatin",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|rosuvastatin",
@@ -1102,7 +1102,7 @@
   {
     "atc_level": "R03AC12",
     "lookback": "3 months",
-    "generic_name": "Salmeterol ",
+    "generic_name": "Salmeterol",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|salmeterol",
@@ -1182,7 +1182,7 @@
   {
     "atc_level": "L01XJ02",
     "lookback": "3 months",
-    "generic_name": "Sonidegib ",
+    "generic_name": "Sonidegib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|sonidegib",
@@ -1192,7 +1192,7 @@
   {
     "atc_level": "98072Q",
     "lookback": "non-PBS",
-    "generic_name": "St John's Wort ",
+    "generic_name": "St John's Wort",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
@@ -1252,7 +1252,7 @@
   {
     "atc_level": "J05AE09",
     "lookback": "3 months",
-    "generic_name": "Tipranavir ",
+    "generic_name": "Tipranavir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|tipranavir",
@@ -1272,7 +1272,7 @@
   {
     "atc_level": "H02AB08",
     "lookback": "6 months",
-    "generic_name": "Triamcinolone (systemic) ",
+    "generic_name": "Triamcinolone (systemic)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|triamcinolone",
@@ -1332,7 +1332,7 @@
   {
     "atc_level": "B01AA03",
     "lookback": "3 months",
-    "generic_name": "Warfarin ",
+    "generic_name": "Warfarin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
     "effect_on_concentration_1": "<up><down>|warfarin",
@@ -1352,7 +1352,7 @@
   {
     "atc_level": "N05CF02",
     "lookback": "non-PBS",
-    "generic_name": "Zolpidem ",
+    "generic_name": "Zolpidem",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|zolpidem",
