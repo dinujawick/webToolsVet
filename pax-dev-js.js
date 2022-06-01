@@ -711,20 +711,23 @@ function filterFunction() {
         //    a[i].style.display = "none";
         //}
 
-        $.each(result, function (index, item) {
+        
 
             for (i = 0; i < a.length; i++) {
                 txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toLowerCase().indexOf(item.generic_name.toLowerCase()) > -1) {
-                    console.log(a[i]);
-                    a[i].style.display = "";
-                } else {
-                    a[i].style.display = "none";
-                } 
+                for (j = 0; j < result.length; j++) {
+                    if (txtValue.toLowerCase().indexOf(result[j].generic_name.toLowerCase()) > -1) {             
+                        a[i].style.display = "";
+                        console.log(a[i]);
+                    } else {
+                        a[i].style.display = "none";
+                    } 
+                }
+                
 
             }
 
-        });
+      
         
 
     
