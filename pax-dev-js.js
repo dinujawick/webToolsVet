@@ -711,6 +711,8 @@ function filterFunction() {
             console.log(item.generic_name.toLowerCase());
 
             if (txtValue.toLowerCase() == item.generic_name.toLowerCase()) {
+                console.log(txtValue.toLowerCase());
+                console.log(item.generic_name.toLowerCase());
                 a[i].style.display = "";
             }
             else {
