@@ -705,22 +705,23 @@ function filterFunction() {
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
         
-        //if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
-        //    a[i].style.display = "";
-        //} else {
-        //    a[i].style.display = "none";
-        //}
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
+            a[i].style.display = "";
+            console.log(a[i]);
+        } else {
+            a[i].style.display = "none";
+        }
 
-        $.each(result, function (index, item) {
+        //$.each(result, function (index, item) {
 
-            if (txtValue.toLowerCase().indexOf(item.generic_name.toLowerCase()) > -1) {
-                console.log(a[i]);
-                a[i].style.display = "";
-            } else {
-                a[i].style.display = "none";
-            }
+        //    if (txtValue.toLowerCase().indexOf(item.generic_name.toLowerCase()) > -1) {
+        //        console.log(a[i]);
+        //        a[i].style.display = "";
+        //    } else {
+        //        a[i].style.display = "none";
+        //    }
 
-        });
+        //});
         
 
     }
