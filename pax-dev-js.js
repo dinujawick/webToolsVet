@@ -702,17 +702,27 @@ function filterFunction() {
     console.log(result);
 
 
-   
-    for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
-            a[i].style.display = "";
-            console.log(a[i]);
-        } else {
-            a[i].style.display = "none";
-        }
+    $.each(result, function (index, item) {
+        for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
 
-    } 
+            if (txtValue.toLowerCase() == item.generic_name.toLowerCase()) {
+                a[i].style.display = "";
+            }
+            else {
+                a[i].style.display = "none";
+            }
+
+            //if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
+            //    a[i].style.display = "";
+
+            //} else {
+                //    a[i].style.display = "none";
+            //}
+
+        }
+    });
+     
                 
                 
 
