@@ -717,14 +717,13 @@ function filterFunction() {
                 addedAnchor.push(txtValue.toLowerCase());
             }
             else {
-                if (result.length > 1) {
-
-                    for (ind = 0; ind < addedAnchor.length; ind++) {
-                        if (txtValue.toLowerCase() != addedAnchor[ind]) {
-                            a[i].style.display = "none";
-                        }
-                    }
-                }
+                //if (result.length > 1) {
+                //    for (ind = 0; ind < addedAnchor.length; ind++) {
+                //        if (txtValue.toLowerCase() != addedAnchor[ind]) {
+                //            a[i].style.display = "none";
+                //        }
+                //    }
+                //}
                 
             }
 
