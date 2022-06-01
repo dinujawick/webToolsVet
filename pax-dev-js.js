@@ -703,10 +703,11 @@ function filterFunction() {
 
 
     for (j = 0; j < result.length; j++) {
+        console.log(result[j].generic_name.toLowerCase());
         for (i = 0; i < a.length; i++) {
 
             txtValue = a[i].textContent || a[i].innerText;
-            console.log(result[j].generic_name.toLowerCase());
+            
 
             if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
                 a[i].style.display = "";
