@@ -680,10 +680,14 @@ function toggleSearchList() {
 //Functon to filter the search dropdown according to input text
 function filterFunction() {
 
+
    
     if (!$('#searchList').hasClass("show")) {
         toggleSearchList();
     }
+
+
+   
 
     var input, filter, a, i;
 
@@ -698,7 +702,7 @@ function filterFunction() {
 
 
     console.log(input.value);
-    var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value) > -1);
+    var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value.toLowerCase()) > -1);
     console.log(result);
 
     var addedAnchor = new Array();
@@ -710,9 +714,8 @@ function filterFunction() {
 
             txtValue = a[i].textContent || a[i].innerText;
             
-
             if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
-                a[i].style.display = "";
+               /* a[i].style.display = "";*/
                 console.log(result[j].generic_name.toLowerCase());
                 addedAnchor.push(txtValue.toLowerCase());
             }
@@ -727,15 +730,19 @@ function filterFunction() {
                 
             }
 
-            //if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
-            //    a[i].style.display = "";
-
-            //} else {
-            //    a[i].style.display = "none";
-            //}
+           
 
         }
         console.log('finish' + j);
+    }
+
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
     }
      
                 
