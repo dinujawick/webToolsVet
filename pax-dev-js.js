@@ -707,10 +707,10 @@ function filterFunction() {
 
             txtValue = a[i].textContent || a[i].innerText;
 
-            if (txtValue.toLowerCase() == item.generic_name.toLowerCase()) {
+            if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
                 a[i].style.display = "";
                 console.log(txtValue.toLowerCase());
-                console.log(item.generic_name.toLowerCase());
+                console.log(result[j].generic_name.toLowerCase());
                 console.log(a[i]);
             }
             else {
