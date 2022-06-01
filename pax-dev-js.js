@@ -707,9 +707,6 @@ function filterFunction() {
 
             txtValue = a[i].textContent || a[i].innerText;
 
-            console.log(txtValue.toLowerCase());
-            console.log(item.generic_name.toLowerCase());
-
             if (txtValue.toLowerCase() == item.generic_name.toLowerCase()) {
                 console.log(txtValue.toLowerCase());
                 console.log(item.generic_name.toLowerCase());
