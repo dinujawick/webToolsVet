@@ -703,36 +703,22 @@ function filterFunction() {
 
 
    
-        
-        //if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
-        //    a[i].style.display = "";
-        //    console.log(a[i]);
-        //} else {
-        //    a[i].style.display = "none";
-        //}
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
+            a[i].style.display = "";
+            console.log(a[i]);
+        } else {
+            a[i].style.display = "none";
+        }
 
-        
-
-            for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                for (j = 0; j < result.length; j++) {
-                    if (txtValue.toLowerCase().indexOf(result[j].generic_name.toLowerCase()) > -1) {             
-                        a[i].style.display = "";
-                        console.log(a[i]);
-                    } else {
-                        a[i].style.display = "none";
-                    } 
-                }
+    } 
+                
                 
 
-            }
+ }
 
-      
-        
-
-    
-
-}
+   
 
 //Fucntion to convert normal lover case into capitelize each word.
 //@str : the string need to convert
