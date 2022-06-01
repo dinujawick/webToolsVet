@@ -720,7 +720,7 @@ function filterFunction() {
                 if (result.length > 1) {
 
                     for (ind = 0; ind < addedAnchor.length; ind++) {
-                        if (txtValue.toLowerCase != addedAnchor[ind]) {
+                        if (txtValue.toLowerCase() != addedAnchor[ind]) {
                             a[i].style.display = "none";
                         }
                     }
