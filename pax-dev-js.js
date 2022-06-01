@@ -701,6 +701,8 @@ function filterFunction() {
     var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value) > -1);
     console.log(result);
 
+    var addedAnchor = new Array();
+    
 
     for (j = 0; j < result.length; j++) {
         console.log(result[j].generic_name.toLowerCase());
@@ -711,12 +713,18 @@ function filterFunction() {
 
             if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
                 a[i].style.display = "";
-                console.log(txtValue.toLowerCase());
-                console.log(result[j].generic_name.toLowerCase());
-                console.log(a[i]);
+                addedAnchor.push(txtValue.toLowerCase());
             }
             else {
-                a[i].style.display = "none";
+                if (result.length > 1) {
+
+                    for (ind = 0; ind < addedAnchor.length; ind++) {
+                        if (txtValue.toLowerCase != addedAnchor[ind]) {
+                            a[i].style.display = "none";
+                        }
+                    }
+                }
+                
             }
 
             //if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
