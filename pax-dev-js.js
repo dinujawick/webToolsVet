@@ -697,7 +697,7 @@ function filterFunction() {
     div = document.getElementById("searchList");
     a = div.getElementsByTagName("a");
 
-    jsonData = [
+    array = [
         {
             "atc_level": "L01EC02",
             "brand_name": "Tafinlar",
@@ -1976,7 +1976,7 @@ function filterFunction() {
     ];
 
 
-    array = JSON.parse(jsonData);
+    /*array = JSON.parse(jsonData);*/
     var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value.toLowerCase()) > -1);
 
     if (result.length == 0) {
