@@ -403,12 +403,13 @@ function createCard(selectedMedObject) {
 
                     $('#mainDeck').children().eq(previousCardIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                     previousCardIndex = currnetCardIndex;
+                    
 
                 }
 
             }
         }
-        
+        previousCardEvaluation = selectedMedObject.evaluation_alt.toLowerCase();
         console.log(currentMed.col.index());
 
         $('#' + currentMed.headerID).append(
