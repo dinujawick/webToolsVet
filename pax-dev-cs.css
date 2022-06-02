@@ -57,7 +57,7 @@
     background-color: #f6f6f6;
     border: none;
     z-index: 1;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
     /* Links inside the dropdown */
