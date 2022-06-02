@@ -715,18 +715,18 @@ function filterFunction() {
             txtValue = a[i].textContent || a[i].innerText;
             
             if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
-               /* a[i].style.display = "";*/
+                a[i].style.display = "";
                 console.log(result[j].generic_name.toLowerCase());
                 addedAnchor.push(txtValue.toLowerCase());
             }
             else {
-                //if (result.length > 1) {
-                //    for (ind = 0; ind < addedAnchor.length; ind++) {
-                //        if (txtValue.toLowerCase() != addedAnchor[ind]) {
-                //            a[i].style.display = "none";
-                //        }
-                //    }
-                //}
+                if (result.length > 1) {
+                    for (ind = 0; ind < addedAnchor.length; ind++) {
+                        if (txtValue.toLowerCase() != addedAnchor[ind]) {
+                            a[i].style.display = "none";
+                        }
+                    }
+                }
                 
             }
 
@@ -736,14 +736,14 @@ function filterFunction() {
         console.log('finish' + j);
     }
 
-    for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
+    //for (i = 0; i < a.length; i++) {
+    //    txtValue = a[i].textContent || a[i].innerText;
+    //    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //        a[i].style.display = "";
+    //    } else {
+    //        a[i].style.display = "none";
+    //    }
+    //}
      
                 
                 
