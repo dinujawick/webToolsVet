@@ -680,8 +680,6 @@ function toggleSearchList() {
 //Functon to filter the search dropdown according to input text
 function filterFunction() {
 
-
-   
     if (!$('#searchList').hasClass("show")) {
         toggleSearchList();
     }
@@ -695,16 +693,9 @@ function filterFunction() {
 
     jsonData = '[{ "atc_level": "L01EC02", "brand_name": "Tafinlar","generic_name":"Dabrafenib"},{ "atc_level": "N05BA12", "brand_name": "Kalma","generic_name":"Alprazolam"},{ "atc_level": "N05BA12", "brand_name": "Alprax", "generic_name": "Alprazolam" },{ "atc_level": "J04AB04", "brand_name": "Mycobutin", "generic_name": "Rifabutin" }]';
     array = JSON.parse(jsonData);
-
-
-
-    console.log(input.value);
     var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value.toLowerCase()) > -1);
-    console.log(result);
 
-    var addedAnchor = new Array();
     
-
     for (j = 0; j < result.length; j++) {
         
         for (i = 0; i < a.length; i++) {
@@ -717,7 +708,6 @@ function filterFunction() {
             }
             else if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
                 a[i].style.display = "";
-                addedAnchor.push(txtValue.toLowerCase());
             }
             else {
                 a[i].style.display = "none";
