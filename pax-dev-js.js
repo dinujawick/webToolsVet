@@ -711,12 +711,15 @@ function filterFunction() {
 
             txtValue = a[i].textContent || a[i].innerText;
             
-            if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase() || txtValue.toUpperCase().indexOf(filter) > -1) {
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+                
+            }
+            else if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
                 a[i].style.display = "";
                 addedAnchor.push(txtValue.toLowerCase());
             }
             else {
-                
                 a[i].style.display = "none";
             }
 
