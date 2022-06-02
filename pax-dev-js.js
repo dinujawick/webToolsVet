@@ -686,9 +686,6 @@ function filterFunction() {
         toggleSearchList();
     }
 
-
-   
-
     var input, filter, a, i;
 
     input = document.getElementById("searchTxt");
@@ -714,26 +711,16 @@ function filterFunction() {
 
             txtValue = a[i].textContent || a[i].innerText;
             
-            if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase()) {
+            if (txtValue.toLowerCase() == result[j].generic_name.toLowerCase() || txtValue.toUpperCase().indexOf(filter) > -1) {
                 a[i].style.display = "";
-                console.log(result[j].generic_name.toLowerCase());
                 addedAnchor.push(txtValue.toLowerCase());
             }
             else {
-                if (result.length > 1) {
-                    for (ind = 0; ind < addedAnchor.length; ind++) {
-                        if (txtValue.toLowerCase() != addedAnchor[ind]) {
-                            a[i].style.display = "none";
-                        }
-                    }
-                }
                 
+                a[i].style.display = "none";
             }
 
-           
-
         }
-        console.log('finish' + j);
     }
 
     //for (i = 0; i < a.length; i++) {
