@@ -13,6 +13,10 @@ var currnetCardIndex = 0;
 //Variable to store previous card div index
 var previousCardIndex = 0;
 
+//Variable to store previous card  evaluation
+var previousCardEvaluation = "";
+
+
 
 $('#btnReset').on('click', function (event) {
 
@@ -389,6 +393,22 @@ function createCard(selectedMedObject) {
 
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
+        currnetCardIndex = currentMed.col.index();
+
+        if (previousCardEvaluation != selectedMedObject.evaluation_alt.toLowerCase()) {
+
+            if (previousCardIndex > 0) {
+
+                if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
+
+                    $('#mainDeck').children().eq(previousCardIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                    previousCardIndex = currnetCardIndex;
+
+                }
+
+            }
+        }
+        
         console.log(currentMed.col.index());
 
         $('#' + currentMed.headerID).append(
@@ -485,7 +505,6 @@ function addMed(selectedMedObject) {
     
     //Create card using med
     createCard(selectedMedObject);
-    console.log($('#mainDeck').children());
 
     //initialize all tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
