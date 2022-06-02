@@ -39,8 +39,6 @@ $(document).ready(function () {
     //}));
 
 
-
-
     //QueryString standard : ?paramName=value1,value2,value3
     var queryStringValues = null;
 
@@ -68,8 +66,6 @@ $(document).ready(function () {
                     }
                 }
             }
-
-
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
                 $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).addClass('wordbr').appendTo('#searchList');
@@ -550,8 +546,10 @@ function createGridRow(selectedMedObject) {
 //@selectedMedObject : selected med object from the search dropdown
 function addMed(selectedMedObject) {
 
+    
     //Create card using med
     createCard(selectedMedObject);
+    console.log($('mainDeck').children());
 
     //initialize all tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -691,7 +689,13 @@ function filterFunction() {
     div = document.getElementById("searchList");
     a = div.getElementsByTagName("a");
 
-    jsonData = '[{ "atc_level": "L01EC02", "brand_name": "Tafinlar","generic_name":"Dabrafenib"},{ "atc_level": "N05BA12", "brand_name": "Kalma","generic_name":"Alprazolam"},{ "atc_level": "N05BA12", "brand_name": "Alprax", "generic_name": "Alprazolam" },{ "atc_level": "J04AB04", "brand_name": "Mycobutin", "generic_name": "Rifabutin" }]';
+    jsonData = '[' +
+        '{ "atc_level": "L01EC02", "brand_name": "Tafinlar","generic_name":"Dabrafenib"},' +
+        '{ "atc_level": "N05BA12", "brand_name": "Kalma", "generic_name": "Alprazolam" },' +
+        '{ "atc_level": "N05BA12", "brand_name": "Alprax", "generic_name": "Alprazolam" },' +
+        '{ "atc_level": "J04AB04", "brand_name": "Mycobutin", "generic_name": "Rifabutin" }]';
+
+
     array = JSON.parse(jsonData);
     var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value.toLowerCase()) > -1);
 
@@ -733,8 +737,6 @@ function filterFunction() {
 
  }
 
-   
-
 //Fucntion to convert normal lover case into capitelize each word.
 //@str : the string need to convert
 function toTitleCase(str) {
@@ -742,3 +744,11 @@ function toTitleCase(str) {
         return match.toUpperCase();
     });
 }
+
+//Fucntion to sort card according to priority
+function sortCards() {
+    /*jQuery($(itemlist).children().eq(selected - 1)).before(jQuery($(itemlist).children().eq(selected)));*/
+
+    
+}
+
