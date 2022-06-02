@@ -187,7 +187,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|betamethasone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant."
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "J05AR20",
@@ -217,7 +217,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|budesonide",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant."
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N06AX12",
@@ -377,7 +377,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|dexamethasone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant."
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N05BA01",
@@ -747,7 +747,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|methylprednisolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant."
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N05CD08",
@@ -947,7 +947,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|prednisolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.   Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant."
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.   Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "H02AB07",
@@ -957,7 +957,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|prednisone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant."
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N03AA03",
@@ -1277,7 +1277,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|triamcinolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes 'Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant. "
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "G04BE09",
