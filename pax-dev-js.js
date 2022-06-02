@@ -39,6 +39,11 @@ $('#btnPrint').on('click', function (event) {
 //Page On Load Function
 $(document).ready(function () {
 
+    //initialize all tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
     
     //console.log($.grep([{ "name": "Lenovo Thinkpad 41A4298", "website": "google" }, { "name": "Lenovo Thinkpad 41A2222", "website": "google" }], function (n, i) {
     //    return n.filter(item => item.website.toLowerCase().indexOf("go") > -1);
@@ -486,7 +491,7 @@ function addMed(selectedMedObject) {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+    });
 
     //Create table row 
     //createGridRow(selectedMedObject);
