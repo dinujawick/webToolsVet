@@ -216,10 +216,11 @@
     margin-top: 3rem;
 }
 
+.wordbr {
+    word-break: break-all;
+}
 /* Icarus addition */
-
 @media only screen and (max-width: 800px) {
-
     .col-3 {
         flex: 0 0 auto;
         width: 100%;

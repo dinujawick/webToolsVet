@@ -213,6 +213,10 @@
 .margin-top-3rem{
     margin-top:3rem;
 }
+.wordbr {
+    word-break: break-all;
+}
+
 
 /* Icarus addition */
 
