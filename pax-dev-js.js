@@ -549,7 +549,7 @@ function addMed(selectedMedObject) {
     
     //Create card using med
     createCard(selectedMedObject);
-    console.log($('mainDeck').children());
+    console.log($('#mainDeck').children());
 
     //initialize all tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
