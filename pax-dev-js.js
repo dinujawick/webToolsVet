@@ -695,7 +695,17 @@ function filterFunction() {
     array = JSON.parse(jsonData);
     var result = array.filter((x) => x.brand_name.toLowerCase().indexOf(input.value.toLowerCase()) > -1);
 
-    
+    if (result.length == 0) {
+        for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+        }
+    }
+
     for (j = 0; j < result.length; j++) {
         
         for (i = 0; i < a.length; i++) {
@@ -716,14 +726,7 @@ function filterFunction() {
         }
     }
 
-    //for (i = 0; i < a.length; i++) {
-    //    txtValue = a[i].textContent || a[i].innerText;
-    //    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //        a[i].style.display = "";
-    //    } else {
-    //        a[i].style.display = "none";
-    //    }
-    //}
+    
      
                 
                 
