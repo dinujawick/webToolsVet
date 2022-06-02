@@ -7,6 +7,12 @@ var selectedMedList = new Array();
 //Array to store selected medOjects
 var selectedMedObjList = new Array();
 
+//Variable to store current card div index
+var currnetCardIndex = 0;
+
+//Variable to store previous card div index
+var previousCardIndex = 0;
+
 
 $('#btnReset').on('click', function (event) {
 
@@ -366,7 +372,7 @@ function createCardLayout(atcLevel) {
     ).appendTo($card);
     $('<div>').attr('id', atcLevel + 'cardFoot').addClass('card-footer').attr('style', 'text-align:right;').appendTo($card);
 
-    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atcLevel + 'vstackContra', 'vstackActionID': atcLevel + 'vstackEffect', 'comments': atcLevel + 'commentsLayer' }
+    return { 'colID': atcLevel + 'cardCol', 'cardID': atcLevel + 'card', 'headerID': atcLevel + 'cardHead', 'bodyID': atcLevel + 'cardBody', 'footerID': atcLevel + 'cardFoot', 'vstackIntID': atcLevel + 'vstackContra', 'vstackActionID': atcLevel + 'vstackEffect', 'comments': atcLevel + 'commentsLayer', 'col': $col }
 
 }
 
@@ -377,6 +383,8 @@ function createCard(selectedMedObject) {
     if (checkDuplicatesOnCard(selectedMedObject.atc_level)) {
 
         var currentMed = createCardLayout(selectedMedObject.atc_level);
+
+        console.log(currentMed.col.index());
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
@@ -749,6 +757,5 @@ function toTitleCase(str) {
 function sortCards() {
     /*jQuery($(itemlist).children().eq(selected - 1)).before(jQuery($(itemlist).children().eq(selected)));*/
 
-    
 }
 
