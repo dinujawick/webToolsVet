@@ -397,7 +397,7 @@ function createCard(selectedMedObject) {
 
         if (previousCardEvaluation != selectedMedObject.evaluation_alt.toLowerCase()) {
 
-            if (previousCardIndex > 0) {
+            if (currnetCardIndex > 0) {
 
                 if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
 
