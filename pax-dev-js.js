@@ -10,8 +10,16 @@ var selectedMedObjList = new Array();
 //Variable to store current card div index
 var currnetCardIndex = 0;
 
-//Variable to store card div count
-var addedCardCount = 0;
+//Array to store CI cards indexs
+var listCICardIndexes = new Array();
+
+//Array to store AR cards indexs
+var listARCardIndexes = new Array();
+
+//Array to store FU cards indexs
+var listFUCardIndexes = new Array();
+
+
 
 
 
@@ -397,9 +405,17 @@ function createCard(selectedMedObject) {
 
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
 
-                console.log(currentMed.col.index());   
+                console.log(currentMed.col.index());
                 $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
-                console.log(currentMed.col.index());                                        
+                console.log(currentMed.col.index());
+                listCICardIndexes.push(currentMed.col.index());
+            }
+            else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+                
+                console.log(listCICardIndexes.sort(function (a, b) { return a - b }));
+            }
+            else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
+
             }
             
         }
