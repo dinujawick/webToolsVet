@@ -421,7 +421,8 @@ function createCard(selectedMedObject) {
                     }
                 }
 
-            } else {
+            }
+            else {
 
                 var firstIndex = 0;
 
@@ -430,7 +431,8 @@ function createCard(selectedMedObject) {
                     for (i = 0; i < listARCardIndexes.length; i++) {
                         listARCardIndexes[i]++; 
                     }
-                }else if (listFUCardIndexes.length != 0) {
+                }
+                else if (listFUCardIndexes.length != 0) {
                     firstIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
                     for (i = 0; i < listFUCardIndexes.length; i++) {
                         listFUCardIndexes[i]++;
@@ -441,7 +443,8 @@ function createCard(selectedMedObject) {
                 listCICardIndexes.push(currentMed.col.index());
             }
             
-        } else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+        }
+        else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
 
             if (listARCardIndexes.length != 0) {
 
@@ -455,7 +458,8 @@ function createCard(selectedMedObject) {
                     }
                 }
 
-            } else {
+            } 
+            else {
 
                 var lastIndex = 0;
 
@@ -475,7 +479,8 @@ function createCard(selectedMedObject) {
                 listARCardIndexes.push(currentMed.col.index());
             }    
             
-        }else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
+        }
+        else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
 
             if (listFUCardIndexes.length != 0) {
 
@@ -483,7 +488,8 @@ function createCard(selectedMedObject) {
                 $('#mainDeck').children().eq(lastIndexOfFUList).after($('#mainDeck').children().eq(currnetCardIndex));
                 listFUCardIndexes.push(currentMed.col.index());
 
-            } else {
+            }
+            else {
 
                 var lastIndex = 0;
 
@@ -498,7 +504,10 @@ function createCard(selectedMedObject) {
                 listFUCardIndexes.push(currentMed.col.index());
             }
         }
-          
+
+        console.log(listCICardIndexes);
+        console.log(listARCardIndexes);
+        console.log(listFUCardIndexes);
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
