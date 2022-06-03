@@ -436,11 +436,11 @@ function createCard(selectedMedObject) {
                     lastIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length - 1];
                     $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
                 } else if (listFUCardIndexes.length != 0) {
-                    firstIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
+                    lastIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
                     $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 }
 
-               
+                $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 listARCardIndexes.push(currentMed.col.index());
             }    
             
@@ -460,6 +460,7 @@ function createCard(selectedMedObject) {
                 } else if (listARCardIndexes.length != 0) {
                     lastIndex = listARCardIndexes.sort(function (a, b) { return a - b })[listARCardIndexes.length - 1];
                 }
+
                 $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 listFUCardIndexes.push(currentMed.col.index());
             }
