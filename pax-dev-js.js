@@ -20,10 +20,6 @@ var listARCardIndexes = new Array();
 var listFUCardIndexes = new Array();
 
 
-
-
-
-
 $('#btnReset').on('click', function (event) {
 
     //Remove array allocation
@@ -585,7 +581,7 @@ function createCard(selectedMedObject) {
                 selectedMedObjList.splice(index, 1);
             }
 
-            //Remove the table row
+            //Remove the card
             $('#' + currentMed.colID).remove();
 
         });
