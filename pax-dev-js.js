@@ -402,10 +402,17 @@ function createCard(selectedMedObject) {
         currnetCardIndex = currentMed.col.index();
 
         if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
-            console.log(currentMed.col.index());
-            $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
-            console.log(currentMed.col.index());
-            listCICardIndexes.push(currentMed.col.index());
+            if (listCICardIndexes != undefined) {
+                //Get last index of CI card indexes list
+                var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b }).pop();
+                console.log(lastIndex);
+                $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
+            } else {
+                $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
+                console.log(currentMed.col.index());
+                listCICardIndexes.push(currentMed.col.index());
+            }
+            
         }
         else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
                 
