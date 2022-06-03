@@ -400,25 +400,21 @@ function createCard(selectedMedObject) {
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
         currnetCardIndex = currentMed.col.index();
-        
-        if (currnetCardIndex > 0) {
 
-            if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
-
-                console.log(currentMed.col.index());
-                $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
-                console.log(currentMed.col.index());
-                listCICardIndexes.push(currentMed.col.index());
-            }
-            else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
-                
-                console.log(listCICardIndexes.sort(function (a, b) { return a - b }));
-            }
-            else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
-
-            }
-            
+        if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
+            console.log(currentMed.col.index());
+            $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
+            console.log(currentMed.col.index());
+            listCICardIndexes.push(currentMed.col.index());
         }
+        else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+                
+            console.log(listCICardIndexes.sort(function (a, b) { return a - b }));
+        }
+        else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
+
+        }
+          
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
