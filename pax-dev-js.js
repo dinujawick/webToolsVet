@@ -403,10 +403,14 @@ function createCard(selectedMedObject) {
 
         if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
             if (listCICardIndexes.length != 0) {
+
+
                 //Get last index of CI card indexes list
                 var lastIndexOfCI = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length-1];
                 $('#mainDeck').children().eq(lastIndexOfCI).after($('#mainDeck').children().eq(currnetCardIndex));
                 listCICardIndexes.push(currentMed.col.index());
+
+
             } else {
 
                 var firstIndex = 0;
@@ -421,7 +425,8 @@ function createCard(selectedMedObject) {
                 listCICardIndexes.push(currentMed.col.index());
             }
             
-        }else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+        } else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+
             if (listARCardIndexes.length != 0) {
 
                 var lastIndexOfARList = listARCardIndexes.sort(function (a, b) { return a - b })[listARCardIndexes.length - 1];
@@ -438,9 +443,10 @@ function createCard(selectedMedObject) {
                 } else if (listFUCardIndexes.length != 0) {
                     lastIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
                     $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                } else {
+                    $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 }
 
-                $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 listARCardIndexes.push(currentMed.col.index());
             }    
             
@@ -455,11 +461,13 @@ function createCard(selectedMedObject) {
             } else {
 
                 var lastIndex = 0;
-                if (listCICardIndexes.length != 0) {
-                    lasIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length - 1];
-                } else if (listARCardIndexes.length != 0) {
+
+                if (listARCardIndexes.length != 0) {
                     lastIndex = listARCardIndexes.sort(function (a, b) { return a - b })[listARCardIndexes.length - 1];
                 }
+                else if (listCICardIndexes.length != 0) {
+                    lasIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length - 1];
+                } 
 
                 $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 listFUCardIndexes.push(currentMed.col.index());
