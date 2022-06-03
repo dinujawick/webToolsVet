@@ -10,8 +10,8 @@ var selectedMedObjList = new Array();
 //Variable to store current card div index
 var currnetCardIndex = 0;
 
-//Variable to store previous card div index
-var previousCardIndex = 0;
+//Variable to store card div count
+var addedCardCount = 0;
 
 
 
@@ -398,13 +398,13 @@ function createCard(selectedMedObject) {
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
 
 
-                $('#mainDeck').children().eq(currnetCardIndex).before($('#mainDeck').children().eq(previousCardIndex-1));
+                $('#mainDeck').children().eq(currnetCardIndex).before($('#mainDeck').children().eq(addedCardCount -1));
                                      
             }
             
 
         }
-        previousCardIndex = currnetCardIndex;
+        addedCardCount = addedCardCount + 1;
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
