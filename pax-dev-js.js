@@ -17,6 +17,16 @@ var previousCardIndex = 0;
 var previousCardEvaluation = "";
 
 
+//Array to store CI cards indexes
+var cICardIndexesList = new Array();
+
+//Array to store AR cards indexes
+var aRCardIndexesList = new Array();
+
+//Array to sotre FU card indexes
+var fUCardIndexesList = new Array();
+
+
 
 $('#btnReset').on('click', function (event) {
 
@@ -394,23 +404,21 @@ function createCard(selectedMedObject) {
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
         currnetCardIndex = currentMed.col.index();
+        console.log(currnetCardIndex);
+        if (currnetCardIndex > 0) {
 
-        if (previousCardEvaluation != selectedMedObject.evaluation_alt.toLowerCase()) {
-
-            if (currnetCardIndex > 0) {
-
-                if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
-
-                    $('#mainDeck').children().eq(previousCardIndex).before($('#mainDeck').children().eq(currnetCardIndex));
-                    previousCardIndex = currnetCardIndex;
-                    
-
-                }
-
+            if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
+                console.log(currnetCardIndex);
+                $('#mainDeck').children().eq(previousCardIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                console.log(currentMed.col.index());
+                cICardIndexesList.push(previousCardIndex);
+                previousCardIndex = currnetCardIndex;
+                previousCardEvaluation = selectedMedObject.evaluation_alt.toLowerCase();
+                
             }
+
         }
-        previousCardEvaluation = selectedMedObject.evaluation_alt.toLowerCase();
-        console.log(currentMed.col.index());
+      
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
