@@ -10,15 +10,8 @@ var selectedMedObjList = new Array();
 //Variable to store current card div index
 var currnetCardIndex = 0;
 
-//Variable to store previous card div index
-var previousCardIndex = 0;
-
-//Variable to store previous card  evaluation
-var previousCardEvaluation = "";
-
-
 //Array to store CI cards indexes
-var cICardIndexesList = new Array();
+var previouscICardIndexesList = 0;
 
 //Array to store AR cards indexes
 var aRCardIndexesList = new Array();
@@ -404,15 +397,13 @@ function createCard(selectedMedObject) {
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
         currnetCardIndex = currentMed.col.index();
-        console.log(currnetCardIndex);
+        
         if (currnetCardIndex > 0) {
 
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
-                console.log(currnetCardIndex);
-                $('#mainDeck').children().eq(previousCardIndex).before($('#mainDeck').children().eq(currnetCardIndex));
-                console.log(currentMed.col.index());
+                $('#mainDeck').children().eq(currnetCardIndex).before($('#mainDeck').children().eq(previouscICardIndexesList));
                 cICardIndexesList.push(previousCardIndex);
-                previousCardIndex = currnetCardIndex;
+                previouscICardIndexesList = currnetCardIndex;
                 previousCardEvaluation = selectedMedObject.evaluation_alt.toLowerCase();
                 
             }
