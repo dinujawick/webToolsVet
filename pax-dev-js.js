@@ -404,23 +404,65 @@ function createCard(selectedMedObject) {
         if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
             if (listCICardIndexes.length != 0) {
                 //Get last index of CI card indexes list
-                var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length-1];
-                $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
+                var lastIndexOfCI = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length-1];
+                $('#mainDeck').children().eq(lastIndexOfCI).after($('#mainDeck').children().eq(currnetCardIndex));
                 listCICardIndexes.push(currentMed.col.index());
-                console.log(listCICardIndexes);
             } else {
-                $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
-                console.log(currentMed.col.index());
+
+                var firstIndex = 0;
+
+                if (listARCardIndexes.length != 0) {
+                    firstIndex = listARCardIndexes.sort(function (a, b) { return a - b })[0];
+                }else if (listFUCardIndexes.length != 0) {
+                    firstIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
+                }
+
+                $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 listCICardIndexes.push(currentMed.col.index());
             }
             
-        }
-        else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
-                
-            console.log(listCICardIndexes);
-        }
-        else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
+        }else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+            if (listARCardIndexes.length != 0) {
 
+                var lastIndexOfARList = listARCardIndexes.sort(function (a, b) { return a - b })[listARCardIndexes.length - 1];
+                $('#mainDeck').children().eq(lastIndexOfARList).after($('#mainDeck').children().eq(currnetCardIndex));
+                listARCardIndexes.push(currentMed.col.index());
+
+            } else {
+
+                var lastIndex = 0;
+
+                if (listCICardIndexes.length != 0) {
+                    lastIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length - 1];
+                    $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
+                } else if (listFUCardIndexes.length != 0) {
+                    firstIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
+                    $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                }
+
+               
+                listARCardIndexes.push(currentMed.col.index());
+            }    
+            
+        }else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
+
+            if (listFUCardIndexes.length != 0) {
+
+                var lastIndexOfFUList = listFUCardIndexes.sort(function (a, b) { return a - b })[listFUCardIndexes.length - 1];
+                $('#mainDeck').children().eq(lastIndexOfFUList).after($('#mainDeck').children().eq(currnetCardIndex));
+                listFUCardIndexes.push(currentMed.col.index());
+
+            } else {
+
+                var lastIndex = 0;
+                if (listCICardIndexes.length != 0) {
+                    lasIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length - 1];
+                } else if (listARCardIndexes.length != 0) {
+                    lastIndex = listARCardIndexes.sort(function (a, b) { return a - b })[listARCardIndexes.length - 1];
+                }
+                $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                listFUCardIndexes.push(currentMed.col.index());
+            }
         }
           
 
