@@ -405,9 +405,9 @@ function createCard(selectedMedObject) {
             if (listCICardIndexes.length != 0) {
                 //Get last index of CI card indexes list
                 var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b }).pop();
-                console.log(lastIndex);
                 $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
                 listCICardIndexes.push(currentMed.col.index());
+                console.log(listCICardIndexes);
             } else {
                 $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
                 console.log(currentMed.col.index());
@@ -417,7 +417,7 @@ function createCard(selectedMedObject) {
         }
         else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
                 
-            console.log(listCICardIndexes.sort(function (a, b) { return a - b }));
+            console.log(listCICardIndexes);
         }
         else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
 
