@@ -505,9 +505,9 @@ function createCard(selectedMedObject) {
             }
         }
 
-        console.log(listCICardIndexes);
-        console.log(listARCardIndexes);
-        console.log(listFUCardIndexes);
+        console.log('CI'+listCICardIndexes);
+        console.log('AR'+listARCardIndexes);
+        console.log('FU'+listFUCardIndexes);
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
