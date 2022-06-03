@@ -417,8 +417,14 @@ function createCard(selectedMedObject) {
 
                 if (listARCardIndexes.length != 0) {
                     firstIndex = listARCardIndexes.sort(function (a, b) { return a - b })[0];
+                    for (i = 0; i < listARCardIndexes.length; i++) {
+                        listARCardIndexes[i]++; 
+                    }
                 }else if (listFUCardIndexes.length != 0) {
                     firstIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
+                    for (i = 0; i < listFUCardIndexes.length; i++) {
+                        listFUCardIndexes[i]++;
+                    }
                 }
 
                 $('#mainDeck').children().eq(firstIndex).before($('#mainDeck').children().eq(currnetCardIndex));
@@ -443,6 +449,9 @@ function createCard(selectedMedObject) {
                 } else if (listFUCardIndexes.length != 0) {
                     lastIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
                     $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                    for (i = 0; i < listFUCardIndexes.length; i++) {
+                        listFUCardIndexes[i]++;
+                    }
                 } else {
                     $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 }
@@ -469,7 +478,7 @@ function createCard(selectedMedObject) {
                     lasIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length - 1];
                 } 
 
-                $('#mainDeck').children().eq(lastIndex).before($('#mainDeck').children().eq(currnetCardIndex));
+                $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
                 listFUCardIndexes.push(currentMed.col.index());
             }
         }
