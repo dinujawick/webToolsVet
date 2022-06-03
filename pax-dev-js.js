@@ -402,7 +402,7 @@ function createCard(selectedMedObject) {
         currnetCardIndex = currentMed.col.index();
 
         if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
-            if (listCICardIndexes != undefined) {
+            if (listCICardIndexes != null) {
                 //Get last index of CI card indexes list
                 var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b }).pop();
                 console.log(lastIndex);
