@@ -407,6 +407,7 @@ function createCard(selectedMedObject) {
                 var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b }).pop();
                 console.log(lastIndex);
                 $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
+                listCICardIndexes.push(currentMed.col.index());
             } else {
                 $('#mainDeck').children().eq(0).before($('#mainDeck').children().eq(currnetCardIndex));
                 console.log(currentMed.col.index());
