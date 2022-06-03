@@ -401,10 +401,10 @@ function createCard(selectedMedObject) {
                 $('#mainDeck').children().eq(currnetCardIndex).before($('#mainDeck').children().eq(previousCardIndex-1));
                                      
             }
-            previousCardIndex = currnetCardIndex;
+            
 
         }
-      
+        previousCardIndex = currnetCardIndex;
 
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
