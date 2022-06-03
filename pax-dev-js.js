@@ -397,9 +397,8 @@ function createCard(selectedMedObject) {
 
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
 
-
                 $('#mainDeck').children().eq(addedCardCount - 1).before($('#mainDeck').children().eq(currnetCardIndex));
-                                     
+                                                     
             }
             
 
