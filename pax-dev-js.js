@@ -404,7 +404,7 @@ function createCard(selectedMedObject) {
         if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
             if (listCICardIndexes.length != 0) {
                 //Get last index of CI card indexes list
-                var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b }).pop();
+                var lastIndex = listCICardIndexes.sort(function (a, b) { return a - b })[listCICardIndexes.length-1];
                 $('#mainDeck').children().eq(lastIndex).after($('#mainDeck').children().eq(currnetCardIndex));
                 listCICardIndexes.push(currentMed.col.index());
                 console.log(listCICardIndexes);
