@@ -581,6 +581,20 @@ function createCard(selectedMedObject) {
                 selectedMedObjList.splice(index, 1);
             }
 
+            //Remove the sorting index array
+            if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
+                const index = listCICardIndexes.indexOf(currentMed.col.index());
+                if (index > -1) {
+                    console.log(listCICardIndexes.splice(index,1));
+                }
+            }
+            else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+
+            }
+            else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
+
+            }
+
             //Remove the card
             $('#' + currentMed.colID).remove();
 
