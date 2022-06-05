@@ -585,7 +585,8 @@ function createCard(selectedMedObject) {
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
                 const index = listCICardIndexes.indexOf(currentMed.col.index());
                 if (index > -1) {
-                    console.log(listCICardIndexes.splice(index,1));
+                    listCICardIndexes.splice(index, 1);
+                    console.log(listCICardIndexes);
                 }
             }
             else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
