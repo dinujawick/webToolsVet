@@ -587,7 +587,7 @@ function createCard(selectedMedObject) {
                 if (index > -1) {
 
                     listCICardIndexes.splice(index, 1);
-                    for (i = index + 1; i < listCICardIndexes.length; i++) {
+                    for (i = index; i < listCICardIndexes.length; i++) {
                         listCICardIndexes[i]--;
                     }
                     console.log(listCICardIndexes);
