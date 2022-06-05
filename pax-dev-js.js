@@ -585,8 +585,11 @@ function createCard(selectedMedObject) {
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
                 const index = listCICardIndexes.indexOf(currentMed.col.index());
                 if (index > -1) {
-                    console.log(index);
+
                     listCICardIndexes.splice(index, 1);
+                    for (i = index + 1; i < listCICardIndexes.length; i++) {
+                        listCICardIndexes[i]--;
+                    }
                     console.log(listCICardIndexes);
                 }
             }
