@@ -590,10 +590,25 @@ function createCard(selectedMedObject) {
                     for (i = index; i < listCICardIndexes.length; i++) {
                         listCICardIndexes[i]--;
                     }
-                    console.log(listCICardIndexes);
+
+                    if (listARCardIndexes.length != 0) {
+                        for (i = 0; i < listARCardIndexes.length; i++) {
+                            listARCardIndexes[i]--;
+                        }
+                    }
+                    if (listFUCardIndexes.length != 0) {
+                        for (i = 0; i < listFUCardIndexes.length; i++) {
+                            listFUCardIndexes[i]--;
+                        }
+                    }
                 }
+                console.log('CI ' + listCICardIndexes);
+                console.log('AR ' + listARCardIndexes);
+                console.log('FU ' + listFUCardIndexes);
+                
             }
             else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
+
 
             }
             else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
