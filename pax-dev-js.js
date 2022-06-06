@@ -593,7 +593,6 @@ function createCard(selectedMedObject) {
             if (selectedMedObject.evaluation_alt.toLowerCase() == "contra-indicated") {
                 const index = listCICardIndexes.indexOf(currentMed.col.index());
                 if (index > -1) {
-
                     listCICardIndexes.splice(index, 1);
                     for (i = index; i < listCICardIndexes.length; i++) {
                         listCICardIndexes[i]--;
@@ -617,10 +616,9 @@ function createCard(selectedMedObject) {
 
                 const index = listARCardIndexes.indexOf(currentMed.col.index());
                 if (index > -1) {
-
                     listARCardIndexes.splice(index, 1);
                     if (listARCardIndexes.length != 0) {
-                        for (i = 0; i < listARCardIndexes.length; i++) {
+                        for (i = index; i < listARCardIndexes.length; i++) {
                             listARCardIndexes[i]--;
                         }
                     }
@@ -636,10 +634,9 @@ function createCard(selectedMedObject) {
 
                 const index = listFUCardIndexes.indexOf(currentMed.col.index());
                 if (index > -1) {
-
                     listFUCardIndexes.splice(index, 1);
                     if (listFUCardIndexes.length != 0) {
-                        for (i = 0; i < listFUCardIndexes.length; i++) {
+                        for (i = index; i < listFUCardIndexes.length; i++) {
                             listFUCardIndexes[i]--;
                         }
                     }
