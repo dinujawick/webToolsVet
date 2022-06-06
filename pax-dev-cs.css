@@ -223,7 +223,7 @@
 }
 #alertBoxForNewMed {
     position: absolute;
-    width: 30rem;
+    width: 19.75rem;
 }
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
