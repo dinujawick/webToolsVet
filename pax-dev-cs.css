@@ -222,6 +222,10 @@
 .hidden{
     display:none;
 }
+#alertBoxForNewMed{
+    position:absolute;
+
+}
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
     .col-3 {
