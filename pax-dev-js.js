@@ -112,7 +112,7 @@ $(document).ready(function () {
 
                     setTimeout(function () { $('#alertBoxForNewMed').fadeOut(1000); }, 1000);
 
-                    this.addClass('disabled');
+                    $('<a>').attr('id', item.atc_level).addClass('disabled');
                 });
 
                 prevAddedItem = item.generic_name;
