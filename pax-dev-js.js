@@ -427,7 +427,7 @@ function createCard(selectedMedObject) {
 
         setTimeout(function () { $('#alertBoxForNewMed').fadeOut(1000); }, 1000);
 
-        $('#' + selectedMedObject.atc_levell).addClass('clicked');
+        $('#' + selectedMedObject.atc_level).addClass('clicked');
 
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
