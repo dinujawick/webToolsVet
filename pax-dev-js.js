@@ -51,6 +51,16 @@ $('#btnReset').on('click', function (event) {
     $('#mainDeck').remove();
     $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-2 g-4').appendTo($('#divMedCon'));
 
+    //Remove .clicked class
+
+    //Get all the med IDs into const medIDs variable.
+    const medIDs = $.map($('#searchList > .clicked'), med => med.id);
+
+    for (var i = 0; i < medIDs.length; i++) {
+
+        $('#' + medIDs[i]).removeClass('clicked');
+    }
+
 });
 
 $('#btnPrint').on('click', function (event) {
@@ -107,17 +117,19 @@ $(document).ready(function () {
 
                 //Med Click Event
                 $med.on('click', function (event) {
+
                     addMed(item);
                     $('#alertBoxForNewMed').attr('style', 'display:');
 
                     setTimeout(function () { $('#alertBoxForNewMed').fadeOut(1000); }, 1000);
 
-                    $('#'+ item.atc_level).addClass('disabled');
+                    $('#' + item.atc_level).addClass('clicked');
+
                 });
 
                 prevAddedItem = item.generic_name;
             }
-        })
+        });
     });
 });
 
