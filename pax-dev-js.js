@@ -151,7 +151,7 @@ function getInteractionIcon(contraType, action_alt) {
                 case "consider alternative covid-19 treatment":
                     //Red Alert
                     var intIcon = $('<span>').append(
-                        $('<img>').attr('src', 'Images/Icarus/alert_red.svg').addClass('h-45')
+                        $('<img>').attr('src', 'Images/Icarus/alert-red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', conAltCovid19T)
                     )
@@ -169,7 +169,7 @@ function getInteractionIcon(contraType, action_alt) {
                 case "seek specialist advice":
                     //Red Specialist
                     var intIcon = $('<span>').append(
-                        $('<img>').attr('src', 'Images/Icarus/specialist_red.svg').addClass('h-45')
+                        $('<img>').attr('src', 'Images/Icarus/specialist-advice-red.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', seekSpecAdvi)
                     )
@@ -210,7 +210,7 @@ function getInteractionIcon(contraType, action_alt) {
                 case "consider alternative covid-19 treatment":
                     //Orange Alert
                     var intIcon = $('<span>').append(
-                        $('<img>').attr('src', 'Images/Icarus/alert_orange.svg').addClass('h-45')
+                        $('<img>').attr('src', 'Images/Icarus/alert-yellow.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', conAltCovid19T)
                     )
@@ -237,7 +237,7 @@ function getInteractionIcon(contraType, action_alt) {
                 case "consider additional contraceptive":
                     //Orange Switch
                     var intIcon = $('<span>').append(
-                        $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                        $('<img>').attr('src', 'Images/Icarus/exchange.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', swtichMed)
                     )
@@ -246,7 +246,7 @@ function getInteractionIcon(contraType, action_alt) {
                 case "consider alternative antibiotic":
                     //Orange Switch
                     var intIcon = $('<span>').append(
-                        $('<img>').attr('src', 'Images/Icarus/medicines_orange.svg').addClass('h-45')
+                        $('<img>').attr('src', 'Images/Icarus/exchange.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', swtichMed)
                     )
@@ -273,7 +273,7 @@ function getInteractionIcon(contraType, action_alt) {
                 case "seek specialist advice":
                     //Orange Specialist
                     var intIcon = $('<span>').append(
-                        $('<img>').attr('src', 'Images/Icarus/specialist_orange.svg').addClass('h-45')
+                        $('<img>').attr('src', 'Images/Icarus/specialist-advice-yellow.svg').addClass('h-45')
                             .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top')
                             .attr('title', seekSpecAdvi)
                     )
