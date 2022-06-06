@@ -108,6 +108,8 @@ $(document).ready(function () {
                 //Med Click Event
                 $med.on('click', function (event) {
                     addMed(item);
+                    $('#alertBoxForNewMed').attr('style', 'display:');
+                    
                 });
 
                 prevAddedItem = item.generic_name;
