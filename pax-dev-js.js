@@ -109,7 +109,7 @@ $(document).ready(function () {
                 $med.on('click', function (event) {
                     addMed(item);
                     $('#alertBoxForNewMed').attr('style', 'display:');
-                    $('#alertBoxForNewMed').addEventListener('transitionend', function (e) {
+                    $('#alertBoxForNewMed').on('transitionend', function (e) {
                         $('#alertBoxForNewMed').addClass('hidden');
                     }, {
                         capture: false,
