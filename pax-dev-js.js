@@ -109,14 +109,8 @@ $(document).ready(function () {
                 $med.on('click', function (event) {
                     addMed(item);
                     $('#alertBoxForNewMed').attr('style', 'display:');
-                    $('#alertBoxForNewMed').on('transitionend', function (e) {
-                        $('#alertBoxForNewMed').addClass('hidden');
-                    }, {
-                        capture: false,
-                        once: true,
-                        passive: false
-                    });
-                    //setTimeout(function () { $('#alertBoxForNewMed').attr('style', 'display:none');; }, 1000);
+
+                    setTimeout(function () { $('#alertBoxForNewMed').hide(1000) }, 1000);
                 });
 
                 prevAddedItem = item.generic_name;
