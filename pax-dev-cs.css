@@ -228,7 +228,7 @@
     margin-left: 0.5rem;
 }
 .clicked {
-    color: #d1d1d1;
+    color: #d1d1d1 !important;
 }
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
