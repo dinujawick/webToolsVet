@@ -109,7 +109,7 @@ $(document).ready(function () {
                 $med.on('click', function (event) {
                     addMed(item);
                     $('#alertBoxForNewMed').attr('style', 'display:');
-                    
+                    setTimeout(function () { $('#alertBoxForNewMed').attr('style', 'display:none');; }, 50);
                 });
 
                 prevAddedItem = item.generic_name;
