@@ -230,7 +230,7 @@
 .clicked {
     color: #d1d1d1 !important;
 }
-.clicked:hover{
+.clicked a:hover{
     background-color:none !important;
 }
 /* Icarus addition */
