@@ -32,6 +32,21 @@ $('#btnReset').on('click', function (event) {
         selectedMedObjList.pop();
     }
 
+    //Remove listCICardIndexes
+    while (listCICardIndexes.length) {
+        listCICardIndexes.pop();
+    }
+
+    //Remove listARCardIndexes
+    while (listARCardIndexes.length) {
+        listARIndexes.pop();
+    }
+
+    //Remove listFUCardIndexes
+    while (listFUCardIndexes.length) {
+        listFUCardIndexes.pop();
+    }
+
     //Card Deck Reset
     $('#mainDeck').remove();
     $('<div>').attr('id', 'mainDeck').addClass('row row-cols-1 row-cols-md-2 g-4').appendTo($('#divMedCon'));
@@ -41,6 +56,8 @@ $('#btnReset').on('click', function (event) {
 $('#btnPrint').on('click', function (event) {
     printPatHandOut();
 });
+
+
 
 //Page On Load Function
 $(document).ready(function () {
