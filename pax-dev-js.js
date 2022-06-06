@@ -424,16 +424,24 @@ function createCard(selectedMedObject) {
 
                 if (listARCardIndexes.length != 0) {
                     firstIndex = listARCardIndexes.sort(function (a, b) { return a - b })[0];
-                    for (i = 0; i < listARCardIndexes.length; i++) {
-                        listARCardIndexes[i]++; 
-                    }
+                    
                 }
                 else if (listFUCardIndexes.length != 0) {
                     firstIndex = listFUCardIndexes.sort(function (a, b) { return a - b })[0];
+                   
+                }
+
+                if (listARCardIndexes.length != 0) {
+                    for (i = 0; i < listARCardIndexes.length; i++) {
+                        listARCardIndexes[i]++;
+                    }
+                }
+                if (listFUCardIndexes.length != 0) {
                     for (i = 0; i < listFUCardIndexes.length; i++) {
                         listFUCardIndexes[i]++;
                     }
                 }
+
 
                 $('#mainDeck').children().eq(firstIndex).before($('#mainDeck').children().eq(currnetCardIndex));
                 listCICardIndexes.push(currentMed.col.index());
