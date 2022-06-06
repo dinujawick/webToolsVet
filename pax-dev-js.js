@@ -39,7 +39,7 @@ $('#btnReset').on('click', function (event) {
 
     //Remove listARCardIndexes
     while (listARCardIndexes.length) {
-        listARIndexes.pop();
+        listARCardIndexes.pop();
     }
 
     //Remove listFUCardIndexes
