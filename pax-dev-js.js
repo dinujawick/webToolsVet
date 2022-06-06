@@ -509,10 +509,6 @@ function createCard(selectedMedObject) {
             }
         }
 
-        console.log('CI'+listCICardIndexes);
-        console.log('AR'+listARCardIndexes);
-        console.log('FU'+listFUCardIndexes);
-
         $('#' + currentMed.headerID).append(
             $('<h4>').text(selectedMedObject.generic_name)
         );
@@ -643,9 +639,6 @@ function createCard(selectedMedObject) {
                 }
             }
 
-            console.log('CI ' + listCICardIndexes);
-            console.log('AR ' + listARCardIndexes);
-            console.log('FU ' + listFUCardIndexes);
 
             //Remove the card
             $('#' + currentMed.colID).remove();
