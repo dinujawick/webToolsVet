@@ -119,11 +119,7 @@ $(document).ready(function () {
                 $med.on('click', function (event) {
 
                     addMed(item);
-                    $('#alertBoxForNewMed').attr('style', 'display:');
-
-                    setTimeout(function () { $('#alertBoxForNewMed').fadeOut(1000); }, 1000);
-
-                    $('#' + item.atc_level).addClass('clicked');
+                   
 
                 });
 
@@ -426,6 +422,12 @@ function createCardLayout(atcLevel) {
 function createCard(selectedMedObject) {
     //***************************************************Card Way******************************************************
     if (checkDuplicatesOnCard(selectedMedObject.atc_level)) {
+
+        $('#alertBoxForNewMed').attr('style', 'display:');
+
+        setTimeout(function () { $('#alertBoxForNewMed').fadeOut(1000); }, 1000);
+
+        $('#' + selectedMedObject.atc_levell).addClass('clicked');
 
         var currentMed = createCardLayout(selectedMedObject.atc_level);
 
