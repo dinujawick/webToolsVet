@@ -17,6 +17,12 @@
             <h5 id="toolHeader">If a medicine is not listed below it cannot automatically be assumed it is safe to coadminister</h5>
             <div class="col-3">
                 <div class="vstack gap-2 mx-auto" id="menu">
+                    <div class="alert alert-primary d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill" /></svg>
+                        <div>
+                            An example alert with an icon
+                        </div>
+                    </div>
                     <div class="searchPanel">
                         <input type="text" placeholder="Select the medicines" id="searchTxt" data-bs-toggle="tooltip" data-bs-placement="top" title="Search by brand name (Viagra) or generic name (sildenafil)" onclick="toggleSearchList()" onkeyup="filterFunction()">
                         <div id="searchList" class="dropdown-content dropdown-scrollbar">
