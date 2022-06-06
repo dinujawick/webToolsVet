@@ -674,7 +674,7 @@ function createCard(selectedMedObject) {
             }
 
             //Remove clicked font color from the list
-            $('#' + currentMed.selectedMedObject.atc_level).removeClass('clicked');
+            $('#' + selectedMedObject.atc_level).removeClass('clicked');
 
             //Remove the card
             $('#' + currentMed.colID).remove();
