@@ -565,7 +565,7 @@ function createCard(selectedMedObject) {
             $('<h6>').text(selectedMedObject.evaluation_alt).attr('style', 'margin-bottom:1.5rem;'),
             getInteractionIcon(selectedMedObject.evaluation_alt.toLowerCase(), selectedMedObject.action_alt.toLowerCase()),
             $('<p>').text(selectedMedObject.action_alt).attr('style', 'margin-top:0.05rem;')
-        )
+        );
 
         $('#' + currentMed.comments).append(
             $('<p>').text(selectedMedObject.clinical_comment)
@@ -610,18 +610,45 @@ function createCard(selectedMedObject) {
                         }
                     }
                 }
-                console.log('CI ' + listCICardIndexes);
-                console.log('AR ' + listARCardIndexes);
-                console.log('FU ' + listFUCardIndexes);
+                
                 
             }
             else if (selectedMedObject.evaluation_alt.toLowerCase() == "attention required") {
 
+                const index = listARCardIndexes.indexOf(currentMed.col.index());
+                if (index > -1) {
+
+                    listARCardIndexes.splice(index, 1);
+                    if (listARCardIndexes.length != 0) {
+                        for (i = 0; i < listARCardIndexes.length; i++) {
+                            listARCardIndexes[i]--;
+                        }
+                    }
+                    if (listFUCardIndexes.length != 0) {
+                        for (i = 0; i < listFUCardIndexes.length; i++) {
+                            listFUCardIndexes[i]--;
+                        }
+                    }
+                }
 
             }
             else if (selectedMedObject.evaluation_alt.toLowerCase() == "follow up") {
 
+                const index = listFUCardIndexes.indexOf(currentMed.col.index());
+                if (index > -1) {
+
+                    listFUCardIndexes.splice(index, 1);
+                    if (listFUCardIndexes.length != 0) {
+                        for (i = 0; i < listFUCardIndexes.length; i++) {
+                            listFUCardIndexes[i]--;
+                        }
+                    }
+                }
             }
+
+            console.log('CI ' + listCICardIndexes);
+            console.log('AR ' + listARCardIndexes);
+            console.log('FU ' + listFUCardIndexes);
 
             //Remove the card
             $('#' + currentMed.colID).remove();
