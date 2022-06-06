@@ -8,10 +8,10 @@
     cursor: pointer;
 }
 
-    /* Dropdown button on hover & focus */
-    .dropbtn:hover, .dropbtn:focus {
-        background-image: linear-gradient(to bottom,#8b0e04,#720b03);
-    }
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-image: linear-gradient(to bottom,#8b0e04,#720b03);
+}
 
 
 /* Icarus edit */
@@ -60,17 +60,17 @@
     overflow-x: hidden;
 }
 
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #d1d1d1
-        }
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #d1d1d1
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
@@ -78,12 +78,10 @@
 }
 
 
-
 .body {
     background-color: white;
     font-family: 'Roboto Condensed',sans-serif;
 }
-
 
 
 .container {
@@ -127,9 +125,9 @@
     color: auto;
 }
 
-    .card-header h4 {
+.card-header h4 {
         font-size: calc(1rem + .3vw);
-    }
+}
 
 .card-footer {
     padding: 0.5rem 1rem;
@@ -200,9 +198,9 @@
     color: white;
 }
 
-    .medCardRemoveBtn:hover {
+.medCardRemoveBtn:hover {
         color: white;
-    }
+}
 
 .h-45 {
     height: 45px;
@@ -225,7 +223,7 @@
 }
 #alertBoxForNewMed {
     position: absolute;
-    width: 19.75rem;
+    width: 30rem;
 }
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
