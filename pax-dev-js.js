@@ -111,6 +111,8 @@ $(document).ready(function () {
                     $('#alertBoxForNewMed').attr('style', 'display:');
 
                     setTimeout(function () { $('#alertBoxForNewMed').fadeOut(1000); }, 1000);
+
+                    this.addClass('disabled');
                 });
 
                 prevAddedItem = item.generic_name;
@@ -685,8 +687,6 @@ function addMed(selectedMedObject) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
-    //Create table row 
-    //createGridRow(selectedMedObject);
 }
 
 //Function to checkduplicates in the current card deck
