@@ -65,9 +65,8 @@ $('#btnReset').on('click', function (event) {
 
 $('#btnPrint').on('click', function (event) {
     //printPatHandOut();
-    print('modalBody');
+    print("modalBody");
 });
-
 
 $('#btnModal').on('click', function (event) {
     setDataOnModal();
@@ -130,7 +129,6 @@ $(document).ready(function () {
         });
     });
 });
-
 
 
 //Function to return interaction icon
