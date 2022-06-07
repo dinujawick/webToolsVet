@@ -173,6 +173,13 @@
     color: white;
     margin-top: 30px;
 }
+#btnPreviewChanges {
+    background-color: #5c636a;
+    background-image: none !important;
+    background-repeat: repeat-x;
+    color: white;
+    margin-top: 30px;
+}
 
 .medCardRemoveBtn {
     background-image: none !important;
