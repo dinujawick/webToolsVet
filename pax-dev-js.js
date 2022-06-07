@@ -766,6 +766,8 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
+    $('#modalBodyRow').remove();
+
     $('<h1>').attr('contenteditable','true').text("Patient Information Handout").appendTo($('#modalBodyRow'));
     $('<p>').attr('contenteditable', 'true').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($('#modalBodyRow'));
     $('<p>').attr('contenteditable', 'true').text("The dosage is").appendTo($('#modalBodyRow'));
