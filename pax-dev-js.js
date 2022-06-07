@@ -64,7 +64,8 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
-    printPatHandOut();
+    //printPatHandOut();
+    printPatHandOut($('#modalBody'));
 });
 
 
@@ -799,6 +800,19 @@ function setDataOnModal() {
             $('<td>').attr('contenteditable', 'true').text("")
         ).appendTo($tblBody);
     });
+}
+
+function printPatHandOut(elem) {
+    var newWin = window.open();
+    var content = document.getElementById(elem).innerHTML;
+    var realContent = document.body.innerHTML;
+    newWin.document.write(content);
+    newWin.document.close(); // necessary for IE >= 10
+    newWin.focus(); // necessary for IE >= 10*/
+    newWin.print();
+    document.body.innerHTML = realContent;
+    newWin.close();
+    return true;
 }
 
 //Function to create new html document for print as a patient handout
