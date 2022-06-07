@@ -65,7 +65,7 @@ $('#btnReset').on('click', function (event) {
 
 $('#btnPrint').on('click', function (event) {
     //printPatHandOut();
-    printPatHandOut($('#modalBody'));
+    print($('#modalBody'));
 });
 
 
@@ -802,7 +802,7 @@ function setDataOnModal() {
     });
 }
 
-function printPatHandOut(elem) {
+function print(elem) {
     var newWin = window.open();
     var content = document.getElementById(elem).innerHTML;
     var realContent = document.body.innerHTML;
