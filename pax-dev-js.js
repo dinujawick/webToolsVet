@@ -832,7 +832,7 @@ function printPatHandOut() {
     var modal = $('#modalBody').innerHTML;
     $body.innerHTML = modal;
     
-
+    console.log($body.innerHTML);
 
     var newWin = window.open('', 'Print-Window');
 
