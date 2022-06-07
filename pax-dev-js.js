@@ -102,14 +102,7 @@ $(document).ready(function () {
 
         $.each(data, function (index, item) {
 
-            //Add med with query string
-            if (queryStringValues != null) {
-                for (var i = 0; i < queryStringValues.length; i++) {
-                    if (queryStringValues[i] == item.atc_level) {
-                        addMed(item);
-                    }
-                }
-            }
+            
             //For remove duplication on the generic names
             if (item.generic_name != prevAddedItem) {
                 $med = $('<a>').attr('id', item.atc_level).text(item.generic_name).addClass('wordbr').appendTo('#searchList');
@@ -124,6 +117,14 @@ $(document).ready(function () {
                 });
 
                 prevAddedItem = item.generic_name;
+            }
+            //Add med with query string
+            if (queryStringValues != null) {
+                for (var i = 0; i < queryStringValues.length; i++) {
+                    if (queryStringValues[i] == item.atc_level) {
+                        addMed(item);
+                    }
+                }
             }
         });
     });
@@ -761,6 +762,34 @@ function checkDuplicates(medItem) {
     return isValid;
 }
 
+
+function setDataOnModal() {
+
+    $('<h1>').text("Patient Information Handout").appendTo($body);
+    $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($body);
+    $('<p>').text("The dosage is").appendTo($body);
+    $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($body);
+
+    $table = $('<table>').addClass("table table-bordered").appendTo($body);
+
+    $tHead = $('<thead>').appendTo($table);
+
+    $tHeaderRow = $('<tr>').appendTo($tHead);
+
+    $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
+    $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid)").attr('scope', 'col').appendTo($tHeaderRow);
+
+
+    $tblBody = $('<tbody>').appendTo($table);
+
+    $.each(selectedMedObjList, function (index, item) {
+        $('<tr>').append(
+            $('<th>').text(item.generic_name),
+            $('<td>').text("")
+        ).appendTo($tblBody);
+    });
+}
+
 //Function to create new html document for print as a patient handout
 function printPatHandOut() {
 
@@ -800,7 +829,7 @@ function printPatHandOut() {
             $('<th>').text(item.generic_name),
             $('<td>').text("")
         ).appendTo($tblBody);
-    })
+    });
 
 
     var newWin = window.open('', 'Print-Window');
