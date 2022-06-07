@@ -770,7 +770,7 @@ function setDataOnModal() {
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
     $('<div>').addClass('row').append(
         $('<label>').text("The dosage is").attr('for', 'dosages').addClass('col-2'),
-        $('<select>').attr('id','dosages').addClass('col-2 form-select').append(
+        $('<select>').attr('id', 'dosages').attr('style','width:fit-content;').addClass('col-2 form-select').append(
             $('<option>').attr('value', '0').text('Dose01'),
             $('<option>').attr('value', '1').text('Dose02'),
             $('<option>').attr('value', '2').text('Dose03')
@@ -829,7 +829,8 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    $('#modalBody').appendTo($body);
+    var modal = $('#modalBody');
+    modal.appendTo($body);
     
 
 
