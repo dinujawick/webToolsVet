@@ -231,9 +231,9 @@
     color: #d1d1d1 !important;
     
 }
-    .clicked:hover {
-        background-color: rgb(255 255 255 / 15%) !important;
-    }
+.clicked:hover {
+    background-color: rgb(255 255 255 / 15%) !important;
+}
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
     .col-3 {

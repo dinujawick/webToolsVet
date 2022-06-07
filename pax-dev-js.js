@@ -764,6 +764,9 @@ function checkDuplicates(medItem) {
 //Function to create new html document for print as a patient handout
 function printPatHandOut() {
 
+
+
+
     var doc = $('<html>');
 
     $head = $('<head>').appendTo(doc);
