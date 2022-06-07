@@ -771,8 +771,8 @@ function setDataOnModal() {
     $('<h1>').text("Patient Information Handout").appendTo($div);
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
     $('<div>').addClass('row').append(
-        $('<p>').addClass('col-3').text("The dosage is"),
-        $('<select>').addClass('col-5 dosageSelection').append(
+        $('<p>').text("The dosage is"),
+        $('<select>').addClass('form-select').append(
             $('<option>').attr('value', '0').text('Dose01'),
             $('<option>').attr('value', '1').text('Dose02'),
             $('<option>').attr('value', '2').text('Dose03')
