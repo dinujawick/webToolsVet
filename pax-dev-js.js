@@ -64,7 +64,8 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
-    printPatHandOut();
+    //printPatHandOut();
+    $('#modalBody').print();
 });
 
 
