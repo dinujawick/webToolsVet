@@ -823,16 +823,12 @@ function printPatHandOut() {
         $('<link>').attr('href', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css")
             .attr('rel', "stylesheet")
             .attr('integrity', "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3")
-            .attr('crossorigin', "anonymous"),
-        $('<script>').attr('src', "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+            .attr('crossorigin', "anonymous")
     );
 
     $body = $('<body>').appendTo(doc);
 
-    var modal = $('#modalBody').innerHTML;
-    $body.innerHTML = modal;
-    
-    console.log($body.innerHTML);
+    $('#modalBody').appendTo($body);
 
     var newWin = window.open('', 'Print-Window');
 
