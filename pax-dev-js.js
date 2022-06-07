@@ -766,10 +766,10 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
-    $('<h1>').text("Patient Information Handout").appendTo($('#modalBodyRow'));
-    $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($('#modalBodyRow'));
-    $('<p>').text("The dosage is").appendTo($('#modalBodyRow'));
-    $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($('#modalBodyRow'));
+    $('<h1>').attr('contenteditable','true').text("Patient Information Handout").appendTo($('#modalBodyRow'));
+    $('<p>').attr('contenteditable', 'true').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($('#modalBodyRow'));
+    $('<p>').attr('contenteditable', 'true').text("The dosage is").appendTo($('#modalBodyRow'));
+    $('<p>').attr('contenteditable', 'true').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($('#modalBodyRow'));
 
     $table = $('<table>').addClass("table table-bordered").appendTo($('#modalBodyRow'));
 
@@ -786,7 +786,7 @@ function setDataOnModal() {
     $.each(selectedMedObjList, function (index, item) {
         $('<tr>').append(
             $('<th>').text(item.generic_name),
-            $('<td>').text("")
+            $('<td>').attr('contenteditable', 'true').text("")
         ).appendTo($tblBody);
     });
 }
