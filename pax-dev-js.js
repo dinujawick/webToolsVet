@@ -773,7 +773,6 @@ function setDataOnModal() {
     $('<div>').addClass('row').append(
         $('<p>').addClass('col-3').text("The dosage is"),
         $('<select>').addClass('form-select col-5').append(
-            $('<option>').attr('selected').text('Select the dose'),
             $('<option>').attr('value', '0').text('Dose01'),
             $('<option>').attr('value', '1').text('Dose02'),
             $('<option>').attr('value', '2').text('Dose03')
