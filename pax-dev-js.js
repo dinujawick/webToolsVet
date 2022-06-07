@@ -829,7 +829,7 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    var modal = $('#modalBody');
+    var modal = $('#modalBody').innerHTML();
     modal.appendTo($body);
     
 
