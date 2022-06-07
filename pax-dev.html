@@ -12,51 +12,6 @@
 
 <body class="body">
     <div class="container-fluid">
-
-        <!--Print Modal-->
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-4">.col-md-4</div>
-                                <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
-                                <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-9">
-                                    Level 1: .col-sm-9
-                                    <div class="row">
-                                        <div class="col-8 col-sm-6">
-                                            Level 2: .col-8 .col-sm-6
-                                        </div>
-                                        <div class="col-4 col-sm-6">
-                                            Level 2: .col-4 .col-sm-6
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Body -->
         <div class="row">
             <h5 id="toolHeader">If a medicine is not listed below it cannot automatically be assumed it is safe to coadminister</h5>
@@ -69,7 +24,7 @@
                     </div>
                     <button id="btnReset" type="button" class="btn">Reset Checker</button>
                     <button id="btnPrint" type="button" class="btn">Print patient handout</button>
-                    <button type="button" class="btn btnModal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button id="btnModal" type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Edit Patient Handout
                     </button>
                     <div id="alertBoxForNewMed" style="display:none;">
@@ -120,6 +75,29 @@
                     </div>
                     <div class="card-footer">
                         <p>DISCLAIMER - <a href="https://tinyurl.com/2p8w2dvr" target="_blank">https://www.unisa.edu.au/about-unisa/Governance-and-management-structure/Disclaimer-of-liability/</a> This website is not a substitute for independent professional advice. Nothing contained in this site is intended to be used as medical advice and it is not intended to be used to diagnose, treat, cure or prevent any disease, nor should it be used for therapeutic purposes or as a substitute for your own health professional's advice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Print Modal-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Edit Patient Information Handout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                 </div>
             </div>
