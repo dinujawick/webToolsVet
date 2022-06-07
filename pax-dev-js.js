@@ -64,8 +64,7 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
-    //printPatHandOut();
-    print("modalBody");
+    printPatHandOut();
 });
 
 $('#btnModal').on('click', function (event) {
@@ -830,35 +829,17 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    $('<h1>').text("Patient Information Handout").appendTo($body);
-    $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($body);
-    $('<p>').text("The dosage is").appendTo($body);
-    $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($body);
-
-    $table = $('<table>').addClass("table table-bordered").appendTo($body);
-
-    $tHead = $('<thead>').appendTo($table);
-
-    $tHeaderRow = $('<tr>').appendTo($tHead);
-
-    $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
-    $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid)").attr('scope', 'col').appendTo($tHeaderRow);
-
-
-    $tblBody = $('<tbody>').appendTo($table);
-
-    $.each(selectedMedObjList, function (index, item) {
-        $('<tr>').append(
-            $('<th>').text(item.generic_name),
-            $('<td>').text("")
-        ).appendTo($tblBody);
-    });
+    $('#modalBody').appendTo($body);
+    
 
 
     var newWin = window.open('', 'Print-Window');
 
     newWin.document.open();
     newWin.document.write(doc[0].outerHTML);
+    newWin.document.close(); // necessary for IE >= 10
+    newWin.focus(); // necessary for IE >= 10*/
+
     setTimeout(function () { newWin.print(); }, 500);
 
     setTimeout(function () { newWin.close(); }, 10000);
