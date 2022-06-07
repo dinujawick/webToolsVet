@@ -115,7 +115,6 @@
 }
 
 
-
 /* Icarus addition */
 .card-header {
     padding: 0.8rem 1rem 0rem 1rem;
@@ -160,6 +159,14 @@
 }
 
 #btnPrint {
+    background-color: #e58e1a;
+    background-image: none !important;
+    background-repeat: repeat-x;
+    color: white;
+    margin-top: 30px;
+}
+
+.btnModal {
     background-color: #e58e1a;
     background-image: none !important;
     background-repeat: repeat-x;
