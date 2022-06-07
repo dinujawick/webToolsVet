@@ -64,8 +64,7 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
-    //printPatHandOut();
-    $('#modalBody').print();
+    printPatHandOut();
 });
 
 
@@ -771,7 +770,15 @@ function setDataOnModal() {
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
     $('<h1>').text("Patient Information Handout").appendTo($div);
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
-    $('<p>').text("The dosage is").appendTo($div);
+    $('<div>').addClass('row').append(
+        $('<p>').addClass('col-3').text("The dosage is"),
+        $('<select>').addClass('form-select col-5').append(
+            $('<option>').attr('selected').text('Select the dose'),
+            $('<option>').attr('value', '0').text('Dose01'),
+            $('<option>').attr('value', '1').text('Dose02'),
+            $('<option>').attr('value', '2').text('Dose03')
+        )
+    ).appendTo($div);
     $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
 
     
