@@ -105,14 +105,14 @@
 
 
 
-/*#btnPrint, #btnReset, .btnModal {
+#btnPrint, #btnReset, #btnModal {
     background-color: #8b0e04;
     background-image: linear-gradient(to bottom,#8b0e04,#720b03);
     background-repeat: repeat-x;
-    color: white;*/
+    color: white;
     /*! width: 60%; */
     /*! padding: 0px; */
-/*}*/
+}
 
 
 /* Icarus addition */
