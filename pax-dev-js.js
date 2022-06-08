@@ -808,18 +808,6 @@ function setDataOnModal() {
     });
 }
 
-function print(elem) {
-    var newWin = window.open();
-    var content = document.getElementById(elem).innerHTML;
-    var realContent = document.body.innerHTML;
-    newWin.document.write(content);
-    newWin.document.close(); // necessary for IE >= 10
-    newWin.focus(); // necessary for IE >= 10*/
-    newWin.print();
-    document.body.innerHTML = realContent;
-    newWin.close();
-    return true;
-}
 
 //Function to create new html document for print as a patient handout
 function printPatHandOut() {
@@ -836,7 +824,15 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    $('#modalBody').clone().appendTo($body);
+    var clone = $('#modalBody').clone();
+
+    var selects = $('#modalBody').find('select');
+    $(selects).each(function (i) {
+        var select = this;
+        $(clone).find('select').eq(i).val($(select).val());
+    });
+
+    clone.appendTo($body);
 
     var newWin = window.open('', 'Print-Window');
 
