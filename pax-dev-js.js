@@ -764,8 +764,7 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
-    const dose01 = "Take TWO 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days";
-    const dose02 = "Take ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days";
+
 
     $('#modalBodyRow').empty();
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
@@ -774,9 +773,9 @@ function setDataOnModal() {
     
     $('<label>').text("The dosage is").attr('for', 'dosages').appendTo($div);
     $('<select>').attr('id', 'dosages').attr('style','padding-bottom:0rem; padding-top:0rem;').addClass('form-select').append(
-            $('<option>').attr('value', '0').text('Select the dose'),
-            $('<option>').attr('value', '1').text(dose01),
-            $('<option>').attr('value', '2').text(dose02)
+            $('<option>').attr('value', '0').text("Select the dose"),
+        $('<option>').attr('value', '1').text("Take TWO 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days"),
+        $('<option>').attr('value', '2').text("Take ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days")
     ).appendTo($div);
 
     $('<p>').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
