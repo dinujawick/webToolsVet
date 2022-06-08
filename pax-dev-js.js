@@ -599,7 +599,7 @@ function createCard(selectedMedObject) {
         );
 
         $('#' + currentMed.comments).append(
-            $('<p>').attr('style', 'margin-top:0.0.625rem;').text(selectedMedObject.clinical_comment)
+            $('<p>').attr('style', 'margin-top:0.625rem;').text(selectedMedObject.clinical_comment)
         );
 
         //Add selected med atc level into the array
