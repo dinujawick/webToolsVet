@@ -821,7 +821,7 @@ function printPatHandOut(selectedDosage) {
 
     $body = $('<body>').appendTo(doc);
 
-    $('<div>').attr().addClass('col-12').append(
+    $('<div>').addClass('col-12').append(
         $('#phi_header').clone(),
         $('#phi_firstPara').clone(),
         $('<p>').text('The dosage is ' + selectedDosage),
