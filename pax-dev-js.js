@@ -816,7 +816,6 @@ function print(elem) {
 function printPatHandOut() {
 
     var doc = $('<html>');
-
     $head = $('<head>').appendTo(doc);
 
     $head.append(
@@ -828,7 +827,7 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    $('#modalBody').appendTo($body);
+    $('#modalBody').clone().appendTo($body);
 
     var newWin = window.open('', 'Print-Window');
 
