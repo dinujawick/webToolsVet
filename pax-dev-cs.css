@@ -253,6 +253,9 @@
     flex: 0 0 auto;
     width: 10.666667%;
 }
+.placeholderForTable {
+    color: #757575;
+}
 
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
