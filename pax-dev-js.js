@@ -825,11 +825,11 @@ function printPatHandOut() {
 
     var clone = $('#modalBody').clone();
 
-    var selects = $('#modalBody').find('select');
-    $(selects).each(function (i) {
-        var select = this;
-        $(clone).find('select').eq(i).val($(select).val());
-    });
+    //var selects = $('#modalBody').find('select');
+    //$(selects).each(function (i) {
+    //    var select = this;
+    //    $(clone).find('select').eq(i).val($(select).val());
+    //});
 
     clone.appendTo($body);
 
