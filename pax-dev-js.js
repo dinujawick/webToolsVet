@@ -825,8 +825,8 @@ function printPatHandOut(selectedDosage) {
         $('#phi_header').clone(),
         $('#phi_header').clone(),
         $('<p>').text('The dosage is' + selectedDosage),
-        $('phi_thirdPara').clone(),
-        $('phi_table').clone()
+        $('#phi_thirdPara').clone(),
+        $('#phi_table').clone()
     );
 
 
