@@ -798,10 +798,10 @@ function setDataOnModal() {
         $('<tr>').append(
             $('<th>').text(item.generic_name),
             $('<td>').attr('contenteditable', 'true').text("Please fill your recommendation..").on('click', function (event) {
-                console.log('inside table cell click');
+                
                 if (this.innerText == "Please fill your recommendation..") {
-                    console.log('inside table cell if cond');
-                    this.text = "";
+                    
+                    this.innerText = "";
                 }
             })
         ).appendTo($tblBody);
