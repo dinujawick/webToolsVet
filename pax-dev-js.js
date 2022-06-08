@@ -800,8 +800,9 @@ function setDataOnModal() {
             $('<td>').attr('contenteditable', 'true').text("Please fill your recommendation..").on('click', function (event) {
                 
                 if (this.innerText == "Please fill your recommendation..") {
-                    
                     this.innerText = "";
+                } else if (this.innerText == "") {
+                    this.innerText == "Please fill your recommendation.."
                 }
             })
         ).appendTo($tblBody);
