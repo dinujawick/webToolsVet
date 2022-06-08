@@ -599,7 +599,7 @@ function createCard(selectedMedObject) {
         );
 
         $('#' + currentMed.comments).append(
-            $('<p>').text(selectedMedObject.clinical_comment)
+            $('<p>').attr('style', 'margin-top:0.0.625rem;').text(selectedMedObject.clinical_comment)
         );
 
         //Add selected med atc level into the array
@@ -764,10 +764,22 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
+    //<div class="dropdown">
+    //    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    //        Dropdown button
+    //    </button>
+    //    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    //        <a class="dropdown-item" href="#">Action</a>
+    //        <a class="dropdown-item" href="#">Another action</a>
+    //        <a class="dropdown-item" href="#">Something else here Something else here Something else here Something else here Something else here Something else here Something else here</a>
+    //    </div>
+    //</div>
+
+
     $('#modalBodyRow').empty();
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
     $('<h1>').attr('id','phi_header').text("Patient Information Handout").appendTo($div);
-    $('<p>').attr('id', 'phi_firstPara').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
+    $('<p>').attr('id', 'phi_firstPara').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid®) to treat your COVID infection").appendTo($div);
     
     $('<label>').text("The dosage is").attr('for', 'dosages').appendTo($div);
     $('<select>').attr('id', 'dosages').attr('style','padding-bottom:0rem; padding-top:0rem;').addClass('form-select').append(
@@ -776,7 +788,7 @@ function setDataOnModal() {
             $('<option>').text("ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days")
     ).appendTo($div);
 
-    $('<p>').attr('id', 'phi_thirdPara').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
+    $('<p>').attr('id', 'phi_thirdPara').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid®)").appendTo($div);
 
     
     $table = $('<table>').attr('id', 'phi_table').attr('style','table-layout: fixed;').addClass("table table-bordered").appendTo($div);
@@ -786,7 +798,7 @@ function setDataOnModal() {
     $tHeaderRow = $('<tr>').appendTo($tHead);
 
     $('<th>').text("Medicine Name").attr('scope', 'col').appendTo($tHeaderRow);
-    $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid)").attr('scope', 'col').appendTo($tHeaderRow);
+    $('<th>').text("Action to take while taking nirmatrelvir in combination with ritonavir (Paxlovid®)").attr('scope', 'col').appendTo($tHeaderRow);
 
 
     $tblBody = $('<tbody>').appendTo($table);
