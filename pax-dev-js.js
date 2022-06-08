@@ -821,13 +821,13 @@ function printPatHandOut(selectedDosage) {
 
     $body = $('<body>').appendTo(doc);
 
-    $body.append(
+    $('<div>').attr('style','border:dotted;').addClass('col-12').append(
         $('#phi_header').clone(),
         $('#phi_firstPara').clone(),
-        $('<p>').text('The dosage is' + selectedDosage),
+        $('<p>').text('The dosage is ' + selectedDosage),
         $('#phi_thirdPara').clone(),
         $('#phi_table').clone()
-    );
+    ).appendTo($body);
 
 
 
