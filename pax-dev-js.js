@@ -772,8 +772,8 @@ function setDataOnModal() {
     $('<label>').text("The dosage is").attr('for', 'dosages').appendTo($div);
     $('<select>').attr('id', 'dosages').attr('style','padding-bottom:0rem; padding-top:0rem;').addClass('form-select').append(
             $('<option>').text("Select the dose"),
-            $('<option>').text("Take TWO 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days"),
-            $('<option>').text("Take ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days")
+            $('<option>').text("TWO 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days"),
+            $('<option>').text("ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days")
     ).appendTo($div);
 
     $('<p>').attr('id', 'phi_thirdPara').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
@@ -821,7 +821,7 @@ function printPatHandOut(selectedDosage) {
 
     $body = $('<body>').appendTo(doc);
 
-    $('<div>').attr('style','border:dotted;').addClass('col-12').append(
+    $('<div>').attr().addClass('col-12').append(
         $('#phi_header').clone(),
         $('#phi_firstPara').clone(),
         $('<p>').text('The dosage is ' + selectedDosage),
