@@ -779,7 +779,7 @@ function setDataOnModal() {
     $('<p>').attr('id', 'phi_thirdPara').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
 
     
-    $table = $('<table>').attr('id', 'phi_table').addClass("table table-bordered").appendTo($div);
+    $table = $('<table>').attr('id', 'phi_table').attr('style','table-layout: fixed;').addClass("table table-bordered").appendTo($div);
 
     $tHead = $('<thead>').appendTo($table);
 
@@ -793,7 +793,7 @@ function setDataOnModal() {
 
     $.each(selectedMedObjList, function (index, item) {
         $('<tr>').append(
-            $('<th>').text(item.generic_name),
+            $('<th>').attr('style','word-break: break-word;').text(item.generic_name),
             $('<td>').attr('id', item.atc_level+'_phi_td').attr('contenteditable', 'true').addClass('placeholderForTable').text("Please fill your recommendation..").on('click', function (event) {
                 
                 if (this.innerText == "Please fill your recommendation..") {
@@ -824,7 +824,7 @@ function printPatHandOut(selectedDosage) {
     $('<div>').addClass('col-12').append(
         $('#phi_header').clone(),
         $('#phi_firstPara').clone(),
-        $('<p>').text('The dosage is ' + selectedDosage),
+        $('<p>').text('The dosage is ' + selectedDosage + '.'),
         $('#phi_thirdPara').clone(),
         $('#phi_table').clone()
     ).appendTo($body);
