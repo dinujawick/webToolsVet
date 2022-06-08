@@ -801,9 +801,8 @@ function setDataOnModal() {
                 
                 if (this.innerText == "Please fill your recommendation..") {
                     this.innerText = "";
-                }
-                if (this.innerText == "") {
-                    this.innerText == "Please fill your recommendation.."
+                }else if (this.innerText == "") {
+                    this.innerText = "Please fill your recommendation.."
                 }
             })
         ).appendTo($tblBody);
