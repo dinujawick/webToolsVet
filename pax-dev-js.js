@@ -801,7 +801,8 @@ function setDataOnModal() {
                 
                 if (this.innerText == "Please fill your recommendation..") {
                     this.innerText = "";
-                } else if (this.innerText == "") {
+                }
+                if (this.innerText == "") {
                     this.innerText == "Please fill your recommendation.."
                 }
             })
