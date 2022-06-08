@@ -837,7 +837,7 @@ function printPatHandOut(selectedDosage) {
     //    $(clone).find('select').eq(i).val($(select).val());
     //});
 
-    clone.appendTo($body);
+    
 
     var newWin = window.open('', 'Print-Window');
 
