@@ -64,8 +64,7 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
-    console.log($('#dosages :selected').text());
-    //printPatHandOut();
+    printPatHandOut($('#dosages :selected').text());
 });
 
 $('#btnModal').on('click', function (event) {
@@ -765,12 +764,10 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
-
-
     $('#modalBodyRow').empty();
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
-    $('<h1>').text("Patient Information Handout").appendTo($div);
-    $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
+    $('<h1>').attr('id','phi_header').text("Patient Information Handout").appendTo($div);
+    $('<p>').attr('id', 'phi_firstPara').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
     
     $('<label>').text("The dosage is").attr('for', 'dosages').appendTo($div);
     $('<select>').attr('id', 'dosages').attr('style','padding-bottom:0rem; padding-top:0rem;').addClass('form-select').append(
@@ -779,10 +776,10 @@ function setDataOnModal() {
             $('<option>').text("Take ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days")
     ).appendTo($div);
 
-    $('<p>').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
+    $('<p>').attr('id', 'phi_thirdPara').attr('style','margin-top:1rem;').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
 
     
-    $table = $('<table>').addClass("table table-bordered").appendTo($div);
+    $table = $('<table>').attr('id', 'phi_table').addClass("table table-bordered").appendTo($div);
 
     $tHead = $('<thead>').appendTo($table);
 
@@ -810,7 +807,7 @@ function setDataOnModal() {
 
 
 //Function to create new html document for print as a patient handout
-function printPatHandOut() {
+function printPatHandOut(selectedDosage) {
 
     var doc = $('<html>');
     $head = $('<head>').appendTo(doc);
@@ -824,7 +821,15 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    var clone = $('#modalBody').clone();
+    $body.append(
+        $('#phi_header').clone(),
+        $('#phi_header').clone(),
+        $('<p>').text('The dosage is' + selectedDosage),
+        $('phi_thirdPara').clone(),
+        $('phi_table').clone()
+    );
+
+
 
     //var selects = $('#modalBody').find('select');
     //$(selects).each(function (i) {
