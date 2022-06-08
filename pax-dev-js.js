@@ -764,6 +764,9 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
+    const dose01 = "Take two 150mg(Pink) tablets of nirmatrelvir with one 100mg(White) tablet of ritonavir TWICE a day";
+    const dose02 = "Take one 150mg(Pink) tablets of nirmatrelvir with one 100mg(White) tablet of ritonavir TWICE a day";
+
     $('#modalBodyRow').empty();
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
     $('<h1>').text("Patient Information Handout").appendTo($div);
@@ -771,9 +774,9 @@ function setDataOnModal() {
     $('<div>').attr('style','margin-top:1rem;margin-bottom:1rem;').addClass('row').append(
         $('<label>').text("The dosage is").attr('for', 'dosages').addClass('col-2'),
         $('<select>').attr('id', 'dosages').attr('style','width:fit-content; padding-bottom:0rem; padding-top:0rem; margin-left:1rem;').addClass('col-2 form-select').append(
-            $('<option>').attr('value', '0').text('Dose01'),
-            $('<option>').attr('value', '1').text('Dose02'),
-            $('<option>').attr('value', '2').text('Dose03')
+            $('<option>').attr('value', '0').text('Select the Dose'),
+            $('<option>').attr('value', '1').text(dose01),
+            $('<option>').attr('value', '2').text(dose02)
         )
     ).appendTo($div);
     $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
