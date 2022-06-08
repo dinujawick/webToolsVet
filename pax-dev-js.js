@@ -768,9 +768,9 @@ function setDataOnModal() {
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
     $('<h1>').text("Patient Information Handout").appendTo($div);
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
-    $('<div>').addClass('row').append(
+    $('<div>').attr('style','margin-top:1rem;margin-bottom:1rem;').addClass('row').append(
         $('<label>').text("The dosage is").attr('for', 'dosages').addClass('col-2'),
-        $('<select>').attr('id', 'dosages').attr('style','width:fit-content;').addClass('col-2 form-select').append(
+        $('<select>').attr('id', 'dosages').attr('style','width:fit-content; padding-bottom:0rem; padding-top:0rem; margin-left:1rem;').addClass('col-2 form-select').append(
             $('<option>').attr('value', '0').text('Dose01'),
             $('<option>').attr('value', '1').text('Dose02'),
             $('<option>').attr('value', '2').text('Dose03')
@@ -794,7 +794,7 @@ function setDataOnModal() {
     $.each(selectedMedObjList, function (index, item) {
         $('<tr>').append(
             $('<th>').text(item.generic_name),
-            $('<td>').attr('contenteditable', 'true').text("Please fill your recomendation..")
+            $('<td>').attr('contenteditable', 'true').text("Please fill your recommendation..")
         ).appendTo($tblBody);
     });
 }
