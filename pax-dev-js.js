@@ -794,7 +794,7 @@ function setDataOnModal() {
     $.each(selectedMedObjList, function (index, item) {
         $('<tr>').append(
             $('<th>').text(item.generic_name),
-            $('<td>').attr('contenteditable', 'true').text("")
+            $('<td>').attr('contenteditable', 'true').text("Please fill your recomendation..")
         ).appendTo($tblBody);
     });
 }
