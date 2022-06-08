@@ -771,14 +771,14 @@ function setDataOnModal() {
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
     $('<h1>').text("Patient Information Handout").appendTo($div);
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
-    $('<div>').attr('style','margin-top:1rem;margin-bottom:1rem;').addClass('row').append(
-        $('<label>').text("The dosage is").attr('for', 'dosages').addClass('col-2'),
-        $('<select>').attr('id', 'dosages').attr('style','width:fit-content; padding-bottom:0rem; padding-top:0rem;').addClass('col-2 form-select').append(
+    
+    $('<label>').text("The dosage is").attr('for', 'dosages').addClass('col-2').appendTo($div);
+    $('<select>').attr('id', 'dosages').attr('style','width:fit-content; padding-bottom:0rem; padding-top:0rem;').addClass('col-2 form-select').append(
             $('<option>').attr('value', '0').text('Select the Dose'),
             $('<option>').attr('value', '1').text(dose01),
             $('<option>').attr('value', '2').text(dose02)
-        )
     ).appendTo($div);
+
     $('<p>').text("Some of your other medicines need adjustment while you are taking nirmatrelvir in combination with ritonavir (Paxlovid)").appendTo($div);
 
     
