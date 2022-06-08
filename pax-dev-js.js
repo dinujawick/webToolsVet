@@ -764,8 +764,8 @@ function checkDuplicates(medItem) {
 
 function setDataOnModal() {
 
-    const dose01 = "Take two 150mg(Pink) tablets of nirmatrelvir with one 100mg(White) tablet of ritonavir TWICE a day";
-    const dose02 = "Take one 150mg(Pink) tablets of nirmatrelvir with one 100mg(White) tablet of ritonavir TWICE a day";
+    const dose01 = "Take TWO 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days";
+    const dose02 = "Take ONE 150mg (pink) tablets of nirmatrelvir with one 100mg (white) tablet of ritonavir TWICE a day for FIVE days";
 
     $('#modalBodyRow').empty();
     $div = $('<div>').addClass('col-12').appendTo($('#modalBodyRow'));
@@ -773,7 +773,7 @@ function setDataOnModal() {
     $('<p>').text("I have prescribed nirmatrelvir in comibination with ritonavir (Paxlovid) to treat your COVID infection").appendTo($div);
     $('<div>').attr('style','margin-top:1rem;margin-bottom:1rem;').addClass('row').append(
         $('<label>').text("The dosage is").attr('for', 'dosages').addClass('col-2'),
-        $('<select>').attr('id', 'dosages').attr('style','width:fit-content; padding-bottom:0rem; padding-top:0rem; margin-left:1rem;').addClass('col-2 form-select').append(
+        $('<select>').attr('id', 'dosages').attr('style','width:fit-content; padding-bottom:0rem; padding-top:0rem;').addClass('col-2 form-select').append(
             $('<option>').attr('value', '0').text('Select the Dose'),
             $('<option>').attr('value', '1').text(dose01),
             $('<option>').attr('value', '2').text(dose02)
@@ -830,7 +830,7 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    $('#modalBody').appendTo($body);
+    $('#modalBody').clone().appendTo($body);
 
     var newWin = window.open('', 'Print-Window');
 
