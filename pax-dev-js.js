@@ -830,7 +830,7 @@ function printPatHandOut() {
 
     $body = $('<body>').appendTo(doc);
 
-    $('#modalBody').clone().appendTo($body);
+    $('#modalBody').appendTo($body);
 
     var newWin = window.open('', 'Print-Window');
 
