@@ -64,7 +64,7 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
-    console.log($('#dosages :selected').text);
+    console.log($('#dosages :selected').text());
     //printPatHandOut();
 });
 
