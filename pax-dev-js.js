@@ -774,7 +774,7 @@ function setDataOnModal() {
     
     $('<label>').text("The dosage is").attr('for', 'dosages').appendTo($div);
     $('<select>').attr('id', 'dosages').attr('style','padding-bottom:0rem; padding-top:0rem;').addClass('form-select').append(
-            $('<option>').attr('value', '0').text('Select the Dose'),
+            $('<option>').attr('value', '0').text('Select the dose'),
             $('<option>').attr('value', '1').text(dose01),
             $('<option>').attr('value', '2').text(dose02)
     ).appendTo($div);
@@ -797,11 +797,11 @@ function setDataOnModal() {
     $.each(selectedMedObjList, function (index, item) {
         $('<tr>').append(
             $('<th>').text(item.generic_name),
-            $('<td>').attr('contenteditable', 'true').addClass('placeholderForTable').text("Please fill your recommendation..").on('click', function (event) {
+            $('<td>').attr('id', item.atc_level+'_phi_td').attr('contenteditable', 'true').addClass('placeholderForTable').text("Please fill your recommendation..").on('click', function (event) {
                 
                 if (this.innerText == "Please fill your recommendation..") {
                     this.innerText = "";
-                    this.removeClass('placeholderForTable');
+                    $('#' + item.atc_level + '_phi_td').removeClass('placeholderForTable');
                 }
             })
         ).appendTo($tblBody);
