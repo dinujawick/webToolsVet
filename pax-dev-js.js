@@ -64,6 +64,15 @@ $('#btnReset').on('click', function (event) {
 });
 
 $('#btnPrint').on('click', function (event) {
+
+    $.each(selectedMedObjList, function (index, item) {
+        
+        if ($('#' + item.atc_level + '_phi_td').innerText == "Please fill your recommendation..") {
+
+                    this.innerText = "";
+                   
+         } 
+    });
     printPatHandOut($('#dosages :selected').text());
 });
 
@@ -829,17 +838,7 @@ function printPatHandOut(selectedDosage) {
         $('<p>').text('The dosage is ' + selectedDosage + '.'),
         $('#phi_thirdPara').clone(),
         $('#phi_table').clone()
-    ).appendTo($body);
-
-
-
-    //var selects = $('#modalBody').find('select');
-    //$(selects).each(function (i) {
-    //    var select = this;
-    //    $(clone).find('select').eq(i).val($(select).val());
-    //});
-
-    
+    ).appendTo($body);  
 
     var newWin = window.open('', 'Print-Window');
 
