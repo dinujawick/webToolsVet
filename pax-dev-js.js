@@ -71,7 +71,16 @@ $('#btnPrint').on('click', function (event) {
          } 
     });
 
-    printPatHandOut($('#dosages :selected').text());
+    if ($('#dosages :selected').text() == "Select the dose") {
+
+        $('#alertBoxForDose').attr('style', 'display:');
+
+        setTimeout(function () { $('#alertBoxForDose').fadeOut(2000); }, 800);
+    }
+    else {
+        printPatHandOut($('#dosages :selected').text());
+    }
+    
 });
 
 $('#btnModal').on('click', function (event) {
