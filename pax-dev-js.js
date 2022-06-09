@@ -559,9 +559,8 @@ function createCard(selectedMedObject) {
         }
 
         var header;
-        if (selectedMedObject.generic_name == "Amlodipine/Valsartan/Hydrochlorothiazide") {
+        if (selectedMedObject.generic_name.length > 37) {
             header = $('<h4>').attr('style', 'font-size:large;').text(selectedMedObject.generic_name)
-            console.log(selectedMedObject.generic_name.length);
         }
         else {
             header = $('<h4>').text(selectedMedObject.generic_name)
