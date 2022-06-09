@@ -65,12 +65,7 @@ $('#btnReset').on('click', function (event) {
 
 $('#btnPrint').on('click', function (event) {
 
-    $.each(selectedMedObjList, function (index, item) {
-        if ($('#' + item.atc_level + '_phi_td').text() == "Please fill your recommendation..") {
-            $('#' + item.atc_level + '_phi_td').text("");     
-         } 
-    });
-
+ 
     if ($('#dosages :selected').text() == "Select the dose") {
 
         $('#alertBoxForDose').attr('style', 'display:');
@@ -78,6 +73,11 @@ $('#btnPrint').on('click', function (event) {
         setTimeout(function () { $('#alertBoxForDose').fadeOut(2000); }, 800);
     }
     else {
+        $.each(selectedMedObjList, function (index, item) {
+            if ($('#' + item.atc_level + '_phi_td').text() == "Please fill your recommendation..") {
+                $('#' + item.atc_level + '_phi_td').text("");
+            }
+        });
         printPatHandOut($('#dosages :selected').text());
     }
     
@@ -777,7 +777,7 @@ function checkDuplicates(medItem) {
 }
 
 
-
+//Function to create Patient Handout Modal
 function setDataOnModal() {
 
     $('#modalBodyRow').empty();
@@ -2208,9 +2208,5 @@ function toTitleCase(str) {
     });
 }
 
-//Fucntion to sort card according to priority
-function sortCards() {
-    /*jQuery($(itemlist).children().eq(selected - 1)).before(jQuery($(itemlist).children().eq(selected)));*/
 
-}
 
