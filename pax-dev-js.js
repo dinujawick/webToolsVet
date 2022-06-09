@@ -66,13 +66,11 @@ $('#btnReset').on('click', function (event) {
 $('#btnPrint').on('click', function (event) {
 
     $.each(selectedMedObjList, function (index, item) {
-        
         if ($('#' + item.atc_level + '_phi_td').innerText == "Please fill your recommendation..") {
-
-                    this.innerText = "";
-                   
+            $('#' + item.atc_level + '_phi_td').innerText = "";     
          } 
     });
+
     printPatHandOut($('#dosages :selected').text());
 });
 
