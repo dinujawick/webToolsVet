@@ -412,7 +412,7 @@ function createCardLayout(atcLevel) {
     $card = $('<div>').attr('id', atcLevel + 'card').addClass('card shadow h-100').appendTo($col);
     $('<div>').attr('id', atcLevel + 'cardHead').addClass('card-header').appendTo($card);
     $('<div>').attr('id', atcLevel + 'cardBody').addClass('card-body').append(
-        $('<div>').attr('id', atcLevel + 'iconLayer').addClass('row').append(
+        $('<div>').attr('id', atcLevel + 'iconLayer').attr('style','height: 9.438rem;').addClass('row').append(
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
                 $('<div>').attr('id', atcLevel + 'vstackEffect').addClass('col').append(
                     $('<h6>').text('EFFECT ON CONCENTRATION')
