@@ -558,8 +558,16 @@ function createCard(selectedMedObject) {
             }
         }
 
+        var header;
+        if (selectedMedObject.generic_name == "Amlodipine/Valsartan/Hydrochlorothiazide") {
+            header = $('<h4>').attr('style', 'font-size:large;').text(selectedMedObject.generic_name)
+        }
+        else {
+            header = $('<h4>').text(selectedMedObject.generic_name)
+        }
+
         $('#' + currentMed.headerID).append(
-            $('<h4>').text(selectedMedObject.generic_name)
+            header   
         );
 
         $('#' + currentMed.footerID).append(
