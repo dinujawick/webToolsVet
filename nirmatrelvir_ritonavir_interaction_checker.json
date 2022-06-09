@@ -17,7 +17,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|abemaciclib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "L01EB03",
@@ -27,7 +27,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|afatinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "G04CA01",
@@ -57,7 +57,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|amiodarone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due potential for cardiac arrhythmias.Amiodarone product information states: The half-life of amiodarone is long and with chronic oral dosing can be from 14 to 110 days but is usually in the range 14 to 59 days."
+    "clinical_comment": "Co-administration contraindicated due potential for cardiac arrhythmias. Amiodarone product information states: The half-life of amiodarone is long and with chronic oral dosing can be from 14 to 110 days but is usually in the range 14 to 59 days."
   },
   {
     "atc_level": "N06AA09",
@@ -77,7 +77,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C10BX03",
@@ -87,7 +87,7 @@
     "action_alt": "Combination product, see clinical comment",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "<up>|atorvastatin",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.Consider temporary discontinuation of atorvastatin  during and for 3 days after treatment with nirmatrelvir/ritonavir.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. Consider temporary discontinuation of atorvastatin  during and for 3 days after treatment with nirmatrelvir/ritonavir.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C09DB01",
@@ -97,7 +97,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C09DX01",
@@ -107,7 +107,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "L02BB05",
@@ -147,7 +147,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|atorvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Consider temporary discontinuation of atorvastatin during treatment with nirmatrelvir/ritonavir.Resume atorvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Consider temporary discontinuation of atorvastatin during treatment with nirmatrelvir/ritonavir. Resume atorvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C10BA05",
@@ -157,7 +157,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|atorvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Consider temporary discontinuation of atorvastatin during treatment with nirmatrelvir/ritonavir.Resume atorvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Consider temporary discontinuation of atorvastatin during treatment with nirmatrelvir/ritonavir. Resume atorvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "P01AX06",
@@ -177,7 +177,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|avanafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for avanafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.Only use nirmatrelvir/ritonavir if clinically appropriate to withhold avanafil. Avanafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for avanafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold avanafil. Avanafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "H02AB01",
@@ -187,7 +187,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|betamethasone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Alternative corticosteroids including  prednisolone should be considered.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "J05AR20",
@@ -207,7 +207,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|bosentan",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration is not recommended.Discontinue use of bosentan at least 36 hours prior to initiation of nirmatrelvir/ritonavir. Monitor for adverse effects."
+    "clinical_comment": "Co-administration is not recommended. Discontinue use of bosentan at least 36 hours prior to initiation of nirmatrelvir/ritonavir. Monitor for adverse effects."
   },
   {
     "atc_level": "A07EA06",
@@ -217,7 +217,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|budesonide",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Alternative corticosteroids including  prednisolone should be considered.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N06AX12",
@@ -237,7 +237,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir.Prescribe alternative COVID-19 therapy."
+    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
     "atc_level": "L01ED02",
@@ -247,7 +247,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|ceritinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "L04AD01",
@@ -277,7 +277,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|clonazepam",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated.Increased risk of extreme sedation and respiratory depression."
+    "clinical_comment": "Co-administration contra-indicated. Increased risk of extreme sedation and respiratory depression."
   },
   {
     "atc_level": "B01AC04",
@@ -317,7 +317,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|dabigatran",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk of bleeding is possible.Monitor clinically for signs of bleeding."
+    "clinical_comment": "Increased risk of bleeding is possible. Monitor clinically for signs of bleeding."
   },
   {
     "atc_level": "L01EC02",
@@ -327,7 +327,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|dabrafenib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "J05AE10",
@@ -367,7 +367,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|dasatinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "H02AB02",
@@ -377,7 +377,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|dexamethasone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Alternative corticosteroids including  prednisolone should be considered.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N05BA01",
@@ -387,7 +387,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|diazepam",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated.Increased risk of extreme sedation and respiratory depression."
+    "clinical_comment": "Co-administration contra-indicated. Increased risk of extreme sedation and respiratory depression."
   },
   {
     "atc_level": "C01AA05",
@@ -407,7 +407,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|diltiazem",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for diltiazem may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for diltiazem may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C01BA03",
@@ -427,7 +427,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|domperidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration is not recommended.The combination may result in increased risk of cardiovascular adverse events associated with domperidone."
+    "clinical_comment": "Co-administration is not recommended. The combination may result in increased risk of cardiovascular adverse events associated with domperidone."
   },
   {
     "atc_level": "J05AG03",
@@ -447,7 +447,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|encorafenib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of encorafenib due to potential risk of serious adverse events such as QT interval prolongation.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of encorafenib due to potential risk of serious adverse events such as QT interval prolongation. Seek oncologist's advice."
   },
   {
     "atc_level": "L02BB04",
@@ -457,7 +457,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir.Prescribe alternative COVID-19 therapy."
+    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
     "atc_level": "C03DA04",
@@ -467,7 +467,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|eplerenone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions.Potential for hyperkalaemia."
+    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions. Potential for hyperkalaemia."
   },
   {
     "atc_level": "G02AB03",
@@ -497,7 +497,7 @@
     "action_alt": "Monitor therapeutic concentration",
     "effect_on_concentration_1": "<up>|everolimus",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants.Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
+    "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
     "atc_level": "L04AA18",
@@ -507,7 +507,7 @@
     "action_alt": "Monitor therapeutic concentration",
     "effect_on_concentration_1": "<up>|everolimus",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants.Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
+    "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
     "atc_level": "C08CA02",
@@ -517,7 +517,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|felodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for felodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for felodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "N02AB03",
@@ -527,7 +527,7 @@
     "action_alt": "Review dose",
     "effect_on_concentration_1": "<up>|fentanyl",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects (including potentially fatal respiratory depression).Modify dose if needed or consult pain specialist for dose adjustment. For patients on patches, note serum fentanyl concentrations decline gradually upon patch removal, falling about 50% in approximately 20 to 27 hours."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects (including potentially fatal respiratory depression). Modify dose if needed or consult pain specialist for dose adjustment. For patients on patches, note serum fentanyl concentrations decline gradually upon patch removal, falling about 50% in approximately 20 to 27 hours."
   },
   {
     "atc_level": "C01BC04",
@@ -577,7 +577,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|glecaprevir/pibrentasvir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek specialist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek specialist's advice."
   },
   {
     "atc_level": "N05AD01",
@@ -597,7 +597,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|ibrutinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "N06AA02",
@@ -627,7 +627,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|ivabradine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated.Liverpool interaction checker notes \"Co-administration is likely to increase ivabradine concentrations which may be associated with the risk of excessive bradycardia.\""
+    "clinical_comment": "Co-administration contra-indicated. Liverpool interaction checker notes \"Co-administration is likely to increase ivabradine concentrations which may be associated with the risk of excessive bradycardia.\""
   },
   {
     "atc_level": "J02AB02",
@@ -707,7 +707,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|lorlatinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "N05AE05",
@@ -747,7 +747,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|methylprednisolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Alternative corticosteroids including  prednisolone should be considered.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N05CD08",
@@ -787,7 +787,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|neratinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions.Seek oncologists advice."
+    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions. Seek oncologists advice."
   },
   {
     "atc_level": "J05AG01",
@@ -807,7 +807,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|nifedipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for nifedipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for nifedipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "L01EA03",
@@ -817,7 +817,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|nilotinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "G03AA05",
@@ -857,7 +857,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C09DX03",
@@ -867,7 +867,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "N02AA05",
@@ -877,7 +877,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|oxycodone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended.Dosage adjustment may be needed."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended. Dosage adjustment may be needed."
   },
   {
     "atc_level": "N06AB05",
@@ -897,7 +897,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "N02AB02",
@@ -917,7 +917,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir.Prescribe alternative COVID-19 therapy."
+    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
     "atc_level": "N03AB02",
@@ -927,7 +927,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir.Prescribe alternative COVID-19 therapy."
+    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
     "atc_level": "M01AC01",
@@ -947,7 +947,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|prednisolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "H02AB07",
@@ -957,7 +957,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|prednisone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "N03AA03",
@@ -977,7 +977,7 @@
     "action_alt": "Review dose",
     "effect_on_concentration_1": "<up>|quetiapine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "If co-administration is necessary, reduce quetiapine dose and monitor quetiapine-associated adverse reactions.Seek specialist advice for mental health patients."
+    "clinical_comment": "If co-administration is necessary, reduce quetiapine dose and monitor quetiapine-associated adverse reactions. Seek specialist advice for mental health patients."
   },
   {
     "atc_level": "J05AJ01",
@@ -1017,7 +1017,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir.Prescribe alternative COVID-19 therapy."
+    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
     "atc_level": "C02KX05",
@@ -1077,7 +1077,7 @@
     "action_alt": "Review risk",
     "effect_on_concentration_1": "<up>|rivaroxaban",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased bleeding risk with rivaroxaban.Avoid concomitant use."
+    "clinical_comment": "Increased bleeding risk with rivaroxaban. Avoid concomitant use."
   },
   {
     "atc_level": "C10AA07",
@@ -1087,7 +1087,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|rosuvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Consider temporary discontinuation of rosuvastatin during treatment with nirmatrelvir/ritonavir.Resume rosuvastatin  3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Consider temporary discontinuation of rosuvastatin during treatment with nirmatrelvir/ritonavir. Resume rosuvastatin  3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C10BA06",
@@ -1097,7 +1097,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|rosuvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Consider temporary discontinuation of rosuvastatin during treatment with nirmatrelvir/ritonavir.Resume rosuvastatin  3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Consider temporary discontinuation of rosuvastatin during treatment with nirmatrelvir/ritonavir. Resume rosuvastatin  3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "R03AC12",
@@ -1107,7 +1107,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|salmeterol",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration is not recommended.The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prolongation, palpitations, and sinus tachycardia. If clinically appropriate, withhold salmeterol and resume 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration is not recommended. The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prolongation, palpitations, and sinus tachycardia. If clinically appropriate, withhold salmeterol and resume 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "J05AE01",
@@ -1137,7 +1137,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|sildenafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for sildenafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.Only use nirmatrelvir/ritonavir if clinically appropriate to withhold sildenafil. Sildenafil can be resumed  3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for sildenafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold sildenafil. Sildenafil can be resumed  3 days after completing nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C10AA01",
@@ -1147,7 +1147,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|simvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis.Discontinue use of simavastin at least 12 hours prior to initiation of nirmatrelvir/ritonavir.Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis. Discontinue use of simavastin at least 12 hours prior to initiation of nirmatrelvir/ritonavir. Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C10BA02",
@@ -1157,7 +1157,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|simvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis.Discontinue use of simavastin at least 12 hours prior to initiation of nirmatrelvir/ritonavir.Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis. Discontinue use of simavastin at least 12 hours prior to initiation of nirmatrelvir/ritonavir. Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "L04AA10",
@@ -1187,7 +1187,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|sonidegib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
     "atc_level": "98072Q",
@@ -1197,7 +1197,7 @@
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir.Prescribe alternative COVID-19 therapy."
+    "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
     "atc_level": "L04AD02",
@@ -1207,7 +1207,7 @@
     "action_alt": "Monitor therapeutic concentration",
     "effect_on_concentration_1": "<up>|tacrolimus",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants.Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
+    "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
     "atc_level": "G04BE08",
@@ -1217,7 +1217,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|tadalafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for tadalafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.Only use nirmatrelvir/ritonavir if clinically appropriate to withhold tadalafil. Tadalafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for tadalafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold tadalafil. Tadalafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "C09DB04",
@@ -1227,7 +1227,7 @@
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "J05AR06",
@@ -1277,7 +1277,7 @@
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|triamcinolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.Alternative corticosteroids including  prednisolone should be considered.Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
     "atc_level": "G04BE09",
@@ -1287,7 +1287,7 @@
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|vardenafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for vardenafil  associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.Only use nirmatrelvir/ritonavir if clinically appropriate to withhold vardenafil. Vardenafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for vardenafil  associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold vardenafil. Vardenafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
   },
   {
     "atc_level": "L01XX52",
@@ -1297,7 +1297,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|venetoclax",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.Seek specialist advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
     "atc_level": "L01CA01",
@@ -1307,7 +1307,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|vinblastine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration of vinblastine may lead to significant haematologic or gastrointestinal side effects.Seek oncologist's advice."
+    "clinical_comment": "Co-administration of vinblastine may lead to significant haematologic or gastrointestinal side effects. Seek oncologist's advice."
   },
   {
     "atc_level": "L01CA02",
@@ -1317,7 +1317,7 @@
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|vincristine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration of vincristine may lead to significant haematologic or gastrointestinal side effects.Seek oncologist's advice."
+    "clinical_comment": "Co-administration of vincristine may lead to significant haematologic or gastrointestinal side effects. Seek oncologist's advice."
   },
   {
     "atc_level": "J02AC03",
