@@ -66,8 +66,8 @@ $('#btnReset').on('click', function (event) {
 $('#btnPrint').on('click', function (event) {
 
     $.each(selectedMedObjList, function (index, item) {
-        if ($('#' + item.atc_level + '_phi_td').innerText == "Please fill your recommendation..") {
-            $('#' + item.atc_level + '_phi_td').innerText = "";     
+        if ($('#' + item.atc_level + '_phi_td').text() == "Please fill your recommendation..") {
+            $('#' + item.atc_level + '_phi_td').text("");     
          } 
     });
 
