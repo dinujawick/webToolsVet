@@ -419,9 +419,7 @@ function createCardLayout(atcLevel) {
                 )
             ),
             $('<div>').addClass('col-6').attr('style', 'text-align:center;').append(
-                $('<div>').attr('id', atcLevel + 'vstackContra').addClass('col').append(
-
-                )
+                $('<div>').attr('id', atcLevel + 'vstackContra').addClass('col')
             )
         ),
         $('<div>').attr('id', atcLevel + 'commentsLayer').addClass('row')
