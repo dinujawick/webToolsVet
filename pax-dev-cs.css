@@ -274,3 +274,8 @@
         width: 100%;
     }
 }
+@media screen and (max-height: 43.59px) {
+   .card-header{
+       font-size:large;
+   }
+}
