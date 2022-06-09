@@ -241,9 +241,13 @@
     margin-top: 0.5rem;
     margin-left: 0.5rem;
 }
+#alertBoxForDose {
+    margin-top: 0.625rem;
+    margin-bottom: 0rem;
+    padding-left: 5rem;
+}
 .clicked {
     color: #d1d1d1 !important;
-    
 }
 .clicked:hover {
     background-color: rgb(255 255 255 / 15%) !important;
