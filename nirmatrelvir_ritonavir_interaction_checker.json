@@ -1,17 +1,23 @@
 [
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AR04",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Abacavir/Lamivudine/Zidovudine",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<down>|zidovudine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EF03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Abemaciclib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
@@ -20,58 +26,76 @@
     "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EB03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Afatinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|afatinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G04CA01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Alfuzosin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|alfuzosin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration is contraindicated due to potential hypotension."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir is contraindicated due to potential hypotension."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05BA12",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Alprazolam",
     "evaluation_alt": "Attention required",
     "action_alt": "Review dose",
     "effect_on_concentration_1": "<up>|alprazolam",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Caution is warranted during the first several days when alprazolam is co-administered with ritonavir before induction of alprazolam metabolism develops. If an anxiolytic is needed, use lorazepam, oxazepam, or temazepam at usual doses. "
+    "clinical_comment": "Caution is warranted during the first several days when alprazolam is co-administered with ritonavir before induction of alprazolam metabolism develops. If an anxiolytic is needed, use lorazepam, oxazepam, or temazepam at usual doses."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01BD01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Amiodarone",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|amiodarone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due potential for cardiac arrhythmias. Amiodarone product information states: The half-life of amiodarone is long and with chronic oral dosing can be from 14 to 110 days but is usually in the range 14 to 59 days."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contraindicated due to potential for cardiac arrhythmias. Amiodarone product information states: The half-life of amiodarone is long and with chronic oral dosing can be from 14 to 110 days but is usually in the range 14 to 59 days."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N06AA09",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Amitriptyline",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|amitriptyline",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when amitriptyline is concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when amitriptyline is concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C08CA01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Amlodipine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -80,18 +104,24 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10BX03",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Amlodipine/Atorvastatin",
     "evaluation_alt": "Attention required",
     "action_alt": "Combination product, see clinical comment",
     "effect_on_concentration_1": "<up>|amlodipine",
     "effect_on_concentration_2": "<up>|atorvastatin",
-    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. Consider temporary discontinuation of atorvastatin  during and for 3 days after treatment with nirmatrelvir/ritonavir.A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
+    "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. Consider temporary discontinuation of atorvastatin  during and for 3 days after treatment with nirmatrelvir/ritonavir. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C09DB01",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Amlodipine/Valsartan",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -100,8 +130,11 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C09DX01",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Amlodipine/Valsartan/Hydrochlorothiazide",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -110,8 +143,11 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L02BB05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Apalutamide",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -120,28 +156,37 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "B01AF02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Apixaban",
     "evaluation_alt": "Attention required",
     "action_alt": "Review risk",
     "effect_on_concentration_1": "<up>|apixaban",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased bleeding risk with apixaban. Avoid concomitant use."
+    "clinical_comment": "Increased bleeding risk with apixaban. Avoid concomitant use. "
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AE08",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Atazanavir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|atazanavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Liverpool interaction checker notes \"If atazanavir is prescribed alone for the treatment of HIV then coadministration with nirmatrelvir/ritonavir is possible with no dose adjustment required.\" Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10AA05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Atorvastatin",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
@@ -150,8 +195,11 @@
     "clinical_comment": "Consider temporary discontinuation of atorvastatin during treatment with nirmatrelvir/ritonavir. Resume atorvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10BA05",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Atorvastatin/Ezetimibe",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
@@ -160,8 +208,11 @@
     "clinical_comment": "Consider temporary discontinuation of atorvastatin during treatment with nirmatrelvir/ritonavir. Resume atorvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "P01AX06",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Atovaquone",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -170,38 +221,50 @@
     "clinical_comment": "Careful monitoring of serum levels or therapeutic effects is recommended when atovaquone is co-administered with ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G04BE10",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Avanafil",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|avanafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for avanafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold avanafil. Avanafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for avanafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.  Only use nirmatrelvir/ritonavir if clinically appropriate to withhold avanafil. Avanafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "H02AB01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Bethametasone (systemic)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|betamethasone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AR20",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Bictegravir/Emtricitabine/Tenofovir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|bictegravir/tenofovir",
     "effect_on_concentration_2": "<double-arrow>|emtricitabine",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C02KX01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Bosentan",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -210,28 +273,37 @@
     "clinical_comment": "Co-administration is not recommended. Discontinue use of bosentan at least 36 hours prior to initiation of nirmatrelvir/ritonavir. Monitor for adverse effects."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "A07EA06",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Budesonide (systemic)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|budesonide",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "N06AX12",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Bupropion",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<down>|bupropion and active metabolite hydroxy-bupropion",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Monitor for an adequate clinical response to bupropion."
+    "clinical_comment": "Monitor for an adequate clinical response to bupropion. "
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N03AF01",
     "lookback": "9 months",
+    "combination": "",
     "generic_name": "Carbamazepine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -240,18 +312,24 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01ED02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Ceritinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|ceritinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L04AD01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Ciclosporin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -260,8 +338,11 @@
     "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J01FA09",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Clarithromycin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor",
@@ -270,38 +351,50 @@
     "clinical_comment": "Liverpool interaction checker notes \"Due to the large therapeutic window of clarithromycin no dose reduction should be necessary in patients with normal renal function.\""
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N03AE01",
     "lookback": "4 months",
+    "combination": "",
     "generic_name": "Clonazepam",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|clonazepam",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated. Increased risk of extreme sedation and respiratory depression."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated. Increased risk of extreme sedation and respiratory depression. The mean elimination half-life of clonazepam is 39.0 (plus or minus 8.3) hours."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "B01AC04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Clopidogrel",
     "evaluation_alt": "Attention required",
     "action_alt": "Review risk",
     "effect_on_concentration_1": "<down>|clopidogrel",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Do not co-administer nirmatrelvir/ritonavir in patients with recent coronary stent."
+    "clinical_comment": "The Liverpool interaction checker notes \"The management of this interaction requires to take into account whether or not a transient loss of clopidogrel efficacy during the short duration of nirmatrelvir/ritonavir treatment is acceptable. The initial period (at least 6 weeks) post coronary stenting represents a high-risk situation which does typically warrant a transition to prasugrel or, if this is not possible, an alternative COVID-19 treatment should be considered.\""
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05AH02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Clozapine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|clozapine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to serious or life-threatening reactions such as cardiac arrhythmias."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contraindicated due to serious or life-threatening reactions such as cardiac arrhythmias."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "M04AC01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Colchicine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Review risk",
@@ -310,8 +403,11 @@
     "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions in patients with renal or hepatic impairment."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "B01AE07",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Dabigatran",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
@@ -320,78 +416,102 @@
     "clinical_comment": "Increased risk of bleeding is possible. Monitor clinically for signs of bleeding."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EC02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Dabrafenib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|dabrafenib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AE10",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Darunavir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|darunavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AR14",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Darunavir/Cobicistat",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|darunavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AR22",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Darunavir/Cobicistat/Emtricitabine/Tenofovir alafenamide",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|darunavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EA02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Dasatinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|dasatinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "H02AB02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Dexamethasone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|dexamethasone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05BA01",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Diazepam",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|diazepam",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated. Increased risk of extreme sedation and respiratory depression."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated.  Increased risk of extreme sedation and respiratory depression. Typical elimination half-life values are in the range of 24 - 48 hours for diazepam and 40 - 100 hours for the active metabolite desmethyldiazepam."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01AA05",
     "lookback": "9 months",
+    "combination": "",
     "generic_name": "Digoxin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -400,8 +520,11 @@
     "clinical_comment": "Caution should be exercised when co-administering nirmatrelvir/ritonavir with digoxin, with appropriate monitoring of serum digoxin levels."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C08DB01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Diltiazem",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -410,48 +533,63 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for diltiazem may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01BA03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Disopyramide",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|disopyramide",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to potential for cardiac arrhythmias."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contraindicated due to potential for cardiac arrhythmias."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "A03FA03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Domperidone",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|domperidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration is not recommended. The combination may result in increased risk of cardiovascular adverse events associated with domperidone."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir is not recommended. The combination may result in increased risk of cardiovascular adverse events associated with domperidone."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AG03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Efavirenz",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|efavirenz",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EC03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Encorafenib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|encorafenib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of encorafenib due to potential risk of serious adverse events such as QT interval prolongation. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of encorafenib due to potential risk of serious adverse events such as QT interval prolongation.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L02BB04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Enzalutamide",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -460,38 +598,50 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C03DA04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Eplerenone",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|eplerenone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions. Potential for hyperkalaemia."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated due to serious or life-threatening reactions.  Potential for hyperkalaemia."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G02AB03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Ergometrine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|ergometrine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated due to serious or life-threatening reactions. "
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J01FA01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Erythromycin",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider alternative antibiotic",
     "effect_on_concentration_1": "<up>|erythromycin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Liverpool Interaction Checker notes \"Use with caution as erythromycin has a known risk of QT prolongation.\" \"Caution would have to be exercised up to 3 days after the last dose of nirmatrelvir/ritonavir\"."
+    "clinical_comment": "Liverpool Interaction Checker notes \"Use with caution as erythromycin has a known risk of QT prolongation\" and \"Caution would have to be exercised up to 3 days after the last dose of nirmatrelvir/ritonavir\"."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EG02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Everolimus",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -500,8 +650,11 @@
     "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L04AA18",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Everolimus",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -510,8 +663,11 @@
     "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C08CA02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Felodipine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -520,8 +676,11 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for felodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N02AB03",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Fentanyl",
     "evaluation_alt": "Attention required",
     "action_alt": "Review dose",
@@ -530,28 +689,37 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects (including potentially fatal respiratory depression). Modify dose if needed or consult pain specialist for dose adjustment. For patients on patches, note serum fentanyl concentrations decline gradually upon patch removal, falling about 50% in approximately 20 to 27 hours."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01BC04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Flecainide",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|flecainide",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to potential for cardiac arrhythmias."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contraindicated due to potential for cardiac arrhythmias."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N06AB03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Fluoxetine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|fluoxetine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when fluoxetine is concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when fluoxetine is concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "R03AK06",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Fluticasone/Salmeterol",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
@@ -560,58 +728,76 @@
     "clinical_comment": "Co-administration is not recommended. The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prolongation, palpitations, and sinus tachycardia. If clinically appropriate, withhold salmeterol and resume 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AE07",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Fosamprenavir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|fosamprenavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AP57",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Glecaprevir/Pibrentasvir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|glecaprevir/pibrentasvir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek specialist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek specialist's advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05AD01",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Haloperidol",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|haloperidol",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects when these medicines are concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects when these medicines are concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EL01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Ibrutinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|ibrutinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N06AA02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Imipramine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|imipramine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when imipramine is concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when imipramine is concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J02AC02",
     "lookback": "non-PBS",
+    "combination": "",
     "generic_name": "Itraconazole",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -620,18 +806,24 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01EB17",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Ivabradine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|ivabradine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated. Liverpool interaction checker notes \"Co-administration is likely to increase ivabradine concentrations which may be associated with the risk of excessive bradycardia.\""
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated. Liverpool interaction checker notes \"Co-administration is likely to increase ivabradine concentrations which may be associated with the risk of excessive bradycardia.\""
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J02AB02",
     "lookback": "non-PBS",
+    "combination": "",
     "generic_name": "Ketoconazole (oral)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -640,18 +832,24 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AR01",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Lamivudine/Zidovudine",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<down>|zidovudine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N03AX09",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Lamotrigine",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -660,8 +858,11 @@
     "clinical_comment": "Careful monitoring of serum levels or therapeutic effects is recommended when these medicines are co-administered with ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G03AA07",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Levonorgestrel/Ethinylestradiol",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider additional contraceptive",
@@ -670,8 +871,11 @@
     "clinical_comment": "An additional, non-hormonal method of contraception should be considered."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G03AB03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Levonorgestrel/Ethinylestradiol",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider additional contraceptive",
@@ -680,18 +884,24 @@
     "clinical_comment": "An additional, non-hormonal method of contraception should be considered."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01BB01",
     "lookback": "hospital only?",
+    "combination": "",
     "generic_name": "Lidocaine (systemic)",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
-    "effect_on_concentration_1": "<up>|lidocain",
+    "effect_on_concentration_1": "<up>|lidocaine",
     "effect_on_concentration_2": "",
     "clinical_comment": "Caution is warranted and therapeutic concentration monitoring is recommended for antiarrhythmics if available."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "R06AX13",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Loratadine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -700,38 +910,50 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when loratadine is co-administered with ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01ED05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Lorlatinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|lorlatinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05AE05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Lurasidone",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|lurasidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to serious or life-threatening reactions such as cardiac arrhythmias."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contraindicated due to serious or life-threatening reactions such as cardiac arrhythmias."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AX09",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Maraviroc",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|maraviroc",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N07BC02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Methadone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -740,18 +962,24 @@
     "clinical_comment": "Monitor methadone maintained patients closely for evidence of withdrawal effects and adjust the methadone dose accordingly."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "H02AB04",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Methylprednisolone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|methylprednisolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05CD08",
     "lookback": "hospital only?",
+    "combination": "",
     "generic_name": "Midazolam (parenteral)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -760,8 +988,11 @@
     "clinical_comment": "Co-administration of midazolam (parenteral) should be done in a setting which ensures close clinical monitoring and appropriate medical management in case of respiratory depression or prolonged sedation. Dosage reduction for midazolam should be considered, especially if more than a single dose of midazolam is administered."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N02AA01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Morphine",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor clinical response",
@@ -770,8 +1001,11 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "A08AA62",
     "lookback": "non-PBS",
+    "combination": "Y",
     "generic_name": "Naltrexone/Bupropion",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor clinical response",
@@ -780,8 +1014,11 @@
     "clinical_comment": "Monitor for an adequate clinical response to bupropion."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EH02",
     "lookback": "non-PBS",
+    "combination": "",
     "generic_name": "Neratinib",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Seek specialist advice",
@@ -790,18 +1027,24 @@
     "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions. Seek oncologists advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AG01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Nevirapine",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<down>|nirmatrelvir/ritonavir(weak)",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C08CA05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Nifedipine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -810,18 +1053,24 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for nifedipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01EA03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Nilotinib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|nilotinib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G03AA05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Norethisterone/Ethinylestradiol",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider additional contraceptive",
@@ -830,8 +1079,11 @@
     "clinical_comment": "An additional, non-hormonal method of contraception should be considered."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G03AB04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Norethisterone/Ethinylestradiol",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider additional contraceptive",
@@ -840,18 +1092,24 @@
     "clinical_comment": "An additional, non-hormonal method of contraception should be considered."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N06AA10",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Nortriptyline",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|nortriptyline",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when nortriptyline is concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when nortriptyline is concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C09DB02",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Olmesartan/Amlodipine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -860,8 +1118,11 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C09DX03",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Olmesartan/Amlodipine/Hydrochlorothiazide",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -870,8 +1131,11 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N02AA05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Oxycodone",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor side effects",
@@ -880,18 +1144,24 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended. Dosage adjustment may be needed."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N06AB05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Paroxetine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|paroxetine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when paroxetine is concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when paroxetine is concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C09BB04",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Perindopril/Amlodipine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -900,18 +1170,24 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N02AB02",
     "lookback": "non-PBS",
+    "combination": "",
     "generic_name": "Pethidine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|pethidine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to potential for serious respiratory depression or haematologic abnormalities."
+    "clinical_comment": "Co-administrationof nirmatrelvir/ritonavir  contra-indicated due to potential for serious respiratory depression or haematologic abnormalities."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N03AA02",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Phenobarbital",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -920,8 +1196,11 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N03AB02",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Phenytoin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -930,38 +1209,50 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "M01AC01",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Piroxicam",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|piroxicam",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to potential for serious respiratory depression or haematologic abnormalities."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated due to potential for serious respiratory depression or haematologic abnormalities."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "H02AB06",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Prednisolone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|prednisolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.   Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "H02AB07",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Prednisone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|prednisone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N03AA03",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Primidone",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -970,38 +1261,50 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05AH04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Quetiapine",
     "evaluation_alt": "Attention required",
     "action_alt": "Review dose",
     "effect_on_concentration_1": "<up>|quetiapine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "If co-administration is necessary, reduce quetiapine dose and monitor quetiapine-associated adverse reactions. Seek specialist advice for mental health patients."
+    "clinical_comment": "If co-administration is necessary, reduce quetiapine dose and monitor quetiapine-associated adverse reactions.  Seek specialist advice for mental health patients."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AJ01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Raltegravir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<down>|raltegravir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Liverpool interaction checker notes \"Coadministration of ritonavir (100 mg twice daily) and raltegravir (400 mg single dose) had no significant effect on raltegravir pharmacokinetics (AUC decreased by 16%, Cmax decreased by 24%, no change in Cmin).\" Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C01EB18",
     "lookback": "non-PBS",
+    "combination": "",
     "generic_name": "Ranolazine",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|ranolazine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contra-indicated due to serious or life-threatening reactions."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir contra-indicated due to serious or life-threatening reactions."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J04AB04",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Rifabutin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -1010,8 +1313,11 @@
     "clinical_comment": "Avoid concomitant use of nirmatrelvir/ritonavir with rifabutin."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J04AB02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Rifampicin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -1020,58 +1326,76 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C02KX05",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Riociguat",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|riociguat",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration is not recommended."
+    "clinical_comment": "Co-administration of nirmatrelvir/ritonavir is not recommended."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05AX08",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Risperidone",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|risperidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Carefully monitor therapeutic and adverse effects of risperidone when administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Carefully monitor therapeutic and adverse effects of risperidone when administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "08781E",
     "atc_level": "N05AX08-I",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Risperidone (long acting injection)",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|risperidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration in patients stabilised on risperidone long acting injection."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir in patients stabilised on risperidone long acting injection."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "08782F",
     "atc_level": "N05AX08-I",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Risperidone (long acting injection)",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|risperidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration in patients stabilised on risperidone long acting injection."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir in patients stabilised on risperidone long acting injection."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "08780D",
     "atc_level": "N05AX08-I",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Risperidone (long acting injection)",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
     "effect_on_concentration_1": "<up>|risperidone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration in patients stabilised on risperidone long acting injection."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir in patients stabilised on risperidone long acting injection."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "B01AF01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Rivaroxaban",
     "evaluation_alt": "Attention required",
     "action_alt": "Review risk",
@@ -1080,8 +1404,11 @@
     "clinical_comment": "Increased bleeding risk with rivaroxaban. Avoid concomitant use."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10AA07",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Rosuvastatin",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
@@ -1090,8 +1417,11 @@
     "clinical_comment": "Consider temporary discontinuation of rosuvastatin during treatment with nirmatrelvir/ritonavir. Resume rosuvastatin  3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10BA06",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Rosuvastatin/Ezetimibe",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
@@ -1100,8 +1430,11 @@
     "clinical_comment": "Consider temporary discontinuation of rosuvastatin during treatment with nirmatrelvir/ritonavir. Resume rosuvastatin  3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "R03AC12",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Salmeterol",
     "evaluation_alt": "Attention required",
     "action_alt": "Withhold if clinically appropriate",
@@ -1110,58 +1443,76 @@
     "clinical_comment": "Co-administration is not recommended. The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prolongation, palpitations, and sinus tachycardia. If clinically appropriate, withhold salmeterol and resume 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AE01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Saquinavir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|saquinavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N06AB06",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Sertraline",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
     "effect_on_concentration_1": "<up>|sertraline",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when sertraline is concomitantly administered with antiretroviral doses of ritonavir (>100mg daily)."
+    "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended when sertraline is concomitantly administered with antiretroviral doses of ritonavir (greater than 100mg daily)."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G04BE03",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Sildenafil",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|sildenafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for sildenafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold sildenafil. Sildenafil can be resumed  3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for sildenafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.  Only use nirmatrelvir/ritonavir if clinically appropriate to withhold sildenafil. Sildenafil can be resumed  3 days after completing nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10AA01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Simvastatin",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|simvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis. Discontinue use of simavastin at least 12 hours prior to initiation of nirmatrelvir/ritonavir. Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis.  Discontinue use of simvastatin at least 12 hours prior to initiation of nirmatrelvir/ritonavir. Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C10BA02",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Simvastatin/Ezetimibe",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|simvastatin",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis. Discontinue use of simavastin at least 12 hours prior to initiation of nirmatrelvir/ritonavir. Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to potential for myopathy including rhabdomyolysis.  Discontinue use of simvastatin at least 12 hours prior to initiation of nirmatrelvir/ritonavir. Resume simvastatin 3 days after the last dose of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L04AA10",
     "lookback": "4 months",
+    "combination": "",
     "generic_name": "Sirolimus",
     "evaluation_alt": "Attention required",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -1170,28 +1521,37 @@
     "clinical_comment": "Avoid concomitant use of sirolimus and nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AP56",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Sofosbuvir/Velpatasvir/Voxilaprevir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|sofosbuvir/velpatasvir/voxilaprevir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Liverpool interaction checker notes \"Coadministration has not been studied but based on metabolism and clearance a clinically significant interaction is unlikely.\" Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01XJ02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Sonidegib",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|sonidegib",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek oncologist's advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "98072Q",
     "atc_level": "98072Q",
-    "lookback": "non-PBS",
+    "lookback": "6 months",
+    "combination": "",
     "generic_name": "St John's Wort",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -1200,8 +1560,11 @@
     "clinical_comment": "Potential loss of virologic response and possible resistance to nirmatrelvir/ritonavir. Prescribe alternative COVID-19 therapy."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L04AD02",
     "lookback": "4 months",
+    "combination": "",
     "generic_name": "Tacrolimus",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -1210,8 +1573,11 @@
     "clinical_comment": "Therapeutic concentration monitoring is recommended for immunosuppressants. Avoid use of nirmatrelvir/ritonavir when close monitoring of immunosuppressant serum concentrations is not feasible."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G04BE08",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Tadalafil",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Withhold if clinically appropriate",
@@ -1220,8 +1586,11 @@
     "clinical_comment": "Co-administration contraindicated due to the potential for tadalafil associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold tadalafil. Tadalafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "C09DB04",
     "lookback": "3 months",
+    "combination": "Y",
     "generic_name": "Telmisartan/Amlodipine",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
@@ -1230,18 +1599,24 @@
     "clinical_comment": "Caution is warranted and clinical monitoring of patients is recommended. A dose decrease for amlodipine may be needed during and for 3 days after treatment with nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AR06",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Tenofovir disoproxil/Emtricitabine/Efavirenz",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|efavirenz",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "B01AC24",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Ticagrelor",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Consider alternative COVID-19 treatment",
@@ -1250,18 +1625,24 @@
     "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AE09",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Tipranavir",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|tipranavir",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Potential interaction with nirmatrelvir/ritonavir. Seek specialist advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N02AX02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Tramadol",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor clinical response",
@@ -1270,38 +1651,50 @@
     "clinical_comment": "Careful monitoring of therapeutic and adverse effects is recommended."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "H02AB08",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Triamcinolone (systemic)",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor side effects",
     "effect_on_concentration_1": "<up>|triamcinolone",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression. Alternative corticosteroids including  prednisolone should be considered. Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
+    "clinical_comment": "Increased risk for Cushing's syndrome and adrenal suppression.  Alternative corticosteroids including  prednisolone should be considered.  Liverpool interaction checker notes \"Given the 5-day duration of nirmatrelvir/ritonavir this is unlikely to be clinically significant.\""
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "G04BE09",
     "lookback": "6 months",
+    "combination": "",
     "generic_name": "Vardenafil",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Withhold if clinically appropriate",
     "effect_on_concentration_1": "<up>|vardenafil",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Co-administration contraindicated due to the potential for vardenafil  associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope. Only use nirmatrelvir/ritonavir if clinically appropriate to withhold vardenafil. Vardenafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
+    "clinical_comment": "Co-administration contraindicated due to the potential for vardenafil  associated adverse events, including visual abnormalities, hypotension, prolonged erection, and syncope.  Only use nirmatrelvir/ritonavir if clinically appropriate to withhold vardenafil. Vardenafil can be resumed 3 days after completing nirmatrelvir/ritonavir."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01XX52",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Venetoclax",
     "evaluation_alt": "Contra-indicated",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<up>|venetoclax",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir. Seek specialist advice."
+    "clinical_comment": "Avoid co-administration of nirmatrelvir/ritonavir.  Seek specialist advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01CA01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Vinblastine",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
@@ -1310,8 +1703,11 @@
     "clinical_comment": "Co-administration of vinblastine may lead to significant haematologic or gastrointestinal side effects. Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "L01CA02",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Vincristine",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
@@ -1320,8 +1716,11 @@
     "clinical_comment": "Co-administration of vincristine may lead to significant haematologic or gastrointestinal side effects. Seek oncologist's advice."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J02AC03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Voriconazole",
     "evaluation_alt": "Attention required",
     "action_alt": "Review dose",
@@ -1330,8 +1729,11 @@
     "clinical_comment": "Avoid concomitant use of nirmatrelvir/ritonavir with voriconazole."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "B01AA03",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Warfarin",
     "evaluation_alt": "Attention required",
     "action_alt": "Monitor therapeutic concentration",
@@ -1340,18 +1742,24 @@
     "clinical_comment": "Closely monitor INR if co-administration with warfarin is necessary."
   },
   {
+    "cumulative_sedative": "",
+    "item_code": "",
     "atc_level": "J05AF01",
     "lookback": "3 months",
+    "combination": "",
     "generic_name": "Zidovudine",
     "evaluation_alt": "Attention required",
     "action_alt": "Seek specialist advice",
     "effect_on_concentration_1": "<down>|zidovudine",
     "effect_on_concentration_2": "",
-    "clinical_comment": "Seek specialist advice."
+    "clinical_comment": "Liverpool interaction checker notes \"Coadministration with ritonavir decreased zidovudine AUC by 25% due to induction of glucuronidation. This decrease does not warrant a dosage adjustment of zidovudine.\" Seek specialist advice."
   },
   {
+    "cumulative_sedative": "Y",
+    "item_code": "",
     "atc_level": "N05CF02",
-    "lookback": "non-PBS",
+    "lookback": "6 months",
+    "combination": "",
     "generic_name": "Zolpidem",
     "evaluation_alt": "Follow up",
     "action_alt": "Monitor",
