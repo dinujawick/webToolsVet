@@ -27,7 +27,7 @@ var totalRisk = {
 $(document).ready(function () {
 
     //Get Empty Graph
-   /* createCSV(selectedMedGroupList, "REMOVE");*/
+    /* createCSV(selectedMedGroupList, "REMOVE");*/
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
