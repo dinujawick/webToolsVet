@@ -89,9 +89,7 @@
     font-family: 'Roboto Condensed',sans-serif;
 }
 
-#vetMatesLogo {
-    margin-bottom: 2rem;
-}
+
 
 
 .container {
@@ -104,12 +102,6 @@
     /*width: -webkit-fill-available;*/
 }
 
-
-#menu {
-    border-left: 1px solid #ffc107;
-    border-right: 1px solid #ffc107;
-    padding: 0.2rem;
-}
 
 /*Graph*/
 
