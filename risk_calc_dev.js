@@ -35,7 +35,7 @@ $(document).ready(function () {
             if (item.itm_gen_nme != prevAddedItem) {
 
                 if (item.Combination != 1) {
-                    $med = $('<a>').attr('id', "a" + atcLevel).text(atcDescr).addClass('wordbr').appendTo('#searchList');
+                    $med = $('<a>').attr('id', "a" + item.prmy_atc_cde).text(item.itm_gen_nme).addClass('wordbr').appendTo('#searchList');
                     $med.on('click', function (event) {
                         addMed();
                     });
