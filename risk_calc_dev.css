@@ -14,22 +14,22 @@
     }
 
 /* The search field */
-#myInput {
+#searchTxt {
     box-sizing: border-box;
     background-image: url('Images/search.png');
     background-position: 14px 19px;
     background-repeat: no-repeat;
     font-size: 16px;
-    padding: 14px 22px 12px 45px;
+    padding: 14px 22px 12px 36px;
     box-shadow: inset;
     border: 1px solid #ddd;
     width: -webkit-fill-available;
 }
 
-    /* The search field when it gets focus/clicked on */
-    #myInput:focus {
-        outline: 3px solid #ddd;
-    }
+/* The search field when it gets focus/clicked on */
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -68,15 +68,10 @@
     display: block;
 }
 
-
 .close {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    padding: 16px 16px;
-    transform: translate(0%, -50%);
-    background-image: url('Images/sign-delete-icon.png');
+    background-size: 29px;
+    background-image: url('Images/delete.png');
     background-repeat: no-repeat;
 }
 
@@ -90,57 +85,30 @@
 }
 
 .body {
-    background-color: #e5e5e5;
+    background-color: white;
+    font-family: 'Roboto Condensed',sans-serif;
 }
 
-#pageHeader {
-    font-family: 'Roboto Condensed',sans-serif;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    background-image: url('Images/headerBgImage.png');
-    background-repeat: no-repeat;
-    color: #f9f9f9;
-    padding-left: 2rem;
-    font-size: 2rem;
+#vetMatesLogo {
+    margin-bottom: 2rem;
 }
+
 
 .container {
     background-color: white;
     font-family: 'Roboto Condensed',sans-serif;
 }
 
-#chart {
-    overflow: auto;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
-    border: outset;
-    padding-left: 2.2rem;
-    padding-right: 2.2rem;
-    width: auto;
-    height: auto;
-    /*visibility: hidden;*/
-}
-
-#legend {
-    overflow: scroll;
-    max-height: 10rem;
-    width: auto;
-    height: auto;
-    overflow-x: hidden;
-}
-
 .searchPanel {
     border: outset;
-    width: -webkit-fill-available;
+    /*width: -webkit-fill-available;*/
 }
 
 
 #menu {
     border-left: 1px solid #ffc107;
     border-right: 1px solid #ffc107;
-    padding: 1rem;
+    padding: 0.2rem;
 }
 
 /*Graph*/
@@ -173,3 +141,53 @@ g {
 #legGroup {
     border: ridge;
 }
+
+#btnPrintDiv {
+    margin-bottom: 1rem;
+}
+
+#btnPrint, #btnReset {
+    background-color: #8b0e04;
+    background-image: linear-gradient(to bottom,#8b0e04,#720b03);
+    background-repeat: repeat-x;
+    color: white;
+}
+
+/*#divTableCol {
+    border-left: 1px solid #ffc107;
+    border-right: 1px solid #ffc107;
+}*/
+
+
+/*#divTable {
+    padding: 0.25rem;
+}*/
+
+#toolHeader {
+    text-align: center;
+    color: #720b03;
+}
+
+#tblArrows {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-right: 5px;
+    border-style: groove;
+}
+
+.arrow-back {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    border-style: groove;
+}
+
+.medCardRemoveBtn {
+    background-color: #8b0e04;
+    background-image: linear-gradient(to bottom,#8b0e04,#720b03);
+    background-repeat: repeat-x;
+    color: white;
+}
+
+    .medCardRemoveBtn:hover {
+        color: white;
+    }

@@ -30,7 +30,7 @@ $(document).ready(function () {
     $.getJSON("risk_calc_data.json", function (data) {
 
         $.each(data, function (index, item) {
-            console.log(item);
+           
             //For remove duplication on the generic names
             if (item.itm_gen_nme != prevAddedItem) {
 
@@ -62,19 +62,26 @@ $(document).ready(function () {
 });
 
 
-// When the user clicks on the button,toggle between hiding and showing the dropdown content
-function myFunction() {
+//Function to when the user clicks on the button,toggle between hiding and showing the dropdown content
+function toggleSearchList() {
     document.getElementById("searchList").classList.toggle("show");
+
 }
 
-
+//Functon to filter the search dropdown according to input text
 function filterFunction() {
 
+    if (!$('#searchList').hasClass("show")) {
+        toggleSearchList();
+    }
+
     var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
+
+    input = document.getElementById("searchTxt");
     filter = input.value.toUpperCase();
     div = document.getElementById("searchList");
     a = div.getElementsByTagName("a");
+
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -83,6 +90,7 @@ function filterFunction() {
             a[i].style.display = "none";
         }
     }
+
 }
 
 function createSelectedList(atcDescr, atcLevel) {
