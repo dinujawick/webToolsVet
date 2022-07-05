@@ -13,42 +13,51 @@
         background-image: linear-gradient(to bottom,#8b0e04,#720b03);
     }
 
+
+/* Icarus edit */
+
 /* The search field */
 #searchTxt {
     box-sizing: border-box;
-    background-image: url('Images/search.png');
+    background-image: url(Images/search.png);
     background-position: 14px 19px;
     background-repeat: no-repeat;
     font-size: 16px;
-    padding: 14px 22px 12px 36px;
-    box-shadow: inset;
-    border: 1px solid #ddd;
+    padding: 14px 5px 12px 45px;
+    box-shadow: none;
+    border: none;
     width: -webkit-fill-available;
+    width: -moz-available;
 }
-
 /* The search field when it gets focus/clicked on */
 #myInput:focus {
-    outline: 3px solid #ddd;
+    border-color: rgba(82,168,236,0.8);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(139,14,4,0.6);
+    outline: 0 none;
+    width: 100%;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
-    width: -webkit-fill-available;
 }
 
 .dropdown-scrollbar {
     height: 200px;
     overflow: scroll;
 }
+
+/* Icarus edit */
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f6f6f6;
-    border: 1px solid #ddd;
+    border: none;
     z-index: 1;
+    overflow-x: hidden;
 }
 
     /* Links inside the dropdown */
@@ -68,21 +77,6 @@
     display: block;
 }
 
-.close {
-    cursor: pointer;
-    background-size: 29px;
-    background-image: url('Images/delete.png');
-    background-repeat: no-repeat;
-}
-
-.medGroupColur {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 25%;
-    padding: 16px 16px;
-    transform: translate(0%, -50%);
-}
 
 .body {
     background-color: white;
@@ -90,87 +84,126 @@
 }
 
 
-
-
 .container {
     background-color: white;
     font-family: 'Roboto Condensed',sans-serif;
 }
 
+/* Icarus edit */
 .searchPanel {
-    border: outset;
-    /*width: -webkit-fill-available;*/
+    border: 1px solid #dddddd;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+/* Icarus edit */
+#menu {
+    border-left: none;
+    border-right: none;
+    padding: 0rem;
 }
 
 
-/*Graph*/
 
-#toggles {
-    border: ridge;
-}
-
-#filters {
-    border: ridge;
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
-
-#tools {
-    border: ridge;
-}
-
-g {
-    font-size: 14px;
-    font-family: 'Roboto Condensed',sans-serif;
-}
-
-#chartHeaderH4 {
-    /*text-align: center;*/
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-#legGroup {
-    border: ridge;
-}
-
-#btnPrintDiv {
-    margin-bottom: 1rem;
-}
-
-#btnPrint, #btnReset {
+#btnPrint, #btnReset, #btnModal {
     background-color: #8b0e04;
     background-image: linear-gradient(to bottom,#8b0e04,#720b03);
     background-repeat: repeat-x;
     color: white;
+    /*! width: 60%; */
+    /*! padding: 0px; */
 }
 
-/*#divTableCol {
-    border-left: 1px solid #ffc107;
-    border-right: 1px solid #ffc107;
-}*/
 
+/* Icarus addition */
+.card-header {
+    padding: 0.8rem 1rem 0rem 1rem;
+    margin-bottom: 0;
+    background-color: #e6e6e6;
+    border-bottom: none;
+    color: auto;
+}
 
-/*#divTable {
-    padding: 0.25rem;
-}*/
+    .card-header h4 {
+        font-size: calc(1rem + .3vw);
+    }
 
+.card-footer {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-top: none;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 2rem 1rem 0.5rem 1rem;
+}
+
+/* Icarus addition */
+
+.col-6 h6 {
+    font-size: 0.85em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Icarus addition */
+
+#btnReset {
+    width: 57%;
+    background-image: none !important;
+    display: inline-block;
+    justify-content: flex-end;
+    margin-left: 43%;
+    padding: .375rem 0.25rem !important;
+}
+
+#btnPrint {
+    background-color: #e58e1a;
+    background-image: none !important;
+    background-repeat: repeat-x;
+    color: white;
+    margin-top: 30px;
+}
+
+#btnModal {
+    background-color: #e58e1a;
+    background-image: none !important;
+    background-repeat: repeat-x;
+    color: white;
+    margin-top: 30px;
+}
+
+#btnPreviewChanges {
+    background-color: #5c636a;
+    background-image: none !important;
+    background-repeat: repeat-x;
+    color: white;
+    margin-top: 30px;
+}
+
+.medCardRemoveBtn {
+    background-image: none !important;
+}
+
+/* Icarus edit */
 #toolHeader {
-    text-align: center;
-    color: #720b03;
+    text-align: left;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 1.4em !important;
+    color: #8b0e04;
+    line-height: 1.5em;
+    border-bottom: none;
+    margin-bottom: 20px;
 }
 
-#tblArrows {
-    background-color: #e9ecef;
-    border-radius: 4px;
-    margin-right: 5px;
-    border-style: groove;
-}
 
+/* Icarus edit */
 .arrow-back {
-    background-color: #e9ecef;
+    background-color: #fff;
     border-radius: 4px;
-    border-style: groove;
+    border-style: none;
+    font-size: 24px;
 }
 
 .medCardRemoveBtn {
@@ -183,3 +216,68 @@ g {
     .medCardRemoveBtn:hover {
         color: white;
     }
+
+.h-45 {
+    height: 45px;
+}
+
+.w-45 {
+    width: 45px;
+}
+
+.margin-top-3rem {
+    margin-top: 3rem;
+}
+
+.wordbr {
+    word-break: break-all;
+}
+
+.hidden {
+    display: none;
+    z-index: 3;
+}
+
+#alertBoxForNewMed {
+    position: absolute;
+    width: 11.75rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#alertBoxForDose {
+    margin-top: 0.625rem;
+    margin-bottom: -1rem;
+    padding-left: 4rem;
+}
+
+.clicked {
+    color: #d1d1d1 !important;
+}
+
+    .clicked:hover {
+        background-color: rgb(255 255 255 / 15%) !important;
+    }
+
+.dosageLabel {
+    flex: 0 0 auto;
+    width: 10.666667%;
+}
+
+.placeholderForTable {
+    color: #757575;
+}
+
+/* Icarus addition */
+@media only screen and (max-width: 800px) {
+    .col-3 {
+        flex: 0 0 auto;
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .col-9 {
+        width: 100%;
+    }
+}
