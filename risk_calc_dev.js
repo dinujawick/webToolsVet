@@ -340,19 +340,23 @@ function createCSV(med, process) {
         header.push(med.Medicines_class);
     }
 
-    fallsRisk.push(med.falls_fractures);    
-    constRisk.push(med.constipation);
-    uretentRisk.push(med.urinary_retention);
-    cnsdeprRisk.push(med.CNS_depression);
-    bleedRisk.push(med.bleeding);
-    heartRisk.push(med.heart_failure);
-    bradyRisk.push(med.bradycardia);
-    hypoglycRisk.push(med.hypoglycaemia);
-    renalRisk.push(med.renal_injury);
-    hypoKRisk.push(med.hypokalemia);
-    hyperKRisk.push(med.hyperkalemia);
-    serosynRisk.push(med.serotonin_syndrome);
-    acglaucRisk.push(med.glaucoma);
+    if (med != "") {
+
+        fallsRisk.push(med.falls_fractures);
+        constRisk.push(med.constipation);
+        uretentRisk.push(med.urinary_retention);
+        cnsdeprRisk.push(med.CNS_depression);
+        bleedRisk.push(med.bleeding);
+        heartRisk.push(med.heart_failure);
+        bradyRisk.push(med.bradycardia);
+        hypoglycRisk.push(med.hypoglycaemia);
+        renalRisk.push(med.renal_injury);
+        hypoKRisk.push(med.hypokalemia);
+        hyperKRisk.push(med.hyperkalemia);
+        serosynRisk.push(med.serotonin_syndrome);
+        acglaucRisk.push(med.glaucoma);
+    }
+ 
 
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, cveRisk, respRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
