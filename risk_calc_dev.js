@@ -29,8 +29,10 @@ $(document).ready(function () {
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("nirmatrelvir_ritonavir_interaction_checker.json", function (data) {
 
-        $.each(data, function (index, item) {
+        
 
+        $.each(data, function (index, item) {
+            console.log(item);
             //For remove duplication on the generic names
             if (item.itm_gen_nme != prevAddedItem) {
 
