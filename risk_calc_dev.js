@@ -27,7 +27,7 @@ var totalRisk = {
 $(document).ready(function () {
 
     //Get Empty Graph
-    /* createCSV(selectedMedGroupList, "REMOVE");*/
+     createCSV(selectedMedGroupList, "REMOVE");
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
@@ -40,7 +40,7 @@ $(document).ready(function () {
                 if (item.Combination != 1) {
                     $med = $('<a>').attr('id', "a" + item.prmy_atc_cde).text(item.itm_gen_nme).addClass('wordbr').appendTo('#searchList');
                     $med.on('click', function (event) {
-                        addMed();
+                        addMed(item);
                     });
                 }
                 prevAddedItem = item.itm_gen_nme;
@@ -150,40 +150,36 @@ function getMedGroups(atcDescr, atcLevel) {
 
 }
 
-function addOnlyMappedMedsToSelectionList(prmyATC, itmGenNme) {
-
-  
-
+function addMed(med) {
 
     var medAddedStatus = false;
     //createSelectedList(atcDescr, atcLevel);
-    var identifiedMedGroup = getMedGroups(atcDescr, atcLevel);
     if (selectedMedList == null) {
-        selectedMedList.push(atcDescr);
+        selectedMedList.push(med.itm_gen_nme);
         medAddedStatus = true;
     }
     else {
         $.each(selectedMedList, function (i, value) {
-            if (value == atcDescr) {
+            if (value == med.itm_gen_nme) {
                 medAddedStatus = true;
             }
         })
         if (medAddedStatus == false)
-            selectedMedList.push(atcDescr);
+            selectedMedList.push(med.itm_gen_nme);
     }
 
 
     if ($('#medGroup').has('.accordion-item').length == 0) {
         //console.log(identifiedMedGroup);
-        createAccordionItem(identifiedMedGroup);
+        createAccordionItem(med.Medicines_class);
         if (medAddedStatus == false) {
 
-            createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
+            createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
             //Calculate Total risk for first med group
-            calculateTotalRisk(identifiedMedGroup);
+            calculateTotalRisk(med.Medicines_class);
 
             //Generate dynamic graph
-            createCSV(identifiedMedGroup, "ADD");
+            createCSV(med.Medicines_class, "ADD");
 
         }
 
@@ -322,76 +318,41 @@ var cnsdeprRisk = ["CNS Depression"];
 var bleedRisk = ["Bleeding"];
 var heartRisk = ["Heart Failure"];
 var bradyRisk = ["Bradycardia"];
-var cveRisk = ["CV Events"];
-var respRisk = ["Respiratory"];
 var hypoglycRisk = ["Hypoglycaemia"];
 var renalRisk = ["Renal Injury"];
 var hypoKRisk = ["Hypokalemia"];
 var hyperKRisk = ["Hyperkalemia"];
 var serosynRisk = ["Serotonin Syndrome"];
-var acglaucRisk = ["Angle Closure Glaucoma"];
+var acglaucRisk = ["Glaucoma"];
 
 
 
-function createCSV(identifiedMedGroup, process) {
+function createCSV(med, process) {
 
 
     var tempCSV = [];
 
-
     if (process == "REMOVE") {
         header = ["Risk"];
-        header = $.merge(header, identifiedMedGroup);
+        header = $.merge(header, med.Medicines_class);
     }
     else if (process == "ADD") {
-        header.push(identifiedMedGroup);
+        header.push(med.Medicines_class);
     }
 
-
-    console.log(header);
-
-    $.each(riskMap, function (key, value) {
-        if (key == identifiedMedGroup) {
-            $.each(value, function (risk, status) {
-
-                if (risk == "falls_fracture")
-                    fallsRisk.push(status);
-                else if (risk == "constipation")
-                    constRisk.push(status);
-                else if (risk == "urinary_retention")
-                    uretentRisk.push(status);
-                else if (risk == "CNS_depression")
-                    cnsdeprRisk.push(status);
-                else if (risk == "bleeding")
-                    bleedRisk.push(status);
-                else if (risk == "heart_failure")
-                    heartRisk.push(status);
-                else if (risk == "bradycardia")
-                    bradyRisk.push(status);
-                else if (risk == "CV_events")
-                    cveRisk.push(status);
-                else if (risk == "respiratory")
-                    respRisk.push(status);
-                else if (risk == "hypoglycaemia")
-                    hypoglycRisk.push(status);
-                else if (risk == "renal_injury")
-                    renalRisk.push(status);
-                else if (risk == "hypokalemia")
-                    hypoKRisk.push(status);
-                else if (risk == "hyperkalemia")
-                    hyperKRisk.push(status);
-                else if (risk == "serotonin_syndrome")
-                    serosynRisk.push(status);
-                else if (risk == "angle_closure_glaucoma")
-                    acglaucRisk.push(status);
-                else
-                    console.log("Something wrong with the risks");
-
-            })
-        }
-
-    })
-
+    fallsRisk.push(med.falls_fractures);    
+    constRisk.push(med.constipation);
+    uretentRisk.push(med.urinary_retention);
+    cnsdeprRisk.push(med.CNS_depression);
+    bleedRisk.push(med.bleeding);
+    heartRisk.push(med.heart_failure);
+    bradyRisk.push(med.bradycardia);
+    hypoglycRisk.push(med.hypoglycaemia);
+    renalRisk.push(med.renal_injury);
+    hypoKRisk.push(med.hypokalemia);
+    hyperKRisk.push(med.hyperkalemia);
+    serosynRisk.push(med.serotonin_syndrome);
+    acglaucRisk.push(med.glaucoma);
 
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, cveRisk, respRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
@@ -407,22 +368,22 @@ function createCSV(identifiedMedGroup, process) {
 
 
 }
-function calculateTotalRisk(identifiedMedGroup) {
+function calculateTotalRisk(med) {
 
-    $.each(riskMap, function (i, value) {
+    //$.each(riskMap, function (i, value) {
 
-        if (i == identifiedMedGroup) {
+    //    if (i == identifiedMedGroup) {
 
-            $.each(value, function (i, value) {
-                if (value == 1) {
-                    totalRisk[i] = totalRisk[i] + 1;
-                }
+    //        $.each(value, function (i, value) {
+    //            if (value == 1) {
+    //                totalRisk[i] = totalRisk[i] + 1;
+    //            }
 
-            })
-            //console.log(totalRisk);
+    //        })
+    //        //console.log(totalRisk);
 
-        }
-    })
+    //    }
+    //})
 
 }
 function createAccordionItem(medGroup) {
