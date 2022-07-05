@@ -37,6 +37,10 @@ $(document).ready(function () {
                 if (item.Combination != 1) {
                     $med = $('<a>').attr('id', "a" + item.prmy_atc_cde).text(item.itm_gen_nme).addClass('wordbr').appendTo('#searchList');
                     $med.on('click', function (event) {
+
+                        //Get Empty Graph
+                        createCSV(selectedMedGroupList, "REMOVE");
+
                         addMed();
                     });
                 }
@@ -47,8 +51,7 @@ $(document).ready(function () {
     });
     
 
-    ////Get Empty Graph
-    //createCSV(selectedMedGroupList, "REMOVE");
+    
 
     //$(riskMap).each(function (index, item) {
     //    //console.log(item.Laxatives);
