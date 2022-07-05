@@ -27,7 +27,7 @@ var totalRisk = {
 $(document).ready(function () {
 
     //Get Empty Graph
-    createCSV(selectedMedGroupList, "REMOVE");
+   /* createCSV(selectedMedGroupList, "REMOVE");*/
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
@@ -40,8 +40,6 @@ $(document).ready(function () {
                 if (item.Combination != 1) {
                     $med = $('<a>').attr('id', "a" + item.prmy_atc_cde).text(item.itm_gen_nme).addClass('wordbr').appendTo('#searchList');
                     $med.on('click', function (event) {
-
-                        
                         addMed();
                     });
                 }
@@ -51,18 +49,6 @@ $(document).ready(function () {
         
     });
     
-
-    
-
-    //$(riskMap).each(function (index, item) {
-    //    //console.log(item.Laxatives);
-    //})
-    //$(medicines).each(function (index, item) {
-    //    //get only 5th level medicines codes and above
-    //    if (item.atc_level.length >= 7) {
-    //        addOnlyMappedMedsToSelectionList(item.atc_level, item.atc_description);
-    //    }
-    //})
 });
 
 
