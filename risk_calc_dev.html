@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en-au">
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Complex Risk Calculator</title>
+    <link href="risk_calc_dev.css" rel="stylesheet" />
+</head>
+
+<body class="body">
+    <div class="container-fluid">
+        <!-- Body -->
+        <div class="row">
+            
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="vstack gap-2 mx-auto" id="menu">
+                    <div class="searchPanel">
+                        <input type="text" placeholder="Select the medicines" id="searchTxt" onclick="toggleSearchList()" onkeyup="filterFunction()">
+                        <div id="searchList" class="dropdown-content dropdown-scrollbar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="stackGraph">
+                <div id="chartHeader">
+                    <h4 id="chartHeaderH4">
+                        Cumulative Risks and Types of Adverse Drug Reactions
+                    </h4>
+                </div>
+                <div class="row">
+                    <div id="toggles" class="col-3">
+                        <fieldset>
+                            <legend>Toggles</legend>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="sort">
+                                <label class="form-check-label" for="sort">Toggle Sort</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="chartType">
+                                <label class="form-check-label" for="chartType">Toggle Vertical</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div id="legGroup" class="col-6">
+                        <fieldset>
+                            <legend style=" padding-left: 1rem;">Legend</legend>
+                            <div id="legend">
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+            <div class="row">
+                <div class="accordion" id="medGroup">
+                </div>
+            </div>
+            
+        
+        <!-- End Body -->
+    </div>
+    <script src="risk_calc_dev.js"></script>
+</body>
+</html>
