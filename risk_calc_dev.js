@@ -27,7 +27,7 @@ var totalRisk = {
 $(document).ready(function () {
 
     //Read JSON and add the med generic values into dropdown.
-    $.getJSON("nirmatrelvir_ritonavir_interaction_checker.json", function (data) {
+    $.getJSON("risk_calc_data.json", function (data) {
 
         
 
