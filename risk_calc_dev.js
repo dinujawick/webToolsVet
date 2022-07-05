@@ -29,8 +29,6 @@ $(document).ready(function () {
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
 
-        
-
         $.each(data, function (index, item) {
             console.log(item);
             //For remove duplication on the generic names
