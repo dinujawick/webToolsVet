@@ -334,7 +334,7 @@ function createCSV(med, process) {
 
     if (process == "REMOVE") {
         header = ["Risk"];
-        header = $.merge(header, med.Medicines_class);
+        /*header = $.merge(header, med.Medicines_class);*/
     }
     else if (process == "ADD") {
         header.push(med.Medicines_class);
