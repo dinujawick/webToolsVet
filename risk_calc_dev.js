@@ -747,8 +747,8 @@ function StackedBarChartHorizontal(data, {
     marginRight = 80, // right margin, in pixels
     marginBottom = 40, // bottom margin, in pixels
     marginLeft = 200, // left margin, in pixels
-    width = 750, // outer width, in pixels
-    height, // outer height, in pixels
+    width = 700, // outer width, in pixels
+    height = 600, // outer height, in pixels
     xType = d3.scaleLinear, // type of x-scale
     xDomain, // [xmin, xmax]
     xRange = [marginLeft, width - marginRight], // [left, right]
