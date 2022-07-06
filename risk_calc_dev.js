@@ -487,7 +487,7 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-    
+    /*$('#legend').empty();*/
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
@@ -739,10 +739,10 @@ function StackedBarChartHorizontal(data, {
     y = (d, i) => i, // given d in data, returns the (ordinal) y-value
     z = () => 1, // given d in data, returns the (categorical) z-value
     title, // given d in data, returns the title text
-    marginTop = 30, // top margin, in pixels
-    marginRight = 0, // right margin, in pixels
-    marginBottom = 0, // bottom margin, in pixels
-    marginLeft = 40, // left margin, in pixels
+    marginTop = 40, // top margin, in pixels
+    marginRight = 80, // right margin, in pixels
+    marginBottom = 40, // bottom margin, in pixels
+    marginLeft = 200, // left margin, in pixels
     width = 640, // outer width, in pixels
     height, // outer height, in pixels
     xType = d3.scaleLinear, // type of x-scale
@@ -750,13 +750,13 @@ function StackedBarChartHorizontal(data, {
     xRange = [marginLeft, width - marginRight], // [left, right]
     yDomain, // array of y-values
     yRange, // [bottom, top]
-    yPadding = 0.1, // amount of y-range to reserve to separate bars
+    yPadding = 0.5, // amount of y-range to reserve to separate bars
     zDomain, // array of z-values
     offset = d3.stackOffsetDiverging, // stack offset method
     order = d3.stackOrderNone, // stack order method
     xFormat, // a format specifier string for the x-axis
     xLabel, // a label for the x-axis
-    colors = d3.schemeTableau10, // array of colors
+    colors = d3.schemePaired, // array of colors
 } = {}) {
     // Compute values.
     const X = d3.map(data, x);
@@ -799,6 +799,8 @@ function StackedBarChartHorizontal(data, {
     const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
     const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
+
+
     // Compute titles.
     if (title === undefined) {
         const formatValue = xScale.tickFormat(100, xFormat);
@@ -813,7 +815,7 @@ function StackedBarChartHorizontal(data, {
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])
-        .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+        .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
         .attr("transform", `translate(0,${marginTop})`)
