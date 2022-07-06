@@ -504,7 +504,10 @@ function initialization(data) {
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
         $('#legend').append(key);
+        console.log(chart);
         $('#chart').append(chart);
+
+
 
     //if ($('#chartType').is(':checked')) {
 
@@ -811,6 +814,7 @@ function StackedBarChartHorizontal(data, {
     }
 
     const svg = d3.create("svg")
+        .attr('id','horizontalChart')
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])
