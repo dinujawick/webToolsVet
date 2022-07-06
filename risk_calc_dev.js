@@ -190,24 +190,24 @@ function addMed(med) {
         const accordionIDs = $.map($('#medGroup > .accordion-item'), acordionItem => acordionItem.id);
         //console.log(accordionIDs)
         $(accordionIDs).each(function (index, id) {
-            if (id == identifiedMedGroup + 'accordion') {
+            if (id == med.Medicines_class + 'accordion') {
                 elementAddedStatus = true;
             }
         });
         if (elementAddedStatus != true) {
-            createAccordionItem(identifiedMedGroup);
+            createAccordionItem(med.Medicines_class);
             //Calculate Total risk for created med group
-            calculateTotalRisk(identifiedMedGroup);
+            calculateTotalRisk(med.Medicines_class);
 
             //Generate dynamic graph
-            createCSV(identifiedMedGroup, "ADD");
+            createCSV(med.Medicines_class, "ADD");
 
             if (medAddedStatus != true)
-                createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
         }
         else {
             if (medAddedStatus != true)
-                createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
         }
     }
 
