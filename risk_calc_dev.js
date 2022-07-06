@@ -503,9 +503,9 @@ function initialization(data) {
             colors: d3.schemeSpectral[keys.length]
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
-        $('#legend').append(key);
-        console.log(chart);
-        $('#chart').append(chart);
+        //$('#legend').append(key);
+        
+        $('#chart').append(chart.attr('width', "900").attr('height', "600").attr('viewbox', "100,0,640,380"););
 
 
 
