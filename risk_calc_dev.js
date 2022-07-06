@@ -653,7 +653,7 @@ function initialization(data) {
                                /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
             yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
             zDomain: keys,
-            colors: d3.schemeSpectral[keys.length]
+            colors: ["#f7fbff", "#e3eef9", "#cfe1f2", "#b5d4e9", "#93c3df", "#6daed5", "#4b97c9", "#2f7ebc", "#1864aa", "#0a4a90", "#08306b"]
         })
 
         
