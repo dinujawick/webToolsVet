@@ -5,6 +5,8 @@ var selectedMedGroupList = new Array();
 
 var selectedMedList = new Array();
 
+var colorCodes = new Array();
+
 var totalRisk = {
     "falls_fracture": 0,
     "constipation": 0,
@@ -543,6 +545,10 @@ function calculateTotalRisk(med) {
 
 }
 function createAccordionItem(medGroup,colorCode) {
+
+    //Push that colorCode to Array
+    colorCodes.push(colorCode);
+    console.log(colorCodes);
 
     $accordion = $('<div>')
         .attr('id', medGroup + 'accordion')
