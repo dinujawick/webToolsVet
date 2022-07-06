@@ -395,7 +395,7 @@ function createAccordionItem(medGroup) {
     var colorCode = "";
 
     //Read JSON and add the med generic values into dropdown.
-    $.getJSON("risk_calc_color_map_dev.json.json", function (data) {
+    $.getJSON("risk_calc_color_map_dev.json", function (data) {
 
         $.each(data, function (index, item) {
 
