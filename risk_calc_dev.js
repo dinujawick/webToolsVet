@@ -189,7 +189,7 @@ $(document).ready(function () {
                         $.each(colorMap, function (ind, itm) {
                            
                             if (itm.medicines_class == item.Medicines_class) {
-                                 colorCode = item.color_hexcode;
+                                colorCode = itm.color_hexcode;
                             }
                          });
                         addMed(item, colorCode);
