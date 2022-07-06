@@ -409,8 +409,8 @@ function createAccordionItem(medGroup) {
                 .attr('aria-controls', medGroup + 'div')
                 .addClass('accordion-button')
                 .append(
-                    $('<span>').addClass('medGroupColor')
-                    $('<span>')text(medGroup + ' Class')
+                    $('<span>').addClass('medGroupColor'),
+                    $('<span>').text(medGroup + ' Class')
                 )
         )
         .appendTo($accordion);
