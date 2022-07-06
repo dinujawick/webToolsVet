@@ -504,7 +504,7 @@ function initialization(data) {
             yLabel: "↑ Med Class Risk Count",
             zDomain: keys,
             colors: d3.schemeSpectral[keys.length],
-            width: 2200,
+            width,
             height: 500
         })
 
@@ -524,7 +524,8 @@ function initialization(data) {
                                /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
             yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
             zDomain: keys,
-            colors: d3.schemeSpectral[keys.length]
+            colors: d3.schemeSpectral[keys.length],
+            width
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
         $('#legend').append(key);
@@ -549,7 +550,7 @@ function initialization(data) {
                 yLabel: "↑ Med Class Risk Count",
                 zDomain: keys,
                 colors: d3.schemeSpectral[keys.length],
-                width: 2200,
+                width,
                 height: 500
             })
 
@@ -570,7 +571,8 @@ function initialization(data) {
                                /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
                 yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
                 zDomain: keys,
-                colors: d3.schemeSpectral[keys.length]
+                colors: d3.schemeSpectral[keys.length],
+                width
             })
             key = Legend(chart.scales.color, { title: "Med Groups" })
             $('#legend').append(key);
