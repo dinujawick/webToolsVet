@@ -40,7 +40,24 @@ $(document).ready(function () {
                 if (item.Combination != 1) {
                     $med = $('<a>').attr('id', "a" + item.prmy_atc_cde).text(item.itm_gen_nme).addClass('wordbr').appendTo('#searchList');
                     $med.on('click', function (event) {
-                        addMed(item);
+
+                        var colorCode = "";
+
+                        //Read JSON and add the med generic values into dropdown.
+                        $.getJSON("risk_calc_color_map_dev.json", function (dat) {
+
+                            $.each(dat, function (ind, itm) {
+
+                                if (itm.Medicines_class == item.Medicines_class) {
+                                    console.log("inside the con")
+                                    colorCode = item.color_hexcode;
+                                    console.log("inside the con " + colorCode)
+                                }
+
+                            });
+
+                        });
+                        addMed(item, colorCode);
                     });
                 }
                 prevAddedItem = item.itm_gen_nme;
@@ -150,7 +167,7 @@ function getMedGroups(atcDescr, atcLevel) {
 
 }
 
-function addMed(med) {
+function addMed(med,colorCode) {
 
     var medAddedStatus = false;
     //createSelectedList(atcDescr, atcLevel);
@@ -171,7 +188,7 @@ function addMed(med) {
 
     if ($('#medGroup').has('.accordion-item').length == 0) {
         //console.log(identifiedMedGroup);
-        createAccordionItem(med.Medicines_class);
+        createAccordionItem(med.Medicines_class, colorCode);
         if (medAddedStatus == false) {
 
             createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
@@ -195,7 +212,7 @@ function addMed(med) {
             }
         });
         if (elementAddedStatus != true) {
-            createAccordionItem(med.Medicines_class);
+            createAccordionItem(med.Medicines_class, colorCode);
             //Calculate Total risk for created med group
             calculateTotalRisk(med.Medicines_class);
 
@@ -390,26 +407,7 @@ function calculateTotalRisk(med) {
     //})
 
 }
-function createAccordionItem(medGroup) {
-
-    var colorCode = "";
-
-    //Read JSON and add the med generic values into dropdown.
-    $.getJSON("risk_calc_color_map_dev.json", function (data) {
-
-        $.each(data, function (index, item) {
-
-            if (item.Medicines_class == medGroup) {
-                console.log("inside the con")
-                colorCode = item.color_hexcode;
-                console.log("inside the con " + colorCode)
-            }
-
-        });
-
-    });
-
-
+function createAccordionItem(medGroup,colorCode) {
 
     $accordion = $('<div>')
         .attr('id', medGroup + 'accordion')
