@@ -187,11 +187,9 @@ $(document).ready(function () {
                         var colorCode = "";
 
                         $.each(colorMap, function (ind, itm) {
-                            console.log(itm);
-                            if (itm.Medicines_class == item.Medicines_class) {
-                                 console.log("inside the con")
+                           
+                            if (itm.medicines_class == item.Medicines_class) {
                                  colorCode = item.color_hexcode;
-                                 console.log("inside the con " + colorCode)
                             }
                          });
                         addMed(item, colorCode);
