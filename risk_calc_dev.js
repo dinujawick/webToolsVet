@@ -391,6 +391,24 @@ function calculateTotalRisk(med) {
 
 }
 function createAccordionItem(medGroup) {
+
+    var colorCode = "";
+
+    //Read JSON and add the med generic values into dropdown.
+    $.getJSON("risk_calc_color_map_dev.json.json", function (data) {
+
+        $.each(data, function (index, item) {
+
+            if (item.Medicines_class == medGroup) {
+                colorCode = item.color_hexcode;
+            }
+
+        });
+
+    });
+
+
+
     $accordion = $('<div>')
         .attr('id', medGroup + 'accordion')
         .addClass('accordion-item')
@@ -409,7 +427,7 @@ function createAccordionItem(medGroup) {
                 .attr('aria-controls', medGroup + 'div')
                 .addClass('accordion-button')
                 .append(
-                    $('<span>').addClass('medGroupColor'),
+                    $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
                     $('<span>').text(medGroup + ' Class')
                 )
         )
