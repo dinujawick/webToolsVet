@@ -410,7 +410,7 @@ function createAccordionItem(medGroup) {
                 .addClass('accordion-button')
                 .text(medGroup + ' Class')
                 .append(
-                    $('<span>').addClass('medGroupColur')
+                    $('<span>').addClass('medGroupColor')
                 )
         )
         .appendTo($accordion);
@@ -439,7 +439,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel) {
         .attr('id', medGroup + atcLevel + 'li')
         .addClass('list-group-item')
         .addClass('acordionContent')
-        .text(atcDescr + '[' + atcLevel + ']')
+        .text(atcDescr +" "+ '[' + atcLevel + ']')
         .append(
             $('<span>')
                 .attr('id', medGroup + atcLevel + 'span')

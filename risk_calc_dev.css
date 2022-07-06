@@ -296,6 +296,12 @@
         width: 100%;
     }
 }
+.medGroupColor {
+    margin-left: 1rem;
+    background-color: blanchedalmond;
+    width: 25px;
+    height: 25px;
+}
 
 .accordion-button:not(.collapsed) {
     color: #212529;
