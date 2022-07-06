@@ -298,9 +298,9 @@
 }
 .medGroupColor {
     margin-right: 0.25rem;
-    background-color: blanchedalmond;
     width: 25px;
     height: 25px;
+    background-color: #bb151a;
 }
 
 .accordion-button:not(.collapsed) {
