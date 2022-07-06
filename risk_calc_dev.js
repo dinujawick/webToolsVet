@@ -179,7 +179,7 @@ function addMed(med) {
             calculateTotalRisk(med.Medicines_class);
 
             //Generate dynamic graph
-            createCSV(med.Medicines_class, "ADD");
+            createCSV(med, "ADD");
 
         }
 
@@ -200,7 +200,7 @@ function addMed(med) {
             calculateTotalRisk(med.Medicines_class);
 
             //Generate dynamic graph
-            createCSV(med.Medicines_class, "ADD");
+            createCSV(med, "ADD");
 
             if (medAddedStatus != true)
                 createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
