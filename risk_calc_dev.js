@@ -900,7 +900,7 @@ function StackedBarChartHorizontal(data, {
     marginRight = 80, // right margin, in pixels
     marginBottom = 40, // bottom margin, in pixels
     marginLeft = 200, // left margin, in pixels
-    width = 700, // outer width, in pixels
+    width = 600, // outer width, in pixels
     height = 500, // outer height, in pixels
     xType = d3.scaleLinear, // type of x-scale
     xDomain, // [xmin, xmax]
@@ -972,7 +972,7 @@ function StackedBarChartHorizontal(data, {
         .attr('id','horizontalChart')
         .attr("width", width)
         .attr("height", height)
-        .attr("viewBox", [20, 0, width, height])
+        .attr("viewBox", [60, 0, width, height])
         .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
