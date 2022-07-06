@@ -491,7 +491,7 @@ function initialization(data) {
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-        $chart = StackedBarChartHorizontal(riskmedGroups, {
+        chart = StackedBarChartHorizontal(riskmedGroups, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
@@ -503,11 +503,11 @@ function initialization(data) {
             colors: d3.schemeSpectral[keys.length]
         })
 
-        console.log($chart);
+        
         /*key = Legend(chart.scales.color, { title: "Med Groups" })*/
         //$('#legend').append(key);
         
-        $('#chart').append($chart.attr('width', "900").attr('height', "600").attr('viewbox', "100,0,640,380"));
+        $('#chart').append(chart);
 
 
 
@@ -817,9 +817,9 @@ function StackedBarChartHorizontal(data, {
 
     const svg = d3.create("svg")
         .attr('id','horizontalChart')
-        .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", [0, 0, width, height])
+        .attr("width", 900)
+        .attr("height", 600)
+        .attr("viewBox", [100, 0, width, height])
         .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
