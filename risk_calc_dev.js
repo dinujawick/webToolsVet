@@ -491,7 +491,7 @@ function initialization(data) {
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-        chart = StackedBarChartHorizontal(riskmedGroups, {
+        $chart = StackedBarChartHorizontal(riskmedGroups, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
@@ -505,7 +505,7 @@ function initialization(data) {
         key = Legend(chart.scales.color, { title: "Med Groups" })
         //$('#legend').append(key);
         
-        $('#chart').append(chart.attr('width', "900").attr('height', "600").attr('viewbox', "100,0,640,380"));
+        $('#chart').append($chart.attr('width', "900").attr('height', "600").attr('viewbox', "100,0,640,380"));
 
 
 
