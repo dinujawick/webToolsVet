@@ -550,7 +550,7 @@ function initialization(data) {
                 yLabel: "↑ Med Class Risk Count",
                 zDomain: keys,
                 colors: d3.schemeSpectral[keys.length],
-                width: 900
+                width: 900,
                 height: 500
             })
 
