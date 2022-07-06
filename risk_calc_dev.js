@@ -747,7 +747,7 @@ function StackedBarChartHorizontal(data, {
     marginRight = 80, // right margin, in pixels
     marginBottom = 40, // bottom margin, in pixels
     marginLeft = 200, // left margin, in pixels
-    width = 640, // outer width, in pixels
+    width = 750, // outer width, in pixels
     height, // outer height, in pixels
     xType = d3.scaleLinear, // type of x-scale
     xDomain, // [xmin, xmax]
@@ -817,9 +817,9 @@ function StackedBarChartHorizontal(data, {
 
     const svg = d3.create("svg")
         .attr('id','horizontalChart')
-        .attr("width", 900)
-        .attr("height", 600)
-        .attr("viewBox", [100, 0, width, height])
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height])
         .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
@@ -1025,4 +1025,4 @@ function Legend(color, {
 
 
 
-        //***********************************************************End Graph******************************************************************
+//***********************************************************End Graph******************************************************************
