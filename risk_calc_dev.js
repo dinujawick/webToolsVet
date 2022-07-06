@@ -400,7 +400,9 @@ function createAccordionItem(medGroup) {
         $.each(data, function (index, item) {
 
             if (item.Medicines_class == medGroup) {
+                console.log("inside the con")
                 colorCode = item.color_hexcode;
+                console.log("inside the con " + colorCode)
             }
 
         });
