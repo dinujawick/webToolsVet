@@ -740,7 +740,7 @@ function StackedBarChartHorizontal(data, {
     z = () => 1, // given d in data, returns the (categorical) z-value
     title, // given d in data, returns the title text
     marginTop = 40, // top margin, in pixels
-    marginRight = 80, // right margin, in pixels
+    marginRight = 0, // right margin, in pixels
     marginBottom = 40, // bottom margin, in pixels
     marginLeft = 200, // left margin, in pixels
     width = 640, // outer width, in pixels
