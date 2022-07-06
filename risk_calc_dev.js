@@ -500,8 +500,7 @@ function initialization(data) {
                                /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
             yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
             zDomain: keys,
-            colors: d3.schemeSpectral[keys.length],
-            width: 900
+            colors: d3.schemeSpectral[keys.length]
         })
         key = Legend(chart.scales.color, { title: "Med Groups" })
         $('#legend').append(key);
