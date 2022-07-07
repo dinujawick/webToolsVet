@@ -93,11 +93,14 @@ function filterFunction() {
 
 function addMed(med,colorCode,medClass) {
 
+
+    var medAddedStatus = false;
+
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class, medClass);
         createAccordionItem(med.Medicines_class, colorCode);
-        if (medAddedStatus == undefined) {
+        if (medAddedStatus == false) {
 
             createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
             //Calculate Total risk for first med group
@@ -137,7 +140,7 @@ function addMed(med,colorCode,medClass) {
         }
     }
 
-    var medAddedStatus = false;
+    
     if (selectedMedList.length == 0) {
         selectedMedList.push(med.itm_gen_nme);
         medAddedStatus = true;
