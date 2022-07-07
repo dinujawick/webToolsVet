@@ -3,7 +3,7 @@ var prevAddedItem = "";
 
 var selectedMedClass = new Map();
 
-var medClassColorMap = "";
+var medClassColorMap = [];
 
 var selectedMedList = new Array();
 
@@ -34,9 +34,12 @@ $(document).ready(function () {
      createCSV("", "EMPTY");
 
     //Read JSON and intialize medClassColorMap.
-    medClassColorMap = $.getJSON("risk_calc_medClassMap_dev.json");
+    $.getJSON("risk_calc_medClassMap_dev.json", function (data) {
+        $.each(data, function (i, row) { medClassColorMap.push(row) })
+    });
 
-    console.log(medClassColorMap.get('responseJSON'));
+    console.log(medClassColorMap);
+ 
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
