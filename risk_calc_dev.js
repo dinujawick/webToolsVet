@@ -863,7 +863,7 @@ function createAccordionItem(medGroup,colorCode) {
     
     $accordion = $('<div>')
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + 'accordion')
-        .addClass('accordion-item')
+        .addClass('accordion-item shadow')
         .appendTo($('#medGroup'));
 
     $accordionHeader = $('<h2>')
