@@ -1,7 +1,7 @@
 ﻿//Variable to store previous generic name
 var prevAddedItem = "";
 
-var selectedMedClass = {};
+var selectedMedClass = new Map();
 
 var selectedMedList = new Array();
 
