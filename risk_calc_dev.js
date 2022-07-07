@@ -904,6 +904,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + atcLevel + 'li')
         .addClass('list-group-item')
         .addClass('acordionContent')
+        .attr('style','font-size:smaller;')
         .text(atcDescr +" "+ '[' + atcLevel + ']')
         .append(
             $('<span>')
