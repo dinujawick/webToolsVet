@@ -33,12 +33,12 @@ $(document).ready(function () {
     //Get Empty Graph
      createCSV("", "EMPTY");
 
-    //Read JSON and intialize medClassColorMap.
-    $.getJSON("risk_calc_medClassMap_dev.json", function (data) {
-        $.each(data, function (i, row) { medClassColorMap.push(row) })
-    });
+    ////Read JSON and intialize medClassColorMap.
+    //$.getJSON("risk_calc_medClassMap_dev.json", function (data) {
+    //    $.each(data, function (i, row) { medClassColorMap.push(row) })
+    //});
 
-    console.log(medClassColorMap);
+    //console.log(medClassColorMap);
  
 
     //Read JSON and add the med generic values into dropdown.
