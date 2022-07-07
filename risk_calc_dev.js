@@ -37,14 +37,16 @@ $(document).ready(function () {
                     $med.on('click', function (event) {
 
                         var colorCode = "";
+                        var medClass = "";
 
                         $.each(medClassColorMap, function (ind, itm) {
                            
                             if (itm.medicines_class == item.Medicines_class) {
+                                medClass = itm;
                                 colorCode = itm.color_hexcode;
                             }
                          });
-                        addMed(item, colorCode);
+                        addMed(item, colorCode, medClass);
                        
                     });
                 }
@@ -89,11 +91,11 @@ function filterFunction() {
 }
 
 
-function addMed(med,colorCode) {
+function addMed(med,colorCode,medClass) {
 
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
-        selectedMedClass.set(med.Medicines_class,med);
+        selectedMedClass.set(med.Medicines_class, medClass);
         createAccordionItem(med.Medicines_class, colorCode);
         if (medAddedStatus != true) {
 
@@ -118,7 +120,7 @@ function addMed(med,colorCode) {
             }
         });
         if (elementAddedStatus != true) {
-            selectedMedClass.set(med.Medicines_class, med);
+            selectedMedClass.set(med.Medicines_class, medClass);
             createAccordionItem(med.Medicines_class, colorCode);
             //Calculate Total risk for created med group
             calculateTotalRisk(med.Medicines_class);
@@ -149,6 +151,8 @@ function addMed(med,colorCode) {
         if (medAddedStatus == false)
             selectedMedList.push(med.itm_gen_nme);
     }
+
+    console.log(selectedMedClass);
 
 }
 
