@@ -152,16 +152,8 @@ function addMed(med,colorCode,medClass) {
     }
 
     
-   
-
-    console.log(selectedMedClass);
 
 }
-
-
-
-
-
 
 
 function createCSV(medClass, process) {
@@ -241,7 +233,7 @@ function createCSV(medClass, process) {
     
  
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
-        heartRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
+        heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
     //console.log(tempCSV);
 
