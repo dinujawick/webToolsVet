@@ -195,9 +195,7 @@ $(document).ready(function () {
                             }
                          });
                         addMed(item, colorCode);
-                        for (var [key, value] of selectedMedClass) {
-                            console.log(key + " = " + value);
-                        }
+                        console.log(selectedMedClass.get(itm.Medicines_class));
                     });
                 }
                 prevAddedItem = item.itm_gen_nme;
