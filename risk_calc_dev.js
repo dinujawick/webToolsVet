@@ -328,7 +328,7 @@ function addMed(med,colorCode) {
         createAccordionItem(med.Medicines_class, colorCode);
         if (medAddedStatus == false) {
 
-            createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
+            createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
             //Calculate Total risk for first med group
             calculateTotalRisk(med.Medicines_class);
 
@@ -357,11 +357,11 @@ function addMed(med,colorCode) {
             createCSV(med, "ADD");
 
             if (medAddedStatus != true)
-                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
         }
         else {
             if (medAddedStatus != true)
-                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
         }
     }
 
@@ -486,8 +486,11 @@ function createCSV(med, process) {
 
     var tempCSV = [];
 
-    if (process == "REMOVE") {
+    if (process == "EMPTY") {
         header = ["Risk"];
+        
+    }
+    else if (process == "REMOVE") {
         /*header = $.merge(header, med.Medicines_class);*/
     }
     else if (process == "ADD") {
@@ -581,18 +584,13 @@ function createAccordionItem(medGroup,colorCode) {
         .attr('data-bs-parent', '#medGroup')
         .appendTo($accordion);
 
-    //.append(
-    //    $accordionBody = $('<div>')
-    //        .attr('id', 'accordion-body-' + medGroup)
-    //        .addClass('accordion-body')
-    //)
-
+   
     $accordionContent = $('<ul>')
         .attr('id', medGroup + 'ul')
         .addClass('list-group')
         .appendTo($accordionBodyHeader);
 }
-function createAcordionContent(medGroup, atcDescr, atcLevel) {
+function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 
     $('<li>')
         .attr('id', medGroup + atcLevel + 'li')
@@ -610,9 +608,17 @@ function createAcordionContent(medGroup, atcDescr, atcLevel) {
                         selectedMedList.splice(index, 1);
                     }
                     console.log(selectedMedList);
+
                     $('#' + medGroup + atcLevel + 'li').remove();
                     const liIDs = $.map($('#' + medGroup + 'ul' + '> li'), li => li.id);
                     if (liIDs.length == 0) {
+
+                        const index = colorCodes.indexOf(colorCode);
+                        if (index > -1) {
+                            colorCodes.splice(index, 1);
+                        }
+                        console.log(colorCodes);
+
                         const index = selectedMedGroupList.indexOf(medGroup);
                         if (index > -1) {
                             selectedMedGroupList.splice(index, 1);
