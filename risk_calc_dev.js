@@ -861,23 +861,23 @@ function createAccordionItem(medGroup,colorCode) {
     //Push that colorCode to Array
     colorCodes.push(colorCode);
     //console.log(colorCodes);
-
+    
     $accordion = $('<div>')
-        .attr('id', medGroup + 'accordion')
+        .attr('id', medGroup.replace(/[- )(]/g, '') + 'accordion')
         .addClass('accordion-item')
         .appendTo($('#medGroup'));
 
     $accordionHeader = $('<h2>')
         .attr('title', 'Click to view medicines group details')
-        .attr('id', medGroup + 'header')
+        .attr('id', medGroup.replace(/[- )(]/g, '') + 'header')
         .addClass('accordion-header')
         .append(
             $('<button>')
                 .attr('type', 'button')
                 .attr('data-bs-toggle', 'collapse')
-                .attr('data-bs-target', '#' + medGroup + 'div')
+                .attr('data-bs-target', '#' + medGroup.replace(/[- )(]/g, '') + 'div')
                 .attr('aria-expanded', 'true')
-                .attr('aria-controls', medGroup + 'div')
+                .attr('aria-controls', medGroup.replace(/[- )(]/g, '') + 'div')
                 .addClass('accordion-button')
                 .append(
                     $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
@@ -887,28 +887,28 @@ function createAccordionItem(medGroup,colorCode) {
         .appendTo($accordion);
 
     $accordionBodyHeader = $('<div>')
-        .attr('id', medGroup + 'div')
+        .attr('id', medGroup.replace(/[- )(]/g, '') + 'div')
         .addClass('accordion-collapse collapse show')
-        .attr('aria-labelledby', medGroup + 'aria')
+        .attr('aria-labelledby', medGroup.replace(/[- )(]/g, '') + 'aria')
         .attr('data-bs-parent', '#medGroup')
         .appendTo($accordion);
 
    
     $accordionContent = $('<ul>')
-        .attr('id', medGroup + 'ul')
+        .attr('id', medGroup.replace(/[- )(]/g, '') + 'ul')
         .addClass('list-group')
         .appendTo($accordionBodyHeader);
 }
 function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 
     $('<li>')
-        .attr('id', medGroup + atcLevel + 'li')
+        .attr('id', medGroup.replace(/[- )(]/g, '') + atcLevel + 'li')
         .addClass('list-group-item')
         .addClass('acordionContent')
         .text(atcDescr +" "+ '[' + atcLevel + ']')
         .append(
             $('<span>')
-                .attr('id', medGroup + atcLevel + 'span')
+                .attr('id', medGroup.replace(/[- )(]/g, '') + atcLevel + 'span')
                 .addClass('close')
                 .on('click', function (event) {
 
@@ -919,7 +919,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                     //console.log(selectedMedList);
 
                     $('#' + medGroup + atcLevel + 'li').remove();
-                    const liIDs = $.map($('#' + medGroup + 'ul' + '> li'), li => li.id);
+                    const liIDs = $.map($('#' + medGroup.replace(/[- )(]/g, '') + 'ul' + '> li'), li => li.id);
                     if (liIDs.length == 0) {
 
                         //Remove Med Classes
@@ -935,7 +935,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                             //create graph again with deleted list.
                             createCSV(selectedMedGroupList, "REMOVE");
                         }
-                        $('#' + medGroup + 'accordion').remove();
+                        $('#' + medGroup.replace(/[- )(]/g, '') + 'accordion').remove();
 
 
 
@@ -943,7 +943,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 
                 })
         )
-        .appendTo($('#' + medGroup + 'ul'));
+        .appendTo($('#' + medGroup.replace(/[- )(]/g, '') + 'ul'));
 }
 
 //***********************************************************Graph******************************************************************
