@@ -705,7 +705,7 @@ function filterFunction() {
 function addMed(med,colorCode) {
 
     var medAddedStatus = false;
-    if (selectedMedList == null) {
+    if (selectedMedList.length == 0) {
         selectedMedList.push(med.itm_gen_nme);
         medAddedStatus = true;
     }
@@ -881,7 +881,7 @@ function createAccordionItem(medGroup,colorCode) {
                 .addClass('accordion-button')
                 .append(
                     $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
-                    $('<span>').text(medGroup + ' Class')
+                    $('<span>').text(medGroup + ' Class').attr('style,"font-size:smaller')
                 )
         )
         .appendTo($accordion);
