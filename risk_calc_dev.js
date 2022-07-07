@@ -34,7 +34,7 @@ $(document).ready(function () {
      createCSV("", "EMPTY");
 
     //Read JSON and intialize medClassColorMap.
-    medClassColorMap = JSON.parse($.getJSON("risk_calc_medClassMap_dev.json"));
+    medClassColorMap = JSON.parse("risk_calc_medClassMap_dev.json");
 
     console.log(medClassColorMap);
 
