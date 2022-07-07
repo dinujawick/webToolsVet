@@ -1,7 +1,7 @@
 ﻿//Variable to store previous generic name
 var prevAddedItem = "";
 
-var selectedMedClass = new Object();
+var selectedMedClass = {};
 
 var selectedMedList = new Array();
 
@@ -261,7 +261,7 @@ function addMed(med,colorCode) {
 
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
-        selectedMedClass.med.Medicines_class = med;
+        selectedMedClass.push(med.Medicines_class + ':' + med);
         createAccordionItem(med.Medicines_class, colorCode);
         if (medAddedStatus == false) {
 
@@ -286,7 +286,7 @@ function addMed(med,colorCode) {
             }
         });
         if (elementAddedStatus != true) {
-            selectedMedClass.med.Medicines_class = med;
+            
             createAccordionItem(med.Medicines_class, colorCode);
             //Calculate Total risk for created med group
             calculateTotalRisk(med.Medicines_class);
