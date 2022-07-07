@@ -192,9 +192,11 @@ function createCSV(med, process) {
     else if (process == "REMOVE") {
 
         for (var [key, value] of med) {
-            console.log(key);
+            header = $.merge(header, key);
+            
         }
-        /*header = $.merge(header, med.Medicines_class);*/
+        console.log(header);
+        
 
     }
     else if (process == "ADD") {
