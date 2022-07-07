@@ -261,7 +261,7 @@ function addMed(med,colorCode) {
 
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
-        selectedMedClass.push(med.Medicines_class + ':' + med);
+        selectedMedClass.set(med.Medicines_class,med);
         createAccordionItem(med.Medicines_class, colorCode);
         if (medAddedStatus == false) {
 
@@ -286,7 +286,7 @@ function addMed(med,colorCode) {
             }
         });
         if (elementAddedStatus != true) {
-            
+            selectedMedClass.set(med.Medicines_class, med);
             createAccordionItem(med.Medicines_class, colorCode);
             //Calculate Total risk for created med group
             calculateTotalRisk(med.Medicines_class);
