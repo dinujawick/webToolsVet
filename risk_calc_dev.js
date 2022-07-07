@@ -742,7 +742,7 @@ function addMed(med,colorCode) {
         const accordionIDs = $.map($('#medGroup > .accordion-item'), acordionItem => acordionItem.id);
         //console.log(accordionIDs)
         $(accordionIDs).each(function (index, id) {
-            if (id == med.Medicines_class + 'accordion') {
+            if (id == med.Medicines_class.replace(/[-_)(]/g, '') + 'accordion') {
                 elementAddedStatus = true;
             }
         });
