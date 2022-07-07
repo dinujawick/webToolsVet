@@ -195,8 +195,8 @@ $(document).ready(function () {
                             }
                          });
                         addMed(item, colorCode);
-                        for (var key in selectedMedClass) {
-                            console.log('key is :' + key + ' and value is : ' + selectedMedClass[key]);
+                        for (var [key, value] of selectedMedClass) {
+                            console.log(key + " = " + value);
                         }
                     });
                 }
