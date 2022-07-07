@@ -1,7 +1,7 @@
 ﻿//Variable to store previous generic name
 var prevAddedItem = "";
 
-var selectedMedGroupList = new Array();
+var selectedMedClass = new Object();
 
 var selectedMedList = new Array();
 
@@ -172,7 +172,7 @@ var colorMap = [
 $(document).ready(function () {
 
     //Get Empty Graph
-     createCSV("", "REMOVE");
+     createCSV("", "EMPTY");
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
@@ -195,6 +195,9 @@ $(document).ready(function () {
                             }
                          });
                         addMed(item, colorCode);
+                        for (var key in selectedMedClass) {
+                            console.log('key is :' + key + ' and value is : ' + selectedMedClass[key]);
+                        }
                     });
                 }
                 prevAddedItem = item.itm_gen_nme;
@@ -237,77 +240,10 @@ function filterFunction() {
 
 }
 
-function createSelectedList(atcDescr, atcLevel) {
-
-    $('#' + "a" + atcLevel)
-        .attr('style', "display:none");
-    //.off('click');
-
-    var addedStatus = false;
-    if ($('#selectedList').has('li').length == 0) {
-        $('<li>').attr('id', atcLevel).text(atcDescr).appendTo('#selectedList');
-    } else {
-        //Get all the li Ids into const liIDs variable.
-        const liIDs = $.map($('#selectedList > li'), li => li.id);
-
-        $(liIDs).each(function (index, item) {
-            if (item == atcLevel)
-                addedStatus = true;
-        });
-        if (addedStatus != true)
-            $('<li>').attr('id', atcLevel).text(atcDescr).appendTo('#selectedList');
-
-
-    }
-}
-
-function getMedGroups(atcDescr, atcLevel) {
-
-    var identifiedMedGroup = "";
-
-    $(medMap).each(function (index, item) {
-
-        var temp;
-        if (atcLevel != 'N05AB04' && atcLevel != 'N03AX16' && atcLevel != 'N03AX12') {
-            temp = atcLevel.substr(0, item.atcLevel.length);
-        } else {
-            temp = atcLevel;
-        }
-        if (temp == item.atcLevel) {
-
-            identifiedMedGroup = item.medGroup;
-
-            if (selectedMedGroupList.length == 0) {
-                selectedMedGroupList.push(item.medGroup);
-                identifiedMedGroup = item.medGroup;
-            } else {
-                var checkAvailablity = false;
-                $.each(selectedMedGroupList, function (i, value) {
-
-                    if (item.medGroup == value) {
-                        checkAvailablity = true;
-                    }
-                    else {
-                        checkAvailablity = false;
-                    }
-                });
-                if (checkAvailablity == false) {
-                    selectedMedGroupList.push(item.medGroup);
-                }
-            }
-        }
-    });
-
-    if (identifiedMedGroup != null) {
-        return identifiedMedGroup;
-    }
-
-}
 
 function addMed(med,colorCode) {
 
     var medAddedStatus = false;
-    //createSelectedList(atcDescr, atcLevel);
     if (selectedMedList == null) {
         selectedMedList.push(med.itm_gen_nme);
         medAddedStatus = true;
@@ -323,8 +259,9 @@ function addMed(med,colorCode) {
     }
 
 
+    //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
-        //console.log(identifiedMedGroup);
+        selectedMedClass.med.Medicines_class = med;
         createAccordionItem(med.Medicines_class, colorCode);
         if (medAddedStatus == false) {
 
@@ -349,6 +286,7 @@ function addMed(med,colorCode) {
             }
         });
         if (elementAddedStatus != true) {
+            selectedMedClass.med.Medicines_class = med;
             createAccordionItem(med.Medicines_class, colorCode);
             //Calculate Total risk for created med group
             calculateTotalRisk(med.Medicines_class);
@@ -368,97 +306,7 @@ function addMed(med,colorCode) {
 }
 
 
-function addOnlyMappedMedsToSelectionList(atcLevel, atcDescr) {
-    $(medMap).each(function (index, item) {
 
-        var temp;
-        if (atcLevel != 'N05AB04' && atcLevel != 'N03AX16' && atcLevel != 'N03AX12') {
-            temp = atcLevel.substr(0, item.atcLevel.length);
-        }
-        else {
-            temp = atcLevel;
-        }
-
-        if (temp == item.atcLevel) {
-            $med = $('<a>').attr('id', "a" + atcLevel + atcDescr.replace(/\s/g, "")).
-                text(atcDescr).appendTo('#myDropdown');
-
-            $med.on('click', function (event) {
-
-                var medAddedStatus = false;
-
-                //createSelectedList(atcDescr, atcLevel);
-                var identifiedMedGroup = getMedGroups(atcDescr, atcLevel);
-                if (selectedMedList == null) {
-                    selectedMedList.push(atcDescr);
-                    medAddedStatus = true;
-                }
-                else {
-
-                    $.each(selectedMedList, function (i, value) {
-                        if (value == atcDescr) {
-                            medAddedStatus = true;
-                        }
-                    })
-
-                    if (medAddedStatus == false)
-                        selectedMedList.push(atcDescr);
-                }
-
-
-                if ($('#medGroup').has('.accordion-item').length == 0) {
-                    //console.log(identifiedMedGroup);
-                    createAccordionItem(identifiedMedGroup);
-                    if (medAddedStatus == false) {
-
-                        createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
-                        //Calculate Total risk for first med group
-                        calculateTotalRisk(identifiedMedGroup);
-
-                        //Generate dynamic graph
-                        createCSV(identifiedMedGroup, "ADD");
-
-                    }
-
-                } else {
-
-                    var elementAddedStatus = false;
-                    //Get all the accordion-item Ids into const liIDs variable.
-                    const accordionIDs = $.map($('#medGroup > .accordion-item'), acordionItem => acordionItem.id);
-                    //console.log(accordionIDs)
-                    $(accordionIDs).each(function (index, id) {
-                        if (id == identifiedMedGroup + 'accordion') {
-                            elementAddedStatus = true;
-                        }
-                    });
-                    if (elementAddedStatus != true) {
-                        createAccordionItem(identifiedMedGroup);
-                        //Calculate Total risk for created med group
-                        calculateTotalRisk(identifiedMedGroup);
-
-                        //Generate dynamic graph
-                        createCSV(identifiedMedGroup, "ADD");
-
-                        if (medAddedStatus != true)
-                            createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
-                    }
-                    else {
-                        if (medAddedStatus != true)
-                            createAcordionContent(identifiedMedGroup, atcDescr, atcLevel);
-                    }
-                }
-
-
-                //console.log(selectedMedList);
-                //console.log(selectedMedGroupList);
-
-
-                //myFunction();
-            })
-        }
-    });
-
-}
 
 //CSV Header and pre-defined first cell value
 var header = ["Risk"];
@@ -518,7 +366,7 @@ function createCSV(med, process) {
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
-    console.log(tempCSV);
+    //console.log(tempCSV);
 
     //create a csv file
     let csvContent = "data:text/csv;charset=utf-8,"
@@ -551,7 +399,7 @@ function createAccordionItem(medGroup,colorCode) {
 
     //Push that colorCode to Array
     colorCodes.push(colorCode);
-    console.log(colorCodes);
+    //console.log(colorCodes);
 
     $accordion = $('<div>')
         .attr('id', medGroup + 'accordion')
@@ -607,17 +455,18 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                     if (index > -1) {
                         selectedMedList.splice(index, 1);
                     }
-                    console.log(selectedMedList);
+                    //console.log(selectedMedList);
 
                     $('#' + medGroup + atcLevel + 'li').remove();
                     const liIDs = $.map($('#' + medGroup + 'ul' + '> li'), li => li.id);
                     if (liIDs.length == 0) {
 
+                        //Remove Med Classes
                         const ind = colorCodes.indexOf(colorCode);
                         if (ind > -1) {
                             colorCodes.splice(ind, 1);
                         }
-                        console.log(colorCodes);
+                        //console.log(colorCodes);
 
                         const index = selectedMedGroupList.indexOf(medGroup);
                         if (index > -1) {
@@ -626,6 +475,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                             createCSV(selectedMedGroupList, "REMOVE");
                         }
                         $('#' + medGroup + 'accordion').remove();
+
 
 
                     }
