@@ -982,6 +982,7 @@ function StackedBarChartHorizontal(data, {
         .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
+        .addClass("textSmaller")
         .attr("transform", `translate(0,${marginTop})`)
         .call(xAxis)
         .call(g => g.select(".domain").remove())
@@ -1012,6 +1013,7 @@ function StackedBarChartHorizontal(data, {
         .text(({ i }) => title(i));
 
     svg.append("g")
+        .addClass("textSmaller")
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis);
 
