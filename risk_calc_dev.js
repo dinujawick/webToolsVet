@@ -17,8 +17,6 @@ var totalRisk = {
     "bleeding": 0,
     "heart_failure": 0,
     "bradycardia": 0,
-    "CV_events": 0,
-    "respiratory": 0,
     "hypoglycaemia": 0,
     "renal_injury": 0,
     "hypokalemia": 0,
@@ -37,7 +35,11 @@ $(document).ready(function () {
 
     //Read JSON and intialize medClassColorMap.
     medClassColorMap = $.getJSON("risk_calc_medClassMap_dev.json");
-    console.log(medClassColorMap);
+    $.each(medClassColorMap, function (index, item) {
+
+        console.log(item);
+
+    });
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
