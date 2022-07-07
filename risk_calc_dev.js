@@ -195,7 +195,7 @@ function createCSV(med, process) {
 
         for (var [key, value] of med) {
             
-            console.log(key);
+            console.log(value.falls_fractures);
         }
         
     }
