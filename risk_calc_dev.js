@@ -3,6 +3,8 @@ var prevAddedItem = "";
 
 var selectedMedClass = new Map();
 
+var medClassColorMap = new Map();
+
 var selectedMedList = new Array();
 
 var colorCodes = new Array();
@@ -26,153 +28,16 @@ var totalRisk = {
 }
 
 
-var colorMap = [
-    {
-        "medicines_class": "Anticoag_antiplt",
-        "color_hexcode": "#970b13"
-    },
-    {
-        "medicines_class": "NSAIDs",
-        "color_hexcode": "#bb151a"
-    },
-    {
-        "medicines_class": "SelectiveAlphaBlockers",
-        "color_hexcode": "#feba4a"
-    },
-    {
-        "medicines_class": "UrinaryAntispasm",
-        "color_hexcode": "#fb992c"
-    },
-    {
-        "medicines_class": "Antimicrobials (renal)",
-        "color_hexcode": "#d08ac2"
-    },
-    {
-        "medicines_class": "H2Blockers",
-        "color_hexcode": "#73c378"
-    },
-    {
-        "medicines_class": "Laxatives",
-        "color_hexcode": "#97d494"
-    },
-    {
-        "medicines_class": "Loperamide",
-        "color_hexcode": "#4daf62"
-    },
-    {
-        "medicines_class": "Strong GI anticholinergics",
-        "color_hexcode": "#036429"
-    },
-    {
-        "medicines_class": "Metoclopramide",
-        "color_hexcode": "#157f3b"
-    },
-    {
-        "medicines_class": "PPI",
-        "color_hexcode": "#2f984f"
-    },
-    {
-        "medicines_class": "ACE_ARB",
-        "color_hexcode": "#fee8d3"
-    },
-    {
-        "medicines_class": "Amiodarone",
-        "color_hexcode": "#7f2704"
-    },
-    {
-        "medicines_class": "Betablockers",
-        "color_hexcode": "#fdc28c"
-    },
-    {
-        "medicines_class": "CCB_dihydropyridine",
-        "color_hexcode": "#fda762"
-    },
-    {
-        "medicines_class": "CCB_dv",
-        "color_hexcode": "#fb8d3d"
-    },
-    {
-        "medicines_class": "Digoxin",
-        "color_hexcode": "#f2701d"
-    },
-    {
-        "medicines_class": "Loop",
-        "color_hexcode": "#9f3303"
-    },
-    {
-        "medicines_class": "Thiazide",
-        "color_hexcode": "#c44103"
-    },
-    {
-        "medicines_class": "Nitrates_nicorandil",
-        "color_hexcode": "#fdd8b3"
-    },
-    {
-        "medicines_class": "Spironolactone",
-        "color_hexcode": "#e25609"
-    },
-    {
-        "medicines_class": "Steroid",
-        "color_hexcode": "#ef4533"
-    },
-    {
-        "medicines_class": "Theophylline",
-        "color_hexcode": "#f9694c"
-    },
-    {
-        "medicines_class": "Benzodiazepines",
-        "color_hexcode": "#61409b"
-    },
-    {
-        "medicines_class": "Opioid",
-        "color_hexcode": "#8782bc"
-    },
-    {
-        "medicines_class": "Sedating antihistamines (AMH)",
-        "color_hexcode": "#f1eff6"
-    },
-    {
-        "medicines_class": "Anticholinergics antipsychotics",
-        "color_hexcode": "#cecee5"
-    },
-    {
-        "medicines_class": "Antiepileptic (excl gabapentinoid)",
-        "color_hexcode": "#9e9bc9"
-    },
-    {
-        "medicines_class": "H1Blockers",
-        "color_hexcode": "#e2e1ef"
-    },
-    {
-        "medicines_class": "Gabapentinoid",
-        "color_hexcode": "#b6b5d8"
-    },
-    {
-        "medicines_class": "SSRI_SNRI",
-        "color_hexcode": "#7363ac"
-    },
-    {
-        "medicines_class": "TCA",
-        "color_hexcode": "#501f8c"
-    },
-    {
-        "medicines_class": "MAO inhibitors",
-        "color_hexcode": "#3f007d"
-    },
-    {
-        "medicines_class": "Sulfonylurea_gliptins",
-        "color_hexcode": "#e33890"
-    },
-    {
-        "medicines_class": "Pioglitazone",
-        "color_hexcode": "#d71c6c"
-    }
-]
+
 
 $(document).ready(function () {
 
     //Get Empty Graph
      createCSV("", "EMPTY");
+
+    //Read JSON and intialize medClassColorMap.
+    medClassColorMap = $.getJSON("risk_calc_medClassMap_dev.json");
+    console.log(medClassColorMap);
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
@@ -195,7 +60,7 @@ $(document).ready(function () {
                             }
                          });
                         addMed(item, colorCode);
-                        console.log(selectedMedClass.get(item.Medicines_class));
+                       
                     });
                 }
                 prevAddedItem = item.itm_gen_nme;
