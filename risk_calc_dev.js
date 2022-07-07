@@ -97,7 +97,7 @@ function addMed(med,colorCode,medClass) {
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class, medClass);
         createAccordionItem(med.Medicines_class, colorCode);
-        if (medAddedStatus != true) {
+        if (medAddedStatus == undefined) {
 
             createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
             //Calculate Total risk for first med group
@@ -128,11 +128,11 @@ function addMed(med,colorCode,medClass) {
             //Generate dynamic graph
             createCSV(med, "ADD");
 
-            if (medAddedStatus != true)
+            if (medAddedStatus == false)
                 createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
         }
         else {
-            if (medAddedStatus != true)
+            if (medAddedStatus == false)
                 createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
         }
     }
@@ -196,8 +196,6 @@ function createCSV(med, process) {
             console.log(key);
         }
         
-        
-
     }
     else if (process == "ADD") {
         header.push(med.Medicines_class);
