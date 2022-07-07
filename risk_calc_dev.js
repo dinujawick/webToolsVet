@@ -34,12 +34,9 @@ $(document).ready(function () {
      createCSV("", "EMPTY");
 
     //Read JSON and intialize medClassColorMap.
-    medClassColorMap = $.getJSON("risk_calc_medClassMap_dev.json");
-    $.each(medClassColorMap, function (index, item) {
+    medClassColorMap = JSON.parse($.getJSON("risk_calc_medClassMap_dev.json"));
 
-        console.log(item);
-
-    });
+    console.log(medClassColorMap);
 
     //Read JSON and add the med generic values into dropdown.
     $.getJSON("risk_calc_data.json", function (data) {
