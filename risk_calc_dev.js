@@ -192,10 +192,10 @@ function createCSV(med, process) {
     else if (process == "REMOVE") {
 
         for (var [key, value] of med) {
-            header = $.merge(header, key);
             
+            console.log(key);
         }
-        console.log(header);
+        
         
 
     }
