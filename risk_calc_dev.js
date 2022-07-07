@@ -881,7 +881,7 @@ function createAccordionItem(medGroup,colorCode) {
                 .addClass('accordion-button')
                 .append(
                     $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
-                    $('<span>').attr('style,"font-size:smaller').text(medGroup + ' Class')
+                    $('<span>').attr('style','font-size:smaller').text(medGroup + ' Class')
                 )
         )
         .appendTo($accordion);
