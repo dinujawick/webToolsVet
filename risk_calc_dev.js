@@ -704,27 +704,11 @@ function filterFunction() {
 
 function addMed(med,colorCode) {
 
-    var medAddedStatus = false;
-    if (selectedMedList.length == 0) {
-        selectedMedList.push(med.itm_gen_nme);
-        medAddedStatus = true;
-    }
-    else {
-        $.each(selectedMedList, function (i, value) {
-            if (value == med.itm_gen_nme) {
-                medAddedStatus = true;
-            }
-        })
-        if (medAddedStatus == false)
-            selectedMedList.push(med.itm_gen_nme);
-    }
-
-
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class,med);
         createAccordionItem(med.Medicines_class, colorCode);
-        if (medAddedStatus == false) {
+        if (medAddedStatus != true) {
 
             createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
             //Calculate Total risk for first med group
@@ -762,6 +746,21 @@ function addMed(med,colorCode) {
             if (medAddedStatus != true)
                 createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
         }
+    }
+
+    var medAddedStatus = false;
+    if (selectedMedList.length == 0) {
+        selectedMedList.push(med.itm_gen_nme);
+        medAddedStatus = true;
+    }
+    else {
+        $.each(selectedMedList, function (i, value) {
+            if (value == med.itm_gen_nme) {
+                medAddedStatus = true;
+            }
+        })
+        if (medAddedStatus == false)
+            selectedMedList.push(med.itm_gen_nme);
     }
 
 }
