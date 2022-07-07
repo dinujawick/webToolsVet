@@ -120,7 +120,7 @@ function addMed(med,colorCode,medClass) {
         calculateTotalRisk(med.Medicines_class);
 
         //Generate dynamic graph
-        createCSV(med, "ADD");
+        createCSV(selectedMedClass, "ADD");
 
     } else {
 
@@ -140,7 +140,7 @@ function addMed(med,colorCode,medClass) {
             calculateTotalRisk(med.Medicines_class);
 
             //Generate dynamic graph
-            createCSV(med, "ADD");
+            createCSV(selectedMedClass, "ADD");
 
             if (medAddedStatus == false)
                 createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
@@ -161,63 +161,81 @@ function addMed(med,colorCode,medClass) {
 
 
 
-//CSV Header and pre-defined first cell value
-var header = ["Risk"];
-
-
-//CSV Rows and pre-defined first cell value
-var fallsRisk = ["Falls Fracture"];
-var constRisk = ["Constipation"];
-var uretentRisk = ["Urinary Retention"];
-var cnsdeprRisk = ["CNS Depression"];
-var bleedRisk = ["Bleeding"];
-var heartRisk = ["Heart Failure"];
-var bradyRisk = ["Bradycardia"];
-var hypoglycRisk = ["Hypoglycaemia"];
-var renalRisk = ["Renal Injury"];
-var hypoKRisk = ["Hypokalemia"];
-var hyperKRisk = ["Hyperkalemia"];
-var serosynRisk = ["Serotonin Syndrome"];
-var acglaucRisk = ["Glaucoma"];
 
 
 
-function createCSV(med, process) {
+function createCSV(medClass, process) {
+
+
+    //CSV Header and pre-defined first cell value
+    var header = ["Risk"];
+
+
+    //CSV Rows and pre-defined first cell value
+    var fallsRisk = ["Falls Fracture"];
+    var constRisk = ["Constipation"];
+    var uretentRisk = ["Urinary Retention"];
+    var cnsdeprRisk = ["CNS Depression"];
+    var bleedRisk = ["Bleeding"];
+    var heartRisk = ["Heart Failure"];
+    var bradyRisk = ["Bradycardia"];
+    var hypoglycRisk = ["Hypoglycaemia"];
+    var renalRisk = ["Renal Injury"];
+    var hypoKRisk = ["Hypokalemia"];
+    var hyperKRisk = ["Hyperkalemia"];
+    var serosynRisk = ["Serotonin Syndrome"];
+    var acglaucRisk = ["Glaucoma"];
+
 
 
     var tempCSV = [];
 
     if (process == "EMPTY") {
-        header = ["Risk"];
+       
         
     }
     else if (process == "REMOVE") {
 
-        for (var [key, value] of med) {
+        for (var [key, value] of medClass) {
             
-            console.log(value.falls_fractures);
+            header.push(key);
+            fallsRisk.push(value.falls_fractures);
+            constRisk.push(value.constipation);
+            uretentRisk.push(value.urinary_retention);
+            cnsdeprRisk.push(value.CNS_depression);
+            bleedRisk.push(value.bleeding);
+            heartRisk.push(value.heart_failure);
+            bradyRisk.push(value.bradycardia);
+            hypoglycRisk.push(value.hypoglycaemia);
+            renalRisk.push(value.renal_injury);
+            hypoKRisk.push(value.hypokalemia);
+            hyperKRisk.push(value.hyperkalemia);
+            serosynRisk.push(value.serotonin_syndrome);
+            acglaucRisk.push(value.glaucoma);
         }
         
     }
     else if (process == "ADD") {
-        header.push(med.Medicines_class);
 
-        if (med != "") {
+        for (var [key, value] of medClass) {
 
-            fallsRisk.push(med.falls_fractures);
-            constRisk.push(med.constipation);
-            uretentRisk.push(med.urinary_retention);
-            cnsdeprRisk.push(med.CNS_depression);
-            bleedRisk.push(med.bleeding);
-            heartRisk.push(med.heart_failure);
-            bradyRisk.push(med.bradycardia);
-            hypoglycRisk.push(med.hypoglycaemia);
-            renalRisk.push(med.renal_injury);
-            hypoKRisk.push(med.hypokalemia);
-            hyperKRisk.push(med.hyperkalemia);
-            serosynRisk.push(med.serotonin_syndrome);
-            acglaucRisk.push(med.glaucoma);
+            header.push(key);
+            fallsRisk.push(value.falls_fractures);
+            constRisk.push(value.constipation);
+            uretentRisk.push(value.urinary_retention);
+            cnsdeprRisk.push(value.CNS_depression);
+            bleedRisk.push(value.bleeding);
+            heartRisk.push(value.heart_failure);
+            bradyRisk.push(value.bradycardia);
+            hypoglycRisk.push(value.hypoglycaemia);
+            renalRisk.push(value.renal_injury);
+            hypoKRisk.push(value.hypokalemia);
+            hyperKRisk.push(value.hyperkalemia);
+            serosynRisk.push(value.serotonin_syndrome);
+            acglaucRisk.push(value.glaucoma);
+
         }
+
     }
 
     
