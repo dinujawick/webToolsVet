@@ -114,16 +114,13 @@ function addMed(med,colorCode,medClass) {
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class, medClass);
         createAccordionItem(med.Medicines_class, colorCode);
-        if (medAddedStatus == false) {
+        
+        createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
+        //Calculate Total risk for first med group
+        calculateTotalRisk(med.Medicines_class);
 
-            createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
-            //Calculate Total risk for first med group
-            calculateTotalRisk(med.Medicines_class);
-
-            //Generate dynamic graph
-            createCSV(med, "ADD");
-
-        }
+        //Generate dynamic graph
+        createCSV(med, "ADD");
 
     } else {
 
