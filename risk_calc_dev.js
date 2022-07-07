@@ -96,6 +96,20 @@ function addMed(med,colorCode,medClass) {
 
     var medAddedStatus = false;
 
+    if (selectedMedList.length == 0) {
+        selectedMedList.push(med.itm_gen_nme);
+        medAddedStatus = true;
+    }
+    else {
+        $.each(selectedMedList, function (i, value) {
+            if (value == med.itm_gen_nme) {
+                medAddedStatus = true;
+            }
+        })
+        if (medAddedStatus == false)
+            selectedMedList.push(med.itm_gen_nme);
+    }
+
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class, medClass);
@@ -141,19 +155,7 @@ function addMed(med,colorCode,medClass) {
     }
 
     
-    if (selectedMedList.length == 0) {
-        selectedMedList.push(med.itm_gen_nme);
-        medAddedStatus = true;
-    }
-    else {
-        $.each(selectedMedList, function (i, value) {
-            if (value == med.itm_gen_nme) {
-                medAddedStatus = true;
-            }
-        })
-        if (medAddedStatus == false)
-            selectedMedList.push(med.itm_gen_nme);
-    }
+   
 
     console.log(selectedMedClass);
 
