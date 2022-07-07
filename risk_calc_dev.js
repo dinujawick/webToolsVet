@@ -190,30 +190,36 @@ function createCSV(med, process) {
         
     }
     else if (process == "REMOVE") {
+
+        for (var [key, value] of med) {
+            console.log(key);
+        }
         /*header = $.merge(header, med.Medicines_class);*/
+
     }
     else if (process == "ADD") {
         header.push(med.Medicines_class);
+
+        if (med != "") {
+
+            fallsRisk.push(med.falls_fractures);
+            constRisk.push(med.constipation);
+            uretentRisk.push(med.urinary_retention);
+            cnsdeprRisk.push(med.CNS_depression);
+            bleedRisk.push(med.bleeding);
+            heartRisk.push(med.heart_failure);
+            bradyRisk.push(med.bradycardia);
+            hypoglycRisk.push(med.hypoglycaemia);
+            renalRisk.push(med.renal_injury);
+            hypoKRisk.push(med.hypokalemia);
+            hyperKRisk.push(med.hyperkalemia);
+            serosynRisk.push(med.serotonin_syndrome);
+            acglaucRisk.push(med.glaucoma);
+        }
     }
 
-    if (med != "") {
-
-        fallsRisk.push(med.falls_fractures);
-        constRisk.push(med.constipation);
-        uretentRisk.push(med.urinary_retention);
-        cnsdeprRisk.push(med.CNS_depression);
-        bleedRisk.push(med.bleeding);
-        heartRisk.push(med.heart_failure);
-        bradyRisk.push(med.bradycardia);
-        hypoglycRisk.push(med.hypoglycaemia);
-        renalRisk.push(med.renal_injury);
-        hypoKRisk.push(med.hypokalemia);
-        hyperKRisk.push(med.hyperkalemia);
-        serosynRisk.push(med.serotonin_syndrome);
-        acglaucRisk.push(med.glaucoma);
-    }
+    
  
-
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
@@ -319,6 +325,9 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                             colorCodes.splice(ind, 1);
                         }
                         //console.log(colorCodes);
+
+                        selectedMedClass.delete(medGroup);
+                        createCSV(selectedMedClass, "REMOVE");
 
                         //const index = selectedMedGroupList.indexOf(medGroup);
                         //if (index > -1) {
