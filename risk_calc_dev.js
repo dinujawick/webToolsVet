@@ -613,9 +613,9 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                     const liIDs = $.map($('#' + medGroup + 'ul' + '> li'), li => li.id);
                     if (liIDs.length == 0) {
 
-                        const index = colorCodes.indexOf(colorCode);
-                        if (index > -1) {
-                            colorCodes.splice(index, 1);
+                        const ind = colorCodes.indexOf(colorCode);
+                        if (ind > -1) {
+                            colorCodes.splice(ind, 1);
                         }
                         console.log(colorCodes);
 
