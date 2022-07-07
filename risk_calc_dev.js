@@ -929,12 +929,12 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                         }
                         //console.log(colorCodes);
 
-                        const index = selectedMedGroupList.indexOf(medGroup);
-                        if (index > -1) {
-                            selectedMedGroupList.splice(index, 1);
-                            //create graph again with deleted list.
-                            createCSV(selectedMedGroupList, "REMOVE");
-                        }
+                        //const index = selectedMedGroupList.indexOf(medGroup);
+                        //if (index > -1) {
+                        //    selectedMedGroupList.splice(index, 1);
+                        //    //create graph again with deleted list.
+                        //    createCSV(selectedMedGroupList, "REMOVE");
+                        //}
                         $('#' + medGroup.replace(/[-_)(]/g, '') + 'accordion').remove();
 
 
