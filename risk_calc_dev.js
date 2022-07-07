@@ -3,7 +3,7 @@ var prevAddedItem = "";
 
 var selectedMedClass = new Map();
 
-var medClassColorMap = new Map();
+var medClassColorMap = "";
 
 var selectedMedList = new Array();
 
