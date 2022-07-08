@@ -161,118 +161,64 @@ function createCSV(medClass, process) {
     var dataStructure = [];
 
     //Objects for each risk classes
-    var faRisk = { Risk:'Falls Fracture'};
-    var conRisk = { Risk:'Constipation'};
-    var ureRisk = { Risk:'Urinary Retention'};
-    var cnsRisk = { Risk:'CNS Depression'};
-    var bleRisk = { Risk:'Bleeding'};
-    var heaRisk = { Risk:'Heart Failure'};
-    var braRisk = { Risk:'Bradycardia'};
-    var hypcRisk = { Risk:'Hypoglycaemia'};
-    var renRisk = { Risk:'Renal Injury'};
-    var hypRisk = { Risk:'Hypokalemia'};
-    var hypeRisk = { Risk:'Hyperkalemia'};
-    var seroRisk = { Risk:'Serotonin Syndrome'};
-    var acglRisk = { Risk:'Glaucoma'};
+    var fallsRisk = { Risk: 'Falls Fracture' };
+    var constRisk = { Risk: 'Constipation' };
+    var uretentRisk = { Risk: 'Urinary Retention' };
+    var cnsdeprRisk = { Risk: 'CNS Depression' };
+    var bleedRisk = { Risk: 'Bleeding' };
+    var heartRisk = { Risk: 'Heart Failure' };
+    var bradyRisk = { Risk: 'Bradycardia' };
+    var hypoglycRisk = { Risk: 'Hypoglycaemia' };
+    var renalRisk = { Risk: 'Renal Injury' };
+    var hypoKRisk = { Risk: 'Hypokalemia' };
+    var hyperKRisk = { Risk: 'Hyperkalemia' };
+    var serosynRisk = { Risk: 'Serotonin Syndrome' };
+    var acglaucRisk = { Risk: 'Glaucoma' };
 
 
     //fRisk['Risk'] = 'Falls Fracture';
     //fRisk['Dinuja'] = '0';
 
-    dataStructure.push(faRisk, conRisk, ureRisk, cnsRisk, bleRisk, heaRisk, braRisk, hypcRisk, renRisk, hypRisk, hypeRisk, seroRisk, acglRisk);
-    dataStructure['columns'] = ['Risk'];
-    console.log(dataStructure);
+
 
 
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
-   
-
-    //CSV Rows and pre-defined first cell value
-    var fallsRisk = ["Falls Fracture"];
-    var constRisk = ["Constipation"];
-    var uretentRisk = ["Urinary Retention"];
-    var cnsdeprRisk = ["CNS Depression"];
-    var bleedRisk = ["Bleeding"];
-    var heartRisk = ["Heart Failure"];
-    var bradyRisk = ["Bradycardia"];
-    var hypoglycRisk = ["Hypoglycaemia"];
-    var renalRisk = ["Renal Injury"];
-    var hypoKRisk = ["Hypokalemia"];
-    var hyperKRisk = ["Hyperkalemia"];
-    var serosynRisk = ["Serotonin Syndrome"];
-    var acglaucRisk = ["Glaucoma"];
-
 
 
     var tempCSV = [];
 
-    if (process == "EMPTY") {
-       
-        
-    }
-    else if (process == "REMOVE") {
 
-        for (var [key, value] of medClass) {
-            
-            header.push(key);
-            fallsRisk.push(value.falls_fractures);
-            constRisk.push(value.constipation);
-            uretentRisk.push(value.urinary_retention);
-            cnsdeprRisk.push(value.CNS_depression);
-            bleedRisk.push(value.bleeding);
-            heartRisk.push(value.heart_failure);
-            bradyRisk.push(value.bradycardia);
-            hypoglycRisk.push(value.hypoglycaemia);
-            renalRisk.push(value.renal_injury);
-            hypoKRisk.push(value.hypokalemia);
-            hyperKRisk.push(value.hyperkalemia);
-            serosynRisk.push(value.serotonin_syndrome);
-            acglaucRisk.push(value.glaucoma);
-        }
-        
-    }
-    else if (process == "ADD") {
 
-        for (var [key, value] of medClass) {
+    for (var [key, value] of medClass) {
 
-            header.push(key);
-            fallsRisk.push(value.falls_fractures);
-            constRisk.push(value.constipation);
-            uretentRisk.push(value.urinary_retention);
-            cnsdeprRisk.push(value.CNS_depression);
-            bleedRisk.push(value.bleeding);
-            heartRisk.push(value.heart_failure);
-            bradyRisk.push(value.bradycardia);
-            hypoglycRisk.push(value.hypoglycaemia);
-            renalRisk.push(value.renal_injury);
-            hypoKRisk.push(value.hypokalemia);
-            hyperKRisk.push(value.hyperkalemia);
-            serosynRisk.push(value.serotonin_syndrome);
-            acglaucRisk.push(value.glaucoma);
-
-        }
+        header.push(key);
+        fallsRisk[key] = value.falls_fractures;
+        constRisk[key] = value.constipation;
+        uretentRisk[key] = value.urinary_retention;
+        cnsdeprRisk[key] = value.CNS_depression;
+        bleedRisk[key] = value.bleeding;
+        heartRisk[key] = value.heart_failure;
+        bradyRisk[key] = value.bradycardia;
+        hypoglycRisk[key] = value.hypoglycaemia;
+        renalRisk[key] = value.renal_injury;
+        hypoKRisk[key] = value.hypokalemia;
+        hyperKRisk[key] = value.hyperkalemia;
+        serosynRisk[key] = value.serotonin_syndrome;
+        acglaucRisk[key] = value.glaucoma;
 
     }
 
-    
- 
-    tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
-        heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
+    dataStructure.push(fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
+    dataStructure['columns'] = header;
+    console.log(dataStructure);
 
+    /*initialization(dataStructure);*/
 
-    
-    //create a csv file
-    let csvContent = "data:text/csv;charset=utf-8,"
-        + tempCSV.map(e => e.join(",")).join("\n");
-
-    
-
-    initialization(dataStructure);
-
-    d3.csv(csvContent).then(d => console.log(d));
+    //d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
+
   
 
 }
