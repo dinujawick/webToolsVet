@@ -235,16 +235,24 @@ function createCSV(medClass, process) {
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
-    
+
+
+
+    let csvContent = "data:text/csv;charset=utf-8,";
+
+    tempCSV.forEach(function (rowArray) {
+        let row = rowArray.join(",");
+        csvContent += row + "\r\n";
+    });
 
     //create a csv file
-    let csvContent = "data:text/csv;charset=utf-8,"
-        + tempCSV.map(e => e.join(",")).join("\n");
+    //let csvContent = "data:text/csv;charset=utf-8,"
+    //    + tempCSV.map(e => e.join(",")).join("\n");
 
-    csvFile = new Blob([tempCSV.map(e => e.join(",")).join("\n")], { type: "text/csv" });
-    console.log(csvFile);
-  
-    d3.csv(csvFile).then(d => console.log(d));
+    
+
+
+    d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
   
 
