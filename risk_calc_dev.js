@@ -164,7 +164,8 @@ function createCSV(medClass, process) {
 
     var test = new Object([{ Risk:'Falls Fracture'}]);
 
-  
+    test[0].push({ Risk: 'Dinuja' });
+
     console.log(test);
     
 
