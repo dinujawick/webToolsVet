@@ -238,16 +238,10 @@ function createCSV(medClass, process) {
 
 
 
-    let csvContent = "data:text/csv;";
-
-    tempCSV.forEach(function (rowArray) {
-        let row = rowArray.join(",");
-        csvContent += row + "\r\n";
-    });
 
     //create a csv file
-    //let csvContent = "data:text/csv;charset=utf-8,"
-    //    + tempCSV.map(e => e.join(",")).join("\n");
+    let csvContent = "data:text/csv;charset=utf-8,"
+        + tempCSV.map(e => e.join(",")).join("\n");
 
     
 
