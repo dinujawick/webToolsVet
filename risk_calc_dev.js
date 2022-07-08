@@ -238,14 +238,16 @@ function createCSV(medClass, process) {
     console.log(tempCSV);
 
     //create a csv file
-    let csvContent = "data:text/csv;"
+    let csvContent = "data:text/csv;charset=utf-8,"
         + tempCSV.map(e => e.join(",")).join("\n");
 
-    console.log(csvContent);
+   
     d3.csv(csvContent).then(d => console.log(d));
   
 
 }
+
+
 function calculateTotalRisk(med) {
 
     //$.each(riskMap, function (i, value) {
