@@ -158,12 +158,28 @@ function addMed(med,colorCode,medClass) {
 
 function createCSV(medClass, process) {
 
-    var tempArray = [];
-    var fRisk = {};
-    fRisk['Risk'] = 'Falls Fracture';
-    fRisk['Dinuja'] = '0';
+    var dataStructure = [];
 
-    tempArray.push(fRisk);
+    //Objects for each risk classes
+    var faRisk = { Risk:'Falls Fracture'};
+    var conRisk = { Risk:'Constipation'};
+    var ureRisk = { Risk:'Urinary Retention'};
+    var cnsRisk = { Risk:'CNS Depression'};
+    var bleRisk = { Risk:'Bleeding'};
+    var heaRisk = { Risk:'Heart Failure'};
+    var braRisk = { Risk:'Bradycardia'};
+    var hypcRisk = { Risk:'Hypoglycaemia'};
+    var renRisk = { Risk:'Renal Injury'};
+    var hypRisk = { Risk:'Hypokalemia'};
+    var hypeRisk = { Risk:'Hyperkalemia'};
+    var seroRisk = { Risk:'Serotonin Syndrome'};
+    var acglRisk = { Risk:'Glaucoma'};
+
+
+    //fRisk['Risk'] = 'Falls Fracture';
+    //fRisk['Dinuja'] = '0';
+
+    tempArray.push(faRisk, conRisk, ureRisk, cnsRisk, bleRisk, heaRisk, braRisk, hypcRisk, renRisk, hypRisk, hypeRisk, seroRisk, acglRisk);
     tempArray['columns'] = ['Risk'];
     console.log(tempArray);
 
