@@ -214,7 +214,7 @@ function createCSV(medClass, process) {
     dataStructure['columns'] = header;
     console.log(dataStructure);
 
-    /*initialization(dataStructure);*/
+    initialization(dataStructure);
 
     //d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
