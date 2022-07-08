@@ -241,9 +241,11 @@ function createCSV(medClass, process) {
     let csvContent = "data:text/csv;charset=utf-8,"
         + tempCSV.map(e => e.join(",")).join("\n");
 
-    d3.csv(csvContent).then(d => initialization(d));
+   /* d3.csv(csvContent).then(d => initialization(d));*/
 
-
+    d3.csv(csvContent, function (data) {
+        console.log(data);
+    });
 
 }
 function calculateTotalRisk(med) {
