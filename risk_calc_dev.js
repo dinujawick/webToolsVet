@@ -242,6 +242,7 @@ function createCSV(medClass, process) {
         + tempCSV.map(e => e.join(",")).join("\n");
 
     d3.csv(csvContent).then(d => console.log(d));
+    console.log(d3.csv(csvContent));
   
 
 }
