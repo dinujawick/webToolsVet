@@ -162,6 +162,10 @@ function createCSV(medClass, process) {
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
 
+    var test = new Object({ Risk:'Falls Fracture'});
+
+    console.log(test);
+    
 
     //CSV Rows and pre-defined first cell value
     var fallsRisk = ["Falls Fracture"];
@@ -241,7 +245,7 @@ function createCSV(medClass, process) {
     let csvContent = "data:text/csv;charset=utf-8,"
         + tempCSV.map(e => e.join(",")).join("\n");
 
-    console.log(tempCSV.map(e => e.join(",")).join("\n"));
+   
   
     /*d3.csv().then(d => console.log(d));*/
     //d3.csv(csvContent).then(d => initialization(d));
