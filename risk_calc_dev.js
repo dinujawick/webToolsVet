@@ -176,17 +176,8 @@ function createCSV(medClass, process) {
     var acglaucRisk = { Risk: 'Glaucoma' };
 
 
-    //fRisk['Risk'] = 'Falls Fracture';
-    //fRisk['Dinuja'] = '0';
-
-
-
-
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
-
-
-   
 
 
 
@@ -218,7 +209,8 @@ function createCSV(medClass, process) {
 
     //d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
-
+    delete dataStructure;
+    delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;
   
 
 }
