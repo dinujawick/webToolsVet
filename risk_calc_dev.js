@@ -248,7 +248,7 @@ function createCSV(medClass, process) {
     
 
 
-    //d3.csv(csvContent).then(d => console.log(d));
+    d3.csv(csvFile.text()).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
   
 
