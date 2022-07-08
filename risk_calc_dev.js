@@ -241,7 +241,11 @@ function createCSV(medClass, process) {
     let csvContent = "data:text/csv;charset=utf-8,"
         + tempCSV.map(e => e.join(",")).join("\n");
 
-    console.log(csvContent);
+
+    let csvContent2 = "data:text/csv;charset=utf-8,"
+        + encodeURI(tempCSV.map(e => e.join(",")).join("\n"));
+
+    console.log(csvContent2);
    
     d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
