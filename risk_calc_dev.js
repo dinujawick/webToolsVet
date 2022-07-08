@@ -237,16 +237,18 @@ function createCSV(medClass, process) {
 
 
 
+    csvFile = new Blob([tempCSV], { type: "text/csv" });
 
+    console.log(csvFile.text());
 
-    //create a csv file
-    let csvContent = "data:text/csv;charset=utf-8,"
-        + tempCSV.map(e => e.join(",")).join("\n");
+    ////create a csv file
+    //let csvContent = "data:text/csv;charset=utf-8,"
+    //    + tempCSV.map(e => e.join(",")).join("\n");
 
     
 
 
-    d3.csv(csvContent).then(d => console.log(d));
+    //d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
   
 
