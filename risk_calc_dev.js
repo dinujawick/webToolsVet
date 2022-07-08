@@ -13,6 +13,13 @@ var colorCodes = new Array();
 
 $(document).ready(function () {
 
+
+    //initialize all tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
     //Get Empty Graph
      createCSV("", "EMPTY");
 
@@ -93,6 +100,7 @@ function filterFunction() {
 
 function addMed(med,colorCode,medClass) {
 
+    $('#' + "a" + item.prmy_atc_cde).addClass('clicked');
 
     var medAddedStatus = false;
 
@@ -296,6 +304,9 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                     }
                     //console.log(selectedMedList);
 
+                    //Remove clicked font color from the list
+                    $('#' + "a" + atcLevel).removeClass('clicked');
+                    
                     $('#' + medGroup.replace(/[-_ )(]/g, '') + atcLevel + 'li').remove();
                     const liIDs = $.map($('#' + medGroup.replace(/[-_ )(]/g, '') + 'ul' + '> li'), li => li.id);
                     if (liIDs.length == 0) {
@@ -316,6 +327,9 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                         //    //create graph again with deleted list.
                         //    createCSV(selectedMedGroupList, "REMOVE");
                         //}
+
+                        
+
                         $('#' + medGroup.replace(/[-_ )(]/g, '') + 'accordion').remove();
 
 
