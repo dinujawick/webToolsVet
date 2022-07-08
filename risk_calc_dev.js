@@ -235,7 +235,7 @@ function createCSV(medClass, process) {
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
-    //console.log(tempCSV);
+    console.log(tempCSV);
 
     //create a csv file
     let csvContent = "data:text/csv;charset=utf-8,"
@@ -243,6 +243,7 @@ function createCSV(medClass, process) {
 
    
     d3.csv(csvContent).then(d => console.log(d));
+    //d3.csv(csvContent).then(d => initialization(d));
   
 
 }
@@ -364,7 +365,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 
 
 
-//d3.csv("test.csv").then(d => initialization(d));
+
 
 function initialization(data) {
 
