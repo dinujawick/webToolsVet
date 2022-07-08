@@ -162,9 +162,9 @@ function createCSV(medClass, process) {
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
 
-    var test = new Object([{ Risk:'Falls Fracture'}]);
+    var test = new Object([{ Risk: 'Falls Fracture', Risk: 'Dinuja' }]);
 
-    test[0].push({ Risk: 'Dinuja' });
+   
 
     console.log(test);
     
