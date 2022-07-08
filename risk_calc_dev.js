@@ -160,8 +160,9 @@ function createCSV(medClass, process) {
 
     var dataStructure = [];
 
-    var fallsRisk = new Map({ Risk:'Falls Fracture'});
+    var fallsRisk = new Map();
 
+    fallsRisk.set("Risk", 'Falls Fracture');
     fallsRisk.set("View", '0');
     console.log(fallsRisk);
 
