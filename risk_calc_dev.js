@@ -399,33 +399,33 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 function initialization(data) {
 
     
-    //keys = data.columns.slice(1)
+    keys = data.columns.slice(1)
 
-    //data.forEach(function (d) {
-    //    d.total = d3.sum(keys, k => +d[k])
-    //    return d
-    //})
+    data.forEach(function (d) {
+        d.total = d3.sum(keys, k => +d[k])
+        return d
+    })
 
-    //riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
+    riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-    ///*$('#legend').empty();*/
-    //$('#chart').empty();
+    /*$('#legend').empty();*/
+    $('#chart').empty();
 
-    ////Horizontal Stacked Bar Chart
-    //    chart = StackedBarChartHorizontal(riskmedGroups, {
-    //        x: d => d.status,
-    //        y: d => d.risk,
-    //        z: d => d.medGroup,
-    //        xLabel: "Med Class Risk Count →",
-    //        xDomain: [0, getRange(d3.max(data, d => d.total))]
-    //                           /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
-    //        yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-    //        zDomain: keys,
-    //        colors: colorCodes
-    //    })
+    //Horizontal Stacked Bar Chart
+        chart = StackedBarChartHorizontal(riskmedGroups, {
+            x: d => d.status,
+            y: d => d.risk,
+            z: d => d.medGroup,
+            xLabel: "Med Class Risk Count →",
+            xDomain: [0, getRange(d3.max(data, d => d.total))]
+                               /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
+            yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+            zDomain: keys,
+            colors: colorCodes
+        })
 
         
-    //    $('#chart').append(chart);
+        $('#chart').append(chart);
 
 
 
