@@ -161,12 +161,7 @@ function createCSV(medClass, process) {
 
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
-
-  
    
-
-    console.log(test);
-    
 
     //CSV Rows and pre-defined first cell value
     var fallsRisk = ["Falls Fracture"];
