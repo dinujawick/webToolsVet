@@ -100,7 +100,7 @@ function filterFunction() {
 
 function addMed(med,colorCode,medClass) {
 
-    $('#' + "a" + item.prmy_atc_cde).addClass('clicked');
+    $('#' + "a" + med.prmy_atc_cde).addClass('clicked');
 
     var medAddedStatus = false;
 
