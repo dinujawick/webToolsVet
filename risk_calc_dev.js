@@ -164,7 +164,7 @@ function createCSV(medClass, process) {
     fRisk['Dinuja'] = '0';
 
     tempArray.push(fRisk);
-
+    tempArray['columns'] = ['Risk'];
     console.log(tempArray);
 
 
