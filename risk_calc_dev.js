@@ -158,6 +158,15 @@ function addMed(med,colorCode,medClass) {
 
 function createCSV(medClass, process) {
 
+    var tempArray = [];
+    var fRisk = {};
+    fRisk['Risk'] = 'Falls Fracture';
+    fRisk['Dinuja'] = '0';
+
+    tempArray.push(fRisk);
+
+    console.log(tempArray);
+
 
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
