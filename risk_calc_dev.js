@@ -179,9 +179,9 @@ function createCSV(medClass, process) {
     //fRisk['Risk'] = 'Falls Fracture';
     //fRisk['Dinuja'] = '0';
 
-    tempArray.push(faRisk, conRisk, ureRisk, cnsRisk, bleRisk, heaRisk, braRisk, hypcRisk, renRisk, hypRisk, hypeRisk, seroRisk, acglRisk);
-    tempArray['columns'] = ['Risk'];
-    console.log(tempArray);
+    dataStructure.push(faRisk, conRisk, ureRisk, cnsRisk, bleRisk, heaRisk, braRisk, hypcRisk, renRisk, hypRisk, hypeRisk, seroRisk, acglRisk);
+    dataStructure['columns'] = ['Risk'];
+    console.log(dataStructure);
 
 
     //CSV Header and pre-defined first cell value
