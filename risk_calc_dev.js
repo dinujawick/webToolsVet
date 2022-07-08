@@ -239,7 +239,7 @@ function createCSV(medClass, process) {
 
     csvFile = new Blob([tempCSV], { type: "text/csv" });
 
-    console.log(csvFile.text());
+    csvFile.text().then(d => console.log(d));
 
     ////create a csv file
     //let csvContent = "data:text/csv;charset=utf-8,"
@@ -248,7 +248,7 @@ function createCSV(medClass, process) {
     
 
 
-    d3.csv(csvFile.text()).then(d => console.log(d));
+    /*d3.csv().then(d => console.log(d));*/
     //d3.csv(csvContent).then(d => initialization(d));
   
 
