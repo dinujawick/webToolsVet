@@ -244,7 +244,7 @@ function createCSV(medClass, process) {
     csvFile = new Blob([tempCSV.map(e => e.join(",")).join("\n")], { type: "text/csv" });
     console.log(csvFile);
   
-    //d3.csv("test.csv").then(d => console.log(d));
+    d3.csv(csvFile).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
   
 
