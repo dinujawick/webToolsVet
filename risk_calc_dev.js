@@ -158,42 +158,31 @@ function addMed(med,colorCode,medClass) {
 
 function createCSV(medClass, process) {
 
-    var dataStructure = [];
-
-    var fallsRisk = new Map();
-
-    fallsRisk.set("Risk", 'Falls Fracture');
-    fallsRisk.set("View", '0');
-    console.log(fallsRisk);
 
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
 
 
-    ////CSV Rows and pre-defined first cell value
-    //var fallsRisk = "Falls Fracture";
-    //var constRisk = "Constipation";
-    //var uretentRisk = "Urinary Retention";
-    //var cnsdeprRisk = "CNS Depression";
-    //var bleedRisk = "Bleeding";
-    //var heartRisk = "Heart Failure";
-    //var bradyRisk = "Bradycardia";
-    //var hypoglycRisk = "Hypoglycaemia";
-    //var renalRisk = "Renal Injury";
-    //var hypoKRisk = "Hypokalemia";
-    //var hyperKRisk = "Hyperkalemia";
-    //var serosynRisk = "Serotonin Syndrome";
-    //var acglaucRisk = "Glaucoma";
+    //CSV Rows and pre-defined first cell value
+    var fallsRisk = ["Falls Fracture"];
+    var constRisk = ["Constipation"];
+    var uretentRisk = ["Urinary Retention"];
+    var cnsdeprRisk = ["CNS Depression"];
+    var bleedRisk = ["Bleeding"];
+    var heartRisk = ["Heart Failure"];
+    var bradyRisk = ["Bradycardia"];
+    var hypoglycRisk = ["Hypoglycaemia"];
+    var renalRisk = ["Renal Injury"];
+    var hypoKRisk = ["Hypokalemia"];
+    var hyperKRisk = ["Hyperkalemia"];
+    var serosynRisk = ["Serotonin Syndrome"];
+    var acglaucRisk = ["Glaucoma"];
 
-    
+
 
     var tempCSV = [];
 
     if (process == "EMPTY") {
-        //for (var i = 0; i < header.length; i++) {
-
-        //    fallsRisk.set(header, fallsRisk)
-        //}
        
         
     }
@@ -246,7 +235,7 @@ function createCSV(medClass, process) {
     tempCSV.push(header, fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk,
         heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
 
-    console.log(tempCSV);
+    //console.log(tempCSV);
 
     //create a csv file
     let csvContent = "data:text/csv;charset=utf-8,"
