@@ -238,7 +238,7 @@ function createCSV(medClass, process) {
 
 
 
-    let csvContent = "data:text/csv;charset=utf-8,";
+    let csvContent = "data:text/csv;";
 
     tempCSV.forEach(function (rowArray) {
         let row = rowArray.join(",");
