@@ -271,7 +271,7 @@ function createCSV(medClass, process) {
 
     initialization(dataStructure);
 
-    //d3.csv(csvContent).then(d => console.log(d));
+    d3.csv(csvContent).then(d => console.log(d));
     //d3.csv(csvContent).then(d => initialization(d));
   
 
@@ -408,7 +408,7 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-    /*$('#legend').empty();*/
+    
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
