@@ -203,12 +203,11 @@ function createCSV(medClass, process) {
 
     dataStructure.push(fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
     dataStructure['columns'] = header;
-    console.log(dataStructure);
+    
 
     initialization(dataStructure);
 
-    //d3.csv(csvContent).then(d => console.log(d));
-    //d3.csv(csvContent).then(d => initialization(d));
+    //destroy the objects
     delete dataStructure;
     delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;
   
