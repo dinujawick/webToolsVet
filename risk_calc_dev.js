@@ -54,6 +54,12 @@ $(document).ready(function () {
                             }
                          });
                         addMed(item, colorCode, medClass);
+
+                        //initialize all tooltips on the graph
+                        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                            return new bootstrap.Tooltip(tooltipTriggerEl)
+                        });
                        
                     });
                 }
@@ -719,7 +725,7 @@ function StackedBarChartHorizontal(data, {
         .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
         .attr("height", yScale.bandwidth());
 
-    if (title) bar.attr("title", ({ i }) => title(i));
+    if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
 
     svg.append("g")
         .attr("style","font-size:smaller;")
