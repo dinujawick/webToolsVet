@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Images"
   ],
-  "SelectedNode": "\\risk_calc_medClassMap_dev.json",
+  "SelectedNode": "\\risk_calc_dev.js",
   "PreviewInSolutionExplorer": false
 }

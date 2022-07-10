@@ -719,8 +719,7 @@ function StackedBarChartHorizontal(data, {
         .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
         .attr("height", yScale.bandwidth());
 
-    if (title) bar.append("title")
-        .text(({ i }) => title(i));
+    if (title) bar.attr("title", ({ i }) => title(i));
 
     svg.append("g")
         .attr("style","font-size:smaller;")
