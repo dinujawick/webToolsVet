@@ -259,8 +259,8 @@ function createAccordionItem(medGroup,colorCode) {
         .appendTo($('#medGroup'));
 
     $accordionHeader = $('<h2>')
-        .attr('title', 'Click to view medicines')
-        .attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
+        //.attr('title', 'Click to view medicines')
+        //.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + 'header')
         .addClass('accordion-header')
         .append(
