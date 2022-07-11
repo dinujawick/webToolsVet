@@ -181,56 +181,56 @@ function createCSV(medClass) {
     console.log(dataStructure);
     console.log(newTest);
 
-    ////Objects for each risk classes
-    //var fallsRisk = { Risk: 'Falls Fracture' };
-    //var constRisk = { Risk: 'Constipation' };
-    //var uretentRisk = { Risk: 'Urinary Retention' };
-    //var cnsdeprRisk = { Risk: 'CNS Depression' };
-    //var bleedRisk = { Risk: 'Bleeding' };
-    //var heartRisk = { Risk: 'Heart Failure' };
-    //var bradyRisk = { Risk: 'Bradycardia' };
-    //var hypoglycRisk = { Risk: 'Hypoglycaemia' };
-    //var renalRisk = { Risk: 'Renal Injury' };
-    //var hypoKRisk = { Risk: 'Hypokalemia' };
-    //var hyperKRisk = { Risk: 'Hyperkalemia' };
-    //var serosynRisk = { Risk: 'Serotonin Syndrome' };
-    //var acglaucRisk = { Risk: 'Glaucoma' };
+    //Objects for each risk classes
+    var fallsRisk = { Risk: 'Falls Fracture' };
+    var constRisk = { Risk: 'Constipation' };
+    var uretentRisk = { Risk: 'Urinary Retention' };
+    var cnsdeprRisk = { Risk: 'CNS Depression' };
+    var bleedRisk = { Risk: 'Bleeding' };
+    var heartRisk = { Risk: 'Heart Failure' };
+    var bradyRisk = { Risk: 'Bradycardia' };
+    var hypoglycRisk = { Risk: 'Hypoglycaemia' };
+    var renalRisk = { Risk: 'Renal Injury' };
+    var hypoKRisk = { Risk: 'Hypokalemia' };
+    var hyperKRisk = { Risk: 'Hyperkalemia' };
+    var serosynRisk = { Risk: 'Serotonin Syndrome' };
+    var acglaucRisk = { Risk: 'Glaucoma' };
 
 
-    ////CSV Header and pre-defined first cell value
-    //var header = ["Risk"];
+    //CSV Header and pre-defined first cell value
+    var header = ["Risk"];
 
 
 
-    //for (var [key, value] of medClass) {
+    for (var [key, value] of medClass) {
 
-    //    header.push(key);
-    //    fallsRisk[key] = value.falls_fractures;
-    //    constRisk[key] = value.constipation;
-    //    uretentRisk[key] = value.urinary_retention;
-    //    cnsdeprRisk[key] = value.CNS_depression;
-    //    bleedRisk[key] = value.bleeding;
-    //    heartRisk[key] = value.heart_failure;
-    //    bradyRisk[key] = value.bradycardia;
-    //    hypoglycRisk[key] = value.hypoglycaemia;
-    //    renalRisk[key] = value.renal_injury;
-    //    hypoKRisk[key] = value.hypokalemia;
-    //    hyperKRisk[key] = value.hyperkalemia;
-    //    serosynRisk[key] = value.serotonin_syndrome;
-    //    acglaucRisk[key] = value.glaucoma;
+        header.push(key);
+        fallsRisk[key] = value.falls_fractures;
+        constRisk[key] = value.constipation;
+        uretentRisk[key] = value.urinary_retention;
+        cnsdeprRisk[key] = value.CNS_depression;
+        bleedRisk[key] = value.bleeding;
+        heartRisk[key] = value.heart_failure;
+        bradyRisk[key] = value.bradycardia;
+        hypoglycRisk[key] = value.hypoglycaemia;
+        renalRisk[key] = value.renal_injury;
+        hypoKRisk[key] = value.hypokalemia;
+        hyperKRisk[key] = value.hyperkalemia;
+        serosynRisk[key] = value.serotonin_syndrome;
+        acglaucRisk[key] = value.glaucoma;
 
-    //}
+    }
 
 
-    //dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk);
-    //dataStructure['columns'] = header;
+    dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk);
+    dataStructure['columns'] = header;
 
-    //console.log(dataStructure);
+    console.log(dataStructure);
 
-    //initialization(dataStructure);
+    initialization(dataStructure);
 
-    ////destroy the objects
-    //delete dataStructure;
+    //destroy the objects
+    delete dataStructure;
     //delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;
   
 
