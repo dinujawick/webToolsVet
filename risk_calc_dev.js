@@ -177,6 +177,7 @@ function createCSV(medClass) {
     delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;
 
     var dataStructure = [];
+    var newTest = [];
     console.log(dataStructure);
 
     //Objects for each risk classes
