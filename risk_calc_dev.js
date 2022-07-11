@@ -390,10 +390,10 @@ function initialization(data) {
 
 
 function getRange(total) {
-    if (total < 5)
-        return 6
-    else
-        return total + 2
+    /*if (total < 5)*/
+        return 5
+    //else
+    //    return total + 2
 }
 
 //Vertical Stacked Bar Chart
