@@ -170,9 +170,10 @@ function addMed(med,colorCode,medClass) {
 }
 
 
-function createCSV(medClass, process) {
+function createCSV(medClass) {
 
     var dataStructure = [];
+    onsole.log(dataStructure);
 
     //Objects for each risk classes
     var fallsRisk = { Risk: 'Falls Fracture' };
@@ -215,7 +216,7 @@ function createCSV(medClass, process) {
     }
 
 
-    dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk   );
+    dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk);
     dataStructure['columns'] = header;
 
     console.log(dataStructure);
