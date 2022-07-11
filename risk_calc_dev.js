@@ -393,7 +393,7 @@ function initialization(data) {
         return d
     })
 
-    test = data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }));
+    test = medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }));
 
     console.log(test);
     console.log(keys);
