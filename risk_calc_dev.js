@@ -173,7 +173,7 @@ function addMed(med,colorCode,medClass) {
 function createCSV(medClass) {
 
     var dataStructure = [];
-    onsole.log(dataStructure);
+    console.log(dataStructure);
 
     //Objects for each risk classes
     var fallsRisk = { Risk: 'Falls Fracture' };
