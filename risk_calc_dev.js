@@ -179,6 +179,7 @@ function createCSV(medClass) {
     var dataStructure = [];
     var newTest = [];
     console.log(dataStructure);
+    console.log(newTest);
 
     //Objects for each risk classes
     var fallsRisk = { Risk: 'Falls Fracture' };
