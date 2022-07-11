@@ -410,7 +410,8 @@ function initialization(data) {
                                /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
             yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
             zDomain: keys,
-            colors: colorCodes
+            colors: colorCodes,
+            xFormat: d3.format('.0f')
         })
 
         
@@ -493,7 +494,6 @@ function StackedBarChartHorizontal(data, {
     const yScale = d3.scaleBand(yDomain, yRange).paddingInner(yPadding);
     const color = d3.scaleOrdinal(zDomain, colors);
     const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
-    console.log(xFormat);
     const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
 
