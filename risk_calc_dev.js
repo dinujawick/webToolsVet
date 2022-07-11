@@ -174,7 +174,7 @@ function createCSV(medClass) {
 
     //destroy the objects
     delete dataStructure;
-    delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;
+    /*delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;*/
 
     var dataStructure = [];
     var newTest = [];
