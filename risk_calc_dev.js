@@ -366,6 +366,7 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
+    console.log(riskmedGroups);
     
     $('#chart').empty();
 
@@ -385,97 +386,6 @@ function initialization(data) {
         
         $('#chart').append(chart);
 
-
-
-    //if ($('#chartType').is(':checked')) {
-
-    //    //Vertical Stacked Bar Chart
-    //    chart = StackedBarChartVertical(riskmedGroups, {
-    //        x: d => d.risk,
-    //        y: d => d.status,
-    //        z: d => d.medGroup,
-    //        xDomain: data.map(d => d.Risk),
-    //        yDomain: [0, getRange(d3.max(data, d => d.total))],
-    //        /* yDomain: [0, d3.max(data, d => d.total) + 2]*/
-    //        yLabel: "↑ Med Class Risk Count",
-    //        zDomain: keys,
-    //        colors: d3.schemeSpectral[keys.length],
-    //        width: 900,
-    //        height: 500
-    //    })
-
-    //    key = Legend(chart.scales.color, { title: "Med Groups" })
-    //    $('#legend').append(key);
-    //    $('#chart').append(chart);
-
-    //}
-    //else {
-    //    //Horizontal Stacked Bar Chart
-    //    chart = StackedBarChartHorizontal(riskmedGroups, {
-    //        x: d => d.status,
-    //        y: d => d.risk,
-    //        z: d => d.medGroup,
-    //        xLabel: "Med Class Risk Count →",
-    //        xDomain: [0, getRange(d3.max(data, d => d.total))]
-    //                           /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
-    //        yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-    //        zDomain: keys,
-    //        colors: d3.schemeSpectral[keys.length],
-    //        width: 900
-    //    })
-    //    key = Legend(chart.scales.color, { title: "Med Groups" })
-    //    $('#legend').append(key);
-    //    $('#chart').append(chart);
-    //}
-
-    ////Toggle Vertical
-    //$('#chartType').on('click', function (e) {
-
-    //    if ($('#chartType').is(':checked')) {
-    //        $('#legend').empty();
-    //        $('#chart').empty();
-
-    //        //Vertical Stacked Bar Chart
-    //        chart = StackedBarChartVertical(riskmedGroups, {
-    //            x: d => d.risk,
-    //            y: d => d.status,
-    //            z: d => d.medGroup,
-    //            xDomain: data.map(d => d.Risk),
-    //            yDomain: [0, getRange(d3.max(data, d => d.total))],
-    //            /* yDomain: [0, d3.max(data, d => d.total) + 2]*/
-    //            yLabel: "↑ Med Class Risk Count",
-    //            zDomain: keys,
-    //            colors: d3.schemeSpectral[keys.length],
-    //            width: 900,
-    //            height: 500
-    //        })
-
-    //        key = Legend(chart.scales.color, { title: "Med Groups" })
-    //        $('#legend').append(key);
-    //        $('#chart').append(chart);
-    //    }
-    //    else {
-    //        $('#legendFieledSet').empty();
-    //        $('#chart').empty();
-    //        //Horizontal Stacked Bar Chart
-    //        chart = StackedBarChartHorizontal(riskmedGroups, {
-    //            x: d => d.status,
-    //            y: d => d.risk,
-    //            z: d => d.medGroup,
-    //            xLabel: "Med Class Risk Count →",
-    //            xDomain: [0, getRange(d3.max(data, d => d.total))]
-    //                           /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
-    //            yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-    //            zDomain: keys,
-    //            colors: d3.schemeSpectral[keys.length],
-    //            width:900
-    //        })
-    //        key = Legend(chart.scales.color, { title: "Med Groups" })
-    //        $('#legend').append(key);
-    //        $('#chart').append(chart);
-    //    }
-
-    //});
 }
 
 
