@@ -422,7 +422,7 @@ function initialization(data) {
 
 function getRange(total) {
     /*if (total < 5)*/
-    return 6;
+    return 5;
     //else
     //    return total + 2
 }
