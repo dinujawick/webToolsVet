@@ -480,9 +480,9 @@ function initialization(data) {
 
 
 function getRange(total) {
-    if (total < 5)
-        return 6
-    else
+    //if (total < 5)
+    //    return 6
+    //else
         return total + 2
 }
 
