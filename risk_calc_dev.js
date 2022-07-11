@@ -393,14 +393,9 @@ function initialization(data) {
         return d
     })
 
-    test = medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }));
-
-    console.log(test);
-    console.log(keys);
-
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
-
-   
+    
+    console.log(riskmedGroups);
     
     
     $('#chart').empty();
