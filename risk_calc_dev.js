@@ -215,7 +215,7 @@ function createCSV(medClass, process) {
     }
 
 
-    dataStructure.push(fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk);
+    dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk   );
     dataStructure['columns'] = header;
     
 
