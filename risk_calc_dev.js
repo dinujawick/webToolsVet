@@ -411,7 +411,7 @@ function initialization(data) {
             yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
             zDomain: keys,
             colors: colorCodes,
-            xFormat: '.0f'
+            /*xFormat: '.0f'*/
         })
 
         
