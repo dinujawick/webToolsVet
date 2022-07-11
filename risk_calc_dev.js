@@ -391,7 +391,7 @@ function initialization(data) {
 
 function getRange(total) {
     if (total < 5)
-        return 5
+        return 6
     else
         return total + 2
 }
@@ -593,7 +593,7 @@ function StackedBarChartHorizontal(data, {
 
     // Compute titles.
     if (title === undefined) {
-        const formatValue = xScale.tickFormat(1, xFormat);
+        const formatValue = xScale.tickFormat(100, xFormat);
         title = i => `${Z[i]}\n${formatValue(X[i])}`;
     } else {
         const O = d3.map(data, d => d);
