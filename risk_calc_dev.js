@@ -189,6 +189,7 @@ function createCSV(medClass) {
     delete acglaucRisk;
 
     var dataStructure = [];
+
     console.log(dataStructure);
 
     //Objects for each risk classes
@@ -239,7 +240,20 @@ function createCSV(medClass) {
 
     //destroy the objects
     delete dataStructure;
-    //delete fallsRisk, constRisk, uretentRisk, cnsdeprRisk, bleedRisk, heartRisk, bradyRisk, hypoglycRisk, renalRisk, hypoKRisk, hyperKRisk, serosynRisk, acglaucRisk;
+    delete dataStructure;
+    delete fallsRisk;
+    delete constRisk;
+    delete uretentRisk;
+    delete cnsdeprRisk;
+    delete bleedRisk;
+    delete heartRisk;
+    delete bradyRisk;
+    delete hypoglycRisk;
+    delete renalRisk;
+    delete hypoKRisk;
+    delete hyperKRisk;
+    delete serosynRisk;
+    delete acglaucRisk;
   
 
 }
