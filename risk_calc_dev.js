@@ -389,7 +389,7 @@ function initialization(data) {
     data.forEach(function (d) {
         d.total = d3.sum(keys, k => +d[k])
         return d
-    })
+    });
 
     
 
@@ -397,12 +397,11 @@ function initialization(data) {
 
     console.log(riskmedGroups);
 
-    //for (var [key, value] of riskmedGroups) {
+    riskmedGroup.forEach(function (d) {
 
-    //    console.log('Key:' + key);
-    //    console.log('Value:' + value);
+        console.log(d.risk);
 
-    //}
+    });
 
 
     
