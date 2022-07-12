@@ -210,69 +210,25 @@ function createPivot(medClass) {
     //CSV Header and pre-defined first cell value
     var header = ["Risk"];
 
-
-    var totFalls = 0;
-    var totConst = 0;
-    var totUrete = 0;
-    var totCNS = 0;
-    var totBleed = 0;
-    var totHeart = 0;
-    var totBrady = 0;
-    var totHypog = 0;
-    var totRenal = 0;
-    var totHypok = 0;
-    var totHyperk = 0;
-    var totSerosyn = 0;
-    var totAcgl = 0;
-
-
-
     for (var [key, value] of medClass) {
 
         header.push(key);
 
         fallsRisk[key] = value.falls_fractures;
-        if (value.falls_fractures == 1) totFalls++;
-
         constRisk[key] = value.constipation;
-        if (value.constipation == 1) totConst++;
-
         uretentRisk[key] = value.urinary_retention;
-        if (value.urinary_retention == 1) totUrete++;
-
         cnsdeprRisk[key] = value.CNS_depression;
-        if (value.CNS_depression == 1) totCNS++;
-
         bleedRisk[key] = value.bleeding;
-        if (value.bleeding == 1) totBleed++;
-
         heartRisk[key] = value.heart_failure;
-        if (value.heart_failure == 1) totHeart++;
-
         bradyRisk[key] = value.bradycardia;
-        if (value.bradycardia == 1) totBrady++;
-
         hypoglycRisk[key] = value.hypoglycaemia;
-        if (value.hypoglycaemia == 1) totHypog++;
-
         renalRisk[key] = value.renal_injury;
-        if (value.renal_injury == 1) totRenal++;
-
         hypoKRisk[key] = value.hypokalemia;
-        if (value.hypokalemia == 1) totHypok++;
-
         hyperKRisk[key] = value.hyperkalemia;
-        if (value.hyperkalemia == 1) totHyperk++;
-
         serosynRisk[key] = value.serotonin_syndrome;
-        if (value.serotonin_syndrome == 1) totSerosyn++;
-
         acglaucRisk[key] = value.glaucoma;
-        if (value.glaucoma == 1) totAcgl++;
+       
     }
-
-    console.log(totFalls, totConst, totUrete, totCNS, totBleed, totHeart, totBrady, totHypog, totRenal, totHypok, totHyperk, totSerosyn, totAcgl);
-    console.log(dataStructure);
 
     dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk);
     dataStructure['columns'] = header;
@@ -438,6 +394,8 @@ function initialization(data) {
     
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
+
+    console.log(riskmedGroups);
 
     //for (var [key, value] of riskmedGroups) {
 
