@@ -395,7 +395,7 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-    console.log(riskmedGroups);
+    
     var objectIndex = 0;
 
     var before = [];
@@ -418,54 +418,57 @@ function initialization(data) {
     
     riskmedGroups.forEach(function (d) {
 
-        if (d.risk == 'Falls Fracture' && d.status == 1) totFalls++;
-        if (d.risk == 'Renal Injury' && d.status == 1) totRenal++;
-        if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
-        if (d.risk == 'Heart Failure' && d.status == 1) totHeart++;
-        if (d.risk == 'CNS Depression' && d.status == 1) totCnsde++;
-        if (d.risk == 'Constipation' && d.status == 1) totConst++;
-        if (d.risk == 'Urinary Retention' && d.status == 1) totUrina++;
-        if (d.risk == 'Serotonin Syndrome' && d.status == 1) totSerot++;
-        if (d.risk == 'Bradycardia' && d.status == 1) totBrady++;
-        if (d.risk == 'Hyperkalemia' && d.status == 1) totHyper++;
-        if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
-        if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
-        if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
+        console.log(d);
 
-        if (totGlauc > 5) after.push(d);
-        if (totHypog > 5) after.push(d);
-        if (totHypok > 5) after.push(d);
-        if (totHyper > 5) after.push(d);
-        if (totBrady > 5) after.push(d);
-        if (totSerot > 5) after.push(d);
-        if (totUrina > 5) after.push(d);
-        if (totConst > 5) after.push(d);
-        if (totCnsde > 5) after.push(d);
-        if (totHeart > 5) after.push(d);
-        if (totBleed > 5) after.push(d);
-        if (totRenal > 5) after.push(d);
-        if (totFalls > 5) after.push(d);
+        //if (d.risk == 'Falls Fracture' && d.status == 1) totFalls++;
+        //if (d.risk == 'Renal Injury' && d.status == 1) totRenal++;
+        //if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
+        //if (d.risk == 'Heart Failure' && d.status == 1) totHeart++;
+        //if (d.risk == 'CNS Depression' && d.status == 1) totCnsde++;
+        //if (d.risk == 'Constipation' && d.status == 1) totConst++;
+        //if (d.risk == 'Urinary Retention' && d.status == 1) totUrina++;
+        //if (d.risk == 'Serotonin Syndrome' && d.status == 1) totSerot++;
+        //if (d.risk == 'Bradycardia' && d.status == 1) totBrady++;
+        //if (d.risk == 'Hyperkalemia' && d.status == 1) totHyper++;
+        //if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
+        //if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
+        //if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
 
-        if (totGlauc <= 5) before.push(d);
-        if (totHypog <= 5) before.push(d);
-        if (totHypok <= 5) before.push(d);
-        if (totHyper <= 5) before.push(d);
-        if (totBrady <= 5) before.push(d);
-        if (totSerot <= 5) before.push(d);
-        if (totUrina <= 5) before.push(d);
-        if (totConst <= 5) before.push(d);
-        if (totCnsde <= 5) before.push(d);
-        if (totHeart <= 5) before.push(d);
-        if (totBleed <= 5) before.push(d);
-        if (totRenal <= 5) before.push(d);
-        if (totFalls <= 5) before.push(d);
+        //if (totGlauc > 5) after.push(d);
+        //if (totHypog > 5) after.push(d);
+        //if (totHypok > 5) after.push(d);
+        //if (totHyper > 5) after.push(d);
+        //if (totBrady > 5) after.push(d);
+        //if (totSerot > 5) after.push(d);
+        //if (totUrina > 5) after.push(d);
+        //if (totConst > 5) after.push(d);
+        //if (totCnsde > 5) after.push(d);
+        //if (totHeart > 5) after.push(d);
+        //if (totBleed > 5) after.push(d);
+        //if (totRenal > 5) after.push(d);
+        //if (totFalls > 5) after.push(d);
+
+        //if (totGlauc <= 5) before.push(d);
+        //if (totHypog <= 5) before.push(d);
+        //if (totHypok <= 5) before.push(d);
+        //if (totHyper <= 5) before.push(d);
+        //if (totBrady <= 5) before.push(d);
+        //if (totSerot <= 5) before.push(d);
+        //if (totUrina <= 5) before.push(d);
+        //if (totConst <= 5) before.push(d);
+        //if (totCnsde <= 5) before.push(d);
+        //if (totHeart <= 5) before.push(d);
+        //if (totBleed <= 5) before.push(d);
+        //if (totRenal <= 5) before.push(d);
+        //if (totFalls <= 5) before.push(d);
 
 
     });
 
-    console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    console.log(before);
-    console.log(after);
+    //console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
+    //console.log(before);
+    //console.log(after);
+
     //$('#chart').empty();
 
     ////Horizontal Stacked Bar Chart
