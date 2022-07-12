@@ -396,6 +396,10 @@ function initialization(data) {
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
     console.log(riskmedGroups);
+    var objectIndex = 0;
+
+    var before = [];
+    var after = [];
 
     var totFalls = 0;
     var totRenal = 0;
@@ -428,28 +432,58 @@ function initialization(data) {
         if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
         if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
 
+        if (totGlauc > 5) after.push(d);
+        if (totHypog > 5) after.push(d);
+        if (totHypok > 5) after.push(d);
+        if (totHyper > 5) after.push(d);
+        if (totBrady > 5) after.push(d);
+        if (totSerot > 5) after.push(d);
+        if (totUrina > 5) after.push(d);
+        if (totConst > 5) after.push(d);
+        if (totCnsde > 5) after.push(d);
+        if (totHeart > 5) after.push(d);
+        if (totBleed > 5) after.push(d);
+        if (totRenal > 5) after.push(d);
+        if (totFalls > 5) after.push(d);
+
+        if (totGlauc <= 5) before.push(d);
+        if (totHypog <= 5) before.push(d);
+        if (totHypok <= 5) before.push(d);
+        if (totHyper <= 5) before.push(d);
+        if (totBrady <= 5) before.push(d);
+        if (totSerot <= 5) before.push(d);
+        if (totUrina <= 5) before.push(d);
+        if (totConst <= 5) before.push(d);
+        if (totCnsde <= 5) before.push(d);
+        if (totHeart <= 5) before.push(d);
+        if (totBleed <= 5) before.push(d);
+        if (totRenal <= 5) before.push(d);
+        if (totFalls <= 5) before.push(d);
+
+
     });
 
     console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    
-    $('#chart').empty();
+    console.log(before);
+    console.log(after);
+    //$('#chart').empty();
 
-    //Horizontal Stacked Bar Chart
-        chart = StackedBarChartHorizontal(riskmedGroups, {
-            x: d => d.status,
-            y: d => d.risk,
-            z: d => d.medGroup,
-            xLabel: "Med Class Risk Count →",
-            xDomain: [0, getRange(d3.max(data, d => d.total))]
-                               /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
-            yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
-            zDomain: keys,
-            colors: colorCodes,
-            /*xFormat: '.0f'*/
-        })
+    ////Horizontal Stacked Bar Chart
+    //    chart = StackedBarChartHorizontal(riskmedGroups, {
+    //        x: d => d.status,
+    //        y: d => d.risk,
+    //        z: d => d.medGroup,
+    //        xLabel: "Med Class Risk Count →",
+    //        xDomain: [0, getRange(d3.max(data, d => d.total))]
+    //                           /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
+    //        yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
+    //        zDomain: keys,
+    //        colors: colorCodes,
+    //        /*xFormat: '.0f'*/
+    //    })
 
         
-        $('#chart').append(chart);
+    //    $('#chart').append(chart);
 
 }
 
