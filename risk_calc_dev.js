@@ -493,7 +493,7 @@ function StackedBarChartHorizontal(data, {
     const xScale = xType(xDomain, xRange);
     const yScale = d3.scaleBand(yDomain, yRange).paddingInner(yPadding);
     const color = d3.scaleOrdinal(zDomain, colors);
-    const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
+    const xAxis = d3.axisTop(xScale).ticks(5);
     const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
 
@@ -501,6 +501,7 @@ function StackedBarChartHorizontal(data, {
     // Compute titles.
     if (title === undefined) {
         const formatValue = xScale.tickFormat(100, xFormat);
+        
         title = i => `${Z[i]}\n${formatValue(X[i])}`;
     } else {
         const O = d3.map(data, d => d);
