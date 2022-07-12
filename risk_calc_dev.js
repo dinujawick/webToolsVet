@@ -397,12 +397,6 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-
-    
-
-   
-    
-
     //for (var [key, value] of riskmedGroups) {
 
     //    console.log('Key:' + key);
@@ -470,7 +464,7 @@ function StackedBarChartHorizontal(data, {
     colors = d3.schemePaired, // array of colors
 } = {}) {
 
-    console.log(data);
+    
 
     // Compute values.
     const X = d3.map(data, x);
