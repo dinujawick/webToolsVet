@@ -418,56 +418,56 @@ function initialization(data) {
     
     riskmedGroups.forEach(function (d) {
 
-        console.log(d);
+       
 
-        //if (d.risk == 'Falls Fracture' && d.status == 1) totFalls++;
-        //if (d.risk == 'Renal Injury' && d.status == 1) totRenal++;
-        //if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
-        //if (d.risk == 'Heart Failure' && d.status == 1) totHeart++;
-        //if (d.risk == 'CNS Depression' && d.status == 1) totCnsde++;
-        //if (d.risk == 'Constipation' && d.status == 1) totConst++;
-        //if (d.risk == 'Urinary Retention' && d.status == 1) totUrina++;
-        //if (d.risk == 'Serotonin Syndrome' && d.status == 1) totSerot++;
-        //if (d.risk == 'Bradycardia' && d.status == 1) totBrady++;
-        //if (d.risk == 'Hyperkalemia' && d.status == 1) totHyper++;
-        //if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
-        //if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
-        //if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
+        if (d.risk == 'Falls Fracture' && d.status == 1) totFalls++;
+        if (d.risk == 'Renal Injury' && d.status == 1) totRenal++;
+        if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
+        if (d.risk == 'Heart Failure' && d.status == 1) totHeart++;
+        if (d.risk == 'CNS Depression' && d.status == 1) totCnsde++;
+        if (d.risk == 'Constipation' && d.status == 1) totConst++;
+        if (d.risk == 'Urinary Retention' && d.status == 1) totUrina++;
+        if (d.risk == 'Serotonin Syndrome' && d.status == 1) totSerot++;
+        if (d.risk == 'Bradycardia' && d.status == 1) totBrady++;
+        if (d.risk == 'Hyperkalemia' && d.status == 1) totHyper++;
+        if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
+        if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
+        if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
 
-        //if (totGlauc > 5) after.push(d);
-        //if (totHypog > 5) after.push(d);
-        //if (totHypok > 5) after.push(d);
-        //if (totHyper > 5) after.push(d);
-        //if (totBrady > 5) after.push(d);
-        //if (totSerot > 5) after.push(d);
-        //if (totUrina > 5) after.push(d);
-        //if (totConst > 5) after.push(d);
-        //if (totCnsde > 5) after.push(d);
-        //if (totHeart > 5) after.push(d);
-        //if (totBleed > 5) after.push(d);
-        //if (totRenal > 5) after.push(d);
-        //if (totFalls > 5) after.push(d);
+        if (totGlauc > 5 && d.risk == 'Glaucoma') after.push(d);
+        if (totHypog > 5 && d.risk == 'Hypoglycaemia') after.push(d);
+        if (totHypok > 5 && d.risk == 'Hypokalemia') after.push(d);
+        if (totHyper > 5 && d.risk == 'Hyperkalemia') after.push(d);
+        if (totBrady > 5 && d.risk == 'Bradycardia') after.push(d);
+        if (totSerot > 5 && d.risk == 'Serotonin Syndrome') after.push(d);
+        if (totUrina > 5 && d.risk == 'Urinary Retention') after.push(d);
+        if (totConst > 5 && d.risk == 'Constipation') after.push(d);
+        if (totCnsde > 5 && d.risk == 'CNS Depression') after.push(d);
+        if (totHeart > 5 && d.risk == 'Heart Failure') after.push(d);
+        if (totBleed > 5 && d.risk == 'Bleeding') after.push(d);
+        if (totRenal > 5 && d.risk == 'Renal Injury') after.push(d);
+        if (totFalls > 5 && d.risk == 'Falls Fracture') after.push(d);
 
-        //if (totGlauc <= 5) before.push(d);
-        //if (totHypog <= 5) before.push(d);
-        //if (totHypok <= 5) before.push(d);
-        //if (totHyper <= 5) before.push(d);
-        //if (totBrady <= 5) before.push(d);
-        //if (totSerot <= 5) before.push(d);
-        //if (totUrina <= 5) before.push(d);
-        //if (totConst <= 5) before.push(d);
-        //if (totCnsde <= 5) before.push(d);
-        //if (totHeart <= 5) before.push(d);
-        //if (totBleed <= 5) before.push(d);
-        //if (totRenal <= 5) before.push(d);
-        //if (totFalls <= 5) before.push(d);
+        if (totGlauc <= 5 && d.risk == 'Glaucoma') before.push(d);
+        if (totHypog <= 5 && d.risk == 'Hypoglycaemia') before.push(d);
+        if (totHypok <= 5 && d.risk == 'Hypokalemia') before.push(d);
+        if (totHyper <= 5 && d.risk == 'Hyperkalemia') before.push(d);
+        if (totBrady <= 5 && d.risk == 'Bradycardia') before.push(d);
+        if (totSerot <= 5 && d.risk == 'Serotonin Syndrome') before.push(d);
+        if (totUrina <= 5 && d.risk == 'Urinary Retention') before.push(d);
+        if (totConst <= 5 && d.risk == 'Constipation') before.push(d);
+        if (totCnsde <= 5 && d.risk == 'CNS Depression') before.push(d);
+        if (totHeart <= 5 && d.risk == 'Heart Failure') before.push(d);
+        if (totBleed <= 5 && d.risk == 'Bleeding') before.push(d);
+        if (totRenal <= 5 && d.risk == 'Renal Injury') before.push(d);
+        if (totFalls <= 5 && d.risk == 'Falls Fracture') before.push(d);
 
 
     });
 
-    //console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    //console.log(before);
-    //console.log(after);
+    console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
+    console.log(before);
+    console.log(after);
 
     //$('#chart').empty();
 
