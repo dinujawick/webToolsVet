@@ -399,7 +399,7 @@ function initialization(data) {
     for (var [key, value] of riskmedGroups) {
 
         console.log('Key:' + key);
-        console.log('value:' + value);
+        console.log('Value:' + value);
 
     }
 
