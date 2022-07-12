@@ -401,7 +401,7 @@ function initialization(data) {
 
         for (var i = 0; i < riskmedGroups.length; i++)
         {
-            console.log(riskmedGroups[0].risk);
+            console.log(riskmedGroups[i].risk);
         }
         console.log(riskmedGroups);
         
