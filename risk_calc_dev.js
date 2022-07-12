@@ -397,6 +397,7 @@ function initialization(data) {
 
     console.log(riskmedGroups);
 
+    if (riskmedGroups.length != 0 )
     riskmedGroup.forEach(function (d) {
 
         console.log(d.risk);
