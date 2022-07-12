@@ -472,7 +472,7 @@ function initialization(data) {
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-        chart = StackedBarChartHorizontal(riskmedGroups, {
+    chart = StackedBarChartHorizontal(before, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
