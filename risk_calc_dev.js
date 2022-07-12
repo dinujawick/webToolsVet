@@ -474,6 +474,9 @@ function StackedBarChartHorizontal(data, {
     xLabel, // a label for the x-axis
     colors = d3.schemePaired, // array of colors
 } = {}) {
+
+    console.log(data);
+
     // Compute values.
     const X = d3.map(data, x);
     const Y = d3.map(data, y);
