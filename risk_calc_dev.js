@@ -398,8 +398,13 @@ function initialization(data) {
     
 
     if (riskmedGroups.length != 0) {
+
+        for (var i = 0; i < riskmedGroups.length; i++)
+        {
+            console.log(riskmedGroups[0].risk);
+        }
         console.log(riskmedGroups);
-        console.log(riskmedGroups[0].risk);
+        
     }
     
 
