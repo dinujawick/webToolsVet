@@ -397,14 +397,40 @@ function initialization(data) {
 
     console.log(riskmedGroups);
 
+    var totFalls = 0;
+    var totRenal = 0;
+    var totBleed = 0;
+    var totHeart = 0;
+    var totCnsde = 0;
+    var totConst = 0;
+    var totUrina = 0;
+    var totSerot = 0;
+    var totBrady = 0;
+    var totHyper = 0;
+    var totHypok = 0;
+    var totHypog = 0;
+    var totGlauc = 0;
+
     
     riskmedGroups.forEach(function (d) {
 
-        console.log(d.risk);
+        if (d.risk == 'Falls Fracture') totFalls++;
+        if (d.risk == 'Renal Injury') totRenal++;
+        if (d.risk == 'Bleeding') totBleed++;
+        if (d.risk == 'Heart Failure') totHeart++;
+        if (d.risk == 'CNS Depression') totCnsde++;
+        if (d.risk == 'Constipation') totConst++;
+        if (d.risk == 'Urinary Retention') totUrina++;
+        if (d.risk == 'Serotonin Syndrome') totSerot++;
+        if (d.risk == 'Bradycardia') totBrady++;
+        if (d.risk == 'Hyperkalemia') totHyper++;
+        if (d.risk == 'Hypokalemia') totHypok++;
+        if (d.risk == 'Hypoglycaemia') totHypog++;
+        if (d.risk == 'Glaucoma') totGlauc++;
 
     });
 
-
+    console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
     
     $('#chart').empty();
 
