@@ -395,8 +395,15 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
     
-    console.log(riskmedGroups);
-    
+
+    for (var [key, value] of riskmedGroups) {
+
+        console.log('Key:' + key);
+        console.log('value:' + value);
+
+    }
+
+
     
     $('#chart').empty();
 
@@ -494,6 +501,7 @@ function StackedBarChartHorizontal(data, {
     const yScale = d3.scaleBand(yDomain, yRange).paddingInner(yPadding);
     const color = d3.scaleOrdinal(zDomain, colors);
     const xAxis = d3.axisTop(xScale).ticks(5);
+    /*const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);*/
     const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
 
 
