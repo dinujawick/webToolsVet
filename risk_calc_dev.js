@@ -414,19 +414,19 @@ function initialization(data) {
     
     riskmedGroups.forEach(function (d) {
 
-        if (d.risk == 'Falls Fracture') totFalls++;
-        if (d.risk == 'Renal Injury') totRenal++;
-        if (d.risk == 'Bleeding') totBleed++;
-        if (d.risk == 'Heart Failure') totHeart++;
-        if (d.risk == 'CNS Depression') totCnsde++;
-        if (d.risk == 'Constipation') totConst++;
-        if (d.risk == 'Urinary Retention') totUrina++;
-        if (d.risk == 'Serotonin Syndrome') totSerot++;
-        if (d.risk == 'Bradycardia') totBrady++;
-        if (d.risk == 'Hyperkalemia') totHyper++;
-        if (d.risk == 'Hypokalemia') totHypok++;
-        if (d.risk == 'Hypoglycaemia') totHypog++;
-        if (d.risk == 'Glaucoma') totGlauc++;
+        if (d.risk == 'Falls Fracture' && d.status == 1) totFalls++;
+        if (d.risk == 'Renal Injury' && d.status == 1) totRenal++;
+        if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
+        if (d.risk == 'Heart Failure' && d.status == 1) totHeart++;
+        if (d.risk == 'CNS Depression' && d.status == 1) totCnsde++;
+        if (d.risk == 'Constipation' && d.status == 1) totConst++;
+        if (d.risk == 'Urinary Retention' && d.status == 1) totUrina++;
+        if (d.risk == 'Serotonin Syndrome' && d.status == 1) totSerot++;
+        if (d.risk == 'Bradycardia' && d.status == 1) totBrady++;
+        if (d.risk == 'Hyperkalemia' && d.status == 1) totHyper++;
+        if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
+        if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
+        if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
 
     });
 
