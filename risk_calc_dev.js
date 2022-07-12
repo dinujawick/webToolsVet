@@ -355,7 +355,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                         //console.log(colorCodes);
 
                         selectedMedClass.delete(medGroup);
-                        createCSV(selectedMedClass, "REMOVE");
+                        createPivot(selectedMedClass);
 
                         //const index = selectedMedGroupList.indexOf(medGroup);
                         //if (index > -1) {
