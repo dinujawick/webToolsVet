@@ -395,9 +395,13 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-    console.log(riskmedGroups);
+    
 
-    console.log(riskmedGroups[0].risk);
+    if (riskmedGroups.length != 0) {
+        console.log(riskmedGroups);
+        console.log(riskmedGroups[0].risk);
+    }
+    
 
     //for (var [key, value] of riskmedGroups) {
 
