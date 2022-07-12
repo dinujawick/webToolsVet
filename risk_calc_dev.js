@@ -397,6 +397,8 @@ function initialization(data) {
 
     console.log(riskmedGroups);
 
+    console.log(riskmedGroups[0].risk);
+
     //for (var [key, value] of riskmedGroups) {
 
     //    console.log('Key:' + key);
