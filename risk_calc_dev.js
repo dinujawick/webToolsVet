@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     //Get Empty Graph
-     createCSV("", "EMPTY");
+    createPivot("");
 
     //Read JSON and intialize medClassColorMap.
     $.getJSON("risk_calc_medClassMap_dev.json", function (data) {
@@ -134,7 +134,7 @@ function addMed(med,colorCode,medClass) {
         calculateTotalRisk(med.Medicines_class);
 
         //Generate dynamic graph
-        createCSV(selectedMedClass, "ADD");
+        createPivot(selectedMedClass);
 
     } else {
 
@@ -154,7 +154,7 @@ function addMed(med,colorCode,medClass) {
             calculateTotalRisk(med.Medicines_class);
 
             //Generate dynamic graph
-            createCSV(selectedMedClass, "ADD");
+            createPivot(selectedMedClass);
 
             if (medAddedStatus == false)
                 createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
@@ -170,7 +170,7 @@ function addMed(med,colorCode,medClass) {
 }
 
 
-function createCSV(medClass) {
+function createPivot(medClass) {
 
     //destroy the objects
     delete dataStructure;
