@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <!-- Body -->
         <div class="row">
-            <h5 id="toolHeader">Select medicines below to visualise their cumulative contribution to adverse drug reaction risks.</h5>
+            <h5 id="toolHeader">Select medicines below to visualise their cumulative contribution to adverse drug reaction risks</h5>
             <div class="col-4">
                 <div class="vstack gap-2 mx-auto" id="menu">
                     <div class="searchPanel">
@@ -54,9 +54,34 @@
                 </div>
 
             </div>
-            <!-- End Body -->
-        </div>
-        <script src="d3.min.js"></script>
-        <script src="risk_calc_dev.js"></script>
+
+            <div class="row margin-top-3rem">
+                <div class="col">
+                    <div class="card shadow h-100">
+                        <div class="card-header">
+                            <h4>
+                                IMPORTANT INFORMATION
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                This checker was developed for the Australian veteran population and may not be universally applicable. This page was last updated on 13/07/2022.
+                            </p>
+                            <p>
+                                The chart lists the potential cumulative risk of adverse drug reactions (ADRs) associated with medicines.  Medicines within the same class are counted only once. This tool has been developed and adapted from the  <a href="https://www.therapeutics.scot.nhs.uk/wp-content/uploads/2018/04/Polypharmacy-Guidance-2018.pdf" target="_blank">Scottish polypharmacy guidelines 2018</a> and can also be used to see how adjustments to your patients medicines might reduce their risk of cumulative adverse effects.
+                            </p>
+                            <p>
+                                The list focuses on commonly used drugs and commonly preventable ADRs, and is not meant to replace more detailed medicines information sources.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <p>DISCLAIMER - <a href="https://tinyurl.com/2p8w2dvr" target="_blank">https://www.unisa.edu.au/about-unisa/Governance-and-management-structure/Disclaimer-of-liability/</a> This website is not a substitute for independent professional advice. Nothing contained in this site is intended to be used as medical advice and it is not intended to be used to diagnose, treat, cure or prevent any disease, nor should it be used for therapeutic purposes or as a substitute for your own health professional's advice.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Body -->
+            </div>
+            <script src="d3.min.js"></script>
+            <script src="risk_calc_dev.js"></script>
 </body>
 </html>
