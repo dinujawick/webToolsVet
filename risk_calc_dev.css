@@ -279,7 +279,7 @@
     right: 0%;
     padding: 16px 16px;
     transform: translate(0%, -50%);
-    background-image: url(Images/delete.png);
+    background-image: url(Images/red-cross.svg);
     background-repeat: no-repeat;
 }
 
