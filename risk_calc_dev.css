@@ -285,7 +285,9 @@
     background-image: url(Images/red-cross.svg);
     background-repeat: no-repeat;
 }
+.accordion-button:focus{
 
+}
 
 .accordion-button:not(.collapsed)::after {
     background-image: url(Images/red-chevron.svg);
