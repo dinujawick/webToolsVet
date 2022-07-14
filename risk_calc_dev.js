@@ -395,8 +395,6 @@ function initialization(data) {
     
     riskmedGroups.forEach(function (d) {
 
-        console.log(d);
-
         if (d.risk == 'Falls and fracture' && d.status == 1) totFalls++;
         if (d.risk == 'Renal injury' && d.status == 1) totRenal++;
         if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
@@ -425,33 +423,32 @@ function initialization(data) {
         if (totRenal <= 5 && d.risk == 'Renal injury') before.push(d);
         if (totFalls <= 5 && d.risk == 'Falls and fracture') before.push(d);
 
-        if (totGlauc > 5 && d.risk == 'Glaucoma') { after.push(d); }
-        if (totHypog > 5 && d.risk == 'Hypoglycaemia') { after.push(d); }
-        if (totHypok > 5 && d.risk == 'Hypokalemia') { after.push(d); }
-        if (totHyper > 5 && d.risk == 'Hyperkalemia') { after.push(d); }
-        if (totBrady > 5 && d.risk == 'Bradycardia') { after.push(d); }
-        if (totSerot > 5 && d.risk == 'Serotonin syndrome') { after.push(d); }
-        if (totUrina > 5 && d.risk == 'Urinary retention') { after.push(d); }
-        if (totConst > 5 && d.risk == 'Constipation') { after.push(d); }
-        if (totCnsde > 5 && d.risk == 'CNS depression') { after.push(d); }
-        if (totHeart > 5 && d.risk == 'Heart failure') { after.push(d); }
-        if (totBleed > 5 && d.risk == 'Bleeding') { after.push(d); }
-        if (totRenal > 5 && d.risk == 'Renal injury') { after.push(d); }
-        if (totFalls > 5 && d.risk == 'Falls and fracture') { after.push(d); }
+        if (totGlauc > 5 && d.risk == 'Glaucoma') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 });}
+        if (totHypog > 5 && d.risk == 'Hypoglycaemia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totHypok > 5 && d.risk == 'Hypokalemia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totHyper > 5 && d.risk == 'Hyperkalemia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totBrady > 5 && d.risk == 'Bradycardia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totSerot > 5 && d.risk == 'Serotonin syndrome') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totUrina > 5 && d.risk == 'Urinary retention') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totConst > 5 && d.risk == 'Constipation') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totCnsde > 5 && d.risk == 'CNS depression') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totHeart > 5 && d.risk == 'Heart failure') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totBleed > 5 && d.risk == 'Bleeding') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totRenal > 5 && d.risk == 'Renal injury') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
+        if (totFalls > 5 && d.risk == 'Falls and fracture') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
 
         
 
-
     });
 
-    //console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    //console.log(before);
-    //console.log(after);
+    
+    console.log(before);
+    console.log(after);
 
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-    chart = StackedBarChartHorizontal(riskmedGroups, {
+    chart = StackedBarChartHorizontal(before, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
