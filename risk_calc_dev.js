@@ -624,12 +624,14 @@ function StackedBarChartHorizontal(data, {
 
     svg.append("g")
         .attr('id','yAxisMainG')
-        .attr("style", "font-size:smaller;")
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis)
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
 
 
+
+    $('#yAxisMainG').attr('font-size', '16').attr('family', "'Roboto Condensed',sans-serif;");
+    $('#xAxisMainG').attr('font-size', '16').attr('family', "'Roboto Condensed',sans-serif;");
    
 
     return Object.assign(svg.node(), { scales: { color } });
