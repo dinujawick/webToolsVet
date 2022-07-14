@@ -604,7 +604,7 @@ function StackedBarChartHorizontal(data, {
             .attr("text-anchor", "end")
             .text(xLabel));
 
-    const bar = svg.append("g")
+    const bar = svg.append("g").attr('id','mainBarG')
         .selectAll("g")
         .data(series)
         .join("g")
