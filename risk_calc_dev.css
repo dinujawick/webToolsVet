@@ -285,7 +285,7 @@
     z-index: 3;
     border-color: black;
     outline: 0;
-    box-shadow: none;
+    box-shadow: 0 0 0 0.25rem #8b0e046e;
 }
 
 .accordion-button:not(.collapsed)::after {
