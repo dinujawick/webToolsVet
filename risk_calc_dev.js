@@ -591,8 +591,7 @@ function StackedBarChartHorizontal(data, {
         .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
-        .attr("font-size", "16")
-        .attr("font-family","'Roboto Condensed',sans-serif;")
+        .attr('id', 'xAxisMainG')
         .attr("transform", `translate(0,${marginTop})`)
         .call(xAxis)
         .call(g => g.select(".domain").remove())
@@ -624,11 +623,12 @@ function StackedBarChartHorizontal(data, {
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
 
     svg.append("g")
-        .attr("font-size", "16")
-        .attr("font-family", "'Roboto Condensed',sans-serif;")
+        .attr('id','yAxisMainG')
+        .attr("style", "font-size:smaller;")
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis)
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
+
 
    
 
