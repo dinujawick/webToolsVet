@@ -123,7 +123,7 @@ function addMed(med,medClass) {
         selectedMedClass.set(medClass.medsclass_graphic, medClass);
         createAccordionItem(med.Medicines_class, medClass.color_hexcode, medClass.medsclass_graphic, medClass.medsclass_tooltip);
         
-        createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
+        createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode, medClass.medsclass_graphic);
        
 
         //Generate dynamic graph
@@ -149,11 +149,11 @@ function addMed(med,medClass) {
             createPivot(selectedMedClass);
 
             if (medAddedStatus == false)
-                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode, medClass.medsclass_graphic);
         }
         else {
             if (medAddedStatus == false)
-                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode, medClass.medsclass_graphic);
         }
     }
 
@@ -298,7 +298,7 @@ function createAccordionItem(medGroup,colorCode,accordionTitle,accordionTooltip)
         .addClass('list-group')
         .appendTo($accordionBodyHeader);
 }
-function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
+function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode,medClassTitle) {
 
     $('<li>')
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + atcLevel + 'li')
@@ -331,7 +331,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
                         }
                         //console.log(colorCodes);
 
-                        selectedMedClass.delete(medGroup);
+                        selectedMedClass.delete(medClassTitle);
                         createPivot(selectedMedClass);
 
                         //const index = selectedMedGroupList.indexOf(medGroup);
@@ -423,7 +423,7 @@ function initialization(data) {
         if (totRenal <= 5 && d.risk == 'Renal injury') before.push(d);
         if (totFalls <= 5 && d.risk == 'Falls and fracture') before.push(d);
 
-        if (totGlauc > 5 && d.risk == 'Glaucoma') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 });}
+        if (totGlauc > 5 && d.risk == 'Glaucoma') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
         if (totHypog > 5 && d.risk == 'Hypoglycaemia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
         if (totHypok > 5 && d.risk == 'Hypokalemia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
         if (totHyper > 5 && d.risk == 'Hyperkalemia') { after.push(d); before.push({ risk: d.risk, medGroup: d.medGroup, status: 0 }); }
