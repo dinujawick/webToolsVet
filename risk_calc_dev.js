@@ -206,6 +206,8 @@ function createPivot(medClass) {
 
     for (var [key, value] of medClass) {
 
+       
+        console.log(value);
         header.push(key);
 
         fallsRisk[key] = value.falls_fractures;
@@ -227,7 +229,6 @@ function createPivot(medClass) {
     dataStructure.push(acglaucRisk, hypoglycRisk, hypoKRisk, hyperKRisk, bradyRisk, serosynRisk, uretentRisk, constRisk, cnsdeprRisk, heartRisk, bleedRisk, renalRisk,fallsRisk);
     dataStructure['columns'] = header;
 
-    console.log(dataStructure);
 
     initialization(dataStructure);
 
