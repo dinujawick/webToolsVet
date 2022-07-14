@@ -630,8 +630,8 @@ function StackedBarChartHorizontal(data, {
 
 
 
-    $('#yAxisMainG').attr('font-size', '16').attr('family', "'Roboto Condensed',sans-serif;");
-    $('#xAxisMainG').attr('font-size', '16').attr('family', "'Roboto Condensed',sans-serif;");
+    $('#yAxisMainG').attr('font-size', '16').attr('font-family', "'Roboto Condensed',sans-serif;");
+    $('#xAxisMainG').attr('font-size', '16').attr('font-family', "'Roboto Condensed',sans-serif;");
    
 
     return Object.assign(svg.node(), { scales: { color } });
