@@ -362,6 +362,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 
 function initialization(data) {
 
+    console.log(data);
     
     keys = data.columns.slice(1)
 
@@ -442,9 +443,9 @@ function initialization(data) {
 
     });
 
-    console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    console.log(before);
-    console.log(after);
+    //console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
+    //console.log(before);
+    //console.log(after);
 
     $('#chart').empty();
 
