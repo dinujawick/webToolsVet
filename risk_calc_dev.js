@@ -206,9 +206,7 @@ function createPivot(medClass) {
 
     for (var [key, value] of medClass) {
 
-       
-        console.log(value);
-        header.push(key);
+        header.push(value.medsclass_graphic);
 
         fallsRisk[key] = value.falls_fractures;
         constRisk[key] = value.constipation;
