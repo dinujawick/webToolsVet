@@ -190,18 +190,18 @@ function createPivot(medClass) {
 
 
     //Objects for each risk classes
-    var fallsRisk = { Risk: 'Falls Fracture' };
+    var fallsRisk = { Risk: 'Falls and fracture' };
     var constRisk = { Risk: 'Constipation' };
-    var uretentRisk = { Risk: 'Urinary Retention' };
-    var cnsdeprRisk = { Risk: 'CNS Depression' };
+    var uretentRisk = { Risk: 'Urinary retention' };
+    var cnsdeprRisk = { Risk: 'CNS depression' };
     var bleedRisk = { Risk: 'Bleeding' };
-    var heartRisk = { Risk: 'Heart Failure' };
+    var heartRisk = { Risk: 'Heart failure' };
     var bradyRisk = { Risk: 'Bradycardia' };
     var hypoglycRisk = { Risk: 'Hypoglycaemia' };
-    var renalRisk = { Risk: 'Renal Injury' };
+    var renalRisk = { Risk: 'Renal injury' };
     var hypoKRisk = { Risk: 'Hypokalemia' };
     var hyperKRisk = { Risk: 'Hyperkalemia' };
-    var serosynRisk = { Risk: 'Serotonin Syndrome' };
+    var serosynRisk = { Risk: 'Serotonin syndrome' };
     var acglaucRisk = { Risk: 'Glaucoma' };
 
 
@@ -416,16 +416,17 @@ function initialization(data) {
     
     riskmedGroups.forEach(function (d) {
 
+
        
 
-        if (d.risk == 'Falls Fracture' && d.status == 1) totFalls++;
-        if (d.risk == 'Renal Injury' && d.status == 1) totRenal++;
+        if (d.risk == 'Falls and fracture' && d.status == 1) totFalls++;
+        if (d.risk == 'Renal injury' && d.status == 1) totRenal++;
         if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
-        if (d.risk == 'Heart Failure' && d.status == 1) totHeart++;
-        if (d.risk == 'CNS Depression' && d.status == 1) totCnsde++;
+        if (d.risk == 'Heart failure' && d.status == 1) totHeart++;
+        if (d.risk == 'CNS depression' && d.status == 1) totCnsde++;
         if (d.risk == 'Constipation' && d.status == 1) totConst++;
-        if (d.risk == 'Urinary Retention' && d.status == 1) totUrina++;
-        if (d.risk == 'Serotonin Syndrome' && d.status == 1) totSerot++;
+        if (d.risk == 'Urinary retention' && d.status == 1) totUrina++;
+        if (d.risk == 'Serotonin syndrome' && d.status == 1) totSerot++;
         if (d.risk == 'Bradycardia' && d.status == 1) totBrady++;
         if (d.risk == 'Hyperkalemia' && d.status == 1) totHyper++;
         if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
@@ -437,28 +438,28 @@ function initialization(data) {
         if (totHypok > 5 && d.risk == 'Hypokalemia') after.push(d);
         if (totHyper > 5 && d.risk == 'Hyperkalemia') after.push(d);
         if (totBrady > 5 && d.risk == 'Bradycardia') after.push(d);
-        if (totSerot > 5 && d.risk == 'Serotonin Syndrome') after.push(d);
-        if (totUrina > 5 && d.risk == 'Urinary Retention') after.push(d);
+        if (totSerot > 5 && d.risk == 'Serotonin syndrome') after.push(d);
+        if (totUrina > 5 && d.risk == 'Urinary retention') after.push(d);
         if (totConst > 5 && d.risk == 'Constipation') after.push(d);
-        if (totCnsde > 5 && d.risk == 'CNS Depression') after.push(d);
-        if (totHeart > 5 && d.risk == 'Heart Failure') after.push(d);
+        if (totCnsde > 5 && d.risk == 'CNS depression') after.push(d);
+        if (totHeart > 5 && d.risk == 'Heart failure') after.push(d);
         if (totBleed > 5 && d.risk == 'Bleeding') after.push(d);
-        if (totRenal > 5 && d.risk == 'Renal Injury') after.push(d);
-        if (totFalls > 5 && d.risk == 'Falls Fracture') after.push(d);
+        if (totRenal > 5 && d.risk == 'Renal injury') after.push(d);
+        if (totFalls > 5 && d.risk == 'Falls and fracture') after.push(d);
 
         if (totGlauc <= 5 && d.risk == 'Glaucoma') before.push(d);
         if (totHypog <= 5 && d.risk == 'Hypoglycaemia') before.push(d);
         if (totHypok <= 5 && d.risk == 'Hypokalemia') before.push(d);
         if (totHyper <= 5 && d.risk == 'Hyperkalemia') before.push(d);
         if (totBrady <= 5 && d.risk == 'Bradycardia') before.push(d);
-        if (totSerot <= 5 && d.risk == 'Serotonin Syndrome') before.push(d);
-        if (totUrina <= 5 && d.risk == 'Urinary Retention') before.push(d);
+        if (totSerot <= 5 && d.risk == 'Serotonin syndrome') before.push(d);
+        if (totUrina <= 5 && d.risk == 'Urinary retention') before.push(d);
         if (totConst <= 5 && d.risk == 'Constipation') before.push(d);
-        if (totCnsde <= 5 && d.risk == 'CNS Depression') before.push(d);
-        if (totHeart <= 5 && d.risk == 'Heart Failure') before.push(d);
+        if (totCnsde <= 5 && d.risk == 'CNS depression') before.push(d);
+        if (totHeart <= 5 && d.risk == 'Heart failure') before.push(d);
         if (totBleed <= 5 && d.risk == 'Bleeding') before.push(d);
-        if (totRenal <= 5 && d.risk == 'Renal Injury') before.push(d);
-        if (totFalls <= 5 && d.risk == 'Falls Fracture') before.push(d);
+        if (totRenal <= 5 && d.risk == 'Renal injury') before.push(d);
+        if (totFalls <= 5 && d.risk == 'Falls and fracture') before.push(d);
 
 
     });
