@@ -164,6 +164,8 @@ function addMed(med,medClass) {
 
 function createPivot(medClass) {
 
+    console.log(medClass);
+
     //destroy the objects
     delete dataStructure;
     delete fallsRisk;
