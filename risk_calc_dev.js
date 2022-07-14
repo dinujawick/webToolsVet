@@ -624,9 +624,9 @@ function StackedBarChartHorizontal(data, {
 
     svg.append("g")
         .attr('id', 'yAxisMainG')
-        .attr('font-family', "'Roboto Condensed',sans-serif;")
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis)
+        .attr('font-family', "'Roboto Condensed',sans-serif;")
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
 
 
