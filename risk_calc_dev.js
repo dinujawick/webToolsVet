@@ -616,6 +616,8 @@ function StackedBarChartHorizontal(data, {
         .attr("y", ({ i }) => yScale(Y[i]))
         .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
         .attr("height", yScale.bandwidth());
+        ([x1, x2]) => Math.min(xScale(x1), xScale(x2));
+        console.log();
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
 
