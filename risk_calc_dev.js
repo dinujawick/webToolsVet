@@ -623,15 +623,15 @@ function StackedBarChartHorizontal(data, {
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
 
     svg.append("g")
-        .attr('id','yAxisMainG')
+        .attr('id', 'yAxisMainG')
+        .attr('font-family', "'Roboto Condensed',sans-serif;")
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis)
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
 
 
 
-    $('#yAxisMainG').attr('font-size', '16').attr('font-family', "'Roboto Condensed',sans-serif;");
-    $('#xAxisMainG').attr('font-size', '16').attr('font-family', "'Roboto Condensed',sans-serif;");
+    
    
 
     return Object.assign(svg.node(), { scales: { color } });
