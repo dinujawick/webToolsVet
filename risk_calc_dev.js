@@ -260,14 +260,12 @@ function createAccordionItem(medGroup,colorCode,accordionTitle,accordionTooltip)
     $accordion = $('<div>')
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + 'accordion')
         .addClass('accordion-item shadow')
-        .attr('data-bs-toggle', 'tooltip')
-        .attr('data-bs-placement', 'right')
-        .attr("title", accordionTooltip)
         .appendTo($('#medGroup'));
 
     $accordionHeader = $('<h2>')
-        //.attr('title', 'Click to view medicines')
-        //.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'right')
+        .attr('data-bs-toggle', 'tooltip')
+        .attr('data-bs-placement', 'right')
+        .attr("title", accordionTooltip)
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + 'header')
         .addClass('accordion-header')
         .append(
