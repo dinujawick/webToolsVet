@@ -128,8 +128,7 @@ function addMed(med,colorCode,medClass) {
         createAccordionItem(med.Medicines_class, colorCode);
         
         createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
-        //Calculate Total risk for first med group
-        calculateTotalRisk(med.Medicines_class);
+       
 
         //Generate dynamic graph
         createPivot(selectedMedClass);
@@ -148,8 +147,7 @@ function addMed(med,colorCode,medClass) {
         if (elementAddedStatus != true) {
             selectedMedClass.set(med.Medicines_class, medClass);
             createAccordionItem(med.Medicines_class, colorCode);
-            //Calculate Total risk for created med group
-            calculateTotalRisk(med.Medicines_class);
+            
 
             //Generate dynamic graph
             createPivot(selectedMedClass);
