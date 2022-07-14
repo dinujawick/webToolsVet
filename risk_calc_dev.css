@@ -132,7 +132,6 @@
     padding: 0.5rem 1rem;
     background-color: #fff;
     border-top: none;
-    font-size:smaller;
 }
 
 .card-body {
@@ -140,9 +139,7 @@
     padding: 1rem 1rem 0.5rem 1rem;
 }
 
-.card-body > p{
-    font-size:smaller;
-}
+
 /* Icarus addition */
 .col-6 h6 {
     font-size: 0.85em;
