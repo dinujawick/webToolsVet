@@ -587,7 +587,7 @@ function StackedBarChartHorizontal(data, {
         .attr('id','horizontalChart')
         .attr("width", width)
         .attr("height", height)
-        .attr("viewBox", [50, -20, width, height])
+        .attr("viewBox", [30, -20, width, height])
         .attr("style", "height:auto; height:intrinsic;");
 
     svg.append("g")
