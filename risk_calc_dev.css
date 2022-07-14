@@ -229,7 +229,7 @@
 }
 
 .wordbr {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .hidden {
@@ -281,8 +281,11 @@
     background-image: url(Images/red-cross.svg);
     background-repeat: no-repeat;
 }
-.accordion-button:focus{
-
+.accordion-button:focus {
+    z-index: 3;
+    border-color: black;
+    outline: 1;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
 
 .accordion-button:not(.collapsed)::after {
