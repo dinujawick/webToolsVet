@@ -254,24 +254,6 @@ function createPivot(medClass) {
 }
 
 
-function calculateTotalRisk(med) {
-
-    //$.each(riskMap, function (i, value) {
-
-    //    if (i == identifiedMedGroup) {
-
-    //        $.each(value, function (i, value) {
-    //            if (value == 1) {
-    //                totalRisk[i] = totalRisk[i] + 1;
-    //            }
-
-    //        })
-    //        //console.log(totalRisk);
-
-    //    }
-    //})
-
-}
 function createAccordionItem(medGroup,colorCode) {
 
     //Push that colorCode to Array
@@ -298,7 +280,7 @@ function createAccordionItem(medGroup,colorCode) {
                 .addClass('accordion-button')
                 .append(
                     $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
-                    $('<span>').attr('style','font-size:smaller').text(medGroup)
+                    $('<span>').text(medGroup)
                 )
         )
         .appendTo($accordion);
@@ -322,7 +304,6 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + atcLevel + 'li')
         .addClass('list-group-item')
         .addClass('acordionContent')
-        .attr('style','font-size:smaller;')
         .text(atcDescr +" "+ '[' + atcLevel + ']')
         .append(
             $('<span>')
