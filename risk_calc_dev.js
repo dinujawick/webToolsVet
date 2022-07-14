@@ -625,7 +625,7 @@ function StackedBarChartHorizontal(data, {
         .attr("style", "font-size:smaller;")
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis)
-        .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20');
+        .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
 
    
 
