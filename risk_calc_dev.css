@@ -284,8 +284,8 @@
 .accordion-button:focus {
     z-index: 3;
     border-color: black;
-    outline: 1;
-    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    outline: 0;
+    box-shadow: none;
 }
 
 .accordion-button:not(.collapsed)::after {

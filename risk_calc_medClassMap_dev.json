@@ -1,6 +1,8 @@
 [
   {
     "medicines_class": "Anticoag_antiplt",
+    "medsclass_graphic": "Antithrombotics",
+    "medsclass_tooltip": "Antithrombotics",
     "falls_fractures": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -18,6 +20,8 @@
   },
   {
     "medicines_class": "NSAIDs",
+    "medsclass_graphic": "NSAIDs",
+    "medsclass_tooltip": "Non-steroidal anti-inflammatory drugs",
     "falls_fractures": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -35,6 +39,8 @@
   },
   {
     "medicines_class": "SelectiveAlphaBlockers",
+    "medsclass_graphic": "Selective alpha blockers",
+    "medsclass_tooltip": "Selective alpha blockers",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -52,6 +58,8 @@
   },
   {
     "medicines_class": "UrinaryAntispasm",
+    "medsclass_graphic": "Urinary antispasmodics",
+    "medsclass_tooltip": "Urinary antispasmodics",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -69,6 +77,8 @@
   },
   {
     "medicines_class": "Antimicrobials (renal)",
+    "medsclass_graphic": "Nephrotoxic antimicrobials",
+    "medsclass_tooltip": "Nephrotoxic antimicrobials",
     "falls_fractures": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -86,6 +96,8 @@
   },
   {
     "medicines_class": "H2Blockers",
+    "medsclass_graphic": "H2-Blockers",
+    "medsclass_tooltip": "Histamine (H2) receptor antagonists",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -103,6 +115,8 @@
   },
   {
     "medicines_class": "Laxatives",
+    "medsclass_graphic": "Laxatives",
+    "medsclass_tooltip": "Laxatives",
     "falls_fractures": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -120,6 +134,8 @@
   },
   {
     "medicines_class": "Loperamide",
+    "medsclass_graphic": "Loperamide",
+    "medsclass_tooltip": "Loperamide",
     "falls_fractures": 0,
     "constipation": 0,
     "urinary_retention": 1,
@@ -137,6 +153,8 @@
   },
   {
     "medicines_class": "Strong GI anticholinergics",
+    "medsclass_graphic": "Prochlorperazine",
+    "medsclass_tooltip": "Prochlorperazine",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -154,6 +172,8 @@
   },
   {
     "medicines_class": "Metoclopramide",
+    "medsclass_graphic": "Metoclopramide",
+    "medsclass_tooltip": "Metoclopramide",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -171,6 +191,8 @@
   },
   {
     "medicines_class": "PPI",
+    "medsclass_graphic": "PPIs",
+    "medsclass_tooltip": "Proton pump inhibitor",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -188,6 +210,8 @@
   },
   {
     "medicines_class": "ACE_ARB",
+    "medsclass_graphic": "ACE or ARB",
+    "medsclass_tooltip": "Angiotensin converting enzyme (ACE) inhibitors or angiotensin receptor blockers (ARBs) ",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -205,6 +229,8 @@
   },
   {
     "medicines_class": "Amiodarone",
+    "medsclass_graphic": "Amiodarone",
+    "medsclass_tooltip": "Amiodarone",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -222,6 +248,8 @@
   },
   {
     "medicines_class": "Betablockers",
+    "medsclass_graphic": "Beta blockers",
+    "medsclass_tooltip": "Beta blockers",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -239,6 +267,8 @@
   },
   {
     "medicines_class": "CCB_dihydropyridine",
+    "medsclass_graphic": "CCB (dihydropyridine)",
+    "medsclass_tooltip": "Calcium channel blockers (dihydropyridine)",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -256,6 +286,8 @@
   },
   {
     "medicines_class": "CCB_dv",
+    "medsclass_graphic": "CCB (non-dihydropyridine)",
+    "medsclass_tooltip": "Calcium channel blockers (non-dihydropyridine)",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -273,6 +305,8 @@
   },
   {
     "medicines_class": "Digoxin",
+    "medsclass_graphic": "Digoxin",
+    "medsclass_tooltip": "Digoxin",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -290,6 +324,8 @@
   },
   {
     "medicines_class": "Loop",
+    "medsclass_graphic": "Loop diuretics",
+    "medsclass_tooltip": "Loop diuretics",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -307,6 +343,8 @@
   },
   {
     "medicines_class": "Thiazide",
+    "medsclass_graphic": "Thiazide",
+    "medsclass_tooltip": "Thiazide",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -324,6 +362,8 @@
   },
   {
     "medicines_class": "Nitrates_nicorandil",
+    "medsclass_graphic": "Nitrates or nicorandil",
+    "medsclass_tooltip": "Nitrates or nicorandil",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -341,6 +381,8 @@
   },
   {
     "medicines_class": "Spironolactone",
+    "medsclass_graphic": "Spironolactone",
+    "medsclass_tooltip": "Spironolactone",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -358,6 +400,8 @@
   },
   {
     "medicines_class": "Steroid",
+    "medsclass_graphic": "Steroid",
+    "medsclass_tooltip": "Steroid",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -375,6 +419,8 @@
   },
   {
     "medicines_class": "Theophylline",
+    "medsclass_graphic": "Theophylline",
+    "medsclass_tooltip": "Theophylline",
     "falls_fractures": 0,
     "constipation": 0,
     "urinary_retention": 0,
@@ -392,6 +438,8 @@
   },
   {
     "medicines_class": "Benzodiazepines",
+    "medsclass_graphic": "Benzodiazepines",
+    "medsclass_tooltip": "Benzodiazepines",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -409,6 +457,8 @@
   },
   {
     "medicines_class": "Opioid",
+    "medsclass_graphic": "Opioids",
+    "medsclass_tooltip": "Opioids",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -426,6 +476,8 @@
   },
   {
     "medicines_class": "Sedating antihistamines (AMH)",
+    "medsclass_graphic": "Sedating antihistamines ",
+    "medsclass_tooltip": "Sedating antihistamines ",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -443,6 +495,8 @@
   },
   {
     "medicines_class": "Anticholinergics antipsychotics",
+    "medsclass_graphic": "Anticholinergics antipsychotics",
+    "medsclass_tooltip": "Anticholinergics antipsychotics",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -460,6 +514,8 @@
   },
   {
     "medicines_class": "Antiepileptic (excl gabapentinoid)",
+    "medsclass_graphic": "Antiepileptics (excl. gabapentinoid)",
+    "medsclass_tooltip": "Antiepileptics (excl. gabapentinoid)",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -477,6 +533,8 @@
   },
   {
     "medicines_class": "H1Blockers",
+    "medsclass_graphic": "H1-Blockers",
+    "medsclass_tooltip": "Histamine (H2) receptor antagonists",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 1,
@@ -494,6 +552,8 @@
   },
   {
     "medicines_class": "Gabapentinoid",
+    "medsclass_graphic": "Gabapentinoid",
+    "medsclass_tooltip": "Gabapentinoid",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
@@ -511,6 +571,8 @@
   },
   {
     "medicines_class": "SSRI_SNRI",
+    "medsclass_graphic": "SSRI or SNRI",
+    "medsclass_tooltip": "Selective serotonin reuptake inhibitors (SSRIs) or serotonin or norepinephrine reuptake inhibitors (SNRIs)",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 1,
@@ -528,6 +590,8 @@
   },
   {
     "medicines_class": "TCA",
+    "medsclass_graphic": "TCA",
+    "medsclass_tooltip": "Tricyclic antidepressants",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -545,6 +609,8 @@
   },
   {
     "medicines_class": "MAO inhibitors",
+    "medsclass_graphic": "MAO inhibitors",
+    "medsclass_tooltip": "Monoamine oxidase inhibitors",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 1,
@@ -562,6 +628,8 @@
   },
   {
     "medicines_class": "Sulfonylurea_gliptins",
+    "medsclass_graphic": "Sulfonylureas or gliptins",
+    "medsclass_tooltip": "Sulfonylureas or gliptins",
     "falls_fractures": 1,
     "constipation": 1,
     "urinary_retention": 0,
@@ -579,6 +647,8 @@
   },
   {
     "medicines_class": "Pioglitazone",
+    "medsclass_graphic": "Pioglitazone",
+    "medsclass_tooltip": "Pioglitazone",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,

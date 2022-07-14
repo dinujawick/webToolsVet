@@ -41,17 +41,17 @@ $(document).ready(function () {
                     $med = $('<a>').attr('id', "a" + item.prmy_atc_cde).text(item.itm_gen_nme).addClass('wordbr').appendTo('#searchList');
                     $med.on('click', function (event) {
 
-                        var colorCode = "";
+                       
                         var medClass = "";
-
+                       
                         $.each(medClassColorMap, function (ind, itm) {
                            
                             if (itm.medicines_class == item.Medicines_class) {
                                 medClass = itm;
-                                colorCode = itm.color_hexcode;
+                               
                             }
                          });
-                        addMed(item, colorCode, medClass);
+                        addMed(item, medClass);
 
                         //initialize all tooltips on the graph
                         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -102,7 +102,7 @@ function filterFunction() {
 }
 
 
-function addMed(med,colorCode,medClass) {
+function addMed(med,medClass) {
 
     $('#' + "a" + med.prmy_atc_cde).addClass('clicked');
 
@@ -125,9 +125,9 @@ function addMed(med,colorCode,medClass) {
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class, medClass);
-        createAccordionItem(med.Medicines_class, colorCode);
+        createAccordionItem(med.Medicines_class, medClass.color_hexcode);
         
-        createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
+        createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
        
 
         //Generate dynamic graph
@@ -146,18 +146,18 @@ function addMed(med,colorCode,medClass) {
         });
         if (elementAddedStatus != true) {
             selectedMedClass.set(med.Medicines_class, medClass);
-            createAccordionItem(med.Medicines_class, colorCode);
+            createAccordionItem(med.Medicines_class, medClass.color_hexcode);
             
 
             //Generate dynamic graph
             createPivot(selectedMedClass);
 
             if (medAddedStatus == false)
-                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
         }
         else {
             if (medAddedStatus == false)
-                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, colorCode);
+                createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
         }
     }
 
