@@ -400,8 +400,8 @@
   },
   {
     "medicines_class": "Steroid",
-    "medsclass_graphic": "Steroid",
-    "medsclass_tooltip": "Steroid",
+    "medsclass_graphic": "Corticosteroid",
+    "medsclass_tooltip": "Corticosteroid",
     "falls_fractures": 1,
     "constipation": 0,
     "urinary_retention": 0,
