@@ -1,12 +1,8 @@
 ﻿//Variable to store previous generic name
 var prevAddedItem = "";
-
 var selectedMedClass = new Map();
-
 var medClassColorMap = [];
-
 var selectedMedList = new Array();
-
 var colorCodes = new Array();
 
 
@@ -125,7 +121,7 @@ function addMed(med,medClass) {
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
         selectedMedClass.set(med.Medicines_class, medClass);
-        createAccordionItem(med.Medicines_class, medClass.color_hexcode);
+        createAccordionItem(med.Medicines_class, medClass.color_hexcode, medClass.medsclass_graphic, medClass.medsclass_tooltip);
         
         createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
        
@@ -146,7 +142,7 @@ function addMed(med,medClass) {
         });
         if (elementAddedStatus != true) {
             selectedMedClass.set(med.Medicines_class, medClass);
-            createAccordionItem(med.Medicines_class, medClass.color_hexcode);
+            createAccordionItem(med.Medicines_class, medClass.color_hexcode, medClass.medsclass_graphic, medClass.medsclass_tooltip);
             
 
             //Generate dynamic graph
@@ -252,7 +248,7 @@ function createPivot(medClass) {
 }
 
 
-function createAccordionItem(medGroup,colorCode) {
+function createAccordionItem(medGroup,colorCode,accordionTitle,accordionTooltip) {
 
     //Push that colorCode to Array
     colorCodes.push(colorCode);
@@ -261,6 +257,9 @@ function createAccordionItem(medGroup,colorCode) {
     $accordion = $('<div>')
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + 'accordion')
         .addClass('accordion-item shadow')
+        .attr('data-bs-toggle', 'tooltip')
+        .attr('data-bs-placement', 'right')
+        .attr("title", accordionTooltip)
         .appendTo($('#medGroup'));
 
     $accordionHeader = $('<h2>')
@@ -278,7 +277,7 @@ function createAccordionItem(medGroup,colorCode) {
                 .addClass('accordion-button')
                 .append(
                     $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
-                    $('<span>').text(medGroup)
+                    $('<span>').text(accordionTitle)
                 )
         )
         .appendTo($accordion);
@@ -394,9 +393,6 @@ function initialization(data) {
 
     
     riskmedGroups.forEach(function (d) {
-
-
-       
 
         if (d.risk == 'Falls and fracture' && d.status == 1) totFalls++;
         if (d.risk == 'Renal injury' && d.status == 1) totRenal++;
