@@ -581,7 +581,7 @@ function StackedBarChartHorizontal(data, {
             .attr("stroke-opacity", 0.1))
         .call(g => g.append("text")
             .attr("x", (width - marginRight) - 40)
-            .attr("y", -30)
+            .attr("y", -40)
             .attr("fill", "currentColor")
             .attr("text-anchor", "end")
             .attr('style','font-weight: bold;')
