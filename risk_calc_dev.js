@@ -206,21 +206,26 @@ function createPivot(medClass) {
 
     for (var [key, value] of medClass) {
 
-        header.push(value.medsclass_graphic);
 
-        fallsRisk[key] = value.falls_fractures;
-        constRisk[key] = value.constipation;
-        uretentRisk[key] = value.urinary_retention;
-        cnsdeprRisk[key] = value.CNS_depression;
-        bleedRisk[key] = value.bleeding;
-        heartRisk[key] = value.heart_failure;
-        bradyRisk[key] = value.bradycardia;
-        hypoglycRisk[key] = value.hypoglycaemia;
-        renalRisk[key] = value.renal_injury;
-        hypoKRisk[key] = value.hypokalemia;
-        hyperKRisk[key] = value.hyperkalemia;
-        serosynRisk[key] = value.serotonin_syndrome;
-        acglaucRisk[key] = value.glaucoma;
+        if (key == value.medClass) {
+
+            header.push(value.medsclass_graphic);
+
+            fallsRisk[value.medsclass_graphic] = value.falls_fractures;
+            constRisk[value.medsclass_graphic] = value.constipation;
+            uretentRisk[value.medsclass_graphic] = value.urinary_retention;
+            cnsdeprRisk[value.medsclass_graphic] = value.CNS_depression;
+            bleedRisk[value.medsclass_graphic] = value.bleeding;
+            heartRisk[value.medsclass_graphic] = value.heart_failure;
+            bradyRisk[value.medsclass_graphic] = value.bradycardia;
+            hypoglycRisk[value.medsclass_graphic] = value.hypoglycaemia;
+            renalRisk[value.medsclass_graphic] = value.renal_injury;
+            hypoKRisk[value.medsclass_graphic] = value.hypokalemia;
+            hyperKRisk[value.medsclass_graphic] = value.hyperkalemia;
+            serosynRisk[value.medsclass_graphic] = value.serotonin_syndrome;
+            acglaucRisk[value.medsclass_graphic] = value.glaucoma;
+        }
+        
        
     }
 
