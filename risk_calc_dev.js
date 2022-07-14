@@ -594,6 +594,8 @@ function StackedBarChartHorizontal(data, {
         .attr('id', 'xAxisMainG')
         .attr("transform", `translate(0,${marginTop})`)
         .call(xAxis)
+        .attr('font-size', "16")
+        .attr('font-family', "'Roboto Condensed',sans-serif;")
         .call(g => g.select(".domain").remove())
         .call(g => g.selectAll(".tick line").clone()
             .attr("y2", height - marginTop - marginBottom)
@@ -626,6 +628,7 @@ function StackedBarChartHorizontal(data, {
         .attr('id', 'yAxisMainG')
         .attr("transform", `translate(${xScale(0)},0)`)
         .call(yAxis)
+        .attr('font-size', "16")
         .attr('font-family', "'Roboto Condensed',sans-serif;")
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
 
