@@ -598,10 +598,11 @@ function StackedBarChartHorizontal(data, {
             .attr("y2", height - marginTop - marginBottom)
             .attr("stroke-opacity", 0.1))
         .call(g => g.append("text")
-            .attr("x", (width - marginRight)- 40)
+            .attr("x", (width - marginRight) - 40)
             .attr("y", -30)
             .attr("fill", "currentColor")
             .attr("text-anchor", "end")
+            .attr('style','font-weight: bold;')
             .text(xLabel));
 
     const bar = svg.append("g").attr('id','mainBarG')
@@ -621,9 +622,10 @@ function StackedBarChartHorizontal(data, {
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
 
     svg.append("g")
-        .attr("style","font-size:smaller;")
+        .attr("style", "font-size:smaller;")
         .attr("transform", `translate(${xScale(0)},0)`)
-        .call(yAxis);
+        .call(yAxis)
+        .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20');
 
    
 
