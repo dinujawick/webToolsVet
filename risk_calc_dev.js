@@ -609,15 +609,15 @@ function StackedBarChartHorizontal(data, {
         .data(series)
         .join("g")
         .attr("fill", ([{ i }]) => color(Z[i]))
-    //    .selectAll("rect")
-    //    .data(d => d)
-    //    .join("rect")
-    //    .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
-    //    .attr("y", ({ i }) => yScale(Y[i]))
-    //    .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
-    //    .attr("height", yScale.bandwidth());
+        .selectAll("rect")
+        .data(d => d)
+        .join("rect")
+        .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
+        .attr("y", ({ i }) => yScale(Y[i]))
+        .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
+        .attr("height", yScale.bandwidth());
 
-    //if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
+    if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
 
     svg.append("g")
         .attr("style","font-size:smaller;")
@@ -628,10 +628,6 @@ function StackedBarChartHorizontal(data, {
 
     return Object.assign(svg.node(), { scales: { color } });
 }
-
-
-
-
 
 
 //***********************************************************End Graph******************************************************************
