@@ -120,7 +120,7 @@ function addMed(med,medClass) {
 
     //There is no any med class on the page
     if ($('#medGroup').has('.accordion-item').length == 0) {
-        selectedMedClass.set(med.Medicines_class, medClass);
+        selectedMedClass.set(medClass.medsclass_graphic, medClass);
         createAccordionItem(med.Medicines_class, medClass.color_hexcode, medClass.medsclass_graphic, medClass.medsclass_tooltip);
         
         createAcordionContent(med.Medicines_class, med.itm_gen_nme, med.prmy_atc_cde, medClass.color_hexcode);
@@ -141,7 +141,7 @@ function addMed(med,medClass) {
             }
         });
         if (elementAddedStatus != true) {
-            selectedMedClass.set(med.Medicines_class, medClass);
+            selectedMedClass.set(medClass.medsclass_graphic, medClass);
             createAccordionItem(med.Medicines_class, medClass.color_hexcode, medClass.medsclass_graphic, medClass.medsclass_tooltip);
             
 
@@ -206,26 +206,21 @@ function createPivot(medClass) {
 
     for (var [key, value] of medClass) {
 
+        header.push(key);
 
-        if (key == value.medClass) {
-
-            header.push(value.medsclass_graphic);
-
-            fallsRisk[value.medsclass_graphic] = value.falls_fractures;
-            constRisk[value.medsclass_graphic] = value.constipation;
-            uretentRisk[value.medsclass_graphic] = value.urinary_retention;
-            cnsdeprRisk[value.medsclass_graphic] = value.CNS_depression;
-            bleedRisk[value.medsclass_graphic] = value.bleeding;
-            heartRisk[value.medsclass_graphic] = value.heart_failure;
-            bradyRisk[value.medsclass_graphic] = value.bradycardia;
-            hypoglycRisk[value.medsclass_graphic] = value.hypoglycaemia;
-            renalRisk[value.medsclass_graphic] = value.renal_injury;
-            hypoKRisk[value.medsclass_graphic] = value.hypokalemia;
-            hyperKRisk[value.medsclass_graphic] = value.hyperkalemia;
-            serosynRisk[value.medsclass_graphic] = value.serotonin_syndrome;
-            acglaucRisk[value.medsclass_graphic] = value.glaucoma;
-        }
-        
+        fallsRisk[key] = value.falls_fractures;
+        constRisk[key] = value.constipation;
+        uretentRisk[key] = value.urinary_retention;
+        cnsdeprRisk[key] = value.CNS_depression;
+        bleedRisk[key] = value.bleeding;
+        heartRisk[key] = value.heart_failure;
+        bradyRisk[key] = value.bradycardia;
+        hypoglycRisk[key] = value.hypoglycaemia;
+        renalRisk[key] = value.renal_injury;
+        hypoKRisk[key] = value.hypokalemia;
+        hyperKRisk[key] = value.hyperkalemia;
+        serosynRisk[key] = value.serotonin_syndrome;
+        acglaucRisk[key] = value.glaucoma;
        
     }
 
@@ -367,7 +362,6 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode) {
 
 function initialization(data) {
 
-    console.log(data);
     
     keys = data.columns.slice(1)
 
@@ -448,9 +442,9 @@ function initialization(data) {
 
     });
 
-    //console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    //console.log(before);
-    //console.log(after);
+    console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
+    console.log(before);
+    console.log(after);
 
     $('#chart').empty();
 
