@@ -374,8 +374,6 @@ function initialization(data) {
 
     riskmedGroups = keys.flatMap(medGroup => data.map(d => ({ risk: d.Risk, medGroup, status: d[medGroup] }))) // pivot
 
-    
-    var objectIndex = 0;
 
     var before = [];
     var after = [];
@@ -397,6 +395,8 @@ function initialization(data) {
     
     riskmedGroups.forEach(function (d) {
 
+        console.log(d);
+
         if (d.risk == 'Falls and fracture' && d.status == 1) totFalls++;
         if (d.risk == 'Renal injury' && d.status == 1) totRenal++;
         if (d.risk == 'Bleeding' && d.status == 1) totBleed++;
@@ -410,20 +410,6 @@ function initialization(data) {
         if (d.risk == 'Hypokalemia' && d.status == 1) totHypok++;
         if (d.risk == 'Hypoglycaemia' && d.status == 1) totHypog++;
         if (d.risk == 'Glaucoma' && d.status == 1) totGlauc++;
-
-        if (totGlauc > 5 && d.risk == 'Glaucoma') after.push(d);
-        if (totHypog > 5 && d.risk == 'Hypoglycaemia') after.push(d);
-        if (totHypok > 5 && d.risk == 'Hypokalemia') after.push(d);
-        if (totHyper > 5 && d.risk == 'Hyperkalemia') after.push(d);
-        if (totBrady > 5 && d.risk == 'Bradycardia') after.push(d);
-        if (totSerot > 5 && d.risk == 'Serotonin syndrome') after.push(d);
-        if (totUrina > 5 && d.risk == 'Urinary retention') after.push(d);
-        if (totConst > 5 && d.risk == 'Constipation') after.push(d);
-        if (totCnsde > 5 && d.risk == 'CNS depression') after.push(d);
-        if (totHeart > 5 && d.risk == 'Heart failure') after.push(d);
-        if (totBleed > 5 && d.risk == 'Bleeding') after.push(d);
-        if (totRenal > 5 && d.risk == 'Renal injury') after.push(d);
-        if (totFalls > 5 && d.risk == 'Falls and fracture') after.push(d);
 
         if (totGlauc <= 5 && d.risk == 'Glaucoma') before.push(d);
         if (totHypog <= 5 && d.risk == 'Hypoglycaemia') before.push(d);
@@ -439,12 +425,28 @@ function initialization(data) {
         if (totRenal <= 5 && d.risk == 'Renal injury') before.push(d);
         if (totFalls <= 5 && d.risk == 'Falls and fracture') before.push(d);
 
+        if (totGlauc > 5 && d.risk == 'Glaucoma') { after.push(d); }
+        if (totHypog > 5 && d.risk == 'Hypoglycaemia') { after.push(d); }
+        if (totHypok > 5 && d.risk == 'Hypokalemia') { after.push(d); }
+        if (totHyper > 5 && d.risk == 'Hyperkalemia') { after.push(d); }
+        if (totBrady > 5 && d.risk == 'Bradycardia') { after.push(d); }
+        if (totSerot > 5 && d.risk == 'Serotonin syndrome') { after.push(d); }
+        if (totUrina > 5 && d.risk == 'Urinary retention') { after.push(d); }
+        if (totConst > 5 && d.risk == 'Constipation') { after.push(d); }
+        if (totCnsde > 5 && d.risk == 'CNS depression') { after.push(d); }
+        if (totHeart > 5 && d.risk == 'Heart failure') { after.push(d); }
+        if (totBleed > 5 && d.risk == 'Bleeding') { after.push(d); }
+        if (totRenal > 5 && d.risk == 'Renal injury') { after.push(d); }
+        if (totFalls > 5 && d.risk == 'Falls and fracture') { after.push(d); }
+
+        
+
 
     });
 
-    console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
-    console.log(before);
-    console.log(after);
+    //console.log(totFalls, totRenal, totBleed, totBleed, totHeart, totCnsde, totConst, totUrina, totSerot, totBrady, totHyper, totHypok, totHypog, totGlauc);
+    //console.log(before);
+    //console.log(after);
 
     $('#chart').empty();
 
