@@ -608,9 +608,7 @@ function StackedBarChartHorizontal(data, {
         .selectAll("g")
         .data(series)
         .join("g")
-
-
-    //    .attr("fill", ([{ i }]) => color(Z[i]))
+        .attr("fill", ([{ i }]) => color(Z[i]))
     //    .selectAll("rect")
     //    .data(d => d)
     //    .join("rect")
