@@ -531,7 +531,7 @@ function getCappedCount(after) {
     if (hypogCount > 0) { $('<text>').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
     if (glauCount > 0) { $('<text>').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(mainGroup); }
 
-    return Object.assign(mainGroup.node());
+    return mainGroup;
    
 }
 
@@ -673,7 +673,7 @@ function StackedBarChartHorizontal(data,after, {
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
 
-    if (after.length != 0) console.log(getCappedCount(after));
+    if (after.length != 0) getCappedCount(after).appendTo(bar);
 
 
     svg.append("g")
