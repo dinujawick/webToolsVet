@@ -673,7 +673,7 @@ function StackedBarChartHorizontal(data,after, {
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
 
-    if (after.length != 0) bar.append(getCappedCount(after));
+    if (after.length != 0) console.log(getCappedCount(after));
 
 
     svg.append("g")
