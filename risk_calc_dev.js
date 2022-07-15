@@ -529,7 +529,7 @@ function getCappedCount(after) {
     if (hyperkCount > 0) { $('<text>').attr('x', xScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(mainGroup); }
     if (hypokCount > 0) { $('<text>').attr('x', xScale).attr('y', '389').text('+' + hypokCount).appendTo(mainGroup); }
     if (hypogCount > 0) { $('<text>').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
-    if (glauMedGroups > 0) { $('<text>').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauMedGroups).appendTo(mainGroup); }
+    if (glauCount > 0) { $('<text>').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(mainGroup); }
 
    
 }
