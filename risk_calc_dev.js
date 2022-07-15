@@ -653,7 +653,7 @@ function StackedBarChartHorizontal(data,after, {
 
 
     
-    
+    console.log(getCappedCount(after));
 
     const bar = svg.append("g").attr('id','mainBarG')
         .selectAll("g")
@@ -680,7 +680,7 @@ function StackedBarChartHorizontal(data,after, {
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
         
 
-    if (after.length != 0) { bar.append(getCappedCount(after)); }
+   
     
    
 
