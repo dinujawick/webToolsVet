@@ -654,9 +654,6 @@ function StackedBarChartHorizontal(data,after, {
             .text(xLabel));
 
 
-    
-   
-
     const bar = svg.append("g").attr('id','mainBarG')
         .selectAll("g")
         .data(series)
@@ -673,7 +670,7 @@ function StackedBarChartHorizontal(data,after, {
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
 
-    if (after.length != 0) getCappedCount(after).appendTo(bar);
+    if (after.length != 0) { var capped = getCappedCount(after); capped.appendTo(bar); }
 
 
     svg.append("g")
@@ -684,10 +681,6 @@ function StackedBarChartHorizontal(data,after, {
         .attr('font-family', "'Roboto Condensed',sans-serif;")
         .call(g => g.selectAll(".tick").selectAll('text').attr('x', '-20'));
         
-
-   
-    
-   
 
     return Object.assign(svg.node(), { scales: { color } });
 }
