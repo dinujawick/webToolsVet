@@ -474,7 +474,7 @@ function getTooltipTitle(array) {
 
     for (i = 0; i < array.length; i++) {
 
-        cont = cont+'<p>' + array[i] + '</p>';
+        cont = cont+'<p style="margin-bottom:0;">' + array[i] + '</p>';
     }
 
     console.log(cont);
