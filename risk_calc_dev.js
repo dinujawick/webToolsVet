@@ -446,7 +446,7 @@ function initialization(data) {
             y: d => d.risk,
             z: d => d.medGroup,
             xLabel: "Medicine class risk count →",
-            xDomain: [0, getRange(d3.max(data, d => d.total))]
+            xDomain: [0, 5]
                                /* xDomain: [0, d3.max(data, d => d.total) + 2]*/,
             yDomain: data.map(d => d.Risk), //d3.groupSort(stateages, D => d3.sum(D, d => d.population), d => d.state), // sort y by x
             zDomain: keys,
