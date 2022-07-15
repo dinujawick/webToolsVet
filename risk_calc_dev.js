@@ -469,17 +469,21 @@ function initialization(data) {
 
 function getTooltipTitle(array) {
 
-   
+    var html = "<p>";
     var cont = "";
 
     for (i = 0; i < array.length; i++) {
 
-        cont = cont+'<p style="margin-bottom:0;">' + array[i] + '</p>';
+        cont = cont + '['+ array[i] + ']' + '<br>';
     }
 
+    var res = html + cont + '</p>';
+
     console.log(cont);
-   
-    return cont;
+    console.log(res);
+    
+
+    return res;
 }
 
 
