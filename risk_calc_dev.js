@@ -526,19 +526,19 @@ function getCappedCount(after) {
 
     const xScale = 530;
 
-    if (ffCount > 0) { $('<text>').attr('x', xScale).attr('y', '53').text('+' + ffCount).appendTo(mainGroup); }
-    if (riCount > 0) { $('<text>').attr('x', xScale).attr('y', '86.6').text('+' + riCount).appendTo(mainGroup); }
-    if (blCount > 0) { $('<text>').attr('x', xScale).attr('y', '120.2').text('+' + blCount).appendTo(mainGroup); }
-    if (hfCount > 0) { $('<text>').attr('x', xScale).attr('y', '153.8').text('+' + hfCount).appendTo(mainGroup); }
-    if (cnsCount > 0) { $('<text>').attr('x', xScale).attr('y', '187.4').text('+' + cnsCount).appendTo(mainGroup); }
-    if (consCount > 0) { $('<text>').attr('x', xScale).attr('y', '221').text('+' + consCount).appendTo(mainGroup); }
-    if (uriCount > 0) { $('<text>').attr('x', xScale).attr('y', '254.60000000000002').text('+' + uriCount).appendTo(mainGroup); }
-    if (seroCount > 0) { $('<text>').attr('x', xScale).attr('y', '288.20000000000005').text('+' + seroCount).appendTo(mainGroup); }
-    if (bradCount > 0) { $('<text>').attr('x', xScale).attr('y', '321.8').text('+' + bradCount).appendTo(mainGroup); }
-    if (hyperkCount > 0) { $('<text>').attr('x', xScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(mainGroup); }
-    if (hypokCount > 0) { $('<text>').attr('x', xScale).attr('y', '389').text('+' + hypokCount).appendTo(mainGroup); }
-    if (hypogCount > 0) { $('<text>').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
-    if (glauCount > 0) { $('<text>').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(mainGroup); }
+    if (ffCount > 0) { $('<text>').attr('fill','currentColor').attr('x', xScale).attr('y', '53').text('+' + ffCount).appendTo(mainGroup); }
+    if (riCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '86.6').text('+' + riCount).appendTo(mainGroup); }
+    if (blCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '120.2').text('+' + blCount).appendTo(mainGroup); }
+    if (hfCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '153.8').text('+' + hfCount).appendTo(mainGroup); }
+    if (cnsCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '187.4').text('+' + cnsCount).appendTo(mainGroup); }
+    if (consCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '221').text('+' + consCount).appendTo(mainGroup); }
+    if (uriCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '254.60000000000002').text('+' + uriCount).appendTo(mainGroup); }
+    if (seroCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '288.20000000000005').text('+' + seroCount).appendTo(mainGroup); }
+    if (bradCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '321.8').text('+' + bradCount).appendTo(mainGroup); }
+    if (hyperkCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(mainGroup); }
+    if (hypokCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '389').text('+' + hypokCount).appendTo(mainGroup); }
+    if (hypogCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
+    if (glauCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(mainGroup); }
 
     return mainGroup;
    
@@ -679,7 +679,6 @@ function StackedBarChartHorizontal(data, {
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
 
-   
 
 
     svg.append("g")
