@@ -445,7 +445,7 @@ function initialization(data) {
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-    chart = StackedBarChartHorizontal(before, {
+    chart = StackedBarChartHorizontal(before,after, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
@@ -464,6 +464,12 @@ function initialization(data) {
 }
 
 
+function getCappedCount(after) {
+
+    console.log(after);
+
+}
+
 function getRange(total) {
     /*if (total < 5)*/
     return 5;
@@ -475,7 +481,7 @@ function getRange(total) {
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/stacked-horizontal-bar-chart
-function StackedBarChartHorizontal(data, {
+function StackedBarChartHorizontal(data,after, {
     x = d => d, // given d in data, returns the (quantitative) x-value
     y = (d, i) => i, // given d in data, returns the (ordinal) y-value
     z = () => 1, // given d in data, returns the (categorical) z-value
@@ -581,6 +587,13 @@ function StackedBarChartHorizontal(data, {
             .attr("text-anchor", "end")
             .attr('style','font-weight: bold;')
             .text(xLabel));
+
+
+    if (after.length != 0) {
+
+        getCappedCount(after);
+    }
+    
 
     const bar = svg.append("g").attr('id','mainBarG')
         .selectAll("g")
