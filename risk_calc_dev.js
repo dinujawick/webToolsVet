@@ -652,7 +652,7 @@ function StackedBarChartHorizontal(data,after, {
 
         });
 
-        const cappedBar = bar.append('g').attr('id', 'cappedBars');
+        const cappedBar = svg.append('g').attr('id', 'cappedBars');
 
         const caXScale = 530;
 
