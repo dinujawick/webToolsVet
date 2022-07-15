@@ -438,7 +438,8 @@ function initialization(data) {
 
     });
 
-    
+    console.log(before);
+    console.log(after);
   
     $('#chart').empty();
 
@@ -530,7 +531,7 @@ function getCappedCount(after) {
     if (hypogCount > 0) { $('<text>').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
     if (glauMedGroups > 0) { $('<text>').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauMedGroups).appendTo(mainGroup); }
 
-    return mainGroup;
+   
 }
 
 function getRange(total) {
@@ -653,7 +654,7 @@ function StackedBarChartHorizontal(data,after, {
 
 
     
-    console.log(getCappedCount(after));
+   getCappedCount(after);
 
     const bar = svg.append("g").attr('id','mainBarG')
         .selectAll("g")
