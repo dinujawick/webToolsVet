@@ -458,9 +458,6 @@ function initialization(data) {
             /*xFormat: '.0f'*/
         })
 
-
-
-        
     $('#chart').append(chart);
    
 }
@@ -652,12 +649,15 @@ function StackedBarChartHorizontal(data,after, {
 
         });
 
+
+
+
         const cappedBar = svg.append('g').attr('id', 'cappedBars');
 
         const caXScale = 530;
 
         if (ffCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-placement', 'top').attr("title", 'sample'); 
         }
         if (riCount > 0) {
             cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount);
