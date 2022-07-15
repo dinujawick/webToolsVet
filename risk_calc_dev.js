@@ -455,6 +455,12 @@ function initialization(data) {
         })
 
     $('#chart').append(chart);
+
+    //initialize all tooltips on the graph
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
    
 }
 
@@ -474,9 +480,6 @@ function getTooltipTitle(array) {
 
 
 //Horizontal Stacked Bar Chart
-// Copyright 2021 Observable, Inc.
-// Released under the ISC license.
-// https://observablehq.com/@d3/stacked-horizontal-bar-chart
 function StackedBarChartHorizontal(data,after, {
     x = d => d, // given d in data, returns the (quantitative) x-value
     y = (d, i) => i, // given d in data, returns the (ordinal) y-value
