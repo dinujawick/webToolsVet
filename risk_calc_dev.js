@@ -441,16 +441,11 @@ function initialization(data) {
     console.log(before);
     console.log(after);
 
-    var capped = "";
-
-    if (after.length != 0) {
-        capped = getCappedCount(after);
-    }
-
+   
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-    chart = StackedBarChartHorizontal(before, {
+    chart = StackedBarChartHorizontal(before, after, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
@@ -467,82 +462,10 @@ function initialization(data) {
 
         
     $('#chart').append(chart);
-    $('#mainBarG').append(capped);
    
 }
 
 
-function getCappedCount(after) {
-
-
-    var ffCount = 0;
-    var riCount = 0;
-    var blCount = 0;
-    var hfCount = 0;
-    var cnsCount = 0;
-    var consCount = 0;
-    var uriCount = 0;
-    var seroCount = 0;
-    var bradCount = 0;
-    var hyperkCount = 0;
-    var hypokCount = 0;
-    var hypogCount = 0;
-    var glauCount = 0;
-
-
-    var ffMedGroups = [];
-    var riMedGroups = [];
-    var blMedGroups = [];
-    var hfMedGroups = [];
-    var cnsMedGroups = [];
-    var consMedGroups = [];
-    var uriMedGroups = [];
-    var seroMedGroups = [];
-    var bradMedGroups = [];
-    var hyperkMedGroups = [];
-    var hypokMedGroups = [];
-    var hypogMedGroups = [];
-    var glauMedGroups = [];
-
-    after.forEach(function (d) {
-
-        if (d.risk == 'Falls and fracture' && d.status == 1) { ffCount++; ffMedGroups.push(d.medGroup); }
-        if (d.risk == 'Renal injury' && d.status == 1) { riCount++; riMedGroups.push(d.medGroup); }
-        if (d.risk == 'Bleeding' && d.status == 1) { blCount++; blMedGroups.push(d.medGroup); }
-        if (d.risk == 'Heart failure' && d.status == 1) { hfCount++; hfMedGroups.push(d.medGroup); }
-        if (d.risk == 'CNS depression' && d.status == 1) { cnsCount++; cnsMedGroups.push(d.medGroup); }
-        if (d.risk == 'Constipation' && d.status == 1) { consCount++; consMedGroups.push(d.medGroup); }
-        if (d.risk == 'Urinary retention' && d.status == 1) { uriCount++; uriMedGroups.push(d.medGroup); }
-        if (d.risk == 'Serotonin syndrome' && d.status == 1) { seroCount++; seroMedGroups.push(d.medGroup); }
-        if (d.risk == 'Bradycardia' && d.status == 1) { bradCount++; bradMedGroups.push(d.medGroup); }
-        if (d.risk == 'Hyperkalemia' && d.status == 1) { hyperkCount++; hyperkMedGroups.push(d.medGroup); }
-        if (d.risk == 'Hypokalemia' && d.status == 1) { hypokCount++; hypokMedGroups.push(d.medGroup); }
-        if (d.risk == 'Hypoglycaemia' && d.status == 1) { hypogCount++; hypogMedGroups.push(d.medGroup); }
-        if (d.risk == 'Glaucoma' && d.status == 1) { glauCount++; glauMedGroups.push(d.medGroup); }
-
-    });
-
-    var mainGroup = $('<g>').attr('id', 'cappedBars');
-
-    const xScale = 530;
-
-    if (ffCount > 0) { $('<text>').attr('fill','currentColor').attr('x', xScale).attr('y', '53').text('+' + ffCount).appendTo(mainGroup); }
-    if (riCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '86.6').text('+' + riCount).appendTo(mainGroup); }
-    if (blCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '120.2').text('+' + blCount).appendTo(mainGroup); }
-    if (hfCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '153.8').text('+' + hfCount).appendTo(mainGroup); }
-    if (cnsCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '187.4').text('+' + cnsCount).appendTo(mainGroup); }
-    if (consCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '221').text('+' + consCount).appendTo(mainGroup); }
-    if (uriCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '254.60000000000002').text('+' + uriCount).appendTo(mainGroup); }
-    if (seroCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '288.20000000000005').text('+' + seroCount).appendTo(mainGroup); }
-    if (bradCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '321.8').text('+' + bradCount).appendTo(mainGroup); }
-    if (hyperkCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(mainGroup); }
-    if (hypokCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '389').text('+' + hypokCount).appendTo(mainGroup); }
-    if (hypogCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
-    if (glauCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(mainGroup); }
-
-    return mainGroup;
-   
-}
 
 function getRange(total) {
     /*if (total < 5)*/
@@ -555,7 +478,7 @@ function getRange(total) {
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/stacked-horizontal-bar-chart
-function StackedBarChartHorizontal(data, {
+function StackedBarChartHorizontal(data,after, {
     x = d => d, // given d in data, returns the (quantitative) x-value
     y = (d, i) => i, // given d in data, returns the (ordinal) y-value
     z = () => 1, // given d in data, returns the (categorical) z-value
@@ -678,6 +601,77 @@ function StackedBarChartHorizontal(data, {
         
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
+
+
+    if (after.length != 0) {
+
+
+        var ffCount = 0;
+        var riCount = 0;
+        var blCount = 0;
+        var hfCount = 0;
+        var cnsCount = 0;
+        var consCount = 0;
+        var uriCount = 0;
+        var seroCount = 0;
+        var bradCount = 0;
+        var hyperkCount = 0;
+        var hypokCount = 0;
+        var hypogCount = 0;
+        var glauCount = 0;
+
+
+        var ffMedGroups = [];
+        var riMedGroups = [];
+        var blMedGroups = [];
+        var hfMedGroups = [];
+        var cnsMedGroups = [];
+        var consMedGroups = [];
+        var uriMedGroups = [];
+        var seroMedGroups = [];
+        var bradMedGroups = [];
+        var hyperkMedGroups = [];
+        var hypokMedGroups = [];
+        var hypogMedGroups = [];
+        var glauMedGroups = [];
+
+        after.forEach(function (d) {
+
+            if (d.risk == 'Falls and fracture' && d.status == 1) { ffCount++; ffMedGroups.push(d.medGroup); }
+            if (d.risk == 'Renal injury' && d.status == 1) { riCount++; riMedGroups.push(d.medGroup); }
+            if (d.risk == 'Bleeding' && d.status == 1) { blCount++; blMedGroups.push(d.medGroup); }
+            if (d.risk == 'Heart failure' && d.status == 1) { hfCount++; hfMedGroups.push(d.medGroup); }
+            if (d.risk == 'CNS depression' && d.status == 1) { cnsCount++; cnsMedGroups.push(d.medGroup); }
+            if (d.risk == 'Constipation' && d.status == 1) { consCount++; consMedGroups.push(d.medGroup); }
+            if (d.risk == 'Urinary retention' && d.status == 1) { uriCount++; uriMedGroups.push(d.medGroup); }
+            if (d.risk == 'Serotonin syndrome' && d.status == 1) { seroCount++; seroMedGroups.push(d.medGroup); }
+            if (d.risk == 'Bradycardia' && d.status == 1) { bradCount++; bradMedGroups.push(d.medGroup); }
+            if (d.risk == 'Hyperkalemia' && d.status == 1) { hyperkCount++; hyperkMedGroups.push(d.medGroup); }
+            if (d.risk == 'Hypokalemia' && d.status == 1) { hypokCount++; hypokMedGroups.push(d.medGroup); }
+            if (d.risk == 'Hypoglycaemia' && d.status == 1) { hypogCount++; hypogMedGroups.push(d.medGroup); }
+            if (d.risk == 'Glaucoma' && d.status == 1) { glauCount++; glauMedGroups.push(d.medGroup); }
+
+        });
+
+        cappedBar = bar.append('g').attr('id', 'cappedBars');
+
+        const caXScale = 530;
+
+        if (ffCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).appendTo(cappedBar); }
+        if (riCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount).appendTo(cappedBar); }
+        if (blCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount).appendTo(cappedBar); }
+        if (hfCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount).appendTo(cappedBar); }
+        if (cnsCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount).appendTo(cappedBar); }
+        if (consCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount).appendTo(cappedBar); }
+        if (uriCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount).appendTo(cappedBar); }
+        if (seroCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount).appendTo(cappedBar); }
+        if (bradCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount).appendTo(cappedBar); }
+        if (hyperkCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(cappedBar); }
+        if (hypokCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount).appendTo(cappedBar); }
+        if (hypogCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount).appendTo(cappedBar); }
+        if (glauCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(cappedBar); }
+
+    }
 
 
 
