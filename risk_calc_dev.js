@@ -652,23 +652,23 @@ function StackedBarChartHorizontal(data,after, {
 
         });
 
-        var cappedBar = bar.append('g').attr('id', 'cappedBars');
+        const cappedBar = bar.append('g').attr('id', 'cappedBars');
 
         const caXScale = 530;
 
-        if (ffCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).appendTo(cappedBar); }
-        if (riCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount).appendTo(cappedBar); }
-        if (blCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount).appendTo(cappedBar); }
-        if (hfCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount).appendTo(cappedBar); }
-        if (cnsCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount).appendTo(cappedBar); }
-        if (consCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount).appendTo(cappedBar); }
-        if (uriCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount).appendTo(cappedBar); }
-        if (seroCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount).appendTo(cappedBar); }
-        if (bradCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount).appendTo(cappedBar); }
-        if (hyperkCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(cappedBar); }
-        if (hypokCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount).appendTo(cappedBar); }
-        if (hypogCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount).appendTo(cappedBar); }
-        if (glauCount > 0) { $('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(cappedBar); }
+        if (ffCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount)); }
+        if (riCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount).appendTo(cappedBar)); }
+        if (blCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount).appendTo(cappedBar)); }
+        if (hfCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount).appendTo(cappedBar)); }
+        if (cnsCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount).appendTo(cappedBar)); }
+        if (consCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount).appendTo(cappedBar)); }
+        if (uriCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount).appendTo(cappedBar)); }
+        if (seroCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount).appendTo(cappedBar)); }
+        if (bradCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount).appendTo(cappedBar)); }
+        if (hyperkCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount).appendTo(cappedBar)); }
+        if (hypokCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount).appendTo(cappedBar)); }
+        if (hypogCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount).appendTo(cappedBar)); }
+        if (glauCount > 0) { cappedBar.append($('<text>').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(cappedBar)); }
 
     }
 
