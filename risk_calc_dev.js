@@ -437,10 +437,6 @@ function initialization(data) {
         
 
     });
-
-    console.log(before);
-    console.log(after);
-
    
     $('#chart').empty();
 
@@ -464,12 +460,18 @@ function initialization(data) {
 
 
 
-function getRange(total) {
-    /*if (total < 5)*/
-    return 5;
-    //else
-    //    return total + 2
+function getTooltipTitle(array) {
+
+    var html = "";
+
+    for (i = 0; i < array.length; i++) {
+
+        html = html + array[i] + '<br>';
+    }
+
+    return html;
 }
+
 
 //Horizontal Stacked Bar Chart
 // Copyright 2021 Observable, Inc.
@@ -652,48 +654,50 @@ function StackedBarChartHorizontal(data,after, {
 
 
 
+
+
         const cappedBar = svg.append('g').attr('id', 'cappedBars');
 
         const caXScale = 530;
 
         if (ffCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", '<span id="sampleToolTip"></span> Steroid'); 
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(ffMedGroups)); 
         }
         if (riCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(riMedGroups));
         }
         if (blCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(blMedGroups));
         }
         if (hfCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(hfMedGroups));
         }
         if (cnsCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(cnsMedGroups));
         }
         if (consCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(consMedGroups));
         }
         if (uriCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(uriMedGroups));
         }
         if (seroCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(seroMedGroups));
         }
         if (bradCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(bradMedGroups));
         }
         if (hyperkCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(hyperkMedGroups));
         }
         if (hypokCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(hypokMedGroups));
         }
         if (hypogCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(hypogMedGroups));
         }
         if (glauCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount);
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", getTooltipTitle(glauMedGroups));
         }
 
     }
