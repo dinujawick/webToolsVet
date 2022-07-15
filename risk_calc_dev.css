@@ -305,12 +305,7 @@
     transition: transform .2s ease-in-out;
 }
 
-#sampleToolTip {
-    margin-right: 0.25rem;
-    width: 15px;
-    height: 15px;
-    background-color: #e33890;
-}
+
 /* Icarus addition */
 @media only screen and (max-width: 800px) {
     .col-4 {
