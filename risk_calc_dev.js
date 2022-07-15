@@ -657,7 +657,7 @@ function StackedBarChartHorizontal(data,after, {
         const caXScale = 530;
 
         if (ffCount > 0) {
-            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'top').attr("title", '<span id="sampleToolTip"></span> Steroid'); 
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount).attr('data-bs-toggle', 'tooltip').attr('data-bs-html', 'true').attr('data-bs-placement', 'right').attr("title", '<span id="sampleToolTip"></span> Steroid'); 
         }
         if (riCount > 0) {
             cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount);
