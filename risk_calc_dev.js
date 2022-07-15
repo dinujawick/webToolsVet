@@ -609,7 +609,7 @@ function StackedBarChartHorizontal(data,after, {
         .attr("height", yScale.bandwidth());
         
 
-    if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','right').attr("title", ({ i }) => title(i));
+    if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
 
     svg.append("g")
         .attr('id', 'yAxisMainG')
