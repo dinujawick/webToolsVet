@@ -656,19 +656,45 @@ function StackedBarChartHorizontal(data,after, {
 
         const caXScale = 530;
 
-        if (ffCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount)); }
-        if (riCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount)); }
-        if (blCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount)); }
-        if (hfCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount)); }
-        if (cnsCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount)); }
-        if (consCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount)); }
-        if (uriCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount)); }
-        if (seroCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount)); }
-        if (bradCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount)); }
-        if (hyperkCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount)); }
-        if (hypokCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount)); }
-        if (hypogCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount)); }
-        if (glauCount > 0) { cappedBar.append(('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount)); }
+        if (ffCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '53').text('+' + ffCount);
+        }
+        if (riCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '86.6').text('+' + riCount);
+        }
+        if (blCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '120.2').text('+' + blCount);
+        }
+        if (hfCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '153.8').text('+' + hfCount);
+        }
+        if (cnsCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '187.4').text('+' + cnsCount);
+        }
+        if (consCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '221').text('+' + consCount);
+        }
+        if (uriCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '254.60000000000002').text('+' + uriCount);
+        }
+        if (seroCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '288.20000000000005').text('+' + seroCount);
+        }
+        if (bradCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '321.8').text('+' + bradCount);
+        }
+        if (hyperkCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '355.40000000000003').text('+' + hyperkCount);
+        }
+        if (hypokCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '389').text('+' + hypokCount);
+        }
+        if (hypogCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '422.6').text('+' + hypogCount);
+        }
+        if (glauCount > 0) {
+            cappedBar.append('text').attr('fill', 'currentColor').attr('x', caXScale).attr('y', '456.20000000000005').text('+' + glauCount);
+        }
 
     }
 
