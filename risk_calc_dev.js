@@ -605,7 +605,6 @@ function StackedBarChartHorizontal(data,after, {
 
     if (after.length != 0) {
 
-
         var ffCount = 0;
         var riCount = 0;
         var blCount = 0;
