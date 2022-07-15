@@ -263,9 +263,6 @@ function createAccordionItem(medGroup,colorCode,accordionTitle,accordionTooltip)
         .appendTo($('#medGroup'));
 
     $accordionHeader = $('<h2>')
-        .attr('data-bs-toggle', 'tooltip')
-        .attr('data-bs-placement', 'right')
-        .attr("title", accordionTooltip)
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + 'header')
         .addClass('accordion-header')
         .append(
@@ -278,7 +275,9 @@ function createAccordionItem(medGroup,colorCode,accordionTitle,accordionTooltip)
                 .addClass('accordion-button')
                 .append(
                     $('<span>').addClass('medGroupColor').attr('style', "background-color:" + colorCode),
-                    $('<span>').text(accordionTitle)
+                    $('<span>').attr('data-bs-toggle', 'tooltip')
+                        .attr('data-bs-placement', 'right')
+                        .attr("title", accordionTooltip).text(accordionTitle)
                 )
         )
         .appendTo($accordion);
