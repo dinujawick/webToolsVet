@@ -440,11 +440,17 @@ function initialization(data) {
 
     console.log(before);
     console.log(after);
-  
+
+    var capped = "";
+
+    if (after.length != 0) {
+        capped = getCappedCount(after);
+    }
+
     $('#chart').empty();
 
     //Horizontal Stacked Bar Chart
-    chart = StackedBarChartHorizontal(before,after, {
+    chart = StackedBarChartHorizontal(before, {
             x: d => d.status,
             y: d => d.risk,
             z: d => d.medGroup,
@@ -457,9 +463,12 @@ function initialization(data) {
             /*xFormat: '.0f'*/
         })
 
-        
-        $('#chart').append(chart);
 
+
+        
+    $('#chart').append(chart);
+    $('#mainBarG').append(capped);
+   
 }
 
 
@@ -546,7 +555,7 @@ function getRange(total) {
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/stacked-horizontal-bar-chart
-function StackedBarChartHorizontal(data,after, {
+function StackedBarChartHorizontal(data, {
     x = d => d, // given d in data, returns the (quantitative) x-value
     y = (d, i) => i, // given d in data, returns the (ordinal) y-value
     z = () => 1, // given d in data, returns the (categorical) z-value
@@ -670,7 +679,7 @@ function StackedBarChartHorizontal(data,after, {
 
     if (title) bar.attr('data-bs-toggle', 'tooltip').attr('data-bs-placement','top').attr("title", ({ i }) => title(i));
 
-    if (after.length != 0) { var capped = getCappedCount(after); capped.appendTo(bar); }
+   
 
 
     svg.append("g")
