@@ -479,10 +479,6 @@ function getTooltipTitle(array) {
 
     var res = html + cont + '</p>';
 
-    console.log(cont);
-    console.log(res);
-    
-
     return res;
 }
 
