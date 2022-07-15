@@ -531,6 +531,7 @@ function getCappedCount(after) {
     if (hypogCount > 0) { $('<text>').attr('x', xScale).attr('y', '422.6').text('+' + hypogCount).appendTo(mainGroup); }
     if (glauCount > 0) { $('<text>').attr('x', xScale).attr('y', '456.20000000000005').text('+' + glauCount).appendTo(mainGroup); }
 
+    console.log(mainGroup);
    
 }
 
