@@ -345,6 +345,11 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode,medClassT
 
 
                     }
+                    //initialize all tooltips on the graph
+                    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl)
+                    });
 
                 })
         )
@@ -456,11 +461,7 @@ function initialization(data) {
 
     $('#chart').append(chart);
 
-    //initialize all tooltips on the graph
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    });
+    
    
 }
 
