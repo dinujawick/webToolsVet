@@ -301,8 +301,9 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode,medClassT
         .attr('id', medGroup.replace(/[-_ )(]/g, '') + atcLevel + 'li')
         .addClass('list-group-item')
         .addClass('acordionContent')
-        .text(atcDescr +" "+ '[' + atcLevel + ']')
         .append(
+            $('<div>').addClass('col-11').text(atcDescr + " " + '[' + atcLevel + ']'),
+            $('<div>').addClass('col-1').append(
             $('<span>')
                 .attr('id', medGroup.replace(/[-_ )(]/g, '') + atcLevel + 'span')
                 .addClass('close')
@@ -352,7 +353,7 @@ function createAcordionContent(medGroup, atcDescr, atcLevel, colorCode,medClassT
                     });
 
                 })
-        )
+        ))
         .appendTo($('#' + medGroup.replace(/[-_ )(]/g, '') + 'ul'));
 }
 
